@@ -8,8 +8,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 
-import java.util.List;
-
 import static java.lang.invoke.MethodHandles.lookup;
 import static org.slf4j.LoggerFactory.getLogger;
 
@@ -251,7 +249,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Selected 'PVM' radio button.");
 
             String valueToSelect5 = "Įsigyti";
-            submittedApplicationsPage.selectDropdownNecessaryForJob(valueToSelect5);
+            submittedApplicationsPage.selectDropdownNecessaryForJobOne(valueToSelect5);
             log.debug("Selected necessary for job: '{}'.", valueToSelect5);
 
             String valueToSelect6 = "Darbo priemonė 1";
@@ -275,12 +273,35 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Entered tool count: '{}'.", count1);
 
             String amount2 = "1000";
-            submittedApplicationsPage.enterPrice(amount2);
-            log.debug("Entered price amount: '{}'.", amount2);
+            submittedApplicationsPage.enterPriceOne(amount2);
+            log.debug("Entered price amount 1: '{}'.", amount2);
 
             String amount3 = "800";
-            submittedApplicationsPage.enterOwnFunds(amount3);
-            log.debug("Entered own funds amount: '{}'.", amount3);
+            submittedApplicationsPage.enterOwnFundsOne(amount3);
+            log.debug("Entered own funds amount 1: '{}'.", amount3);
+
+            submittedApplicationsPage.clickButtonAdd();
+            log.debug("Clicked 'Add' button.");
+
+            String valueToSelect5_1 = "Remontuoti";
+            submittedApplicationsPage.selectDropdownNecessaryForJobTwo(valueToSelect5_1);
+            log.debug("Selected necessary for job 'to repair': '{}'.", valueToSelect5_1);
+
+            String valueToSelect10 = "Remonto pavadinimas 1";
+            submittedApplicationsPage.enterRepairName(valueToSelect10);
+            log.debug("Selected repair name: '{}'.", valueToSelect10);
+
+            String text7 = "Remonto aprašymas 1";
+            submittedApplicationsPage.enterRepairDescription(text7);
+            log.debug("Entered repair information: '{}'.", text7);
+
+            String amount4 = "1000";
+            submittedApplicationsPage.enterPriceTwo(amount4);
+            log.debug("Entered price amount 2: '{}'.", amount4);
+
+            String amount5 = "900";
+            submittedApplicationsPage.enterOwnFundsTwo(amount5);
+            log.debug("Entered own funds amount 2: '{}'.", amount5);
 
             String perc1 = "50";
             submittedApplicationsPage.enterCountryPerc(perc1);
@@ -307,9 +328,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterProjectDateUntil();
             log.debug("Entered project date until.");
 
-            String amount4 = "2000";
-            submittedApplicationsPage.enterSupportAmount(amount4);
-            log.debug("Entered support amount: '{}'.", amount4);
+            String amount6 = "2000";
+            submittedApplicationsPage.enterSupportAmount(amount6);
+            log.debug("Entered support amount: '{}'.", amount6);
 
             submittedApplicationsPage.clickButtonNext();
             log.debug("Clicked 'Next' button.");
@@ -399,6 +420,14 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             String documentName8 = "Dokumentas 8";
             submittedApplicationsPage.enterDocumentNameEight(documentName8);
             log.debug("Entered program name: '{}'.", documentName8);
+
+            String documentName9 = "Dokumentas 9";
+            submittedApplicationsPage.enterDocumentNameNine(documentName9);
+            log.debug("Entered program name: '{}'.", documentName9);
+
+            String documentName10 = "Dokumentas 10";
+            submittedApplicationsPage.enterDocumentNameTen(documentName10);
+            log.debug("Entered program name: '{}'.", documentName10);
 
             SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationDocument, true);
             log.debug("Checked 'ConfirmationDocument'");
@@ -590,11 +619,11 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Entered tool count: '{}'.", count1);
 
             String amount2 = "1000";
-            submittedApplicationsPage.enterPrice(amount2);
+            submittedApplicationsPage.enterPriceOne(amount2);
             log.debug("Entered price amount: '{}'.", amount2);
 
             String amount3 = "800";
-            submittedApplicationsPage.enterOwnFunds(amount3);
+            submittedApplicationsPage.enterOwnFundsOne(amount3);
             log.debug("Entered own funds amount: '{}'.", amount3);
 
             submittedApplicationsPage.clickRadioButtonDeMinimis();

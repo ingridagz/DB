@@ -176,8 +176,11 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "(//input[@type='radio' and @value='false'])[6]")
     WebElement radioButtonPVM;
 
-    @FindBy(xpath = "//mat-label[contains(text(), 'Darbo vietai įsteigti reikalinga')]")
-    WebElement dropdownButtonNecessaryForJob;
+    @FindBy(xpath = "(//mat-label[contains(text(), 'Darbo vietai įsteigti reikalinga')])[1]")
+    WebElement dropdownButtonNecessaryForJobOne;
+
+    @FindBy(xpath = "(//mat-label[contains(text(), 'Darbo vietai įsteigti reikalinga')])[2]")
+    WebElement dropdownButtonNecessaryForJobTwo;
 
     //DVP
 //    @FindBy(xpath = "//label//mat-label[contains(text(), 'Reikalinga')]")
@@ -202,11 +205,27 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Darbo priemonės kiekis, vnt.')]//input")
     WebElement inputToolsCount;
 
-    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Kaina, Eur')]//input")
-    WebElement inputPrice;
+    @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Kaina, Eur')]//input)[1]")
+    WebElement inputPriceOne;
 
-    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Nuosavos lėšos, Eur')]//input")
-    WebElement inputOwnFunds;
+    @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Kaina, Eur')]//input)[2]")
+    WebElement inputPriceTwo;
+
+    @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Nuosavos lėšos, Eur')]//input)[1]")
+    WebElement inputOwnFundsOne;
+
+    @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Nuosavos lėšos, Eur')]//input)[2]")
+    WebElement inputOwnFundsTwo;
+
+//    @FindBy(xpath = "//common-button//button[contains(@class, 'i-forms-repeater-button-add')]//mat-icon[text()='add']")
+    @FindBy(xpath = "(//button[contains(@class, 'i-forms-repeater-button-add')])[4]")
+    WebElement buttonAdd;
+
+    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Remonto darbų pavadinimas')]//input")
+    WebElement inputRepairName;
+
+    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[8]")
+    WebElement inputRepairDescription;
 
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Valstybės institucijos, įstaigos (proc.)')]//input")
     WebElement inputCountryPerc;
@@ -271,6 +290,12 @@ public class SubmittedApplicationsPage extends UztisPage {
 
     @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Dokumento pavadinimas')]//input)[8]")
     WebElement inputDocumentNameEight;
+
+    @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Dokumento pavadinimas')]//input)[9]")
+    WebElement inputDocumentNameNine;
+
+    @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Dokumento pavadinimas')]//input)[10]")
+    WebElement inputDocumentNameTen;
 
     @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[5]")
     public WebElement checkboxConfirmationDocument;
@@ -920,11 +945,11 @@ public void selectDropdownJobNameAdaptable(String valueToSelect) {
         }
     }
 
-    public void selectDropdownNecessaryForJob(String valueToSelect) {
+    public void selectDropdownNecessaryForJobOne(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
         log.info("Located the dropdown button.");
-        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonNecessaryForJob)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonNecessaryForJobOne)).click();
 
         List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option/span")));
 
@@ -943,7 +968,36 @@ public void selectDropdownJobNameAdaptable(String valueToSelect) {
         }
 
         try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonNecessaryForJob, "aria-expanded", "false"));
+            wait.until(ExpectedConditions.attributeToBe(dropdownButtonNecessaryForJobOne, "aria-expanded", "false"));
+        } catch (TimeoutException e) {
+            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
+        }
+    }
+
+    public void selectDropdownNecessaryForJobTwo(String valueToSelect) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+        log.info("Located the dropdown button.");
+        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonNecessaryForJobTwo)).click();
+
+        List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option/span")));
+
+        boolean optionSelected = false;
+        for (WebElement option : options) {
+            if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
+                wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+                optionSelected = true;
+                log.info("Successfully selected the value: '{}'", valueToSelect);
+                break;
+            }
+        }
+
+        if (!optionSelected) {
+            log.warn("Dropdown value '{}' not found.", valueToSelect);
+        }
+
+        try {
+            wait.until(ExpectedConditions.attributeToBe(dropdownButtonNecessaryForJobTwo, "aria-expanded", "false"));
         } catch (TimeoutException e) {
             log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
         }
@@ -1006,14 +1060,40 @@ public void selectDropdownJobNameAdaptable(String valueToSelect) {
         inputToolsCount.sendKeys(amount);
     }
 
-    public void enterPrice(String amount) {
-        inputPrice.clear();
-        inputPrice.sendKeys(amount);
+    public void enterPriceOne(String amount) {
+        inputPriceOne.clear();
+        inputPriceOne.sendKeys(amount);
     }
 
-    public void enterOwnFunds(String amount) {
-        inputOwnFunds.clear();
-        inputOwnFunds.sendKeys(amount);
+    public void enterPriceTwo(String amount) {
+        inputPriceTwo.clear();
+        inputPriceTwo.sendKeys(amount);
+    }
+
+    public void enterOwnFundsOne(String amount) {
+        inputOwnFundsOne.clear();
+        inputOwnFundsOne.sendKeys(amount);
+    }
+
+    public void enterOwnFundsTwo(String amount) {
+        inputOwnFundsTwo.clear();
+        inputOwnFundsTwo.sendKeys(amount);
+    }
+
+    public void clickButtonAdd() {
+        if (!buttonAdd.isSelected()) {
+            buttonAdd.click();
+        }
+    }
+
+    public void enterRepairName(String amount) {
+        inputRepairName.clear();
+        inputRepairName.sendKeys(amount);
+    }
+
+    public void enterRepairDescription(String text) {
+        inputRepairDescription.clear();
+        inputRepairDescription.sendKeys(text);
     }
 
     public void enterCountryPerc(String amount) {
@@ -1233,6 +1313,17 @@ public void selectDropdownJobNameAdaptable(String valueToSelect) {
         inputDocumentNameEight.clear();
         inputDocumentNameEight.sendKeys(count);
     }
+
+    public void enterDocumentNameNine(String count) {
+        inputDocumentNameNine.clear();
+        inputDocumentNameNine.sendKeys(count);
+    }
+
+    public void enterDocumentNameTen(String count) {
+        inputDocumentNameTen.clear();
+        inputDocumentNameTen.sendKeys(count);
+    }
+
 
     //DVP
     public void enterPersonCountOne(String count) {
