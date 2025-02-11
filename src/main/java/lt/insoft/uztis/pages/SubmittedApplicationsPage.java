@@ -45,6 +45,9 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "//button[contains(@class, 'mat-mdc-menu-item') and .//span[contains(text(), 'Pateikti naują')]]")
     WebElement buttonNewApplication;
 
+    @FindBy(xpath = "//button[contains(@class, 'mat-mdc-menu-item') and .//span[contains(text(), 'Priskirti vertintojus')]]")
+    WebElement buttonAddEvaluators;
+
     @FindBy(xpath = "//button[contains(@class, 'i-forms-stepper-button-next') and normalize-space(text())='Toliau']")
     WebElement buttonNext;
 
@@ -324,6 +327,65 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Asmenų skaičius')]//input)[2]")
     WebElement inputPersonCountTwo;
 
+    //Add Evaluators
+    //---------------
+
+    @FindBy(xpath = "//div[contains(@class, 'mat-mdc-form-field-infix')]//input[@type='text' and contains(@class, 'mat-datepicker-input')]")
+    WebElement firstEvaluationEndDate;
+    @FindBy(xpath = "(//div[contains(@class, 'mat-mdc-form-field-infix')]//input[@type='text' and contains(@class, 'mat-datepicker-input')])[2]")
+    WebElement secondEvaluationEndDate;
+    @FindBy(xpath = "(//div[contains(@class, 'mat-mdc-form-field-infix')]//input[@type='text' and contains(@class, 'mat-datepicker-input')])[3]")
+    WebElement thirdEvaluationEndDate;
+
+    @FindBy(xpath = "//common-button[@btnclass='btn btn--primary']//button[text()='Priskirti vertintojus']")
+    WebElement buttonAddEvaluatorsConfirmation;
+
+    //---------------
+
+
+
+    public void enterFirstEvaluationEndDate() {
+        LocalDate today = LocalDate.now();
+        LocalDate futureDate = today.plusDays(1);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedFutureDate = futureDate.format(formatter);
+
+        if (firstEvaluationEndDate.isDisplayed() && firstEvaluationEndDate.isEnabled()) {
+            firstEvaluationEndDate.clear();
+            firstEvaluationEndDate.sendKeys(formattedFutureDate);
+        } else {
+            throw new RuntimeException("First date input is not interactable.");
+        }
+    }
+
+    public void enterSecondEvaluationEndDate() {
+        LocalDate today = LocalDate.now();
+        LocalDate futureDate = today.plusDays(2);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedFutureDate = futureDate.format(formatter);
+
+        if (secondEvaluationEndDate.isDisplayed() && secondEvaluationEndDate.isEnabled()) {
+            secondEvaluationEndDate.clear();
+            secondEvaluationEndDate.sendKeys(formattedFutureDate);
+        } else {
+            throw new RuntimeException("Second date input is not interactable.");
+        }
+    }
+
+    public void enterThirdEvaluationEndDate() {
+        LocalDate today = LocalDate.now();
+        LocalDate futureDate = today.plusDays(3);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedFutureDate = futureDate.format(formatter);
+
+        if (thirdEvaluationEndDate.isDisplayed() && thirdEvaluationEndDate.isEnabled()) {
+            thirdEvaluationEndDate.clear();
+            thirdEvaluationEndDate.sendKeys(formattedFutureDate);
+        } else {
+            throw new RuntimeException("Third date input is not interactable.");
+        }
+    }
+
 
     public void clickMenuSubmittedApplications() {
         buttonMenuSubmittedApplications.click();
@@ -356,6 +418,14 @@ public class SubmittedApplicationsPage extends UztisPage {
 
     public void clickButtonNewApplication() {
         buttonNewApplication.click();
+    }
+
+    public void clickButtonAddEvaluators() {
+        buttonAddEvaluators.click();
+    }
+
+    public void clickButtonAddEvaluatorsConfirmation() {
+        buttonAddEvaluatorsConfirmation.click();
     }
 
     public boolean isButtonNextDisplayed() {
@@ -1335,6 +1405,11 @@ public void selectDropdownJobNameAdaptable(String valueToSelect) {
         inputPersonCountTwo.clear();
         inputPersonCountTwo.sendKeys(count);
     }
+
+//---------------------------
+
+
+
 
 
 }

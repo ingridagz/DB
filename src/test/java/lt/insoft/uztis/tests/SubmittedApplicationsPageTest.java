@@ -461,6 +461,46 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
     //ĮVESTI Į DB REDION_ID IR MINICIPALITY_ID (kol kas)
 
+    @Test
+    void testAddEvaluators() {
+
+        log.info("Starting test:'testAddEvaluators'");
+
+        try {
+            applicationFormsPage.login("test", "test");
+            log.debug("User logged in with test credentials.");
+
+            getAndInsertInvitationCodeText();
+            log.debug("Invitation code inserted.");
+
+            submittedApplicationsPage.clickButtonActionApplication();
+            log.debug("Clicked on 'Action Application' button.");
+
+            submittedApplicationsPage.clickButtonAddEvaluators();
+            log.debug("Clicked on 'Add Evaluators' button.");
+
+            submittedApplicationsPage.enterFirstEvaluationEndDate();
+            log.debug("Entered first evaluation date.");
+
+            submittedApplicationsPage.enterSecondEvaluationEndDate();
+            log.debug("Entered second evaluation date.");
+
+            submittedApplicationsPage.enterThirdEvaluationEndDate();
+            log.debug("Entered third evaluation date.");
+
+            submittedApplicationsPage.clickButtonAddEvaluatorsConfirmation();
+            log.debug("Clicked on 'Add Evaluators' confirmation button.");
+
+            invitationsPage.verifySuccessMessage("Paraiškų vertinimai sėkmingai priskirti vertintojams.");
+
+            log.info("Test 'testAddEvaluators' completed successfully.");
+        } catch (AssertionError | Exception e) {
+            log.error("Test 'testAddEvaluators' failed with error: {}", e.getMessage(), e);
+            throw e;
+        }
+
+    }
+
 
     @Test
     void testFillNewDVPApplicationFA() {
