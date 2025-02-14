@@ -459,59 +459,113 @@ public class SubmittedApplicationsPage extends UztisPage {
         inputEMail.sendKeys(emailAddress);
     }
 
+//    public void selectValueByListEVRK(String valueToSelect) {
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//        try {
+//            // Paspaudžiame ant pasirinkimo lauko
+//            log.info("Located the dropdown button.");
+//            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonEVRK)).click();
+//
+//            // Laukiame, kol pasirodys pasirinkimai
+//            List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option//span")));
+//
+//            // Pridedame logą, kad pamatytume, kiek elementų surasta
+//            log.info("Found {} options in the dropdown.", options.size());
+//
+//            // Surandame ir pasirinkame reikšmę
+//            boolean optionSelected = false;
+//            for (WebElement option : options) {
+//                // Patikriname, ar tekstas tinka
+//                if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
+//                    // Pasirenkame reikšmę
+//                    option.click();
+//                    optionSelected = true;
+//                    log.info("Successfully selected the value: '{}'", valueToSelect);
+//                    break; // Pasirenkame tik pirmą reikšmę
+//                }
+//            }
+//
+//            // Jei reikšmė nerasta
+//            if (!optionSelected) {
+//                log.warn("The value '{}' was not found among the options.", valueToSelect);
+//                throw new RuntimeException("The value '" + valueToSelect + "' was not found in the dropdown.");
+//            }
+//
+//            // Laukiame, kol pasirinkimo sąrašas užsidarys
+//            try {
+//                // Patikriname, ar 'aria-expanded' atributas pasikeitė į 'false'
+//                wait.until(ExpectedConditions.attributeToBe(dropdownButtonEVRK, "aria-expanded", "false"));
+//                log.info("Dropdown closed successfully.");
+//            } catch (TimeoutException e) {
+//                log.error("Failed to close the dropdown with aria-expanded = 'false'. Attempting manual close.");
+//
+//                // Jeigu 'aria-expanded' nepasikeitė, bandykite uždaryti dropdown paspausdami už jo ribų
+//                try {
+//                    WebElement body = driver.findElement(By.className("cdk-overlay-backdrop"));
+//                    body.click(); // Paspaudžiame už dropdown ribų, kad uždarytumėte meniu
+//                    log.info("Manual close attempt for the dropdown using body click.");
+//                } catch (Exception ex) {
+//                    log.error("Failed to manually close the dropdown: {}", ex.getMessage());
+//                }
+//            }
+//
+//        } catch (Exception e) {
+//            log.error("Error selecting value from the list: {}", e.getMessage());
+//            throw new RuntimeException("Failed to select from the list", e);
+//        }
+//    }
+
     public void selectValueByListEVRK(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
-            // Paspaudžiame ant pasirinkimo lauko
-            log.info("Located the dropdown button.");
+            log.info("Clicking on the dropdown button.");
             wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonEVRK)).click();
 
-            // Laukiame, kol pasirodys pasirinkimai
+            // Laukiame, kol išskleidžiamas meniu bus matomas
             List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option//span")));
-
-            // Pridedame logą, kad pamatytume, kiek elementų surasta
             log.info("Found {} options in the dropdown.", options.size());
 
-            // Surandame ir pasirinkame reikšmę
             boolean optionSelected = false;
+
+            // Tikriname kiekvieną meniu parinktį
             for (WebElement option : options) {
-                // Patikriname, ar tekstas tinka
-                if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
-                    // Pasirenkame reikšmę
-                    option.click();
+                String optionText = option.getText().trim();
+                log.debug("Checking option: '{}'", optionText);
+
+                if (optionText.equalsIgnoreCase(valueToSelect)) {
+                    option.click();  // Tiesioginis paspaudimas ant pasirinkimo
                     optionSelected = true;
                     log.info("Successfully selected the value: '{}'", valueToSelect);
-                    break; // Pasirenkame tik pirmą reikšmę
+                    break;
                 }
             }
 
-            // Jei reikšmė nerasta
             if (!optionSelected) {
                 log.warn("The value '{}' was not found among the options.", valueToSelect);
                 throw new RuntimeException("The value '" + valueToSelect + "' was not found in the dropdown.");
             }
 
-            // Laukiame, kol pasirinkimo sąrašas užsidarys
-            try {
-                // Patikriname, ar 'aria-expanded' atributas pasikeitė į 'false'
-                wait.until(ExpectedConditions.attributeToBe(dropdownButtonEVRK, "aria-expanded", "false"));
-                log.info("Dropdown closed successfully.");
-            } catch (TimeoutException e) {
-                log.error("Failed to close the dropdown with aria-expanded = 'false'. Attempting manual close.");
+            log.info("Attempting to close the dropdown.");
 
-                // Jeigu 'aria-expanded' nepasikeitė, bandykite uždaryti dropdown paspausdami už jo ribų
-                try {
-                    WebElement body = driver.findElement(By.className("cdk-overlay-backdrop"));
-                    body.click(); // Paspaudžiame už dropdown ribų, kad uždarytumėte meniu
-                    log.info("Manual close attempt for the dropdown using body click.");
-                } catch (Exception ex) {
-                    log.error("Failed to manually close the dropdown: {}", ex.getMessage());
-                }
-            }
+            // Palaukite, kol pasirinkimas bus atliktas ir dropdown užsidarys
+            // Paliekame laiko įsitikinti, kad pasirinkimas buvo atliktas (rekomenduojama ne mažiau kaip 500ms)
+            Thread.sleep(500);
+
+            // Bandome uždaryti meniu paspausdami ESC (kartais tai padeda, jei meniu nepatikimai užsidaro)
+            Actions actions = new Actions(driver);
+            actions.sendKeys(Keys.ESCAPE).perform();
+
+            // Jei ESC nepadėjo, bandome paspausti į tuščią vietą ekrane
+            WebElement body = driver.findElement(By.tagName("body")); // Paspauskime į visą puslapio kūną, kuris yra tiksliai matomas
+            actions.moveToElement(body).click().perform();
+
+            // Patikriname, ar meniu užsidarė
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//mat-option//span")));
+            log.info("Dropdown should be closed now.");
 
         } catch (Exception e) {
-            log.error("Error selecting value from the list: {}", e.getMessage());
-            throw new RuntimeException("Failed to select from the list", e);
+            log.error("Error occurred while selecting value: {}", e.getMessage());
+            throw new RuntimeException("Failed to select value from dropdown.", e);
         }
     }
 
