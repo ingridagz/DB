@@ -92,14 +92,22 @@ public class FundingPageTest extends UztisPageTest{
             getAndInsertInvitationCodeText();
             log.debug("Invitation code inserted.");
 
+            fundingPage.clickButtonForm();
+            log.debug("Clicked 'Form'.");
 
+            fundingPage.clickButtonFinance();
+            log.debug("Clicked 'Finance'.");
 
+            String orderN = "VUI_1";
+            fundingPage.enterOrderNumber(orderN);
+            log.debug("Entered order number '{}'.", orderN);
 
+           fundingPage.enterOrderDate();
 
+            fundingPage.clickButtonFinanceConfirmation();
+            log.debug("Clicked 'Finance Confirmation'.");
 
-
-
-            invitationsPage.verifySuccessMessage("...");
+            invitationsPage.verifySuccessMessage("Funkcija sėkmingai atlikta.");
 
             log.info("Test 'testFundApplication' completed successfully.");
         } catch (AssertionError | Exception e) {

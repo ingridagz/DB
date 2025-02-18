@@ -92,25 +92,28 @@ public class SubmittedApplicationsPage extends UztisPage {
     WebElement dropdownButtonJobName;
 
     //DVP
-
-
     @FindBy(xpath = "//mat-label[contains(text(), 'Pritaikomos darbo vietos pavadinimas, kodas pagal profesijų klasifikatorių')]")
-    WebElement dropdownButtonJobNameAdaptable;
+    WebElement dropdownButtonJobNameAdaptableDVP;
 
     @FindBy(xpath = "//mat-label[contains(text(), 'Išlaidų tipas')]")
-    WebElement dropdownButtonExpensesTyp;
-
+    WebElement dropdownButtonExpensesTypDVP;
     //DVP
 
     @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[1]")
     WebElement inputJobFunction;
 
     @FindBy(xpath = "(//input[@type='radio' and @value='true'])[1]")
-    WebElement radioButtonWithDisabilities;
+    WebElement radioButtonWithDisabilitiesVUI;
 
     //DVP
-    @FindBy(xpath = "(//input[@type='radio' and @value='false'])[1]")
-    WebElement radioButtonForAlreadyWorking;
+    @FindBy(xpath = "(//input[@type='radio' and @value='true'])[1]")
+    WebElement radioButtonForAlreadyWorkingDVP_step1;
+
+    @FindBy(xpath = "(//input[@type='radio' and @value='true'])[2]")
+    WebElement radioButtonForNewWorkingDVP_step1;
+
+    @FindBy(xpath = "(//input[@type='radio' and @value='false'])[3]")
+    WebElement radioButtonForAlreadyWorkingDVP_step2;
     //DVP
 
     @FindBy(xpath = "//mat-label[contains(text(), 'Papildomai remiamo asmens tipas')]")
@@ -118,10 +121,8 @@ public class SubmittedApplicationsPage extends UztisPage {
 
     //DVP
     @FindBy(xpath = "//mat-label[contains(text(), 'Asmens su negalia dalyvumo lygis')]")
-    WebElement dropdownButtonDisabilitiesLevel;
+    WebElement dropdownButtonDisabilitiesLevelDVP;
     //DVP
-
-
 
     @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[2]")
     WebElement inputDisabilities;
@@ -138,22 +139,25 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[2]")
     WebElement inputJopDate;
 
-    //dvp
+    //DVP
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[1]")
     WebElement inputJopDateDVP;
-    //dvp
+
+    @FindBy(xpath = "(//input[@type='radio' and @value='false'])[4]")
+    WebElement radioButtonTemporaryJobDVP;
+
+    @FindBy(xpath = "(//input[@type='radio' and @value='false'])[5]")
+    WebElement radioButtonSeasonJobDVP;
+
+//    @FindBy(xpath = "(//input[@type='radio' and @value='false'])[6]")
+//    WebElement radioButtonPVM_DVP;
+    //DVP
 
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Planuojamas mokėti bruto darbo užmokestis, Eur')]//input")
     WebElement inputSalary;
 
     @FindBy(xpath = "(//input[@type='radio' and @value='false'])[2]")
     WebElement radioButtonTemporaryJob;
-
-    //DVP
-    @FindBy(xpath = "(//input[@type='radio' and @value='true'])[2]")
-    WebElement radioButtonPersonCountTwo;
-    //DVP
-
 
     @FindBy(xpath = "(//input[@type='radio' and @value='false'])[3]")
     WebElement radioButtonSeasonJob;
@@ -162,13 +166,13 @@ public class SubmittedApplicationsPage extends UztisPage {
     WebElement inputJobDescription;
 
     @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[5]")
-    WebElement inputProsesDescription;
+    WebElement inputProsesDescriptionVUI_equipmentDescriptionDVP;
 
     @FindBy(xpath = "(//input[@type='radio' and @value='true'])[4]")
     WebElement radioButtonEnergy;
 
     @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[6]")
-    WebElement inputEnergyInformation;
+    WebElement inputEnergyInformationVUI_workInformationDVP;
 
     @FindBy(xpath = "(//input[@type='radio' and @value='true'])[5]")
     WebElement radioButtonRepair;
@@ -322,10 +326,10 @@ public class SubmittedApplicationsPage extends UztisPage {
     //--------------
 
     @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Asmenų skaičius')]//input)[1]")
-    WebElement inputPersonCountOne;
+    WebElement inputPersonCountOneDVP;
 
     @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Asmenų skaičius')]//input)[2]")
-    WebElement inputPersonCountTwo;
+    WebElement inputPersonCountTwoDVP;
 
     //Add Evaluators
     //---------------
@@ -648,6 +652,19 @@ public class SubmittedApplicationsPage extends UztisPage {
         inputJobCount.sendKeys(count);
     }
 
+    //DVP
+    public void clickRadioButtonForAlreadyWorkingDVP_step1() {
+        if (!radioButtonForAlreadyWorkingDVP_step1.isSelected()) {
+            radioButtonForAlreadyWorkingDVP_step1.click();
+        }
+    }
+
+    public void clickRadioButtonForNewWorkingDVP_step1() {
+        if (!radioButtonForNewWorkingDVP_step1.isSelected()) {
+            radioButtonForNewWorkingDVP_step1.click();
+        }
+    }
+    //DVP
     public void clickButtonNext() {
         if (!buttonNext.isSelected()) {
             buttonNext.click();
@@ -722,15 +739,15 @@ public class SubmittedApplicationsPage extends UztisPage {
     }
 
     //DVP
-public void selectDropdownJobNameAdaptable(String valueToSelect) {
+public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Ilgesnis laukimo laikas
 
     log.info("Located the dropdown button.");
     try {
-        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonJobNameAdaptable));
+        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonJobNameAdaptableDVP));
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView(true);", dropdownButtonJobNameAdaptable); // Užtikrinsime, kad elementas būtų matomas
-        dropdownButtonJobNameAdaptable.click();
+        js.executeScript("arguments[0].scrollIntoView(true);", dropdownButtonJobNameAdaptableDVP); // Užtikrinsime, kad elementas būtų matomas
+        dropdownButtonJobNameAdaptableDVP.click();
     } catch (Exception e) {
         log.error("Dropdown button click failed: {}", e.getMessage());
     }
@@ -757,21 +774,21 @@ public void selectDropdownJobNameAdaptable(String valueToSelect) {
     }
 
     try {
-        wait.until(ExpectedConditions.attributeToBe(dropdownButtonJobNameAdaptable, "aria-expanded", "false"));
+        wait.until(ExpectedConditions.attributeToBe(dropdownButtonJobNameAdaptableDVP, "aria-expanded", "false"));
     } catch (TimeoutException e) {
         log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
     }
 }
 
-    public void selectDropdownExpensesTyp(String valueToSelect) {
+    public void selectDropdownExpensesTypDVP(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Ilgesnis laukimo laikas
 
         log.info("Located the dropdown button.");
         try {
-            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonExpensesTyp));
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonExpensesTypDVP));
             JavascriptExecutor js = (JavascriptExecutor) driver;
-            js.executeScript("arguments[0].scrollIntoView(true);", dropdownButtonExpensesTyp); // Užtikrinsime, kad elementas būtų matomas
-            dropdownButtonExpensesTyp.click();
+            js.executeScript("arguments[0].scrollIntoView(true);", dropdownButtonExpensesTypDVP); // Užtikrinsime, kad elementas būtų matomas
+            dropdownButtonExpensesTypDVP.click();
         } catch (Exception e) {
             log.error("Dropdown button click failed: {}", e.getMessage());
         }
@@ -798,7 +815,7 @@ public void selectDropdownJobNameAdaptable(String valueToSelect) {
         }
 
         try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonExpensesTyp, "aria-expanded", "false"));
+            wait.until(ExpectedConditions.attributeToBe(dropdownButtonExpensesTypDVP, "aria-expanded", "false"));
         } catch (TimeoutException e) {
             log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
         }
@@ -811,16 +828,16 @@ public void selectDropdownJobNameAdaptable(String valueToSelect) {
     }
 
 
-    public void clickRadioButtonWithDisabilities() {
-        if (!radioButtonWithDisabilities.isSelected()) {
-            radioButtonWithDisabilities.click();
+    public void clickRadioButtonWithDisabilitiesVUI() {
+        if (!radioButtonWithDisabilitiesVUI.isSelected()) {
+            radioButtonWithDisabilitiesVUI.click();
         }
     }
 
     //DVP
-    public void clickRadioButtonForAlreadyWorking() {
-        if (!radioButtonForAlreadyWorking.isSelected()) {
-            radioButtonForAlreadyWorking.click();
+    public void clickRadioButtonForAlreadyWorkingDVP_step2() {
+        if (!radioButtonForAlreadyWorkingDVP_step2.isSelected()) {
+            radioButtonForAlreadyWorkingDVP_step2.click();
         }
     }
     //DVP
@@ -880,11 +897,11 @@ public void selectDropdownJobNameAdaptable(String valueToSelect) {
     }
 
     //DVP
-    public void selectValueByListDisabilitiesLevel(String valueToSelect) {
+    public void selectValueByListDisabilitiesLevelDVP(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
             log.info("Clicking on the dropdown button.");
-            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonDisabilitiesLevel)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonDisabilitiesLevelDVP)).click();
 
             List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option//span")));
             log.info("Found {} options in the dropdown.", options.size());
@@ -1017,13 +1034,7 @@ public void selectDropdownJobNameAdaptable(String valueToSelect) {
         }
     }
 
-    //DVP
-    public void clickRadioButtonPersonCountTwo() {
-        if (!radioButtonPersonCountTwo.isSelected()) {
-            radioButtonPersonCountTwo.click();
-        }
-    }
-    //DVP
+
 
     public void clickRadioButtonSeasonJob() {
         if (!radioButtonSeasonJob.isSelected()) {
@@ -1036,9 +1047,9 @@ public void selectDropdownJobNameAdaptable(String valueToSelect) {
         inputJobDescription.sendKeys(text);
     }
 
-    public void enterProsesDescription(String text) {
-        inputProsesDescription.clear();
-        inputProsesDescription.sendKeys(text);
+    public void enterProsesDescriptionVUI_equipmentDescriptionDVP(String text) {
+        inputProsesDescriptionVUI_equipmentDescriptionDVP.clear();
+        inputProsesDescriptionVUI_equipmentDescriptionDVP.sendKeys(text);
     }
 
     public void clickRadioButtonEnergy() {
@@ -1047,9 +1058,9 @@ public void selectDropdownJobNameAdaptable(String valueToSelect) {
         }
     }
 
-    public void enterEnergyInformation(String text) {
-        inputEnergyInformation.clear();
-        inputEnergyInformation.sendKeys(text);
+    public void enterEnergyInformationVUI_workInformationDVP(String text) {
+        inputEnergyInformationVUI_workInformationDVP.clear();
+        inputEnergyInformationVUI_workInformationDVP.sendKeys(text);
     }
 
     public void clickRadioButtonRepair() {
@@ -1450,14 +1461,14 @@ public void selectDropdownJobNameAdaptable(String valueToSelect) {
 
 
     //DVP
-    public void enterPersonCountOne(String count) {
-        inputPersonCountOne.clear();
-        inputPersonCountOne.sendKeys(count);
+    public void enterPersonCountOneDVP(String count) {
+        inputPersonCountOneDVP.clear();
+        inputPersonCountOneDVP.sendKeys(count);
     }
 
-    public void enterPersonCountTwo(String count) {
-        inputPersonCountTwo.clear();
-        inputPersonCountTwo.sendKeys(count);
+    public void enterPersonCountTwoDVP(String count) {
+        inputPersonCountTwoDVP.clear();
+        inputPersonCountTwoDVP.sendKeys(count);
     }
 
 //---------------------------

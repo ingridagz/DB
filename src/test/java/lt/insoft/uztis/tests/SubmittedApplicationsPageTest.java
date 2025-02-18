@@ -187,7 +187,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterInputJobFunction(text);
             log.debug("Entered job function: '{}'.", text);
 
-            submittedApplicationsPage.clickRadioButtonWithDisabilities();
+            submittedApplicationsPage.clickRadioButtonWithDisabilitiesVUI();
             log.debug("Selected 'RadioButtonWithDisabilities' option.");
 
             String valueToSelect2 = "Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis";
@@ -234,11 +234,11 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Entered job description: '{}'.", text3);
 
             String text4 = "Procesas 1";
-            submittedApplicationsPage.enterProsesDescription(text4);
+            submittedApplicationsPage.enterProsesDescriptionVUI_equipmentDescriptionDVP(text4);
             log.debug("Entered process description: '{}'.", text4);
 
             String text5 = "Energija 1";
-            submittedApplicationsPage.enterEnergyInformation(text5);
+            submittedApplicationsPage.enterEnergyInformationVUI_workInformationDVP(text5);
             log.debug("Entered energy information: '{}'.", text5);
 
             String text6 = "Remontas 1";
@@ -550,18 +550,18 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
 
             //only DVP
-            submittedApplicationsPage.clickRadioButtonWithDisabilities();
+            submittedApplicationsPage.clickRadioButtonForAlreadyWorkingDVP_step1();
             log.debug("Selected 'For already working' option.");
 
             String jobCount1 = "1";
-            submittedApplicationsPage.enterPersonCountOne(jobCount1);
+            submittedApplicationsPage.enterPersonCountOneDVP(jobCount1);
             log.debug("Entered person count1: '{}'.", jobCount1);
 
-            submittedApplicationsPage.clickRadioButtonPersonCountTwo();
+            submittedApplicationsPage.clickRadioButtonForNewWorkingDVP_step1();
             log.debug("Selected 'For new working' option.");
 
             String jobCount2 = "1";
-            submittedApplicationsPage.enterPersonCountTwo(jobCount2);
+            submittedApplicationsPage.enterPersonCountTwoDVP(jobCount2);
             log.debug("Entered person count2: '{}'.", jobCount2);
             //only DVP
 
@@ -572,7 +572,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             //--------------------
 
             String valueToSelect1 = "Administratoriai";
-            submittedApplicationsPage.selectDropdownJobNameAdaptable(valueToSelect1);
+            submittedApplicationsPage.selectDropdownJobNameAdaptableDVP(valueToSelect1);
             log.debug("Selected adaptable job name: '{}'.", valueToSelect1);
 
             submittedApplicationsPage.enterJobDateDVP();
@@ -582,11 +582,11 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterInputJobFunction(text);
             log.debug("Entered job function: '{}'.", text);
 
-//            submittedApplicationsPage.clickRadioButtonForAlreadyWorking();
-//            log.debug("Selected 'ForAlreadyWorking' 'no' option.");
+            submittedApplicationsPage.clickRadioButtonForAlreadyWorkingDVP_step2();
+            log.debug("Selected 'ForAlreadyWorking' 'no' option.");
 
             String valueToSelect2 = "Sunkaus neįgalumo lygis ar neviršijantis 25 procentų dalyvumo lygis (iki 2023 metų gruodžio 31 dienos – iki 25 procentų darbingumo lygis)";
-            submittedApplicationsPage.selectValueByListDisabilitiesLevel(valueToSelect2);
+            submittedApplicationsPage.selectValueByListDisabilitiesLevelDVP(valueToSelect2);
             log.debug("Selected disabilities type: '{}'.", valueToSelect2);
 
             String text1 = "Negalia 1";
@@ -602,11 +602,11 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Entered job description: '{}'.", text3);
 
             String text4 = "Priemonių įsigyjimas 1";
-            submittedApplicationsPage.enterProsesDescription(text4);
+            submittedApplicationsPage.enterProsesDescriptionVUI_equipmentDescriptionDVP(text4);
             log.debug("Entered equipment description: '{}'.", text4);
 
             String text5 = "Darbai 1";
-            submittedApplicationsPage.enterEnergyInformation(text5);
+            submittedApplicationsPage.enterEnergyInformationVUI_workInformationDVP(text5);
             log.debug("Entered work information: '{}'.", text5);
 
             String valueToSelect3 = "Kita";
@@ -621,17 +621,17 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterSalary(amount1);
             log.debug("Entered salary amount: '{}'.", amount1);
 
-//            submittedApplicationsPage.clickRadioButtonTemporaryJob();
-//            log.debug("Selected 'Temporary Job' radio button.");
+            submittedApplicationsPage.clickRadioButtonTemporaryJobDVP();
+            log.debug("Selected 'Temporary Job' radio button.");
 
-//            submittedApplicationsPage.clickRadioButtonSeasonJob();
-//            log.debug("Selected 'Season Job' radio button.");
-//
-//            submittedApplicationsPage.clickRadioButtonPVM();
-//            log.debug("Selected 'PVM' radio button.");
+            submittedApplicationsPage.clickRadioButtonSeasonJobDVP();
+            log.debug("Selected 'Season Job' radio button.");
+
+            submittedApplicationsPage.clickRadioButtonPVM();
+            log.debug("Selected 'PVM' radio button.");
 
             String type1 = "Darbo vietos pritaikymui";
-            submittedApplicationsPage.selectDropdownExpensesTyp(type1);
+            submittedApplicationsPage.selectDropdownExpensesTypDVP(type1);
             log.debug("Selected adaptable job name: '{}'.", type1);
 
 //            String valueToSelect5 = "Įsigyti";

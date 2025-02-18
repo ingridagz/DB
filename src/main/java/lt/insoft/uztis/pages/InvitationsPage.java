@@ -306,7 +306,7 @@ public class InvitationsPage extends UztisPage {
 
     public void enterEndDate() {
         LocalDate today = LocalDate.now();
-        LocalDate futureDate = today.plusDays(3); // Pridedame 3 dienas
+        LocalDate futureDate = today.plusDays(30); // Pridedame 30 dienų
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String formattedFutureDate = futureDate.format(formatter);
 
@@ -320,7 +320,7 @@ public class InvitationsPage extends UztisPage {
 
     public void enterPublicationEndDate() {
         LocalDate today = LocalDate.now();
-        LocalDate futureDate = today.plusDays(6); // Pridedame 6 dienas
+        LocalDate futureDate = today.plusDays(60); // Pridedame 60 dienu
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String formattedFutureDate = futureDate.format(formatter);
 
