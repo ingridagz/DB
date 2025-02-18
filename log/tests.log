@@ -72303,3 +72303,590 @@ Session ID: 2d7059d6163d854b90be6522e8ddd0c5
 2025-02-17 15:20:23 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Fetched label text: Įvertinta
 2025-02-17 15:20:23 [main] INFO  l.i.uztis.tests.EvaluationsPageTest - Verified that the label text matches the expected value.
 2025-02-17 15:20:23 [main] INFO  l.i.uztis.tests.EvaluationsPageTest - Test 'testConfirmEvaluationTwo' completed successfully.
+2025-02-18 07:25:10 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-02-18 07:25:10 [main] INFO  l.i.uztis.tests.EvaluationsPageTest - Starting test:'testFillSaveDraftEvaluationThree'
+2025-02-18 07:25:10 [main] INFO  l.i.uztis.tests.EvaluationsPageTest - Starting test:'testNavigateToEvaluationsPage'
+2025-02-18 07:25:11 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - User logged in with test credentials
+2025-02-18 07:25:11 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Opened 'Application Processing' menu.
+2025-02-18 07:25:11 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Clicked on 'Evaluations' menu.
+2025-02-18 07:25:11 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Navigating to evaluations menu.
+2025-02-18 07:25:11 [main] INFO  l.i.uztis.tests.EvaluationsPageTest - Test 'testNavigateToEvaluationsPage' completed successfully.
+2025-02-18 07:25:12 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Clicked on last evaluation.
+2025-02-18 07:25:12 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Clicked 'Edit'.
+2025-02-18 07:25:12 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Entered commission date.
+2025-02-18 07:25:13 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Selected 'Without Commission' radio button.
+2025-02-18 07:25:13 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Entered chairman name: 'Pirmininkas Pirmininkauskas'.
+2025-02-18 07:25:13 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Entered member name: 'Narys Narauskas'.
+2025-02-18 07:25:13 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Clicked 'Continue'.
+2025-02-18 07:25:13 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Entered chairman score 1: '1'.
+2025-02-18 07:25:14 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Entered member score 1: '2'.
+2025-02-18 07:25:14 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Entered member conclusion 1: 'Išvada - palanki 1'.
+2025-02-18 07:25:14 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Entered chairman score 2: '3'.
+2025-02-18 07:25:14 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Entered member score 2: '4'.
+2025-02-18 07:25:14 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Entered member conclusion 2: 'Išvada - palanki 2'.
+2025-02-18 07:25:14 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Entered chairman score 3: '5'.
+2025-02-18 07:25:14 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Entered member score 3: '6'.
+2025-02-18 07:25:15 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Entered member conclusion 3: 'Išvada - palanki 3'.
+2025-02-18 07:25:15 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Entered chairman score 4: '7'.
+2025-02-18 07:25:15 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Entered member score 4: '8'.
+2025-02-18 07:25:15 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Entered member conclusion 4: 'Išvada - palanki 4'.
+2025-02-18 07:25:15 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Entered chairman score 5: '9'.
+2025-02-18 07:25:15 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Entered member score 5: '10'.
+2025-02-18 07:25:16 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Entered member conclusion 5: 'Išvada - palanki 5'.
+2025-02-18 07:25:16 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Clicked 'Save Draft'.
+2025-02-18 07:25:16 [main] DEBUG l.insoft.uztis.pages.InvitationsPage - Verified success message: 'Duomenys sėkmingai išsaugoti.'
+2025-02-18 07:25:16 [main] INFO  l.i.uztis.tests.EvaluationsPageTest - Test 'testFillSaveDraftEvaluationThree' completed successfully.
+2025-02-18 07:25:40 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-02-18 07:25:40 [main] INFO  l.i.uztis.tests.EvaluationsPageTest - Starting test:'testConfirmEvaluationThree'
+2025-02-18 07:25:40 [main] INFO  l.i.uztis.tests.EvaluationsPageTest - Starting test:'testNavigateToEvaluationsPage'
+2025-02-18 07:25:40 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - User logged in with test credentials
+2025-02-18 07:25:40 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Opened 'Application Processing' menu.
+2025-02-18 07:25:41 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Clicked on 'Evaluations' menu.
+2025-02-18 07:25:41 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Navigating to evaluations menu.
+2025-02-18 07:25:41 [main] INFO  l.i.uztis.tests.EvaluationsPageTest - Test 'testNavigateToEvaluationsPage' completed successfully.
+2025-02-18 07:25:41 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Clicked on last evaluation.
+2025-02-18 07:25:41 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Clicked 'Edit'.
+2025-02-18 07:25:42 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Clicked 'Continue'.
+2025-02-18 07:25:42 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Clicked 'Confirm'.
+2025-02-18 07:25:42 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Clicked 'Confirm Confirmation'.
+2025-02-18 07:25:45 [main] DEBUG l.i.uztis.tests.EvaluationsPageTest - Fetched label text: Įvertinta
+2025-02-18 07:25:45 [main] INFO  l.i.uztis.tests.EvaluationsPageTest - Verified that the label text matches the expected value.
+2025-02-18 07:25:45 [main] INFO  l.i.uztis.tests.EvaluationsPageTest - Test 'testConfirmEvaluationThree' completed successfully.
+2025-02-18 08:13:32 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-02-18 08:13:32 [main] INFO  l.insoft.uztis.tests.FundingPageTest - Starting test:'testNavigateToFundingPage'
+2025-02-18 08:13:32 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - User logged in with test credentials
+2025-02-18 08:13:32 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Opened 'Application Processing' menu.
+2025-02-18 08:13:32 [main] ERROR l.insoft.uztis.tests.FundingPageTest - Test 'testNavigateToFundingPage' failed with error: Cannot invoke "lt.insoft.uztis.pages.FundingPage.clickMenuFundingQueue()" because "this.fundingPage" is null
+java.lang.NullPointerException: Cannot invoke "lt.insoft.uztis.pages.FundingPage.clickMenuFundingQueue()" because "this.fundingPage" is null
+	at lt.insoft.uztis.tests.FundingPageTest.navigateToFundingMenu(FundingPageTest.java:23)
+	at lt.insoft.uztis.tests.FundingPageTest.testNavigateToFundingPage(FundingPageTest.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-02-18 08:13:33 [main] INFO  l.insoft.uztis.tests.utils.TestUtils - Screenshot moved to C:\Users\ingrida.zadorozniene\Desktop\Asm\UZTIS\UZTIS_tests\test-output\screenshots\20250218\081333127_testNavigateToFundingPage().png
+2025-02-18 08:18:29 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-02-18 08:18:29 [main] INFO  l.insoft.uztis.tests.FundingPageTest - Starting test:'testNavigateToFundingPage'
+2025-02-18 08:18:29 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - User logged in with test credentials
+2025-02-18 08:18:30 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Opened 'Application Processing' menu.
+2025-02-18 08:18:30 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Clicked on 'Funding' menu.
+2025-02-18 08:18:30 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Navigating to funding menu.
+2025-02-18 08:18:30 [main] INFO  l.insoft.uztis.tests.FundingPageTest - Test 'testNavigateToFundingPage' completed successfully.
+2025-02-18 08:27:31 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-02-18 08:27:31 [main] INFO  l.insoft.uztis.tests.FundingPageTest - Starting test:'testFundApplication'
+2025-02-18 08:27:31 [main] INFO  l.insoft.uztis.tests.FundingPageTest - Starting test:'testNavigateToFundingPage'
+2025-02-18 08:27:32 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - User logged in with test credentials
+2025-02-18 08:27:32 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Opened 'Application Processing' menu.
+2025-02-18 08:27:32 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Clicked on 'Funding' menu.
+2025-02-18 08:27:32 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Navigating to funding menu.
+2025-02-18 08:27:32 [main] INFO  l.insoft.uztis.tests.FundingPageTest - Test 'testNavigateToFundingPage' completed successfully.
+2025-02-18 08:27:32 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Opened 'Application Processing' menu.
+2025-02-18 08:27:33 [main] ERROR l.insoft.uztis.tests.FundingPageTest - Test 'testFundApplication' failed with error: element click intercepted: Element <a _ngcontent-ng-c2406107313="" routerlinkactive="active" mattooltipposition="right" class="mat-mdc-tooltip-trigger d-flex routerItem justify-content-start align-items-center mat-mdc-tooltip-disabled" href="/application/description">...</a> is not clickable at point (165, 563). Other element would receive the click: <span _ngcontent-ng-c2406107313="" class="routerItemText level-0">...</span>
+  (Session info: chrome=132.0.6834.197)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b713e14e4e25d547780386be8cd885dd, clickElement {id=f.A415CE29C374CFEED5343A3F77887BBC.d.C1717E2EC9C82ECC5C51EAB16C38C760.e.34}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65310}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65310/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (b713e14e4e25d547780386be8cd885dd)] -> xpath: //a[@href='/application/description']]
+Session ID: b713e14e4e25d547780386be8cd885dd
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a _ngcontent-ng-c2406107313="" routerlinkactive="active" mattooltipposition="right" class="mat-mdc-tooltip-trigger d-flex routerItem justify-content-start align-items-center mat-mdc-tooltip-disabled" href="/application/description">...</a> is not clickable at point (165, 563). Other element would receive the click: <span _ngcontent-ng-c2406107313="" class="routerItemText level-0">...</span>
+  (Session info: chrome=132.0.6834.197)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b713e14e4e25d547780386be8cd885dd, clickElement {id=f.A415CE29C374CFEED5343A3F77887BBC.d.C1717E2EC9C82ECC5C51EAB16C38C760.e.34}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65310}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65310/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (b713e14e4e25d547780386be8cd885dd)] -> xpath: //a[@href='/application/description']]
+Session ID: b713e14e4e25d547780386be8cd885dd
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at lt.insoft.uztis.pages.ApplicationFormsPage.clickMenuApplicationForms(ApplicationFormsPage.java:174)
+	at lt.insoft.uztis.tests.FundingPageTest.getAndInsertInvitationCodeText(FundingPageTest.java:31)
+	at lt.insoft.uztis.tests.FundingPageTest.testFundApplication(FundingPageTest.java:91)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-02-18 08:27:33 [main] INFO  l.insoft.uztis.tests.utils.TestUtils - Screenshot moved to C:\Users\ingrida.zadorozniene\Desktop\Asm\UZTIS\UZTIS_tests\test-output\screenshots\20250218\082733898_testFundApplication().png
+2025-02-18 08:29:33 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-02-18 08:29:33 [main] INFO  l.insoft.uztis.tests.FundingPageTest - Starting test:'testFundApplication'
+2025-02-18 08:29:33 [main] INFO  l.insoft.uztis.tests.FundingPageTest - Starting test:'testNavigateToFundingPage'
+2025-02-18 08:29:33 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - User logged in with test credentials
+2025-02-18 08:29:34 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Opened 'Application Processing' menu.
+2025-02-18 08:29:34 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Clicked on 'Funding' menu.
+2025-02-18 08:29:34 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Navigating to funding menu.
+2025-02-18 08:29:34 [main] INFO  l.insoft.uztis.tests.FundingPageTest - Test 'testNavigateToFundingPage' completed successfully.
+2025-02-18 08:29:34 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Opened 'Application Processing' menu.
+2025-02-18 08:29:35 [main] ERROR l.insoft.uztis.tests.FundingPageTest - Test 'testFundApplication' failed with error: element click intercepted: Element <a _ngcontent-ng-c2406107313="" routerlinkactive="active" mattooltipposition="right" class="mat-mdc-tooltip-trigger d-flex routerItem justify-content-start align-items-center mat-mdc-tooltip-disabled" href="/application/description">...</a> is not clickable at point (165, 550). Other element would receive the click: <a _ngcontent-ng-c2406107313="" routerlinkactive="active" mattooltipposition="right" class="mat-mdc-tooltip-trigger d-flex routerItem justify-content-start align-items-center mat-mdc-tooltip-disabled" href="/application/project">...</a>
+  (Session info: chrome=132.0.6834.197)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f560120ffbec3c8c3abbc3943c0abf73, clickElement {id=f.AFF03F9BF5BD32D9614E9B53161FF8A3.d.E3448CAF7991D89025D0290F266A412E.e.34}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65396}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65396/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f560120ffbec3c8c3abbc3943c0abf73)] -> xpath: //a[@href='/application/description']]
+Session ID: f560120ffbec3c8c3abbc3943c0abf73
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a _ngcontent-ng-c2406107313="" routerlinkactive="active" mattooltipposition="right" class="mat-mdc-tooltip-trigger d-flex routerItem justify-content-start align-items-center mat-mdc-tooltip-disabled" href="/application/description">...</a> is not clickable at point (165, 550). Other element would receive the click: <a _ngcontent-ng-c2406107313="" routerlinkactive="active" mattooltipposition="right" class="mat-mdc-tooltip-trigger d-flex routerItem justify-content-start align-items-center mat-mdc-tooltip-disabled" href="/application/project">...</a>
+  (Session info: chrome=132.0.6834.197)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f560120ffbec3c8c3abbc3943c0abf73, clickElement {id=f.AFF03F9BF5BD32D9614E9B53161FF8A3.d.E3448CAF7991D89025D0290F266A412E.e.34}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65396}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65396/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f560120ffbec3c8c3abbc3943c0abf73)] -> xpath: //a[@href='/application/description']]
+Session ID: f560120ffbec3c8c3abbc3943c0abf73
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at lt.insoft.uztis.pages.ApplicationFormsPage.clickMenuApplicationForms(ApplicationFormsPage.java:174)
+	at lt.insoft.uztis.tests.FundingPageTest.testFundApplication(FundingPageTest.java:99)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-02-18 08:29:35 [main] INFO  l.insoft.uztis.tests.utils.TestUtils - Screenshot moved to C:\Users\ingrida.zadorozniene\Desktop\Asm\UZTIS\UZTIS_tests\test-output\screenshots\20250218\082935755_testFundApplication().png
+2025-02-18 08:36:48 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-02-18 08:36:48 [main] INFO  l.insoft.uztis.tests.FundingPageTest - Starting test:'testFundApplication'
+2025-02-18 08:36:48 [main] INFO  l.insoft.uztis.tests.FundingPageTest - Starting test:'testNavigateToFundingPage'
+2025-02-18 08:36:49 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - User logged in with test credentials
+2025-02-18 08:36:49 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Opened 'Application Processing' menu.
+2025-02-18 08:36:49 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Clicked on 'Funding' menu.
+2025-02-18 08:36:49 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Navigating to funding menu.
+2025-02-18 08:36:49 [main] INFO  l.insoft.uztis.tests.FundingPageTest - Test 'testNavigateToFundingPage' completed successfully.
+2025-02-18 08:36:59 [main] ERROR l.insoft.uztis.tests.FundingPageTest - Test 'testFundApplication' failed with error: no such element: Unable to locate element: {"method":"xpath","selector":"//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell']"}
+  (Session info: chrome=132.0.6834.197)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [61d72889a4b5fab593733bf868284a0e, findElement {value=//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49278}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49278/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 61d72889a4b5fab593733bf868284a0e
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell']"}
+  (Session info: chrome=132.0.6834.197)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [61d72889a4b5fab593733bf868284a0e, findElement {value=//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49278}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49278/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 61d72889a4b5fab593733bf868284a0e
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+	at lt.insoft.uztis.pages.ApplicationFormsPage.getLastDescriptionCode(ApplicationFormsPage.java:518)
+	at lt.insoft.uztis.tests.FundingPageTest.testFundApplication(FundingPageTest.java:71)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-02-18 08:36:59 [main] INFO  l.insoft.uztis.tests.utils.TestUtils - Screenshot moved to C:\Users\ingrida.zadorozniene\Desktop\Asm\UZTIS\UZTIS_tests\test-output\screenshots\20250218\083659640_testFundApplication().png
+2025-02-18 08:38:17 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-02-18 08:38:17 [main] INFO  l.insoft.uztis.tests.FundingPageTest - Starting test:'testFundApplication'
+2025-02-18 08:38:23 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - MenuApplicationProcessing button is not displayed invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=132.0.6834.197)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c3da9acac8d0d3d16f545952fb01009a, findElement {value=//mat-expansion-panel[4]/mat-expansion-panel-header[@role='button'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.197, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49348}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49348/devtoo..., se:cdpVersion: 132.0.6834.197, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c3da9acac8d0d3d16f545952fb01009a
+2025-02-18 08:38:23 [main] ERROR l.insoft.uztis.tests.FundingPageTest - Test 'testFundApplication' failed with error: MenuApplicationProcessing is not displayed!
+java.lang.RuntimeException: MenuApplicationProcessing is not displayed!
+	at lt.insoft.uztis.pages.ApplicationFormsPage.openMenuApplicationProcessing(ApplicationFormsPage.java:151)
+	at lt.insoft.uztis.tests.FundingPageTest.testFundApplication(FundingPageTest.java:71)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-02-18 08:39:19 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-02-18 08:39:19 [main] INFO  l.insoft.uztis.tests.FundingPageTest - Starting test:'testFundApplication'
+2025-02-18 08:39:20 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - User logged in with test credentials
+2025-02-18 08:39:20 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Opened 'Application Processing' menu.
+2025-02-18 08:39:20 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Clicked on 'Application Forms' menu.
+2025-02-18 08:39:21 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Retrieved last description code text: 'TST-VUI-00'.
+2025-02-18 08:39:21 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Clicked on 'Invitation' menu.
+2025-02-18 08:39:22 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Selected application section by code: 'TST-VUI-00'.
+2025-02-18 08:39:22 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Clicked 'Search' button.
+2025-02-18 08:39:22 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Retrieved invitation code: ''.
+2025-02-18 08:39:22 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Clicked on 'Submitted Applications' menu.
+2025-02-18 08:39:23 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Selected invitation by code: 'TST-VUI-00'.
+2025-02-18 08:39:33 [main] ERROR l.insoft.uztis.pages.InvitationsPage - Failed to verify the success message: '...'. Available messages: []
+2025-02-18 08:39:33 [main] INFO  l.insoft.uztis.tests.FundingPageTest - Test 'testFundApplication' completed successfully.
+2025-02-18 08:40:58 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-02-18 08:40:58 [main] INFO  l.insoft.uztis.tests.FundingPageTest - Starting test:'testFundApplication'
+2025-02-18 08:40:59 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - User logged in with test credentials
+2025-02-18 08:40:59 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Opened 'Application Processing' menu.
+2025-02-18 08:40:59 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Clicked on 'Application Forms' menu.
+2025-02-18 08:40:59 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Retrieved last description code text: 'TST-VUI-00'.
+2025-02-18 08:41:00 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Clicked on 'Invitation' menu.
+2025-02-18 08:41:00 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Selected application section by code: 'TST-VUI-00'.
+2025-02-18 08:41:01 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Clicked 'Search' button.
+2025-02-18 08:41:01 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Retrieved invitation code: ''.
+2025-02-18 08:41:01 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Clicked on 'Funding Queue' menu.
+2025-02-18 08:41:02 [main] DEBUG l.insoft.uztis.tests.FundingPageTest - Selected invitation by code: 'TST-VUI-00'.
+2025-02-18 08:41:12 [main] ERROR l.insoft.uztis.pages.InvitationsPage - Failed to verify the success message: '...'. Available messages: []
+2025-02-18 08:41:12 [main] INFO  l.insoft.uztis.tests.FundingPageTest - Test 'testFundApplication' completed successfully.
