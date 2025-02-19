@@ -190,30 +190,46 @@ public class SubmittedApplicationsPage extends UztisPage {
     WebElement dropdownButtonNecessaryForJobTwo;
 
     //DVP
-//    @FindBy(xpath = "//label//mat-label[contains(text(), 'Reikalinga')]")
-    @FindBy(xpath = "//label[contains(@class, 'mdc-floating-label') and .//mat-label[contains(., 'Reikalinga')]]")
-    WebElement dropdownButtonNecessaryForJobDVP;
+//    @FindBy(xpath = "//label[contains(@class, 'mdc-floating-label') and .//mat-label[contains(., 'Reikalinga')]]")
+    @FindBy(xpath = "//mat-label[contains(text(), 'Reikalinga')]")
+//    @FindBy(xpath = "//label[contains(text(),'Reikalinga')]/following-sibling::common-select//mat-select")
+    WebElement dropdownButtonNecessaryForJobOneDVP;
 
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Darbo priemonės pavadinimas')]//input")
     WebElement inputTool;
+
+    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Išlaidų elemento pavadinimas')]//input")
+    WebElement inputToolDVP;
 
     //DVP
 
 //    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Darbo priemonės pavadinimas')]//input")
 //    WebElement inputTool;
 
-        @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Darbo priemonės techninis parametras')]]//input)[1]")
+    @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Darbo priemonės techninis parametras')]]//input)[1]")
     WebElement inputToolParameterOne;
     @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Darbo priemonės techninis parametras')]]//input)[2]")
     WebElement inputToolParameterTwo;
     @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Darbo priemonės techninis parametras')]]//input)[3]")
     WebElement inputToolParameterThree;
 
+    @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Išlaidų elemento techninis parametras')]]//input)[1]")
+    WebElement inputToolParameterOneDVP;
+    @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Išlaidų elemento techninis parametras')]]//input)[2]")
+    WebElement inputToolParameterTwoDVP;
+    @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Išlaidų elemento techninis parametras')]]//input)[3]")
+    WebElement inputToolParameterThreeDVP;
+
+
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Darbo priemonės kiekis, vnt.')]//input")
     WebElement inputToolsCount;
 
+    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Išlaidų elemento kiekis, vnt.')]//input")
+    WebElement inputToolsCountDVP;
+
     @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Kaina, Eur')]//input)[1]")
     WebElement inputPriceOne;
+
 
     @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Kaina, Eur')]//input)[2]")
     WebElement inputPriceTwo;
@@ -250,8 +266,14 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[3]")
     WebElement inputProjectDateFrom;
 
+    @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[2]")
+    WebElement inputProjectDateFromDVP;
+
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[4]")
     WebElement inputProjectDateUntil;
+
+    @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[3]")
+    WebElement inputProjectDateUntilDVP;
 
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Gautos paramos suma, Eur')]//input")
     WebElement inputSupportAmount;
@@ -665,6 +687,7 @@ public class SubmittedApplicationsPage extends UztisPage {
         }
     }
     //DVP
+
     public void clickButtonNext() {
         if (!buttonNext.isSelected()) {
             buttonNext.click();
@@ -1034,11 +1057,21 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
         }
     }
 
-
+    public void clickRadioButtonTemporaryJobDVP() {
+        if (!radioButtonTemporaryJobDVP.isSelected()) {
+            radioButtonTemporaryJobDVP.click();
+        }
+    }
 
     public void clickRadioButtonSeasonJob() {
         if (!radioButtonSeasonJob.isSelected()) {
             radioButtonSeasonJob.click();
+        }
+    }
+
+    public void clickRadioButtonSeasonJobDVP() {
+        if (!radioButtonSeasonJobDVP.isSelected()) {
+            radioButtonSeasonJobDVP.click();
         }
     }
 
@@ -1139,11 +1172,11 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
     }
 
     //DVP
-    public void selectDropdownNecessaryForJobDVP(String valueToSelect) {
+    public void selectDropdownNecessaryForJobOneDVP(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 
         log.info("Located the dropdown button.");
-        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonNecessaryForJobDVP)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonNecessaryForJobOneDVP)).click();
 
         List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option/span")));
 
@@ -1162,7 +1195,7 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
         }
 
         try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonNecessaryForJobDVP, "aria-expanded", "false"));
+            wait.until(ExpectedConditions.attributeToBe(dropdownButtonNecessaryForJobOneDVP, "aria-expanded", "false"));
         } catch (TimeoutException e) {
             log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
         }
@@ -1173,6 +1206,11 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
     public void enterTool(String tool) {
         inputTool.clear();
         inputTool.sendKeys(tool);
+    }
+
+    public void enterToolDVP(String tool) {
+        inputToolDVP.clear();
+        inputToolDVP.sendKeys(tool);
     }
 
     public void enterToolParameterOne(String parameter) {
@@ -1190,9 +1228,30 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
         inputToolParameterThree.sendKeys(parameter);
     }
 
+    public void enterToolParameterOneDVP(String parameter) {
+        inputToolParameterOneDVP.clear();
+        inputToolParameterOneDVP.sendKeys(parameter);
+    }
+
+    public void enterToolParameterTwoDVP(String parameter) {
+        inputToolParameterTwoDVP.clear();
+        inputToolParameterTwoDVP.sendKeys(parameter);
+    }
+
+    public void enterToolParameterThreeDVP(String parameter) {
+        inputToolParameterThreeDVP.clear();
+        inputToolParameterThreeDVP.sendKeys(parameter);
+    }
+
+
     public void enterToolsCount(String amount) {
         inputToolsCount.clear();
         inputToolsCount.sendKeys(amount);
+    }
+
+    public void enterToolsCountDVP(String amount) {
+        inputToolsCountDVP.clear();
+        inputToolsCountDVP.sendKeys(amount);
     }
 
     public void enterPriceOne(String amount) {
@@ -1272,6 +1331,21 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
         }
     }
 
+    public void enterProjectDateFromDVP() {
+        LocalDate today = LocalDate.now();
+        LocalDate pastDate = today.minusDays(1);
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedPastDate = pastDate.format(formatter);
+
+        if (inputProjectDateFromDVP.isDisplayed() && inputProjectDateFromDVP.isEnabled()) {
+            inputProjectDateFromDVP.clear();
+            inputProjectDateFromDVP.sendKeys(formattedPastDate);
+        } else {
+            throw new RuntimeException("End date input is not interactable.");
+        }
+    }
+
     public void enterProjectDateUntil() {
         LocalDate today = LocalDate.now();
         LocalDate pastDate = today.plusYears(1);
@@ -1282,6 +1356,21 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
         if (inputProjectDateUntil.isDisplayed() && inputProjectDateUntil.isEnabled()) {
             inputProjectDateUntil.clear();
             inputProjectDateUntil.sendKeys(formattedPastDate);
+        } else {
+            throw new RuntimeException("End date input is not interactable.");
+        }
+    }
+
+    public void enterProjectDateUntilDVP() {
+        LocalDate today = LocalDate.now();
+        LocalDate pastDate = today.plusYears(1);
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedPastDate = pastDate.format(formatter);
+
+        if (inputProjectDateUntilDVP.isDisplayed() && inputProjectDateUntilDVP.isEnabled()) {
+            inputProjectDateUntilDVP.clear();
+            inputProjectDateUntilDVP.sendKeys(formattedPastDate);
         } else {
             throw new RuntimeException("End date input is not interactable.");
         }

@@ -531,14 +531,13 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterEmailAddress(emailInput);
             log.debug("Entered email: '{}'.", emailInput);
 
-            //only DVP
+            //DVP
             SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationOne, true);
             log.debug("Checked 'For workplace adaptation' checkbox 1.");
 
             SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationTwo, true);
             log.debug("Checked 'For environmental adaptation' checkbox 2.");
-            //only DVP
-
+            //DVP
 
             String valueToSelect = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
             submittedApplicationsPage.selectValueByListEVRK_DVP(valueToSelect);
@@ -549,7 +548,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Entered address: '{}'.", addressInput);
 
 
-            //only DVP
+            //oDVP
             submittedApplicationsPage.clickRadioButtonForAlreadyWorkingDVP_step1();
             log.debug("Selected 'For already working' option.");
 
@@ -563,7 +562,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             String jobCount2 = "1";
             submittedApplicationsPage.enterPersonCountTwoDVP(jobCount2);
             log.debug("Entered person count2: '{}'.", jobCount2);
-            //only DVP
+            //DVP
 
 
             submittedApplicationsPage.clickButtonNext();
@@ -634,28 +633,28 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectDropdownExpensesTypDVP(type1);
             log.debug("Selected adaptable job name: '{}'.", type1);
 
-//            String valueToSelect5 = "Įsigyti";
-//            submittedApplicationsPage.selectDropdownNecessaryForJobDVP(valueToSelect5);
-//            log.debug("Selected necessary for job: '{}'.", valueToSelect5);
+            String valueToSelect5 = "Gaminti";
+            submittedApplicationsPage.selectDropdownNecessaryForJobOneDVP(valueToSelect5);
+            log.debug("Selected necessary for job: '{}'.", valueToSelect5);
 
-//            String valueToSelect6 = "Darbo priemonė 1";
-//            submittedApplicationsPage.enterTool(valueToSelect6);
-//            log.debug("Selected tool: '{}'.", valueToSelect6);
+            String valueToSelect6 = "Darbo priemonė 1";
+            submittedApplicationsPage.enterToolDVP(valueToSelect6);
+            log.debug("Selected tool: '{}'.", valueToSelect6);
 
             String valueToSelect7 = "Darbo priemonės 1 parametras 1";
-            submittedApplicationsPage.enterToolParameterOne(valueToSelect7);
+            submittedApplicationsPage.enterToolParameterOneDVP(valueToSelect7);
             log.debug("Selected tool parameter one: '{}'.", valueToSelect7);
 
             String valueToSelect8 = "Darbo priemonės 1 parametras 2";
-            submittedApplicationsPage.enterToolParameterTwo(valueToSelect8);
+            submittedApplicationsPage.enterToolParameterTwoDVP(valueToSelect8);
             log.debug("Selected tool parameter two: '{}'.", valueToSelect8);
 
             String valueToSelect9 = "Darbo priemonės 1 parametras 3";
-            submittedApplicationsPage.enterToolParameterThree(valueToSelect9);
+            submittedApplicationsPage.enterToolParameterThreeDVP(valueToSelect9);
             log.debug("Selected tool parameter three: '{}'.", valueToSelect9);
 
             String count1 = "1";
-            submittedApplicationsPage.enterToolsCount(count1);
+            submittedApplicationsPage.enterToolsCountDVP(count1);
             log.debug("Entered tool count: '{}'.", count1);
 
             String amount2 = "1000";
@@ -673,10 +672,10 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterProgramName(programName);
             log.debug("Entered program name: '{}'.", programName);
 
-            submittedApplicationsPage.enterProjectDateFrom();
+            submittedApplicationsPage.enterProjectDateFromDVP();
             log.debug("Entered project date from.");
 
-            submittedApplicationsPage.enterProjectDateUntil();
+            submittedApplicationsPage.enterProjectDateUntilDVP();
             log.debug("Entered project date until.");
 
             String amount4 = "2000";
