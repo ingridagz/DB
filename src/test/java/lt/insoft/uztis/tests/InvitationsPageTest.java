@@ -8,8 +8,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 
-import java.util.List;
-
 import static java.lang.invoke.MethodHandles.lookup;
 import static org.slf4j.LoggerFactory.getLogger;
 
@@ -84,8 +82,8 @@ public class InvitationsPageTest extends UztisPageTest {
     }
 
     @Test
-    void testCreateNewVuiInvitationDraft() {
-        log.info("Starting test:'testCreateNewVuiInvitationDraft'");
+    void testCreateNewVuiInvitationDraft_toEdit() {
+        log.info("Starting test:'testCreateNewVuiInvitationDraft_toEdit'");
 
         try {
             applicationFormsPage.login("test", "test");
@@ -133,9 +131,9 @@ public class InvitationsPageTest extends UztisPageTest {
 
 //        TestUtils.takeScreenshot(driver, "testCreateNewVuiInvitationDraft");
 
-            log.info("Test 'testCreateNewVuiInvitationDraft' completed successfully.");
+            log.info("Test 'testCreateNewVuiInvitationDraft_toEdit' completed successfully.");
         } catch (AssertionError | Exception e) {
-            log.error("Test 'testCreateNewVuiInvitationDraft' failed with error: {}", e.getMessage(), e);
+            log.error("Test 'testCreateNewVuiInvitationDraft_toEdit' failed with error: {}", e.getMessage(), e);
             throw e;
         }
     }

@@ -34,7 +34,11 @@ public class ApplicationFormsPage extends UztisPage {
     //Menu
 //    @FindBy(xpath = "//button/mat-icon[@role='img']")
 //    WebElement MenuAppProcessing;
-    @FindBy(xpath = "//mat-expansion-panel[4]/mat-expansion-panel-header[@role='button']")
+//    @FindBy(xpath = "//mat-expansion-panel[4]/mat-expansion-panel-header[@role='button']")
+//    @FindBy(xpath = "//mat-expansion-panel-header[.//span[contains(text(), 'Paraiškų tvarkymas')]]")
+//    @FindBy(xpath = "//mat-expansion-panel-header[.//span[contains(text(), 'Paraiškų tvarkymas')]]//mat-icon[text()='expand_more']")
+//    @FindBy(xpath = "//span[@class='mat-content mat-content-hide-toggle']//span[contains(text(), 'Paraiškų tvarkymas')]")
+    @FindBy(xpath = "//mat-expansion-panel-header[@id='mat-expansion-panel-header-4']")
     WebElement buttonMenuApplicationProcessing;
 
     @FindBy(xpath = "//a[@href='/application/description']")
@@ -136,6 +140,48 @@ public class ApplicationFormsPage extends UztisPage {
 
 //    @FindBy(css = ".components .ng-star-inserted")
 //    WebElement formDataArea;
+
+    //-------------------------------------------------------------------
+
+    @FindBy(xpath = "//span[@class='mdc-tab__text-label' and contains(text(), 'Projekto vykdymo eiga')]")
+    WebElement tabProjectProgress;
+
+    @FindBy(xpath = "(//mat-label[contains(text(), 'Dokumentas')])[3]")
+    WebElement dropdownButtonDocument;
+
+
+    public void clickTabProjectProgress() {
+        tabProjectProgress.click();
+    }
+
+    public void selectValuesByListDocument(String valueToSelect) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        log.info("Located the dropdown button.");
+        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonDocument)).click();
+
+        List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option"))); // Replace with actual locator
+
+        boolean optionSelected = false;
+        for (WebElement option : options) {
+            if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
+                wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+                optionSelected = true;
+                log.info("Successfully selected the value: '{}'", valueToSelect);
+                break;
+            }
+        }
+
+        if (!optionSelected) {
+            log.warn("The value '{}' was not found among the options.", valueToSelect);
+        }
+
+        try {
+            wait.until(ExpectedConditions.attributeToBe(dropdownButtonDocument, "aria-expanded", "false"));
+        } catch (TimeoutException e) {
+            log.error("Failed to close the dropdown with aria-expanded = 'false'.");
+        }
+    }
 
 
     public void login(String uname, String pword) {

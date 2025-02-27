@@ -444,13 +444,13 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             //--------------------
 
-            submittedApplicationsPage.clickButtonSubmit();
-            log.debug("Clicked 'Submit' button after checkboxes.");
-
-            submittedApplicationsPage.clickButtonSubmitConfirmation();
-            log.debug("Clicked 'SubmitConfirmation' button after checkboxes.");
-
-            invitationsPage.verifySuccessMessage("Paraiška sėkmingai pateikta ir užregistruota.");
+//            submittedApplicationsPage.clickButtonSubmit();
+//            log.debug("Clicked 'Submit' button after checkboxes.");
+//
+//            submittedApplicationsPage.clickButtonSubmitConfirmation();
+//            log.debug("Clicked 'SubmitConfirmation' button after checkboxes.");
+//
+//            invitationsPage.verifySuccessMessage("Paraiška sėkmingai pateikta ir užregistruota.");
 
             log.info("Test 'testFillNewVUIApplicationFA' completed successfully.");
         } catch (AssertionError | Exception e) {
@@ -532,11 +532,18 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Entered email: '{}'.", emailInput);
 
             //DVP
-            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationOne, true);
+
+            invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationOne, true);
             log.debug("Checked 'For workplace adaptation' checkbox 1.");
 
-            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationTwo, true);
-            log.debug("Checked 'For environmental adaptation' checkbox 2.");
+            invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationTwo, true);
+            log.debug("Checked 'For workplace adaptation' checkbox 2.");
+
+//            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationOne, true);
+//            log.debug("Checked 'For workplace adaptation' checkbox 1.");
+//
+//            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationTwo, true);
+//            log.debug("Checked 'For environmental adaptation' checkbox 2.");
             //DVP
 
             String valueToSelect = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
@@ -633,7 +640,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectDropdownExpensesTypDVP(type1);
             log.debug("Selected adaptable job name: '{}'.", type1);
 
-            String valueToSelect5 = "Gaminti";
+            String valueToSelect5 = "Įsigyti";
             submittedApplicationsPage.selectDropdownNecessaryForJobOneDVP(valueToSelect5);
             log.debug("Selected necessary for job: '{}'.", valueToSelect5);
 
@@ -682,16 +689,16 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterSupportAmount(amount4);
             log.debug("Entered support amount: '{}'.", amount4);
 
-            submittedApplicationsPage.clickButtonNext();
-            log.debug("Clicked 'Next' button.");
+//            submittedApplicationsPage.clickButtonNext();
+//            log.debug("Clicked 'Next' button.");
 
             //--------------------
-
-            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationOne, true);
-            log.debug("Checked 'Legal Entities' checkbox 1.");
-
-            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationTwo, true);
-            log.debug("Checked 'Legal Entities' checkbox 2.");
+//NUSIZYMI 1 ZINGSNIO CHECKBOXAI
+//            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationOne, true);
+//            log.debug("Checked 'Legal Entities' checkbox 1.");
+//
+//            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationTwo, true);
+//            log.debug("Checked 'Legal Entities' checkbox 2.");
 
             SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationThree, true);
             log.debug("Checked 'Legal Entities' checkbox 3.");

@@ -191,8 +191,12 @@ public class SubmittedApplicationsPage extends UztisPage {
 
     //DVP
 //    @FindBy(xpath = "//label[contains(@class, 'mdc-floating-label') and .//mat-label[contains(., 'Reikalinga')]]")
-    @FindBy(xpath = "//mat-label[contains(text(), 'Reikalinga')]")
-//    @FindBy(xpath = "//label[contains(text(),'Reikalinga')]/following-sibling::common-select//mat-select")
+    //    @FindBy(xpath = "//label[contains(text(),'Reikalinga')]/following-sibling::common-select//mat-select")
+//    @FindBy(xpath = "//mat-label[contains(text(), 'Reikalinga')]/following-sibling::div//mat-select")
+//    @FindBy(xpath = "//common-select[@id='common-select-9']//div[contains(@class, 'mat-mdc-select-trigger')]")
+//    @FindBy(xpath = "//common-select[contains(@class, 'common-select')]//mat-select")
+    @FindBy(xpath = "//mat-select[@id='mat-select-11']")
+//    @FindBy(xpath = "//mat-select[@aria-label='Reikalinga']")
     WebElement dropdownButtonNecessaryForJobOneDVP;
 
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Darbo priemonės pavadinimas')]//input")
@@ -1173,10 +1177,11 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
 
     //DVP
     public void selectDropdownNecessaryForJobOneDVP(String valueToSelect) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        log.info("Located the dropdown button.");
+
         wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonNecessaryForJobOneDVP)).click();
+        log.debug("Located the dropdown button 'Reikalinga'.");
 
         List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option/span")));
 
@@ -1200,6 +1205,39 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
             log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
         }
     }
+//    public void selectDropdownNecessaryForJobOneDVP(String valueToSelect) {
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+//
+//        log.info("Clicking on dropdown...");
+//        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonNecessaryForJobOneDVP)).click();
+//
+//        // Laukti dropdown atsidarymo
+//        wait.until(ExpectedConditions.attributeToBe(dropdownButtonNecessaryForJobOneDVP, "aria-expanded", "true"));
+//
+//        // Gauti visus matomus pasirinkimus
+//        List<WebElement> options = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@role='listbox']//mat-option/span")));
+//
+//        boolean optionSelected = false;
+//        for (WebElement option : options) {
+//            if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
+//                log.info("Selecting option: {}", valueToSelect);
+//                wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+//                optionSelected = true;
+//                break;
+//            }
+//        }
+//
+//        if (!optionSelected) {
+//            log.warn("Dropdown value '{}' not found.", valueToSelect);
+//        }
+//
+//        // Laukti, kol dropdown užsidarys
+//        try {
+//            wait.until(ExpectedConditions.attributeToBe(dropdownButtonNecessaryForJobOneDVP, "aria-expanded", "false"));
+//        } catch (TimeoutException e) {
+//            log.error("Timeout while waiting for dropdown to close.");
+//        }
+//    }
 //DVP
 
 

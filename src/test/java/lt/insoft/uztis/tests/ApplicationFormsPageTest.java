@@ -19,7 +19,7 @@ public class ApplicationFormsPageTest extends UztisPageTest {
 
     private ApplicationFormsPage applicationFormsPage;
 
-    private void navigateToApplicationFormsMenu() {
+    public void navigateToApplicationFormsMenu() {
         applicationFormsPage.openMenuApplicationProcessing();
         log.debug("Opened 'Application Processing' menu.");
         applicationFormsPage.clickMenuApplicationForms();
@@ -243,6 +243,39 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             throw e;
         }
     }
+
+    @Test
+    void testAddContract() {
+        log.info("Starting test:'testAddContract'");
+
+        try {
+            applicationFormsPage.login("test", "test");
+            log.debug("User logged in with test credentials");
+
+            navigateToApplicationFormsMenu();
+
+            applicationFormsPage.clickLastDescription();
+            log.debug("Selected the last application description.");
+
+            applicationFormsPage.clickTabProjectProgress();
+            log.debug("Clicked 'Project Progress' tab.");
+
+            applicationFormsPage.clickButtonEdit();
+            log.debug("Clicked the 'Edit' button.");
+
+            String document1 = "Vietinių užimtumo iniciatyvų projekto įgyvendinimo ir finansavimo sutartis";
+            applicationFormsPage.selectValuesByListDocument(document1);
+            log.debug("Selected a value from the 'Document' dropdown: '{}'", document1);
+
+            log.info("Test 'testAddContract' completed successfully.");
+        } catch (AssertionError | Exception e) {
+            log.error("Test 'testAddContract' failed with error: {}", e.getMessage(), e);
+            throw e;
+        }
+    }
+
+
+
 //-----------------------------------------------------
 
     @Test
@@ -334,8 +367,8 @@ public class ApplicationFormsPageTest extends UztisPageTest {
     }
 
     @Test
-    void testCreateNewPvkApplication() {
-        log.info("Starting test:'testCreateNewPvkApplication'");
+    void testCreateNewPvkApplication_toEdit() {
+        log.info("Starting test:'testCreateNewPvkApplication_toEdit'");
 
         try {
             applicationFormsPage.login("test", "test");
@@ -425,9 +458,9 @@ public class ApplicationFormsPageTest extends UztisPageTest {
 
 //        TestUtils.takeScreenshot(driver, "testCreateNewVuiApplication");
 
-            log.info("Test 'testCreateNewPvkApplication' completed successfully.");
+            log.info("Test 'testCreateNewPvkApplication_toEdit' completed successfully.");
         } catch (AssertionError | Exception e) {
-            log.error("Test 'testCreateNewPvkApplication' failed with error: {}", e.getMessage(), e);
+            log.error("Test 'testCreateNewPvkApplication_toEdit' failed with error: {}", e.getMessage(), e);
             throw e;
         }
     }
