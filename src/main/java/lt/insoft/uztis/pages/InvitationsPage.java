@@ -131,9 +131,9 @@ public class InvitationsPage extends UztisPage {
     @FindBy(css = ".reverse-mobile .ng-star-inserted:nth-of-type(2)")
     WebElement buttonPublicationConfirmation;
 
-    @FindBy(css = "[class='w-100']")
-//    WebElement successMessage;
-    List<WebElement> successMessages;
+//    @FindBy(css = "[class='w-100']")
+////    WebElement successMessage;
+//    List<WebElement> successMessages;
 
     //------------------------------------------
     @FindBy(css = "common-button:nth-of-type(2) > .btn.btn--primary")
@@ -194,23 +194,23 @@ public class InvitationsPage extends UztisPage {
     WebElement invitationCode;
 
 
-    public void verifySuccessMessage(String expectedMessage) {
-        List<String> actualMessages = getAllMessagesText(); // Gauti visas žinutės tekstas
-
-        boolean messageFound = false;
-        for (String message : actualMessages) {
-            if (message.equals(expectedMessage)) {
-                messageFound = true; // Jei žinutė rasta, pažymime, kad ji yra
-                break; // Baigiame paiešką, nes radome norimą žinutę
-            }
-        }
-
-        if (messageFound) {
-            log.debug("Verified success message: '{}'", expectedMessage); // Sėkmingas tikrinimas
-        } else {
-            log.error("Failed to verify the success message: '{}'. Available messages: {}", expectedMessage, actualMessages); // Klaidos pranešimas su visų žinučių sąrašu
-        }
-    }
+//    public void verifySuccessMessage(String expectedMessage) {
+//        List<String> actualMessages = getAllMessagesText(); // Gauti visas žinutės tekstas
+//
+//        boolean messageFound = false;
+//        for (String message : actualMessages) {
+//            if (message.equals(expectedMessage)) {
+//                messageFound = true; // Jei žinutė rasta, pažymime, kad ji yra
+//                break; // Baigiame paiešką, nes radome norimą žinutę
+//            }
+//        }
+//
+//        if (messageFound) {
+//            log.debug("Verified success message: '{}'", expectedMessage); // Sėkmingas tikrinimas
+//        } else {
+//            log.error("Failed to verify the success message: '{}'. Available messages: {}", expectedMessage, actualMessages); // Klaidos pranešimas su visų žinučių sąrašu
+//        }
+//    }
 
     //-------------------------------------------
 
@@ -581,11 +581,11 @@ public class InvitationsPage extends UztisPage {
 
 //    public String getMessageText() {
 //        return successMessage.getText();
-public List<String> getAllMessagesText() {
-        return successMessages.stream()
-                .map(WebElement::getText)
-                .collect(Collectors.toList());
-    }
+//public List<String> getAllMessagesText() {
+//        return successMessages.stream()
+//                .map(WebElement::getText)
+//                .collect(Collectors.toList());
+//    }
 
     public void clickButtonSearch() {
         buttonSearch.click();

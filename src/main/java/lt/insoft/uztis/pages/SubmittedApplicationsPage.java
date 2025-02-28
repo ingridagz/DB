@@ -71,8 +71,31 @@ public class SubmittedApplicationsPage extends UztisPage {
     WebElement dropdownButtonEVRK_DVP;
     //DVP
 
-    @FindBy(xpath = "//mat-form-field[.//label[contains(., 'Planuojamos (-ų) steigti darbo vietos (-ų) adresas')]]//input")
-    WebElement inputAddress;
+//    @FindBy(xpath = "//mat-form-field[.//label[contains(., 'Planuojamos (-ų) steigti darbo vietos (-ų) adresas')]]//input")
+//    WebElement inputAddress;
+
+//    @FindBy(xpath = "//input[@class='primary-control mat-mdc-form-field-input-control mat-mdc-form-field-input' and @readonly]")
+//    @FindBy(xpath = "//span[matsuffix]//mat-icon[contains(text(), 'edit')]")
+//@FindBy(xpath = "//input[contains(@class, 'primary-control') and @readonly]")
+//@FindBy(xpath = "//div[contains(@class, 'mat-mdc-form-field-infix')]")
+//@FindBy(xpath = "//input[@id='common-text-input-25']")
+@FindBy(xpath = "(//mat-icon[contains(text(), 'edit')])[3]")
+WebElement addressComponent;
+
+    @FindBy(xpath = "//mat-label[contains(text(), 'Valstybė')]/following::mat-select[1]")
+    WebElement dropdownAddressCountry;
+
+    @FindBy(xpath = "//mat-label[contains(text(), 'Miestas')]/ancestor::mat-form-field")
+    WebElement dropdownAddressCity;
+
+    @FindBy(xpath = "//mat-label[contains(text(), 'Gatvė')]/following::mat-select[1]")
+    WebElement dropdownAddressStreet;
+
+    @FindBy(xpath = "//mat-label[contains(text(), 'Namo Nr.')]/following::mat-select[1]")
+    WebElement dropdownAddressHouse;
+
+    @FindBy(xpath = "//mat-label[contains(text(), 'Buto / patalpos Nr.')]/following::mat-select[1]")
+    WebElement dropdownAddressApartment;
 
     //DVP
     @FindBy(xpath = "//mat-form-field[.//label[contains(., 'Planuojamos (-ų) pritaikyti darbo vietos (-ų) adresas')]]//input")
@@ -293,12 +316,21 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[3]")
     public WebElement checkboxConfirmationThree;
 
+    @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[4]")
+    public WebElement checkboxConfirmationFour;
+
+    @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[5]")
+    public WebElement checkboxConfirmationFive;
+
     //application form step 4 (Checkboxes)
 //-----------
     @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[4]")
     public WebElement checkboxConfirmationStepFour;
 
-    //application form step 5 (Checkboxes)
+    @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[6]")
+    public WebElement checkboxConfirmationStepFourDVP;
+
+    //application form step 5 (Radiobuttons)
 //-----------
     @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Dokumento pavadinimas')]//input)[1]")
     WebElement inputDocumentNameOne;
@@ -646,9 +678,233 @@ public class SubmittedApplicationsPage extends UztisPage {
     }
 
 
-    public void enterAddress(String address) {
-        inputAddress.clear();
-        inputAddress.sendKeys(address);
+//    public void enterAddress(String address) {
+//        inputAddress.clear();
+//        inputAddress.sendKeys(address);
+//    }
+
+//    public void clickAddressComponent() {
+//        addressComponent.click();
+//    }
+
+    public void clickAddressComponent() {
+        try {
+            // Laukiame, kol elementas bus matomas ir paspaudžiamas
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            WebElement inputField = wait.until(ExpectedConditions.elementToBeClickable(addressComponent));
+
+            // Paspaudžiame ant laukelio
+            inputField.click();
+            System.out.println("Elementas paspaustas!");
+
+        } catch (Exception e) {
+            System.out.println("Klaida: Nepavyko rasti elemento.");
+        }
+    }
+
+    public void selectDropdownAddressCountry(String valueToSelect) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Ilgesnis laukimo laikas
+
+        log.info("Located the dropdown button.");
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownAddressCountry));
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView(true);", dropdownAddressCountry); // Užtikrinsime, kad elementas būtų matomas
+            dropdownAddressCountry.click();
+        } catch (Exception e) {
+            log.error("Dropdown button click failed: {}", e.getMessage());
+        }
+
+        try {
+            List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option/span")));
+
+            boolean optionSelected = false;
+            for (WebElement option : options) {
+                if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
+                    wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+                    optionSelected = true;
+                    log.info("Successfully selected the value: '{}'", valueToSelect);
+                    break;
+                }
+            }
+
+            if (!optionSelected) {
+                log.warn("Dropdown value '{}' not found.", valueToSelect);
+            }
+
+        } catch (Exception e) {
+            log.error("Failed to select dropdown option: {}", e.getMessage());
+        }
+
+        try {
+            wait.until(ExpectedConditions.attributeToBe(dropdownAddressCountry, "aria-expanded", "false"));
+        } catch (TimeoutException e) {
+            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
+        }
+    }
+
+    public void selectDropdownAddressCity(String valueToSelect) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Ilgesnis laukimo laikas
+
+        log.info("Located the dropdown button.");
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownAddressCity));
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView(true);", dropdownAddressCity); // Užtikrinsime, kad elementas būtų matomas
+            dropdownAddressCity.click();
+        } catch (Exception e) {
+            log.error("Dropdown button click failed: {}", e.getMessage());
+        }
+
+        try {
+            List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option/span")));
+
+            boolean optionSelected = false;
+            for (WebElement option : options) {
+                if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
+                    wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+                    optionSelected = true;
+                    log.info("Successfully selected the value: '{}'", valueToSelect);
+                    break;
+                }
+            }
+
+            if (!optionSelected) {
+                log.warn("Dropdown value '{}' not found.", valueToSelect);
+            }
+
+        } catch (Exception e) {
+            log.error("Failed to select dropdown option: {}", e.getMessage());
+        }
+
+        try {
+            wait.until(ExpectedConditions.attributeToBe(dropdownAddressCity, "aria-expanded", "false"));
+        } catch (TimeoutException e) {
+            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
+        }
+    }
+
+    public void selectDropdownAddressStreet(String valueToSelect) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Ilgesnis laukimo laikas
+
+        log.info("Located the dropdown button.");
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownAddressStreet));
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView(true);", dropdownAddressStreet); // Užtikrinsime, kad elementas būtų matomas
+            dropdownAddressStreet.click();
+        } catch (Exception e) {
+            log.error("Dropdown button click failed: {}", e.getMessage());
+        }
+
+        try {
+            List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option/span")));
+
+            boolean optionSelected = false;
+            for (WebElement option : options) {
+                if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
+                    wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+                    optionSelected = true;
+                    log.info("Successfully selected the value: '{}'", valueToSelect);
+                    break;
+                }
+            }
+
+            if (!optionSelected) {
+                log.warn("Dropdown value '{}' not found.", valueToSelect);
+            }
+
+        } catch (Exception e) {
+            log.error("Failed to select dropdown option: {}", e.getMessage());
+        }
+
+        try {
+            wait.until(ExpectedConditions.attributeToBe(dropdownAddressStreet, "aria-expanded", "false"));
+        } catch (TimeoutException e) {
+            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
+        }
+    }
+
+    public void selectDropdownAddressHouse(String valueToSelect) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Ilgesnis laukimo laikas
+
+        log.info("Located the dropdown button.");
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownAddressHouse));
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView(true);", dropdownAddressHouse); // Užtikrinsime, kad elementas būtų matomas
+            dropdownAddressHouse.click();
+        } catch (Exception e) {
+            log.error("Dropdown button click failed: {}", e.getMessage());
+        }
+
+        try {
+            List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option/span")));
+
+            boolean optionSelected = false;
+            for (WebElement option : options) {
+                if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
+                    wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+                    optionSelected = true;
+                    log.info("Successfully selected the value: '{}'", valueToSelect);
+                    break;
+                }
+            }
+
+            if (!optionSelected) {
+                log.warn("Dropdown value '{}' not found.", valueToSelect);
+            }
+
+        } catch (Exception e) {
+            log.error("Failed to select dropdown option: {}", e.getMessage());
+        }
+
+        try {
+            wait.until(ExpectedConditions.attributeToBe(dropdownAddressHouse, "aria-expanded", "false"));
+        } catch (TimeoutException e) {
+            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
+        }
+    }
+
+    public void selectDropdownAddressApartment(String valueToSelect) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Ilgesnis laukimo laikas
+
+        log.info("Located the dropdown button.");
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownAddressApartment));
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView(true);", dropdownAddressApartment); // Užtikrinsime, kad elementas būtų matomas
+            dropdownAddressApartment.click();
+        } catch (Exception e) {
+            log.error("Dropdown button click failed: {}", e.getMessage());
+        }
+
+        try {
+            List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option/span")));
+
+            boolean optionSelected = false;
+            for (WebElement option : options) {
+                if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
+                    wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+                    optionSelected = true;
+                    log.info("Successfully selected the value: '{}'", valueToSelect);
+                    break;
+                }
+            }
+
+            if (!optionSelected) {
+                log.warn("Dropdown value '{}' not found.", valueToSelect);
+            }
+
+        } catch (Exception e) {
+            log.error("Failed to select dropdown option: {}", e.getMessage());
+        }
+
+        try {
+            wait.until(ExpectedConditions.attributeToBe(dropdownAddressApartment, "aria-expanded", "false"));
+        } catch (TimeoutException e) {
+            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
+        }
     }
 
     //DVP

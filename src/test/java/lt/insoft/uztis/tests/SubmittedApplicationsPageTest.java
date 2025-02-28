@@ -164,9 +164,10 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectValueByListEVRK(valueToSelect);
             log.debug("Selected EVRK value: '{}'.", valueToSelect);
 
-            String addressInput = "Vilniaus m. sav., Vilnius, Testo g. 10T";
-            submittedApplicationsPage.enterAddress(addressInput);
-            log.debug("Entered address: '{}'.", addressInput);
+//            String addressInput = "Vilniaus m. sav., Vilnius, Testo g. 10T";
+//            submittedApplicationsPage.enterAddress(addressInput);
+//            log.debug("Entered address: '{}'.", addressInput);
+
 
             submittedApplicationsPage.enterDate();
             log.debug("Entered project date.");
@@ -174,6 +175,38 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             String jobCount = "1";
             submittedApplicationsPage.enterJobCount(jobCount);
             log.debug("Entered job count: '{}'.", jobCount);
+
+            submittedApplicationsPage.clickAddressComponent();
+            log.debug("Clicked on 'Address Component' button.");
+
+            String country = "Lietuva";
+            submittedApplicationsPage.selectDropdownAddressCountry(country);
+            log.debug("Selected country: '{}'.", country);
+
+//            String city = "Vilnius, Vilniaus miesto sav.";
+//            submittedApplicationsPage.selectDropdownAddressCity(city);
+//            log.debug("Selected city: '{}'.", city);
+
+
+
+            String city = "Vilnius";
+//            String district = "Vilniaus miesto sav.";
+
+            submittedApplicationsPage.selectDropdownAddressCity(city);
+            log.debug("Selected city: '{}'.", city);
+
+            String street = "V. Grybo g.";
+            submittedApplicationsPage.selectDropdownAddressStreet(street);
+            log.debug("Selected street: '{}'.", street);
+
+            String house = "1";
+            submittedApplicationsPage.selectDropdownAddressHouse(house);
+            log.debug("Selected house: '{}'.", house);
+
+            String apartment = "1";
+            submittedApplicationsPage.selectDropdownAddressApartment(apartment);
+            log.debug("Selected apartment: '{}'.", apartment);
+
 
             submittedApplicationsPage.clickButtonNext();
             log.debug("Clicked 'Next' button.");
@@ -437,7 +470,8 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.clickButtonSaveDraft();
             log.debug("Clicked 'SaveDraft' button after checkboxes.");
 
-            invitationsPage.verifySuccessMessage("Ruošinys sėkmingai išsaugotas.");
+            applicationFormsPage.verifySuccessMessage("Ruošinys sėkmingai išsaugotas.");
+            log.info("Verified success message");
 
             submittedApplicationsPage.clickButtonReview();
             log.debug("Clicked 'Review' button after checkboxes.");
@@ -491,7 +525,8 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.clickButtonAddEvaluatorsConfirmation();
             log.debug("Clicked on 'Add Evaluators' confirmation button.");
 
-            invitationsPage.verifySuccessMessage("Paraiškų vertinimai sėkmingai priskirti vertintojams.");
+            applicationFormsPage.verifySuccessMessage("Paraiškų vertinimai sėkmingai priskirti vertintojams.");
+            log.info("Verified success message");
 
             log.info("Test 'testAddEvaluators' completed successfully.");
         } catch (AssertionError | Exception e) {
@@ -700,8 +735,17 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 //            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationTwo, true);
 //            log.debug("Checked 'Legal Entities' checkbox 2.");
 
-            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationThree, true);
-            log.debug("Checked 'Legal Entities' checkbox 3.");
+//            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationThree, true);
+//            log.debug("Checked 'Legal Entities' checkbox 3.");
+
+            invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationThree, true);
+            log.debug("Checked 'For workplace adaptation' checkbox 1.");
+
+            invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationFour, true);
+            log.debug("Checked 'For workplace adaptation' checkbox 2.");
+
+            invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationFive, true);
+            log.debug("Checked 'For workplace adaptation' checkbox 3.");
 
             log.debug("Test finished: All 'Legal Entities' checkboxes checked successfully.");
 
@@ -736,7 +780,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             SubmittedApplicationsPage.RadioButtonHelper.selectRadioButton(driver, SubmittedApplicationsPage.RadioButtonHelper.RADIO_YES_12, true);
             log.info("Marking 'Taip' radio button 12");
 
-            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationStepFour, true);
+            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationStepFourDVP, true);
             log.debug("Checked 'ConfirmationStepFour'");
 
             submittedApplicationsPage.clickButtonNext();
@@ -791,7 +835,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.clickButtonSaveDraft();
             log.debug("Clicked 'SaveDraft' button after checkboxes.");
 
-            invitationsPage.verifySuccessMessage("Ruošinys sėkmingai išsaugotas.");
+            applicationFormsPage.verifySuccessMessage("Ruošinys sėkmingai išsaugotas.");
 
             submittedApplicationsPage.clickButtonSubmit();
             log.debug("Clicked 'Submit' button after checkboxes.");
@@ -799,7 +843,8 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.clickButtonSubmitConfirmation();
             log.debug("Clicked 'SubmitConfirmation' button after checkboxes.");
 
-            invitationsPage.verifySuccessMessage("Paraiška sėkmingai pateikta ir užregistruota.");
+            applicationFormsPage.verifySuccessMessage("Paraiška sėkmingai pateikta ir užregistruota.");
+            log.info("Verified success message");
 
             log.info("Test 'testFillNewDVPApplicationFA' completed successfully.");
         } catch (AssertionError | Exception e) {

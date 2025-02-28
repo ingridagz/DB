@@ -107,7 +107,8 @@ public class FundingPageTest extends UztisPageTest{
             fundingPage.clickButtonFinanceConfirmation();
             log.debug("Clicked 'Finance Confirmation'.");
 
-            invitationsPage.verifySuccessMessage("Funkcija sėkmingai atlikta.");
+            applicationFormsPage.verifySuccessMessage("Funkcija sėkmingai atlikta.");
+            log.info("Verified success message");
 
             log.info("Test 'testFundApplication' completed successfully.");
         } catch (AssertionError | Exception e) {

@@ -118,11 +118,7 @@ public class ApplicationFormsPage extends UztisPage {
     @FindBy(id = "mat-button-toggle-0-button")
     WebElement buttonSaveForm;
 
-    @FindBy(css = "[class='w-100']")
-//    WebElement successMessage;
-    List<WebElement> successMessages;
-
-    //-------------------------------------------------------------------
+     //-------------------------------------------------------------------
 
     @FindBy(css = "tbody > tr:nth-of-type(1)")
     WebElement lastDescription;
@@ -149,6 +145,34 @@ public class ApplicationFormsPage extends UztisPage {
     @FindBy(xpath = "(//mat-label[contains(text(), 'Dokumentas')])[3]")
     WebElement dropdownButtonDocument;
 
+//--------------------
+    @FindBy(css = "[class='w-100']")
+    List<WebElement> successMessages;
+
+    public List<String> getAllMessagesText() {
+        return successMessages.stream()
+                .map(WebElement::getText)
+                .collect(Collectors.toList());
+    }
+
+    public void verifySuccessMessage(String expectedMessage) {
+        List<String> actualMessages = getAllMessagesText(); // Gauti visas žinutės tekstas
+
+        boolean messageFound = false;
+        for (String message : actualMessages) {
+            if (message.equals(expectedMessage)) {
+                messageFound = true; // Jei žinutė rasta, pažymime, kad ji yra
+                break; // Baigiame paiešką, nes radome norimą žinutę
+            }
+        }
+
+        if (messageFound) {
+            log.debug("Verified success message: '{}'", expectedMessage); // Sėkmingas tikrinimas
+        } else {
+            log.error("Failed to verify the success message: '{}'. Available messages: {}", expectedMessage, actualMessages); // Klaidos pranešimas su visų žinučių sąrašu
+        }
+    }
+//-------------------------
 
     public void clickTabProjectProgress() {
         tabProjectProgress.click();

@@ -166,7 +166,8 @@ public class EvaluationsPageTest extends UztisPageTest{
             evaluationsPage.clickButtonSaveDraft();
             log.debug("Clicked 'Save Draft'.");
 
-            invitationsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            log.info("Verified success message");
 
             log.info("Test 'testFillSaveDraftEvaluationOne' completed successfully.");
         } catch (AssertionError | Exception e) {
@@ -262,7 +263,8 @@ public class EvaluationsPageTest extends UztisPageTest{
             evaluationsPage.clickButtonSaveDraft();
             log.debug("Clicked 'Save Draft'.");
 
-            invitationsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            log.info("Verified success message");
 
             log.info("Test 'testFillSaveDraftEvaluationTwo' completed successfully.");
         } catch (AssertionError | Exception e) {
@@ -434,7 +436,8 @@ public class EvaluationsPageTest extends UztisPageTest{
             evaluationsPage.clickButtonSaveDraft();
             log.debug("Clicked 'Save Draft'.");
 
-            invitationsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            log.info("Verified success message");
 
             log.info("Test 'testFillSaveDraftEvaluationThree' completed successfully.");
         } catch (AssertionError | Exception e) {

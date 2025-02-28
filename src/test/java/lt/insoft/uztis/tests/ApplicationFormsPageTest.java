@@ -153,21 +153,8 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             //neveikia:
 //        applicationFormsPage.enterFormData("");
 
-            List<String> actualSuccessMessages = applicationFormsPage.getSuccessMessagesText();
-            String expectedSuccessMessage = "Duomenys sėkmingai išsaugoti.";
-
-// Patikriname, ar bent viena žinutė atitinka laukiamą tekstą
-            boolean isMessageFound = actualSuccessMessages.stream()
-                    .anyMatch(message -> message.equals(expectedSuccessMessage));
-
-            Assertions.assertTrue(isMessageFound,
-                    String.format("Expected success message '%s' but none matched in '%s'.", expectedSuccessMessage, actualSuccessMessages));
-            log.info("Verified success message text: '{}'", expectedSuccessMessage);
-//            String actualSuccessMessage = applicationFormsPage.getSuccessMessageText();
-//            String expectedSuccessMessage = "Duomenys sėkmingai išsaugoti.";
-//            Assertions.assertEquals(expectedSuccessMessage, actualSuccessMessage,
-//                    String.format("Expected success message '%s' but found '%s'.", expectedSuccessMessage, actualSuccessMessage));
-//            log.info("Verified success message text: '{}'", actualSuccessMessage);
+            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            log.info("Verified success message");
 
             boolean isSaveFormButtonVisible = applicationFormsPage.isButtonSaveFormDisplayed();
             Assertions.assertTrue(isSaveFormButtonVisible, "Save form button should be displayed.");
@@ -220,20 +207,8 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.clickButtonSave();
             log.debug("Clicked the 'Save' button.");
 
-//            String successMessage = applicationFormsPage.getSuccessMessageText();
-//            Assertions.assertEquals("Duomenys sėkmingai išsaugoti.", applicationFormsPage.getSuccessMessageText(), "No such message");
-//            log.info("Verified success message: '{}'", successMessage);
-            List<String> successMessages = applicationFormsPage.getSuccessMessagesText();
-
-// Tikriname, ar bent viena žinutė sutampa su laukiamąja
-            String expectedMessage = "Duomenys sėkmingai išsaugoti.";
-            boolean isMessageFound = successMessages.stream()
-                    .anyMatch(message -> message.equals(expectedMessage));
-
-            Assertions.assertTrue(isMessageFound,
-                    String.format("Expected success message '%s' but none matched in '%s'.", expectedMessage, successMessages));
-
-            log.info("Verified success message: '{}'", expectedMessage);
+            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            log.info("Verified success message");
 
 //        TestUtils.takeScreenshot(driver, "testEditAndSaveVuiApplication");
 
@@ -245,8 +220,8 @@ public class ApplicationFormsPageTest extends UztisPageTest {
     }
 
     @Test
-    void testAddContract() {
-        log.info("Starting test:'testAddContract'");
+    void testAddContractVUI() {
+        log.info("Starting test:'testAddContractVUI'");
 
         try {
             applicationFormsPage.login("test", "test");
@@ -267,14 +242,18 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.selectValuesByListDocument(document1);
             log.debug("Selected a value from the 'Document' dropdown: '{}'", document1);
 
-            log.info("Test 'testAddContract' completed successfully.");
+            applicationFormsPage.clickButtonSave();
+            log.debug("Clicked the 'Save' button.");
+
+            applicationFormsPage.verifySuccessMessage("Funkcija sėkmingai atlikta.");
+            log.info("Verified success message");
+
+            log.info("Test 'testAddContractVUI' completed successfully.");
         } catch (AssertionError | Exception e) {
-            log.error("Test 'testAddContract' failed with error: {}", e.getMessage(), e);
+            log.error("Test 'testAddContractVUI' failed with error: {}", e.getMessage(), e);
             throw e;
         }
     }
-
-
 
 //-----------------------------------------------------
 
@@ -335,23 +314,8 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             //neveikia:
 //        applicationFormsPage.enterFormData("");
 
-//            String actualSuccessMessage = applicationFormsPage.getSuccessMessageText();
-//            String expectedSuccessMessage = "Duomenys sėkmingai išsaugoti.";
-//            Assertions.assertEquals(expectedSuccessMessage, actualSuccessMessage,
-//                    String.format("Expected success message '%s' but found '%s'.", expectedSuccessMessage, actualSuccessMessage));
-//            log.info("Verified success message text: '{}'", actualSuccessMessage);
-            List<String> successMessages = applicationFormsPage.getSuccessMessagesText();
-
-// Tikriname, ar bent viena žinutė sutampa su laukiamąja
-            String expectedMessage = "Duomenys sėkmingai išsaugoti.";
-            boolean isMessageFound = successMessages.stream()
-                    .anyMatch(message -> message.equals(expectedMessage));
-
-            Assertions.assertTrue(isMessageFound,
-                    String.format("Expected success message '%s' but none matched in '%s'.", expectedMessage, successMessages));
-
-            log.info("Verified success message: '{}'", expectedMessage);
-
+            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            log.info("Verified success message");
 
             boolean isSaveFormButtonVisible = applicationFormsPage.isButtonSaveFormDisplayed();
             Assertions.assertTrue(isSaveFormButtonVisible, "Save form button should be displayed.");
@@ -365,6 +329,43 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             throw e;
         }
     }
+
+    @Test
+    void testAddContractDVP() {
+        log.info("Starting test:'testAddContractDVP'");
+
+        try {
+            applicationFormsPage.login("test", "test");
+            log.debug("User logged in with test credentials");
+
+            navigateToApplicationFormsMenu();
+
+            applicationFormsPage.clickLastDescription();
+            log.debug("Selected the last application description.");
+
+            applicationFormsPage.clickTabProjectProgress();
+            log.debug("Clicked 'Project Progress' tab.");
+
+            applicationFormsPage.clickButtonEdit();
+            log.debug("Clicked the 'Edit' button.");
+
+            String document1 = "Darbo vietų pritaikymo ir finansavimo sutartis";
+            applicationFormsPage.selectValuesByListDocument(document1);
+            log.debug("Selected a value from the 'Document' dropdown: '{}'", document1);
+
+            applicationFormsPage.clickButtonSave();
+            log.debug("Clicked the 'Save' button.");
+
+            applicationFormsPage.verifySuccessMessage("Funkcija sėkmingai atlikta.");
+            log.info("Verified success message");
+
+            log.info("Test 'testAddContractDVP' completed successfully.");
+        } catch (AssertionError | Exception e) {
+            log.error("Test 'testAddContractDVP' failed with error: {}", e.getMessage(), e);
+            throw e;
+        }
+    }
+
 
     @Test
     void testCreateNewPvkApplication_toEdit() {
@@ -433,24 +434,10 @@ public class ApplicationFormsPageTest extends UztisPageTest {
 
             //ĮDĖTI DINAMINĘ FORMĄ RANKINIU BŪDU, nes:
             //neveikia:
-//        applicationFormsPage.enterFormData("");
+////        applicationFormsPage.enterFormData("");
 
-//            String actualSuccessMessage = applicationFormsPage.getSuccessMessageText();
-//            String expectedSuccessMessage = "Duomenys sėkmingai išsaugoti.";
-//            Assertions.assertEquals(expectedSuccessMessage, actualSuccessMessage,
-//                    String.format("Expected success message '%s' but found '%s'.", expectedSuccessMessage, actualSuccessMessage));
-//            log.info("Verified success message text: '{}'", actualSuccessMessage);
-            List<String> successMessages = applicationFormsPage.getSuccessMessagesText();
-
-// Tikriname, ar bent viena žinutė sutampa su laukiamąja
-            String expectedMessage = "Duomenys sėkmingai išsaugoti.";
-            boolean isMessageFound = successMessages.stream()
-                    .anyMatch(message -> message.equals(expectedMessage));
-
-            Assertions.assertTrue(isMessageFound,
-                    String.format("Expected success message '%s' but none matched in '%s'.", expectedMessage, successMessages));
-
-            log.info("Verified success message: '{}'", expectedMessage);
+            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            log.info("Verified success message");
 
             boolean isSaveFormButtonVisible = applicationFormsPage.isButtonSaveFormDisplayed();
             Assertions.assertTrue(isSaveFormButtonVisible, "Save form button should be displayed.");
@@ -464,5 +451,42 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             throw e;
         }
     }
+
+    @Test
+    void testAddContractPVK() {
+        log.info("Starting test:'testAddContractPVK'");
+
+        try {
+            applicationFormsPage.login("test", "test");
+            log.debug("User logged in with test credentials");
+
+            navigateToApplicationFormsMenu();
+
+            applicationFormsPage.clickLastDescription();
+            log.debug("Selected the last application description.");
+
+            applicationFormsPage.clickTabProjectProgress();
+            log.debug("Clicked 'Project Progress' tab.");
+
+            applicationFormsPage.clickButtonEdit();
+            log.debug("Clicked the 'Edit' button.");
+
+            String document1 = "Paramos verslui kurti sutartis";
+            applicationFormsPage.selectValuesByListDocument(document1);
+            log.debug("Selected a value from the 'Document' dropdown: '{}'", document1);
+
+            applicationFormsPage.clickButtonSave();
+            log.debug("Clicked the 'Save' button.");
+
+            applicationFormsPage.verifySuccessMessage("Funkcija sėkmingai atlikta.");
+            log.info("Verified success message");
+
+            log.info("Test 'testAddContractPVK' completed successfully.");
+        } catch (AssertionError | Exception e) {
+            log.error("Test 'testAddContractPVK' failed with error: {}", e.getMessage(), e);
+            throw e;
+        }
+    }
+
 
 }

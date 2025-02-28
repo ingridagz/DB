@@ -127,7 +127,8 @@ public class InvitationsPageTest extends UztisPageTest {
             invitationsPage.clickButtonSave();
             log.debug("Draft saved.");
 
-            invitationsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            log.info("Verified success message");
 
 //        TestUtils.takeScreenshot(driver, "testCreateNewVuiInvitationDraft");
 
@@ -247,7 +248,8 @@ public class InvitationsPageTest extends UztisPageTest {
             invitationsPage.clickButtonPublicationConfirmation();
             log.debug("Publication confirmed.");
 
-            invitationsPage.verifySuccessMessage("Funkcija sėkmingai atlikta.");
+            applicationFormsPage.verifySuccessMessage("Funkcija sėkmingai atlikta.");
+            log.info("Verified success message");
 
 //        TestUtils.takeScreenshot(driver, "testEditAndPublishVuiInvitationDraft");
 
@@ -297,7 +299,8 @@ public class InvitationsPageTest extends UztisPageTest {
             invitationsPage.clickButtonSave();
             log.debug("Clicked 'Save' button.");
 
-            invitationsPage.verifySuccessMessage("Funkcija sėkmingai atlikta.");
+            applicationFormsPage.verifySuccessMessage("Funkcija sėkmingai atlikta.");
+            log.info("Verified success message");
 
             log.info("Test 'testInsertVuiStatisticInformation' completed successfully.");
         } catch (AssertionError |
@@ -427,7 +430,8 @@ public class InvitationsPageTest extends UztisPageTest {
             invitationsPage.clickButtonStatusChangeConfirmation();
             log.debug("Clicked 'Stop Publication Confirmation'.");
 
-            invitationsPage.verifySuccessMessage("Įrašas sėkmingai pašalintas.");
+            applicationFormsPage.verifySuccessMessage("Įrašas sėkmingai pašalintas.");
+            log.info("Verified success message");
 
 //        TestUtils.takeScreenshot(driver, "testDeleteVuiInvitation");
 
@@ -554,7 +558,8 @@ public class InvitationsPageTest extends UztisPageTest {
             invitationsPage.clickButtonPublicationConfirmation();
             log.debug("Publication confirmed.");
 
-            invitationsPage.verifySuccessMessage("Funkcija sėkmingai atlikta.");
+            applicationFormsPage.verifySuccessMessage("Funkcija sėkmingai atlikta.");
+            log.info("Verified success message");
 
 //        TestUtils.takeScreenshot(driver, "testCreateNewVuiInvitationDraft");
 
@@ -713,7 +718,8 @@ public class InvitationsPageTest extends UztisPageTest {
             invitationsPage.clickButtonPublicationConfirmation();
             log.debug("Publication confirmed.");
 
-            invitationsPage.verifySuccessMessage("Funkcija sėkmingai atlikta.");
+            applicationFormsPage.verifySuccessMessage("Funkcija sėkmingai atlikta.");
+            log.info("Verified success message");
 
 //        TestUtils.takeScreenshot(driver, "testCreateNewVuiInvitationDraft");
 
