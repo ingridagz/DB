@@ -12,6 +12,9 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+
 import static java.lang.invoke.MethodHandles.lookup;
 import static org.slf4j.LoggerFactory.getLogger;
 
@@ -87,6 +90,11 @@ WebElement addressComponent;
 
     @FindBy(xpath = "//mat-label[contains(text(), 'Miestas')]/ancestor::mat-form-field")
     WebElement dropdownAddressCity;
+    @FindBy(xpath = "//input[@placeholder='Ieškoti...']")
+    WebElement dropdownAddressCitySearch;
+
+    @FindBy(xpath = "//common-button[@btntype='submit']//button")
+    WebElement buttonConfirm;
 
     @FindBy(xpath = "//mat-label[contains(text(), 'Gatvė')]/following::mat-select[1]")
     WebElement dropdownAddressStreet;
@@ -490,6 +498,10 @@ WebElement addressComponent;
         buttonAddEvaluatorsConfirmation.click();
     }
 
+    public void clickButtonConfirm() {
+        buttonConfirm.click();
+    }
+
     public boolean isButtonNextDisplayed() {
         try {
             return buttonNext.isDisplayed();
@@ -677,16 +689,6 @@ WebElement addressComponent;
         }
     }
 
-
-//    public void enterAddress(String address) {
-//        inputAddress.clear();
-//        inputAddress.sendKeys(address);
-//    }
-
-//    public void clickAddressComponent() {
-//        addressComponent.click();
-//    }
-
     public void clickAddressComponent() {
         try {
             // Laukiame, kol elementas bus matomas ir paspaudžiamas
@@ -743,44 +745,50 @@ WebElement addressComponent;
         }
     }
 
+
+    public void clickOnCityDropdown() {
+        dropdownAddressCity.click(); // Paspaudžia ant mat-form-field elemento
+    }
+
+    public void enterCityName(String cityName) {
+        dropdownAddressCitySearch.sendKeys(cityName); // Įrašo tekstą į paieškos lauką
+    }
+
     public void selectDropdownAddressCity(String valueToSelect) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Ilgesnis laukimo laikas
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
-        log.info("Located the dropdown button.");
+        log.info("Located the dropdown search field.");
+
         try {
-            wait.until(ExpectedConditions.elementToBeClickable(dropdownAddressCity));
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            js.executeScript("arguments[0].scrollIntoView(true);", dropdownAddressCity); // Užtikrinsime, kad elementas būtų matomas
-            dropdownAddressCity.click();
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownAddressCity)).click();
+            log.info("Dropdown city is opened.");
         } catch (Exception e) {
-            log.error("Dropdown button click failed: {}", e.getMessage());
+            log.error("Dropdown city click failed: {}", e.getMessage());
+            return;
         }
 
         try {
-            List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option/span")));
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownAddressCitySearch)).click();
+            dropdownAddressCitySearch.clear();
+            dropdownAddressCitySearch.sendKeys(valueToSelect);
 
-            boolean optionSelected = false;
-            for (WebElement option : options) {
-                if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
-                    wait.until(ExpectedConditions.elementToBeClickable(option)).click();
-                    optionSelected = true;
-                    log.info("Successfully selected the value: '{}'", valueToSelect);
-                    break;
-                }
-            }
+            // Laukiame, kol atsiras bent vienas variantas
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//mat-option")));
 
-            if (!optionSelected) {
-                log.warn("Dropdown value '{}' not found.", valueToSelect);
-            }
-
+            log.info("Searched for value: '{}'", valueToSelect);
         } catch (Exception e) {
-            log.error("Failed to select dropdown option: {}", e.getMessage());
+            log.error("Failed to enter search value: {}", e.getMessage());
+            return;
         }
 
         try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownAddressCity, "aria-expanded", "false"));
-        } catch (TimeoutException e) {
-            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
+            String optionXPath = "//mat-option//span[contains(@class, 'area-center') and text()='" + valueToSelect + "']";
+            WebElement correctOption = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(optionXPath)));
+            correctOption.click();
+
+            log.info("Successfully selected: '{}'", valueToSelect);
+        } catch (Exception e) {
+            log.error("Failed to select correct dropdown option: {}", e.getMessage());
         }
     }
 
@@ -865,6 +873,7 @@ WebElement addressComponent;
             log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
         }
     }
+
 
     public void selectDropdownAddressApartment(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Ilgesnis laukimo laikas

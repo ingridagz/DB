@@ -6,7 +6,10 @@ import lt.insoft.uztis.pages.SubmittedApplicationsPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
+import org.testng.Assert;
 
 import static java.lang.invoke.MethodHandles.lookup;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -160,21 +163,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterEmailAddress(emailInput);
             log.debug("Entered email: '{}'.", emailInput);
 
-            String valueToSelect = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
-            submittedApplicationsPage.selectValueByListEVRK(valueToSelect);
-            log.debug("Selected EVRK value: '{}'.", valueToSelect);
-
-//            String addressInput = "Vilniaus m. sav., Vilnius, Testo g. 10T";
-//            submittedApplicationsPage.enterAddress(addressInput);
-//            log.debug("Entered address: '{}'.", addressInput);
-
-
-            submittedApplicationsPage.enterDate();
-            log.debug("Entered project date.");
-
-            String jobCount = "1";
-            submittedApplicationsPage.enterJobCount(jobCount);
-            log.debug("Entered job count: '{}'.", jobCount);
+//            String valueToSelect = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
+//            submittedApplicationsPage.selectValueByListEVRK(valueToSelect);
+//            log.debug("Selected EVRK value: '{}'.", valueToSelect);
 
             submittedApplicationsPage.clickAddressComponent();
             log.debug("Clicked on 'Address Component' button.");
@@ -183,19 +174,26 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectDropdownAddressCountry(country);
             log.debug("Selected country: '{}'.", country);
 
-//            String city = "Vilnius, Vilniaus miesto sav.";
-//            submittedApplicationsPage.selectDropdownAddressCity(city);
-//            log.debug("Selected city: '{}'.", city);
+            String citySearchTerm = "Vilnius";
 
+            try {
+                // Iškviečiame metodą, kuris įveda ir pasirenka miestą
+                submittedApplicationsPage.selectDropdownAddressCity(citySearchTerm);
 
+                // Patikriname, ar pasirinktas būtent „Vilnius“
+                WebElement selectedCity = driver.findElement(By.xpath("//mat-option[@aria-selected='true']//span[contains(@class, 'area-center')]"));
+                String selectedCityText = selectedCity.getText().trim();
 
-            String city = "Vilnius";
-//            String district = "Vilniaus miesto sav.";
+                Assert.assertTrue(selectedCityText.equalsIgnoreCase(citySearchTerm),
+                        "The selected city is incorrect. Found: " + selectedCityText);
 
-            submittedApplicationsPage.selectDropdownAddressCity(city);
-            log.debug("Selected city: '{}'.", city);
+                System.out.println("Test passed: correct city selected - " + selectedCityText);
 
-            String street = "V. Grybo g.";
+            } catch (Exception e) {
+                Assert.fail("Test failed: " + e.getMessage());
+            }
+
+            String street = "A. Domaševičiaus g.";
             submittedApplicationsPage.selectDropdownAddressStreet(street);
             log.debug("Selected street: '{}'.", street);
 
@@ -207,9 +205,18 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectDropdownAddressApartment(apartment);
             log.debug("Selected apartment: '{}'.", apartment);
 
+            submittedApplicationsPage.clickButtonConfirm();
+            log.debug("Clicked 'Confirm' button.");
 
-            submittedApplicationsPage.clickButtonNext();
-            log.debug("Clicked 'Next' button.");
+            submittedApplicationsPage.enterDate();
+            log.debug("Entered project date.");
+
+            String jobCount = "1";
+            submittedApplicationsPage.enterJobCount(jobCount);
+            log.debug("Entered job count: '{}'.", jobCount);
+
+//            submittedApplicationsPage.clickButtonNext();
+//            log.debug("Clicked 'Next' button.");
 
             //--------------------
             String valueToSelect1 = "Administratoriai";
