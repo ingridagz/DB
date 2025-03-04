@@ -1,13 +1,10 @@
 package lt.insoft.uztis.pages;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 
-import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -17,10 +14,12 @@ import static org.slf4j.LoggerFactory.getLogger;
 public class EvaluationsPage extends UztisPage{
 
     private static final Logger log = getLogger(lookup().lookupClass());
+    private static org.openqa.selenium.By By;
 
     public EvaluationsPage(WebDriver driver) {
         super(driver);
     }
+
 
     @FindBy(xpath = "//a[@href='/application/evaluation']")
     WebElement buttonMenuEvaluations;

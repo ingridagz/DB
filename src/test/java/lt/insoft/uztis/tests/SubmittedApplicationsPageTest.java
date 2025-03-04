@@ -21,14 +21,6 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
     protected ApplicationFormsPage applicationFormsPage;
     protected SubmittedApplicationsPage submittedApplicationsPage;
 
-
-//    private void navigateToMainMenu() {
-//        applicationFormsPage.openMenuApplicationProcessing();
-//        log.debug("Opened 'Application Processing' menu.");
-//        invitationsPage.clickMenuInvitation();
-//        log.debug("Clicked on 'Invitation' menu.");
-//    }
-
     private void navigateToSubmittedApplicationsMenu() {
         applicationFormsPage.openMenuApplicationProcessing();
         log.debug("Opened 'Application Processing' menu.");
@@ -65,14 +57,6 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
         log.debug("Selected invitation by code: '{}'.", codeText);
 
     }
-
-//    public void verifySuccessMessage(String expectedMessage) {
-//        List<String> actualMessages = invitationsPage.getAllMessagesText();
-//        boolean messageFound = actualMessages.stream()
-//                .anyMatch(message -> message.equals(expectedMessage));
-//        Assertions.assertTrue(messageFound, "Expected message not found: " + expectedMessage);
-//        log.debug("Verified success message: '{}'", expectedMessage);
-//    }
 
     @BeforeEach
     void setUpInvitationPage() {
@@ -163,10 +147,12 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterEmailAddress(emailInput);
             log.debug("Entered email: '{}'.", emailInput);
 
-//            String valueToSelect = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
-//            submittedApplicationsPage.selectValueByListEVRK(valueToSelect);
-//            log.debug("Selected EVRK value: '{}'.", valueToSelect);
+            String evrk = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
+            submittedApplicationsPage.selectValueByListEVRK_VUI(evrk);
+            log.debug("Selected EVRK value: '{}'.", evrk);
 
+            //address
+            //--------------
             submittedApplicationsPage.clickAddressComponent();
             log.debug("Clicked on 'Address Component' button.");
 
@@ -177,10 +163,8 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             String citySearchTerm = "Vilnius";
 
             try {
-                // Iškviečiame metodą, kuris įveda ir pasirenka miestą
                 submittedApplicationsPage.selectDropdownAddressCity(citySearchTerm);
 
-                // Patikriname, ar pasirinktas būtent „Vilnius“
                 WebElement selectedCity = driver.findElement(By.xpath("//mat-option[@aria-selected='true']//span[contains(@class, 'area-center')]"));
                 String selectedCityText = selectedCity.getText().trim();
 
@@ -207,6 +191,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             submittedApplicationsPage.clickButtonConfirm();
             log.debug("Clicked 'Confirm' button.");
+            //-------------
 
             submittedApplicationsPage.enterDate();
             log.debug("Entered project date.");
@@ -215,47 +200,47 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterJobCount(jobCount);
             log.debug("Entered job count: '{}'.", jobCount);
 
-//            submittedApplicationsPage.clickButtonNext();
-//            log.debug("Clicked 'Next' button.");
+            submittedApplicationsPage.clickButtonNext();
+            log.debug("Clicked 'Next' button.");
 
             //--------------------
-            String valueToSelect1 = "Administratoriai";
-            submittedApplicationsPage.selectDropdownJobName(valueToSelect1);
-            log.debug("Selected job name: '{}'.", valueToSelect1);
+            String jobName = "Administratoriai";
+            submittedApplicationsPage.selectDropdownJobName(jobName);
+            log.debug("Selected job name: '{}'.", jobName);
 
-            String text = "Funkcija 1";
-            submittedApplicationsPage.enterInputJobFunction(text);
-            log.debug("Entered job function: '{}'.", text);
+            String function = "Funkcija 1";
+            submittedApplicationsPage.enterInputJobFunction(function);
+            log.debug("Entered job function: '{}'.", function);
 
             submittedApplicationsPage.clickRadioButtonWithDisabilitiesVUI();
             log.debug("Selected 'RadioButtonWithDisabilities' option.");
 
-            String valueToSelect2 = "Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis";
-            submittedApplicationsPage.selectValueByListDisabilitiesType(valueToSelect2);
-            log.debug("Selected disabilities type: '{}'.", valueToSelect2);
+            String disabilities = "Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis";
+            submittedApplicationsPage.selectValueByListDisabilitiesType_VUI(disabilities);
+            log.debug("Selected disabilities type: '{}'.", disabilities);
 
-            String text1 = "Negalia 1";
-            submittedApplicationsPage.enterDisabilities(text1);
-            log.debug("Entered disability information: '{}'.", text1);
+            String disabilitiesDescription = "Negalia 1";
+            submittedApplicationsPage.enterDisabilities(disabilitiesDescription);
+            log.debug("Entered disability information: '{}'.", disabilitiesDescription);
 
-            String valueToSelect3 = "Kita";
-            submittedApplicationsPage.selectDropdownTimeMode(valueToSelect3);
-            log.debug("Selected time mode: '{}'.", valueToSelect3);
+            String timeMode = "Kita";
+            submittedApplicationsPage.selectDropdownTimeMode(timeMode);
+            log.debug("Selected time mode: '{}'.", timeMode);
 
-            String valueToSelect4 = "6 val. per dieną ir 4 d. per savaitę";
-            submittedApplicationsPage.enterInputTimeModeOthers(valueToSelect4);
-            log.debug("Selected time mode other: '{}'.", valueToSelect4);
+            String timeMode2 = "6 val. per dieną ir 4 d. per savaitę";
+            submittedApplicationsPage.enterInputTimeModeOthers(timeMode2);
+            log.debug("Selected time mode other: '{}'.", timeMode2);
 
-            String text2 = "Kvalifikacija 1";
-            submittedApplicationsPage.enterQualification(text2);
-            log.debug("Entered qualification: '{}'.", text2);
+            String qualificationDescription = "Kvalifikacija 1";
+            submittedApplicationsPage.enterQualification(qualificationDescription);
+            log.debug("Entered qualification: '{}'.", qualificationDescription);
 
             submittedApplicationsPage.enterJobDate();
             log.debug("Entered job date.");
 
-            String amount1 = "1200";
-            submittedApplicationsPage.enterSalary(amount1);
-            log.debug("Entered salary amount: '{}'.", amount1);
+            String salary = "1200";
+            submittedApplicationsPage.enterSalary(salary);
+            log.debug("Entered salary amount: '{}'.", salary);
 
             submittedApplicationsPage.clickRadioButtonTemporaryJob();
             log.debug("Selected 'Temporary Job' radio button.");
@@ -269,48 +254,48 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.clickRadioButtonRepair();
             log.debug("Selected 'Repair' radio button.");
 
-            String text3 = "Veikla 1";
-            submittedApplicationsPage.enterJobDescription(text3);
-            log.debug("Entered job description: '{}'.", text3);
+            String activity = "Veikla 1";
+            submittedApplicationsPage.enterJobDescription(activity);
+            log.debug("Entered job description: '{}'.", activity);
 
-            String text4 = "Procesas 1";
-            submittedApplicationsPage.enterProsesDescriptionVUI_equipmentDescriptionDVP(text4);
-            log.debug("Entered process description: '{}'.", text4);
+            String elementDescription = "Procesas 1";
+            submittedApplicationsPage.enterProsesDescriptionVUI_equipmentDescriptionDVP(elementDescription);
+            log.debug("Entered process description: '{}'.", elementDescription);
 
-            String text5 = "Energija 1";
-            submittedApplicationsPage.enterEnergyInformationVUI_workInformationDVP(text5);
-            log.debug("Entered energy information: '{}'.", text5);
+            String energyDescription = "Energija 1";
+            submittedApplicationsPage.enterEnergyInformationVUI_workInformationDVP(energyDescription);
+            log.debug("Entered energy information: '{}'.", energyDescription);
 
-            String text6 = "Remontas 1";
-            submittedApplicationsPage.enterRepairInformation(text6);
-            log.debug("Entered repair information: '{}'.", text6);
+            String repairDescription = "Remontas 1";
+            submittedApplicationsPage.enterRepairInformation(repairDescription);
+            log.debug("Entered repair information: '{}'.", repairDescription);
 
             submittedApplicationsPage.clickRadioButtonPVM();
             log.debug("Selected 'PVM' radio button.");
 
-            String valueToSelect5 = "Įsigyti";
-            submittedApplicationsPage.selectDropdownNecessaryForJobOne(valueToSelect5);
-            log.debug("Selected necessary for job: '{}'.", valueToSelect5);
+            String necessaryForJob = "Įsigyti";
+            submittedApplicationsPage.selectDropdownNecessaryForJobOne(necessaryForJob);
+            log.debug("Selected necessary for job: '{}'.", necessaryForJob);
 
-            String valueToSelect6 = "Darbo priemonė 1";
-            submittedApplicationsPage.enterTool(valueToSelect6);
-            log.debug("Selected tool: '{}'.", valueToSelect6);
+            String tool = "Darbo priemonė 1";
+            submittedApplicationsPage.enterTool(tool);
+            log.debug("Selected tool: '{}'.", tool);
 
-            String valueToSelect7 = "Darbo priemonės 1 parametras 1";
-            submittedApplicationsPage.enterToolParameterOne(valueToSelect7);
-            log.debug("Selected tool parameter one: '{}'.", valueToSelect7);
+            String toolParameter1 = "Darbo priemonės 1 parametras 1";
+            submittedApplicationsPage.enterToolParameterOne(toolParameter1);
+            log.debug("Selected tool parameter one: '{}'.", toolParameter1);
 
-            String valueToSelect8 = "Darbo priemonės 1 parametras 2";
-            submittedApplicationsPage.enterToolParameterTwo(valueToSelect8);
-            log.debug("Selected tool parameter two: '{}'.", valueToSelect8);
+            String toolParameter2 = "Darbo priemonės 1 parametras 2";
+            submittedApplicationsPage.enterToolParameterTwo(toolParameter2);
+            log.debug("Selected tool parameter two: '{}'.", toolParameter2);
 
-            String valueToSelect9 = "Darbo priemonės 1 parametras 3";
-            submittedApplicationsPage.enterToolParameterThree(valueToSelect9);
-            log.debug("Selected tool parameter three: '{}'.", valueToSelect9);
+            String toolParameter3 = "Darbo priemonės 1 parametras 3";
+            submittedApplicationsPage.enterToolParameterThree(toolParameter3);
+            log.debug("Selected tool parameter three: '{}'.", toolParameter3);
 
-            String count1 = "1";
-            submittedApplicationsPage.enterToolsCount(count1);
-            log.debug("Entered tool count: '{}'.", count1);
+            String toolCount = "1";
+            submittedApplicationsPage.enterToolsCount(toolCount);
+            log.debug("Entered tool count: '{}'.", toolCount);
 
             String amount2 = "1000";
             submittedApplicationsPage.enterPriceOne(amount2);
@@ -323,17 +308,17 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.clickButtonAdd();
             log.debug("Clicked 'Add' button.");
 
-            String valueToSelect5_1 = "Remontuoti";
-            submittedApplicationsPage.selectDropdownNecessaryForJobTwo(valueToSelect5_1);
-            log.debug("Selected necessary for job 'to repair': '{}'.", valueToSelect5_1);
+            String necessaryForJob1 = "Remontuoti";
+            submittedApplicationsPage.selectDropdownNecessaryForJobTwo(necessaryForJob1);
+            log.debug("Selected necessary for job 'to repair': '{}'.", necessaryForJob1);
 
-            String valueToSelect10 = "Remonto pavadinimas 1";
-            submittedApplicationsPage.enterRepairName(valueToSelect10);
-            log.debug("Selected repair name: '{}'.", valueToSelect10);
+            String repairName = "Remonto pavadinimas 1";
+            submittedApplicationsPage.enterRepairName(repairName);
+            log.debug("Selected repair name: '{}'.", repairName);
 
-            String text7 = "Remonto aprašymas 1";
-            submittedApplicationsPage.enterRepairDescription(text7);
-            log.debug("Entered repair information: '{}'.", text7);
+            String repairDescription1 = "Remonto aprašymas 1";
+            submittedApplicationsPage.enterRepairDescription(repairDescription1);
+            log.debug("Entered repair information: '{}'.", repairDescription1);
 
             String amount4 = "1000";
             submittedApplicationsPage.enterPriceTwo(amount4);
@@ -500,8 +485,6 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
         }
     }
 
-    //ĮVESTI Į DB REDION_ID IR MINICIPALITY_ID (kol kas)
-
     @Test
     void testAddEvaluators() {
 
@@ -574,12 +557,11 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Entered email: '{}'.", emailInput);
 
             //DVP
-
             invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationOne, true);
             log.debug("Checked 'For workplace adaptation' checkbox 1.");
 
             invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationTwo, true);
-            log.debug("Checked 'For workplace adaptation' checkbox 2.");
+            log.debug("Checked 'For environmental adaptation' checkbox 2.");
 
 //            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationOne, true);
 //            log.debug("Checked 'For workplace adaptation' checkbox 1.");
@@ -588,123 +570,161 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 //            log.debug("Checked 'For environmental adaptation' checkbox 2.");
             //DVP
 
-            String valueToSelect = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
-            submittedApplicationsPage.selectValueByListEVRK_DVP(valueToSelect);
-            log.debug("Selected EVRK value: '{}'.", valueToSelect);
+            String evrkDVP = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
+            submittedApplicationsPage.selectValueByListEVRK_DVP(evrkDVP);
+            log.debug("Selected EVRK value: '{}'.", evrkDVP);
 
-            String addressInput = "Vilniaus m. sav., Vilnius, Testo g. 10T";
-            submittedApplicationsPage.enterAddress_DVP(addressInput);
-            log.debug("Entered address: '{}'.", addressInput);
+            //address
+            //--------------
+            submittedApplicationsPage.clickAddressComponent();
+            log.debug("Clicked on 'Address Component' button.");
 
+            String country = "Lietuva";
+            submittedApplicationsPage.selectDropdownAddressCountry(country);
+            log.debug("Selected country: '{}'.", country);
 
-            //oDVP
-            submittedApplicationsPage.clickRadioButtonForAlreadyWorkingDVP_step1();
+            String citySearchTerm = "Vilnius";
+
+            try {
+                // Iškviečiame metodą, kuris įveda ir pasirenka miestą
+                submittedApplicationsPage.selectDropdownAddressCity(citySearchTerm);
+
+                // Patikriname, ar pasirinktas būtent „Vilnius“
+                WebElement selectedCity = driver.findElement(By.xpath("//mat-option[@aria-selected='true']//span[contains(@class, 'area-center')]"));
+                String selectedCityText = selectedCity.getText().trim();
+
+                Assert.assertTrue(selectedCityText.equalsIgnoreCase(citySearchTerm),
+                        "The selected city is incorrect. Found: " + selectedCityText);
+
+                System.out.println("Test passed: correct city selected - " + selectedCityText);
+
+            } catch (Exception e) {
+                Assert.fail("Test failed: " + e.getMessage());
+            }
+
+            String street = "A. Domaševičiaus g.";
+            submittedApplicationsPage.selectDropdownAddressStreet(street);
+            log.debug("Selected street: '{}'.", street);
+
+            String house = "1";
+            submittedApplicationsPage.selectDropdownAddressHouse(house);
+            log.debug("Selected house: '{}'.", house);
+
+            String apartment = "1";
+            submittedApplicationsPage.selectDropdownAddressApartment(apartment);
+            log.debug("Selected apartment: '{}'.", apartment);
+
+            submittedApplicationsPage.clickButtonConfirm();
+            log.debug("Clicked 'Confirm' button.");
+            //-------------
+
+            //DVP
+            submittedApplicationsPage.clickRadioButtonForAlreadyWorking_DVP_step1();
             log.debug("Selected 'For already working' option.");
 
             String jobCount1 = "1";
-            submittedApplicationsPage.enterPersonCountOneDVP(jobCount1);
+            submittedApplicationsPage.enterPersonCountOne_DVP(jobCount1);
             log.debug("Entered person count1: '{}'.", jobCount1);
 
-            submittedApplicationsPage.clickRadioButtonForNewWorkingDVP_step1();
+            submittedApplicationsPage.clickRadioButtonForNewWorking_DVP_step1();
             log.debug("Selected 'For new working' option.");
 
             String jobCount2 = "1";
-            submittedApplicationsPage.enterPersonCountTwoDVP(jobCount2);
+            submittedApplicationsPage.enterPersonCountTwo_DVP(jobCount2);
             log.debug("Entered person count2: '{}'.", jobCount2);
             //DVP
-
 
             submittedApplicationsPage.clickButtonNext();
             log.debug("Clicked 'Next' button after checkboxes.");
 
             //--------------------
 
-            String valueToSelect1 = "Administratoriai";
-            submittedApplicationsPage.selectDropdownJobNameAdaptableDVP(valueToSelect1);
-            log.debug("Selected adaptable job name: '{}'.", valueToSelect1);
+            String jobName = "Administratoriai";
+            submittedApplicationsPage.selectDropdownJobNameAdaptable_DVP(jobName);
+            log.debug("Selected adaptable job name: '{}'.", jobName);
 
-            submittedApplicationsPage.enterJobDateDVP();
+            submittedApplicationsPage.enterJobDate_DVP();
             log.debug("Entered job date.");
 
-            String text = "Funkcija 1";
-            submittedApplicationsPage.enterInputJobFunction(text);
-            log.debug("Entered job function: '{}'.", text);
+            String function = "Funkcija 1";
+            submittedApplicationsPage.enterInputJobFunction(function);
+            log.debug("Entered job function: '{}'.", function);
 
-            submittedApplicationsPage.clickRadioButtonForAlreadyWorkingDVP_step2();
-            log.debug("Selected 'ForAlreadyWorking' 'no' option.");
+            submittedApplicationsPage.clickRadioButtonForAlreadyWorking_DVP_step2();
+            log.debug("Selected 'For already working' 'no' option.");
 
-            String valueToSelect2 = "Sunkaus neįgalumo lygis ar neviršijantis 25 procentų dalyvumo lygis (iki 2023 metų gruodžio 31 dienos – iki 25 procentų darbingumo lygis)";
-            submittedApplicationsPage.selectValueByListDisabilitiesLevelDVP(valueToSelect2);
-            log.debug("Selected disabilities type: '{}'.", valueToSelect2);
+            String disabilitiesLevel = "Sunkaus neįgalumo lygis ar neviršijantis 25 procentų dalyvumo lygis (iki 2023 metų gruodžio 31 dienos – iki 25 procentų darbingumo lygis)";
+            submittedApplicationsPage.selectValueByListDisabilitiesLevel_DVP(disabilitiesLevel);
+            log.debug("Selected disabilities type: '{}'.", disabilitiesLevel);
 
-            String text1 = "Negalia 1";
-            submittedApplicationsPage.enterDisabilities(text1);
-            log.debug("Entered disability information: '{}'.", text1);
+            String disabilitiesDescription = "Negalia 1";
+            submittedApplicationsPage.enterDisabilities(disabilitiesDescription);
+            log.debug("Entered disability information: '{}'.", disabilitiesDescription);
 
-            String text2 = "Kvalifikacija 1";
-            submittedApplicationsPage.enterQualification(text2);
-            log.debug("Entered qualification: '{}'.", text2);
+            String qualification = "Kvalifikacija 1";
+            submittedApplicationsPage.enterQualification(qualification);
+            log.debug("Entered qualification: '{}'.", qualification);
 
-            String text3 = "Darbo vietos aprašymas 1";
-            submittedApplicationsPage.enterJobDescription(text3);
-            log.debug("Entered job description: '{}'.", text3);
+            String jobDescription = "Darbo vietos aprašymas 1";
+            submittedApplicationsPage.enterJobDescription(jobDescription);
+            log.debug("Entered job description: '{}'.", jobDescription);
 
-            String text4 = "Priemonių įsigyjimas 1";
-            submittedApplicationsPage.enterProsesDescriptionVUI_equipmentDescriptionDVP(text4);
-            log.debug("Entered equipment description: '{}'.", text4);
+            String equipmentDescription_DVP = "Priemonių įsigyjimas 1";
+            submittedApplicationsPage.enterProsesDescriptionVUI_equipmentDescriptionDVP(equipmentDescription_DVP);
+            log.debug("Entered equipment description: '{}'.", equipmentDescription_DVP);
 
-            String text5 = "Darbai 1";
-            submittedApplicationsPage.enterEnergyInformationVUI_workInformationDVP(text5);
-            log.debug("Entered work information: '{}'.", text5);
+            String workInformation_DVP = "Darbai 1";
+            submittedApplicationsPage.enterEnergyInformationVUI_workInformationDVP(workInformation_DVP);
+            log.debug("Entered work information: '{}'.", workInformation_DVP);
 
-            String valueToSelect3 = "Kita";
-            submittedApplicationsPage.selectDropdownTimeMode(valueToSelect3);
-            log.debug("Selected time mode: '{}'.", valueToSelect3);
+            String timeMode = "Kita";
+            submittedApplicationsPage.selectDropdownTimeMode(timeMode);
+            log.debug("Selected time mode: '{}'.", timeMode);
 
-            String valueToSelect4 = "6 val. per dieną ir 4 d. per savaitę";
-            submittedApplicationsPage.enterInputTimeModeOthers(valueToSelect4);
-            log.debug("Selected time mode other: '{}'.", valueToSelect4);
+            String timeMode1 = "6 val. per dieną ir 4 d. per savaitę";
+            submittedApplicationsPage.enterInputTimeModeOthers(timeMode1);
+            log.debug("Selected time mode other: '{}'.", timeMode1);
 
             String amount1 = "1200";
             submittedApplicationsPage.enterSalary(amount1);
             log.debug("Entered salary amount: '{}'.", amount1);
 
-            submittedApplicationsPage.clickRadioButtonTemporaryJobDVP();
+            submittedApplicationsPage.clickRadioButtonTemporaryJob_DVP();
             log.debug("Selected 'Temporary Job' radio button.");
 
-            submittedApplicationsPage.clickRadioButtonSeasonJobDVP();
+            submittedApplicationsPage.clickRadioButtonSeasonJob_DVP();
             log.debug("Selected 'Season Job' radio button.");
 
             submittedApplicationsPage.clickRadioButtonPVM();
             log.debug("Selected 'PVM' radio button.");
 
             String type1 = "Darbo vietos pritaikymui";
-            submittedApplicationsPage.selectDropdownExpensesTypDVP(type1);
+            submittedApplicationsPage.selectDropdownExpensesTyp_DVP(type1);
             log.debug("Selected adaptable job name: '{}'.", type1);
 
-            String valueToSelect5 = "Įsigyti";
-            submittedApplicationsPage.selectDropdownNecessaryForJobOneDVP(valueToSelect5);
-            log.debug("Selected necessary for job: '{}'.", valueToSelect5);
+            String necessaryForJob = "Įsigyti";
+            submittedApplicationsPage.selectDropdownNecessaryForJobOne_DVP(necessaryForJob);
+            log.debug("Selected necessary for job: '{}'.", necessaryForJob);
 
-            String valueToSelect6 = "Darbo priemonė 1";
-            submittedApplicationsPage.enterToolDVP(valueToSelect6);
-            log.debug("Selected tool: '{}'.", valueToSelect6);
+            String tool1 = "Darbo priemonė 1";
+            submittedApplicationsPage.enterTool_DVP(tool1);
+            log.debug("Selected tool: '{}'.", tool1);
 
-            String valueToSelect7 = "Darbo priemonės 1 parametras 1";
-            submittedApplicationsPage.enterToolParameterOneDVP(valueToSelect7);
-            log.debug("Selected tool parameter one: '{}'.", valueToSelect7);
+            String toolParameter1 = "Darbo priemonės 1 parametras 1";
+            submittedApplicationsPage.enterToolParameterOne_DVP(toolParameter1);
+            log.debug("Selected tool parameter one: '{}'.", toolParameter1);
 
-            String valueToSelect8 = "Darbo priemonės 1 parametras 2";
-            submittedApplicationsPage.enterToolParameterTwoDVP(valueToSelect8);
-            log.debug("Selected tool parameter two: '{}'.", valueToSelect8);
+            String toolParameter2 = "Darbo priemonės 1 parametras 2";
+            submittedApplicationsPage.enterToolParameterTwo_DVP(toolParameter2);
+            log.debug("Selected tool parameter two: '{}'.", toolParameter2);
 
-            String valueToSelect9 = "Darbo priemonės 1 parametras 3";
-            submittedApplicationsPage.enterToolParameterThreeDVP(valueToSelect9);
-            log.debug("Selected tool parameter three: '{}'.", valueToSelect9);
+            String toolParameter3 = "Darbo priemonės 1 parametras 3";
+            submittedApplicationsPage.enterToolParameterThree_DVP(toolParameter3);
+            log.debug("Selected tool parameter three: '{}'.", toolParameter3);
 
-            String count1 = "1";
-            submittedApplicationsPage.enterToolsCountDVP(count1);
-            log.debug("Entered tool count: '{}'.", count1);
+            String toolCount1 = "1";
+            submittedApplicationsPage.enterToolsCount_DVP(toolCount1);
+            log.debug("Entered tool count: '{}'.", toolCount1);
 
             String amount2 = "1000";
             submittedApplicationsPage.enterPriceOne(amount2);
@@ -721,10 +741,10 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterProgramName(programName);
             log.debug("Entered program name: '{}'.", programName);
 
-            submittedApplicationsPage.enterProjectDateFromDVP();
+            submittedApplicationsPage.enterProjectDateFrom_DVP();
             log.debug("Entered project date from.");
 
-            submittedApplicationsPage.enterProjectDateUntilDVP();
+            submittedApplicationsPage.enterProjectDateUntil_DVP();
             log.debug("Entered project date until.");
 
             String amount4 = "2000";
@@ -735,7 +755,6 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 //            log.debug("Clicked 'Next' button.");
 
             //--------------------
-//NUSIZYMI 1 ZINGSNIO CHECKBOXAI
 //            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationOne, true);
 //            log.debug("Checked 'Legal Entities' checkbox 1.");
 //

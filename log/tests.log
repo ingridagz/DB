@@ -90698,3 +90698,1225 @@ Session ID: f09fcc64fc24cc8ac6c8a927747a6251
 	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
 	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
 	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-03-04 08:42:11 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-04 08:42:11 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Setup complete. ApplicationFormsPage initialized.
+2025-03-04 08:42:11 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Starting test:'testCreateNewPvkApplication'
+2025-03-04 08:42:12 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - User logged in with test credentials
+2025-03-04 08:42:12 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Opened 'Application Processing' menu.
+2025-03-04 08:42:12 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked on 'Application Forms' menu.
+2025-03-04 08:42:13 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked to create a new application form.
+2025-03-04 08:42:13 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Entered random application code: TST-PVK-12
+2025-03-04 08:42:13 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected 'Municipality' radio button.
+2025-03-04 08:42:13 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Located the dropdown button.
+2025-03-04 08:42:14 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Successfully selected the value: 'Kauno departamentas'
+2025-03-04 08:42:24 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Failed to close the dropdown with aria-expanded = 'false'.
+2025-03-04 08:42:24 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected a value from the 'Municipality' dropdown: 'Kauno departamentas'
+2025-03-04 08:42:24 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected 'Budget by Municipality' option.
+2025-03-04 08:42:24 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected 'Financed By Queue' radio button.
+2025-03-04 08:42:25 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked 'Add' button.
+2025-03-04 08:42:25 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Located the dropdown button.
+2025-03-04 08:42:25 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Successfully selected the value: 'PVK paraiškos vertinimo forma - I etapas'
+2025-03-04 08:42:36 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Failed to close the dropdown with aria-expanded = 'false'.
+2025-03-04 08:42:36 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected a value from the 'EvaluationOne' dropdown: 'PVK paraiškos vertinimo forma - I etapas'
+2025-03-04 08:42:36 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Located the dropdown button.
+2025-03-04 08:42:36 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Successfully selected the value: 'PVK paraiškos vertinimo forma - II etapas'
+2025-03-04 08:42:47 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Failed to close the dropdown with aria-expanded = 'false'.
+2025-03-04 08:42:47 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected a value from the 'EvaluationTwon' dropdown: 'PVK paraiškos vertinimo forma - II etapas'
+2025-03-04 08:42:47 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Located the dropdown button.
+2025-03-04 08:42:47 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Successfully selected the value: 'PVK paraiškos vertinimo forma - III etapas'
+2025-03-04 08:42:58 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Failed to close the dropdown with aria-expanded = 'false'.
+2025-03-04 08:42:58 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected a value from the 'EvaluationThree' dropdown: 'PVK paraiškos vertinimo forma - III etapas'
+2025-03-04 08:42:58 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked 'Plus' button.
+2025-03-04 08:42:58 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked 'Add' button seven times.
+2025-03-04 08:42:58 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 0
+2025-03-04 08:43:09 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 0 with aria-expanded = 'false'
+2025-03-04 08:43:09 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 1
+2025-03-04 08:43:20 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 1 with aria-expanded = 'false'
+2025-03-04 08:43:20 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 2
+2025-03-04 08:43:31 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 2 with aria-expanded = 'false'
+2025-03-04 08:43:31 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 3
+2025-03-04 08:43:42 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 3 with aria-expanded = 'false'
+2025-03-04 08:43:42 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 4
+2025-03-04 08:43:53 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 4 with aria-expanded = 'false'
+2025-03-04 08:43:53 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 5
+2025-03-04 08:44:03 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 5 with aria-expanded = 'false'
+2025-03-04 08:44:03 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 6
+2025-03-04 08:44:15 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 6 with aria-expanded = 'false'
+2025-03-04 08:44:15 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 7
+2025-03-04 08:44:25 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 7 with aria-expanded = 'false'
+2025-03-04 08:44:25 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 0
+2025-03-04 08:44:25 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '50' into field index: 0
+2025-03-04 08:44:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 1
+2025-03-04 08:44:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '924' into field index: 1
+2025-03-04 08:44:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 2
+2025-03-04 08:44:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '31' into field index: 2
+2025-03-04 08:44:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 3
+2025-03-04 08:44:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '4.7' into field index: 3
+2025-03-04 08:44:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 4
+2025-03-04 08:44:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '35' into field index: 4
+2025-03-04 08:44:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 5
+2025-03-04 08:44:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '20' into field index: 5
+2025-03-04 08:44:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 6
+2025-03-04 08:44:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '30' into field index: 6
+2025-03-04 08:44:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 7
+2025-03-04 08:44:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '60' into field index: 7
+2025-03-04 08:44:26 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Entered additional values and text.
+2025-03-04 08:44:26 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Entered application name: PVK paraiška
+2025-03-04 08:44:27 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked the 'Save' button.
+2025-03-04 08:44:28 [main] DEBUG l.i.uztis.pages.ApplicationFormsPage - Verified success message: 'Duomenys sėkmingai išsaugoti.'
+2025-03-04 08:44:28 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Verified success message
+2025-03-04 08:44:28 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Verified that the 'Save Form' button is displayed.
+2025-03-04 08:44:28 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Test 'testCreateNewPvkApplication' completed successfully.
+2025-03-04 08:47:22 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-04 08:47:22 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Setup complete. ApplicationFormsPage initialized.
+2025-03-04 08:47:22 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Starting test:'testAddContractPVK'
+2025-03-04 08:47:23 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - User logged in with test credentials
+2025-03-04 08:47:23 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Opened 'Application Processing' menu.
+2025-03-04 08:47:23 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked on 'Application Forms' menu.
+2025-03-04 08:47:23 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected the last application description.
+2025-03-04 08:47:24 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked 'Project Progress' tab.
+2025-03-04 08:47:24 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked the 'Edit' button.
+2025-03-04 08:47:24 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Located the dropdown button.
+2025-03-04 08:47:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Successfully selected the value: 'Paramos verslui kurti sutartis'
+2025-03-04 08:47:37 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Failed to close the dropdown with aria-expanded = 'false'.
+2025-03-04 08:47:37 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected a value from the 'Document' dropdown: 'Paramos verslui kurti sutartis'
+2025-03-04 08:47:37 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked the 'Save' button.
+2025-03-04 08:47:37 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Failed to verify the success message: 'Funkcija sėkmingai atlikta.'. Available messages: [Duomenys sėkmingai išsaugoti.]
+2025-03-04 08:47:37 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Verified success message
+2025-03-04 08:47:37 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Test 'testAddContractPVK' completed successfully.
+2025-03-04 08:48:11 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-04 08:48:11 [main] INFO  l.i.uztis.tests.InvitationsPageTest - Starting test:'testCreateNewPvkInvitation'
+2025-03-04 08:48:11 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - User logged in with test credentials
+2025-03-04 08:48:11 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Opened 'Application Processing' menu.
+2025-03-04 08:48:11 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked on 'Application Forms' menu.
+2025-03-04 08:48:11 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Navigating to application forms menu.
+2025-03-04 08:48:12 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Retrieved last description code text: 'TST-PVK-12'.
+2025-03-04 08:48:12 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked on 'Invitation' menu.
+2025-03-04 08:48:12 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked 'Create New Application Form'.
+2025-03-04 08:48:13 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected section by code: 'TST-PVK-12'.
+2025-03-04 08:48:13 [main] INFO  l.insoft.uztis.pages.InvitationsPage - Located the dropdown button.
+2025-03-04 08:48:24 [main] ERROR l.insoft.uztis.pages.InvitationsPage - Timeout while waiting for dropdown to close with aria-expanded = 'false'.
+2025-03-04 08:48:24 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected invitation number from the list.
+2025-03-04 08:48:25 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered current date.
+2025-03-04 08:48:25 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered start time: 00:00.
+2025-03-04 08:48:25 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered end date.
+2025-03-04 08:48:26 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered end time: 11:11.
+2025-03-04 08:48:26 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered publication end date.
+2025-03-04 08:48:26 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Added additional values.
+2025-03-04 08:48:26 [main] INFO  l.insoft.uztis.pages.InvitationsPage - Located the dropdown button.
+2025-03-04 08:48:27 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected the value: 'Didžiausia galima paramos suma aplinkos darbo vietai, Eur'
+2025-03-04 08:48:27 [main] INFO  l.insoft.uztis.pages.InvitationsPage - Located the dropdown button.
+2025-03-04 08:48:28 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected the value: 'Didžiausia galima paramos suma, Eur'
+2025-03-04 08:48:28 [main] INFO  l.insoft.uztis.pages.InvitationsPage - Located the dropdown button.
+2025-03-04 08:48:28 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected the value: 'Didžiausia galima paramos suma vienai darbo vietai, Eur'
+2025-03-04 08:48:29 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered value: 11000
+2025-03-04 08:48:29 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered value: 12000
+2025-03-04 08:48:29 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered value: 13000
+2025-03-04 08:48:29 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Checked 'Legal Entities' checkbox.
+2025-03-04 08:48:29 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Unchecked 'Persons Registered with Employment Service' checkbox.
+2025-03-04 08:48:29 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Checked 'Persons Registered as Employers' checkbox.
+2025-03-04 08:48:29 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered second evaluation grade: '5'.
+2025-03-04 08:48:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered third evaluation grade: '6'.
+2025-03-04 08:48:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered second evaluation grade weight: '0,45'.
+2025-03-04 08:48:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered third evaluation grade weight: '0,55'.
+2025-03-04 08:48:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered budget: '2000'.
+2025-03-04 08:48:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered budget: '2000'.
+2025-03-04 08:48:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered budget: '2000'.
+2025-03-04 08:48:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered budget: '2000'.
+2025-03-04 08:48:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered budget: '2000'.
+2025-03-04 08:48:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered description text: 'Aprašo tekstas'.
+2025-03-04 08:48:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered applicants text: 'Pareiškėjų tekstas'.
+2025-03-04 08:48:31 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered expenditures text: 'Išlaidų tekstas'.
+2025-03-04 08:48:31 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered legislation text: 'Teisės aktų tekstas'.
+2025-03-04 08:48:31 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered education text: 'Mokymų tekstas'.
+2025-03-04 08:48:31 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - File uploaded.
+2025-03-04 08:48:31 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked 'Publish'.
+2025-03-04 08:48:31 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Publication confirmed.
+2025-03-04 08:48:34 [main] DEBUG l.i.uztis.pages.ApplicationFormsPage - Verified success message: 'Funkcija sėkmingai atlikta.'
+2025-03-04 08:48:34 [main] INFO  l.i.uztis.tests.InvitationsPageTest - Verified success message
+2025-03-04 08:48:34 [main] INFO  l.i.uztis.tests.InvitationsPageTest - Test 'testCreateNewPvkInvitation' completed successfully.
+2025-03-04 08:50:16 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-04 08:50:16 [main] INFO  l.i.uztis.tests.InvitationsPageTest - Starting test:'testInsertVui_PvkStatisticInformation'
+2025-03-04 08:50:16 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - User logged in with test credentials
+2025-03-04 08:50:17 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Opened 'Application Processing' menu.
+2025-03-04 08:50:17 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked on 'Application Forms' menu.
+2025-03-04 08:50:17 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Navigating to invitation forms menu.
+2025-03-04 08:50:17 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Retrieved last description code text: 'TST-PVK-12'.
+2025-03-04 08:50:17 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked on 'Invitation' menu.
+2025-03-04 08:50:18 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected section by code: 'TST-PVK-12'.
+2025-03-04 08:50:18 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked 'Search'.
+2025-03-04 08:50:18 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Getting and inserting application code text.
+2025-03-04 08:50:18 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked 'Publishing'.
+2025-03-04 08:50:19 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked 'Statistic Information' tab.
+2025-03-04 08:50:19 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked 'Edit' button.
+2025-03-04 08:50:19 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered current date.
+2025-03-04 08:50:19 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered value: 8.7
+2025-03-04 08:50:19 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered average salary: 2237.9
+2025-03-04 08:50:19 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - File uploaded.
+2025-03-04 08:50:19 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked 'Save' button.
+2025-03-04 08:50:21 [main] DEBUG l.i.uztis.pages.ApplicationFormsPage - Verified success message: 'Funkcija sėkmingai atlikta.'
+2025-03-04 08:50:21 [main] INFO  l.i.uztis.tests.InvitationsPageTest - Verified success message
+2025-03-04 08:50:21 [main] INFO  l.i.uztis.tests.InvitationsPageTest - Test 'testInsertVui_PvkStatisticInformation' completed successfully.
+2025-03-04 14:53:46 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-04 14:53:46 [main] INFO  l.i.u.t.SubmittedApplicationsPageTest - Starting test:'testFillNewVUIPApplicationFA'
+2025-03-04 14:53:47 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - User logged in with test credentials.
+2025-03-04 14:53:47 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Opened 'Application Processing' menu.
+2025-03-04 14:53:47 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Application Forms' menu.
+2025-03-04 14:53:48 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved last description code text: 'TST-VUI-52'.
+2025-03-04 14:53:48 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Invitation' menu.
+2025-03-04 14:53:49 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected application section by code: 'TST-VUI-52'.
+2025-03-04 14:53:49 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Search' button.
+2025-03-04 14:53:49 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved invitation code: ''.
+2025-03-04 14:53:49 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Submitted Applications' menu.
+2025-03-04 14:53:50 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected invitation by code: 'TST-VUI-52'.
+2025-03-04 14:53:50 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Invitation code inserted.
+2025-03-04 14:53:51 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Action Application' button.
+2025-03-04 14:53:51 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'New Application' button.
+2025-03-04 14:53:51 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected the 'RadioButtonFA' option.
+2025-03-04 14:53:51 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered phone number: '61298745'.
+2025-03-04 14:53:52 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered email: 'test@autotest.com'.
+2025-03-04 14:53:52 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Clicking on the dropdown button.
+2025-03-04 14:54:08 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 1741 options in the dropdown.
+2025-03-04 14:54:08 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: ''
+2025-03-04 14:54:08 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'
+2025-03-04 14:54:08 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'
+2025-03-04 14:54:08 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Attempting to close the dropdown.
+2025-03-04 14:54:19 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown should be closed now.
+2025-03-04 14:54:19 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected EVRK value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'.
+2025-03-04 14:54:19 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Address Component' button.
+2025-03-04 14:54:19 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 14:54:22 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Lietuva'
+2025-03-04 14:54:22 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected country: 'Lietuva'.
+2025-03-04 14:54:22 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown search field.
+2025-03-04 14:54:22 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown city is opened.
+2025-03-04 14:54:23 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Searched for value: 'Vilnius'
+2025-03-04 14:54:23 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected: 'Vilnius'
+2025-03-04 14:54:23 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 14:54:24 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'A. Domaševičiaus g.'
+2025-03-04 14:54:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected street: 'A. Domaševičiaus g.'.
+2025-03-04 14:54:24 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 14:54:24 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-04 14:54:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected house: '1'.
+2025-03-04 14:54:24 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 14:54:24 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-04 14:54:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected apartment: '1'.
+2025-03-04 14:54:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Confirm' button.
+2025-03-04 14:54:25 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered project date.
+2025-03-04 14:54:25 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job count: '1'.
+2025-03-04 14:54:25 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 14:55:06 [main] ERROR l.i.u.p.SubmittedApplicationsPage - Dropdown button click failed: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //mat-label[contains(text(), 'Darbo vietos pavadinimas')]' (tried for 30 second(s) with 500 milliseconds interval)
+2025-03-04 14:55:46 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-04 14:55:46 [main] INFO  l.i.u.t.SubmittedApplicationsPageTest - Starting test:'testFillNewVUIPApplicationFA'
+2025-03-04 14:55:47 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - User logged in with test credentials.
+2025-03-04 14:55:47 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Opened 'Application Processing' menu.
+2025-03-04 14:55:47 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Application Forms' menu.
+2025-03-04 14:55:48 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved last description code text: 'TST-VUI-52'.
+2025-03-04 14:55:48 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Invitation' menu.
+2025-03-04 14:55:49 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected application section by code: 'TST-VUI-52'.
+2025-03-04 14:55:49 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Search' button.
+2025-03-04 14:55:49 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved invitation code: ''.
+2025-03-04 14:55:49 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Submitted Applications' menu.
+2025-03-04 14:55:50 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected invitation by code: 'TST-VUI-52'.
+2025-03-04 14:55:50 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Invitation code inserted.
+2025-03-04 14:55:51 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Action Application' button.
+2025-03-04 14:55:51 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'New Application' button.
+2025-03-04 14:55:51 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected the 'RadioButtonFA' option.
+2025-03-04 14:55:51 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered phone number: '61298745'.
+2025-03-04 14:55:52 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered email: 'test@autotest.com'.
+2025-03-04 14:55:52 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Clicking on the dropdown button.
+2025-03-04 14:56:11 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 1741 options in the dropdown.
+2025-03-04 14:56:11 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: ''
+2025-03-04 14:56:11 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'
+2025-03-04 14:56:11 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'
+2025-03-04 14:56:11 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Attempting to close the dropdown.
+2025-03-04 14:56:22 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown should be closed now.
+2025-03-04 14:56:22 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected EVRK value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'.
+2025-03-04 14:56:22 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Address Component' button.
+2025-03-04 14:56:22 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 14:56:25 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Lietuva'
+2025-03-04 14:56:25 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected country: 'Lietuva'.
+2025-03-04 14:56:25 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown search field.
+2025-03-04 14:56:25 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown city is opened.
+2025-03-04 14:56:25 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Searched for value: 'Vilnius'
+2025-03-04 14:56:26 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected: 'Vilnius'
+2025-03-04 14:56:26 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 14:56:27 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'A. Domaševičiaus g.'
+2025-03-04 14:56:27 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected street: 'A. Domaševičiaus g.'.
+2025-03-04 14:56:27 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 14:56:27 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-04 14:56:27 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected house: '1'.
+2025-03-04 14:56:27 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 14:56:28 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-04 14:56:28 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected apartment: '1'.
+2025-03-04 14:56:28 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Confirm' button.
+2025-03-04 14:56:28 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered project date.
+2025-03-04 14:56:29 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job count: '1'.
+2025-03-04 14:56:29 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Next' button.
+2025-03-04 14:56:29 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 14:56:30 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Administratoriai'
+2025-03-04 14:57:00 [main] ERROR l.i.u.p.SubmittedApplicationsPage - Timeout while waiting for dropdown to close with aria-expanded = 'false'.
+2025-03-04 14:57:00 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected job name: 'Administratoriai'.
+2025-03-04 14:57:00 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job function: 'Funkcija 1'.
+2025-03-04 14:57:00 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'RadioButtonWithDisabilities' option.
+2025-03-04 14:57:00 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Clicking on the dropdown button.
+2025-03-04 14:57:01 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 34 options in the dropdown.
+2025-03-04 14:57:01 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, kuriems suteiktas pabėgėlio statusas ar perkeliamojo asmens statusas, arba asmenys, kuriems suteikta papildoma ar laikinoji apsauga, ir asmenys, turintys teisę gauti laikinąją apsaugą, iki sprendimo dėl laikinosios apsaugos suteikimo (nesuteikimo) priėmimo, tačiau ne ilgiau kaip laikinosios apsaugos laikotarpiu'
+2025-03-04 14:57:01 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, kuriems suteiktas pabėgėlio statusas ar perkeliamojo asmens statusas, arba asmenys, kuriems suteikta papildoma ar laikinoji apsauga, ir asmenys, turintys teisę gauti laikinąją apsaugą, iki sprendimo dėl laikinosios apsaugos suteikimo (nesuteikimo) priėmimo, tačiau ne ilgiau kaip laikinosios apsaugos laikotarpiu'
+2025-03-04 14:57:01 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, turintys teisę į papildomas užimtumo garantijas pagal Lietuvos Respublikos valstybės įmonės Ignalinos atominės elektrinės darbuotojų papildomų užimtumo ir socialinių garantijų įstatymą'
+2025-03-04 14:57:01 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, turintys teisę į papildomas užimtumo garantijas pagal Lietuvos Respublikos valstybės įmonės Ignalinos atominės elektrinės darbuotojų papildomų užimtumo ir socialinių garantijų įstatymą'
+2025-03-04 14:57:01 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai iki 29 metų'
+2025-03-04 14:57:01 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai iki 29 metų'
+2025-03-04 14:57:01 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 30–40 procentų darbingumo lygis arba vidutinis neįgalumo lygis'
+2025-03-04 14:57:01 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 30–40 procentų darbingumo lygis arba vidutinis neįgalumo lygis'
+2025-03-04 14:57:01 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 45–55 procentų darbingumo lygis arba lengvas neįgalumo lygis'
+2025-03-04 14:57:01 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 45–55 procentų darbingumo lygis arba lengvas neįgalumo lygis'
+2025-03-04 14:57:01 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis'
+2025-03-04 14:57:01 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis'
+2025-03-04 14:57:01 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Attempting to close the dropdown.
+2025-03-04 14:57:11 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown should be closed now.
+2025-03-04 14:57:11 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected disabilities type: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis'.
+2025-03-04 14:57:12 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered disability information: 'Negalia 1'.
+2025-03-04 14:57:12 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 14:57:12 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Kita'
+2025-03-04 14:57:23 [main] ERROR l.i.u.p.SubmittedApplicationsPage - Timeout while waiting for dropdown to close with aria-expanded = 'false'.
+2025-03-04 14:57:23 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected time mode: 'Kita'.
+2025-03-04 14:57:23 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected time mode other: '6 val. per dieną ir 4 d. per savaitę'.
+2025-03-04 14:57:23 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered qualification: 'Kvalifikacija 1'.
+2025-03-04 14:57:23 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job date.
+2025-03-04 14:57:23 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered salary amount: '1200'.
+2025-03-04 14:57:23 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Temporary Job' radio button.
+2025-03-04 14:57:23 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Season Job' radio button.
+2025-03-04 14:57:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Energy' radio button.
+2025-03-04 14:57:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Repair' radio button.
+2025-03-04 14:57:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job description: 'Veikla 1'.
+2025-03-04 14:57:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered process description: 'Procesas 1'.
+2025-03-04 14:57:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered energy information: 'Energija 1'.
+2025-03-04 14:57:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered repair information: 'Remontas 1'.
+2025-03-04 14:57:25 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'PVM' radio button.
+2025-03-04 14:57:25 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 14:57:25 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Įsigyti'
+2025-03-04 14:57:46 [main] ERROR l.i.u.p.SubmittedApplicationsPage - Timeout while waiting for dropdown to close with aria-expanded = 'false'.
+2025-03-04 14:57:46 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected necessary for job: 'Įsigyti'.
+2025-03-04 14:57:46 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool: 'Darbo priemonė 1'.
+2025-03-04 14:57:46 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool parameter one: 'Darbo priemonės 1 parametras 1'.
+2025-03-04 14:57:46 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool parameter two: 'Darbo priemonės 1 parametras 2'.
+2025-03-04 14:57:46 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool parameter three: 'Darbo priemonės 1 parametras 3'.
+2025-03-04 14:57:46 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered tool count: '1'.
+2025-03-04 14:57:47 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered price amount 1: '1000'.
+2025-03-04 14:57:47 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered own funds amount 1: '800'.
+2025-03-04 14:57:47 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Add' button.
+2025-03-04 14:57:47 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 14:57:47 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Remontuoti'
+2025-03-04 14:58:07 [main] ERROR l.i.u.p.SubmittedApplicationsPage - Timeout while waiting for dropdown to close with aria-expanded = 'false'.
+2025-03-04 14:58:07 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected necessary for job 'to repair': 'Remontuoti'.
+2025-03-04 14:58:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected repair name: 'Remonto pavadinimas 1'.
+2025-03-04 14:58:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered repair information: 'Remonto aprašymas 1'.
+2025-03-04 14:58:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered price amount 2: '1000'.
+2025-03-04 14:58:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered own funds amount 2: '900'.
+2025-03-04 14:58:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered country percentage: '50'.
+2025-03-04 14:58:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered institution percentage: '50'.
+2025-03-04 14:58:09 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered municipality percentage: '50'.
+2025-03-04 14:58:09 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'De Minimis' radio button.
+2025-03-04 14:58:09 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered program name: 'Programa 1'.
+2025-03-04 14:58:09 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered project date from.
+2025-03-04 14:58:09 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered project date until.
+2025-03-04 14:58:09 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered support amount: '2000'.
+2025-03-04 14:58:10 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Next' button.
+2025-03-04 14:58:11 [main] ERROR l.i.u.t.SubmittedApplicationsPageTest - Test 'testFillNewVUIApplicationFA' failed with error: element click intercepted: Element <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-1-input" tabindex="0"> is not clickable at point (885, 354). Other element would receive the click: <p>...</p>
+  (Session info: chrome=133.0.6943.142)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6b9ea659a7784f588bc7a2d46ebe2ba1, clickElement {id=f.49137330217F6EA856220A844D05E3B4.d.48BB3B48D69D18F8969D53EBD332C8DF.e.2683}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61298}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61298/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6b9ea659a7784f588bc7a2d46ebe2ba1)] -> xpath: (//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[1]]
+Session ID: 6b9ea659a7784f588bc7a2d46ebe2ba1
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-1-input" tabindex="0"> is not clickable at point (885, 354). Other element would receive the click: <p>...</p>
+  (Session info: chrome=133.0.6943.142)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6b9ea659a7784f588bc7a2d46ebe2ba1, clickElement {id=f.49137330217F6EA856220A844D05E3B4.d.48BB3B48D69D18F8969D53EBD332C8DF.e.2683}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61298}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61298/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6b9ea659a7784f588bc7a2d46ebe2ba1)] -> xpath: (//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[1]]
+Session ID: 6b9ea659a7784f588bc7a2d46ebe2ba1
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at lt.insoft.uztis.pages.InvitationsPage.setCheckbox(InvitationsPage.java:481)
+	at lt.insoft.uztis.tests.SubmittedApplicationsPageTest.testFillNewVUIApplicationFA(SubmittedApplicationsPageTest.java:365)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-03-04 14:58:11 [main] INFO  l.insoft.uztis.tests.utils.TestUtils - Screenshot moved to C:\Users\ingrida.zadorozniene\Desktop\Asm\UZTIS\UZTIS_tests\test-output\screenshots\20250304\145811475_testFillNewVUIApplicationFA().png
+2025-03-04 15:02:23 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-04 15:02:24 [main] INFO  l.i.u.t.SubmittedApplicationsPageTest - Starting test:'testFillNewVUIPApplicationFA'
+2025-03-04 15:02:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - User logged in with test credentials.
+2025-03-04 15:02:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Opened 'Application Processing' menu.
+2025-03-04 15:02:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Application Forms' menu.
+2025-03-04 15:02:25 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved last description code text: 'TST-VUI-52'.
+2025-03-04 15:02:25 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Invitation' menu.
+2025-03-04 15:02:26 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected application section by code: 'TST-VUI-52'.
+2025-03-04 15:02:26 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Search' button.
+2025-03-04 15:02:26 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved invitation code: ''.
+2025-03-04 15:02:26 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Submitted Applications' menu.
+2025-03-04 15:02:28 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected invitation by code: 'TST-VUI-52'.
+2025-03-04 15:02:28 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Invitation code inserted.
+2025-03-04 15:02:28 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Action Application' button.
+2025-03-04 15:02:28 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'New Application' button.
+2025-03-04 15:02:28 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected the 'RadioButtonFA' option.
+2025-03-04 15:02:29 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered phone number: '61298745'.
+2025-03-04 15:02:29 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered email: 'test@autotest.com'.
+2025-03-04 15:02:29 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Clicking on the dropdown button.
+2025-03-04 15:02:47 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 1741 options in the dropdown.
+2025-03-04 15:02:47 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: ''
+2025-03-04 15:02:47 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'
+2025-03-04 15:02:47 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'
+2025-03-04 15:02:47 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Attempting to close the dropdown.
+2025-03-04 15:02:58 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown should be closed now.
+2025-03-04 15:02:58 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected EVRK value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'.
+2025-03-04 15:02:58 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Address Component' button.
+2025-03-04 15:02:58 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:03:01 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Lietuva'
+2025-03-04 15:03:01 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected country: 'Lietuva'.
+2025-03-04 15:03:01 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown search field.
+2025-03-04 15:03:01 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown city is opened.
+2025-03-04 15:03:01 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Searched for value: 'Vilnius'
+2025-03-04 15:03:02 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected: 'Vilnius'
+2025-03-04 15:03:02 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:03:03 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'A. Domaševičiaus g.'
+2025-03-04 15:03:03 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected street: 'A. Domaševičiaus g.'.
+2025-03-04 15:03:03 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:03:03 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-04 15:03:03 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected house: '1'.
+2025-03-04 15:03:03 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:03:04 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-04 15:03:04 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected apartment: '1'.
+2025-03-04 15:03:04 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Confirm' button.
+2025-03-04 15:03:04 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered project date.
+2025-03-04 15:03:04 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job count: '1'.
+2025-03-04 15:03:05 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Next' button.
+2025-03-04 15:03:05 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:03:06 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Administratoriai'
+2025-03-04 15:03:36 [main] ERROR l.i.u.p.SubmittedApplicationsPage - Timeout while waiting for dropdown to close with aria-expanded = 'false'.
+2025-03-04 15:03:36 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected job name: 'Administratoriai'.
+2025-03-04 15:03:36 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job function: 'Funkcija 1'.
+2025-03-04 15:03:36 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'RadioButtonWithDisabilities' option.
+2025-03-04 15:03:36 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Clicking on the dropdown button.
+2025-03-04 15:03:37 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 34 options in the dropdown.
+2025-03-04 15:03:37 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, kuriems suteiktas pabėgėlio statusas ar perkeliamojo asmens statusas, arba asmenys, kuriems suteikta papildoma ar laikinoji apsauga, ir asmenys, turintys teisę gauti laikinąją apsaugą, iki sprendimo dėl laikinosios apsaugos suteikimo (nesuteikimo) priėmimo, tačiau ne ilgiau kaip laikinosios apsaugos laikotarpiu'
+2025-03-04 15:03:37 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, kuriems suteiktas pabėgėlio statusas ar perkeliamojo asmens statusas, arba asmenys, kuriems suteikta papildoma ar laikinoji apsauga, ir asmenys, turintys teisę gauti laikinąją apsaugą, iki sprendimo dėl laikinosios apsaugos suteikimo (nesuteikimo) priėmimo, tačiau ne ilgiau kaip laikinosios apsaugos laikotarpiu'
+2025-03-04 15:03:37 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, turintys teisę į papildomas užimtumo garantijas pagal Lietuvos Respublikos valstybės įmonės Ignalinos atominės elektrinės darbuotojų papildomų užimtumo ir socialinių garantijų įstatymą'
+2025-03-04 15:03:37 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, turintys teisę į papildomas užimtumo garantijas pagal Lietuvos Respublikos valstybės įmonės Ignalinos atominės elektrinės darbuotojų papildomų užimtumo ir socialinių garantijų įstatymą'
+2025-03-04 15:03:37 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai iki 29 metų'
+2025-03-04 15:03:37 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai iki 29 metų'
+2025-03-04 15:03:37 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 30–40 procentų darbingumo lygis arba vidutinis neįgalumo lygis'
+2025-03-04 15:03:37 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 30–40 procentų darbingumo lygis arba vidutinis neįgalumo lygis'
+2025-03-04 15:03:37 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 45–55 procentų darbingumo lygis arba lengvas neįgalumo lygis'
+2025-03-04 15:03:37 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 45–55 procentų darbingumo lygis arba lengvas neįgalumo lygis'
+2025-03-04 15:03:37 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis'
+2025-03-04 15:03:37 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis'
+2025-03-04 15:03:37 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Attempting to close the dropdown.
+2025-03-04 15:06:01 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-04 15:06:01 [main] INFO  l.i.u.t.SubmittedApplicationsPageTest - Starting test:'testFillNewVUIPApplicationFA'
+2025-03-04 15:06:02 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - User logged in with test credentials.
+2025-03-04 15:06:02 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Opened 'Application Processing' menu.
+2025-03-04 15:06:02 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Application Forms' menu.
+2025-03-04 15:06:03 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved last description code text: 'TST-VUI-52'.
+2025-03-04 15:06:03 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Invitation' menu.
+2025-03-04 15:06:04 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected application section by code: 'TST-VUI-52'.
+2025-03-04 15:06:04 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Search' button.
+2025-03-04 15:06:04 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved invitation code: ''.
+2025-03-04 15:06:04 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Submitted Applications' menu.
+2025-03-04 15:06:05 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected invitation by code: 'TST-VUI-52'.
+2025-03-04 15:06:05 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Invitation code inserted.
+2025-03-04 15:06:05 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Action Application' button.
+2025-03-04 15:06:06 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'New Application' button.
+2025-03-04 15:06:06 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected the 'RadioButtonFA' option.
+2025-03-04 15:06:06 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered phone number: '61298745'.
+2025-03-04 15:06:06 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered email: 'test@autotest.com'.
+2025-03-04 15:06:06 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Clicking on the dropdown button.
+2025-03-04 15:06:24 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 1741 options in the dropdown.
+2025-03-04 15:06:24 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: ''
+2025-03-04 15:06:24 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'
+2025-03-04 15:06:24 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'
+2025-03-04 15:06:24 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Attempting to close the dropdown.
+2025-03-04 15:06:35 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown should be closed now.
+2025-03-04 15:06:35 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected EVRK value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'.
+2025-03-04 15:06:35 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Address Component' button.
+2025-03-04 15:06:35 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:06:38 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Lietuva'
+2025-03-04 15:06:38 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected country: 'Lietuva'.
+2025-03-04 15:06:38 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown search field.
+2025-03-04 15:06:39 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown city is opened.
+2025-03-04 15:06:39 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Searched for value: 'Vilnius'
+2025-03-04 15:06:40 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected: 'Vilnius'
+2025-03-04 15:06:40 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:06:40 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'A. Domaševičiaus g.'
+2025-03-04 15:06:40 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected street: 'A. Domaševičiaus g.'.
+2025-03-04 15:06:40 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:06:41 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-04 15:06:41 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected house: '1'.
+2025-03-04 15:06:41 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:06:41 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-04 15:06:42 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected apartment: '1'.
+2025-03-04 15:06:42 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Confirm' button.
+2025-03-04 15:06:42 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered project date.
+2025-03-04 15:06:42 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job count: '1'.
+2025-03-04 15:06:42 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Next' button.
+2025-03-04 15:06:42 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:06:43 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Administratoriai'
+2025-03-04 15:06:43 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected job name: 'Administratoriai'.
+2025-03-04 15:06:43 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job function: 'Funkcija 1'.
+2025-03-04 15:06:43 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'RadioButtonWithDisabilities' option.
+2025-03-04 15:06:43 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Clicking on the dropdown button.
+2025-03-04 15:06:44 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 34 options in the dropdown.
+2025-03-04 15:06:44 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, kuriems suteiktas pabėgėlio statusas ar perkeliamojo asmens statusas, arba asmenys, kuriems suteikta papildoma ar laikinoji apsauga, ir asmenys, turintys teisę gauti laikinąją apsaugą, iki sprendimo dėl laikinosios apsaugos suteikimo (nesuteikimo) priėmimo, tačiau ne ilgiau kaip laikinosios apsaugos laikotarpiu'
+2025-03-04 15:06:44 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, kuriems suteiktas pabėgėlio statusas ar perkeliamojo asmens statusas, arba asmenys, kuriems suteikta papildoma ar laikinoji apsauga, ir asmenys, turintys teisę gauti laikinąją apsaugą, iki sprendimo dėl laikinosios apsaugos suteikimo (nesuteikimo) priėmimo, tačiau ne ilgiau kaip laikinosios apsaugos laikotarpiu'
+2025-03-04 15:06:44 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, turintys teisę į papildomas užimtumo garantijas pagal Lietuvos Respublikos valstybės įmonės Ignalinos atominės elektrinės darbuotojų papildomų užimtumo ir socialinių garantijų įstatymą'
+2025-03-04 15:06:44 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, turintys teisę į papildomas užimtumo garantijas pagal Lietuvos Respublikos valstybės įmonės Ignalinos atominės elektrinės darbuotojų papildomų užimtumo ir socialinių garantijų įstatymą'
+2025-03-04 15:06:44 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai iki 29 metų'
+2025-03-04 15:06:44 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai iki 29 metų'
+2025-03-04 15:06:44 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 30–40 procentų darbingumo lygis arba vidutinis neįgalumo lygis'
+2025-03-04 15:06:44 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 30–40 procentų darbingumo lygis arba vidutinis neįgalumo lygis'
+2025-03-04 15:06:44 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 45–55 procentų darbingumo lygis arba lengvas neįgalumo lygis'
+2025-03-04 15:06:44 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 45–55 procentų darbingumo lygis arba lengvas neįgalumo lygis'
+2025-03-04 15:06:44 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis'
+2025-03-04 15:06:44 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis'
+2025-03-04 15:06:44 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Attempting to close the dropdown.
+2025-03-04 15:06:55 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown should be closed now.
+2025-03-04 15:06:55 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected disabilities type: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis'.
+2025-03-04 15:06:55 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered disability information: 'Negalia 1'.
+2025-03-04 15:06:55 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:06:56 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Kita'
+2025-03-04 15:07:06 [main] ERROR l.i.u.p.SubmittedApplicationsPage - Timeout while waiting for dropdown to close with aria-expanded = 'false'.
+2025-03-04 15:07:06 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected time mode: 'Kita'.
+2025-03-04 15:07:06 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected time mode other: '6 val. per dieną ir 4 d. per savaitę'.
+2025-03-04 15:11:54 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-04 15:11:54 [main] INFO  l.i.u.t.SubmittedApplicationsPageTest - Starting test:'testFillNewVUIPApplicationFA'
+2025-03-04 15:11:54 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - User logged in with test credentials.
+2025-03-04 15:11:54 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Opened 'Application Processing' menu.
+2025-03-04 15:11:54 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Application Forms' menu.
+2025-03-04 15:11:55 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved last description code text: 'TST-VUI-52'.
+2025-03-04 15:11:55 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Invitation' menu.
+2025-03-04 15:11:56 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected application section by code: 'TST-VUI-52'.
+2025-03-04 15:11:56 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Search' button.
+2025-03-04 15:11:56 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved invitation code: ''.
+2025-03-04 15:11:56 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Submitted Applications' menu.
+2025-03-04 15:11:58 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected invitation by code: 'TST-VUI-52'.
+2025-03-04 15:11:58 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Invitation code inserted.
+2025-03-04 15:11:58 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Action Application' button.
+2025-03-04 15:11:58 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'New Application' button.
+2025-03-04 15:11:59 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected the 'RadioButtonFA' option.
+2025-03-04 15:11:59 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered phone number: '61298745'.
+2025-03-04 15:11:59 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered email: 'test@autotest.com'.
+2025-03-04 15:11:59 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Clicking on the dropdown button.
+2025-03-04 15:12:16 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 1741 options in the dropdown.
+2025-03-04 15:12:16 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: ''
+2025-03-04 15:12:16 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'
+2025-03-04 15:12:17 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'
+2025-03-04 15:12:17 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Attempting to close the dropdown.
+2025-03-04 15:12:17 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected EVRK value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'.
+2025-03-04 15:12:17 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Address Component' button.
+2025-03-04 15:12:17 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:12:21 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Lietuva'
+2025-03-04 15:12:21 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected country: 'Lietuva'.
+2025-03-04 15:12:21 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown search field.
+2025-03-04 15:12:21 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown city is opened.
+2025-03-04 15:12:21 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Searched for value: 'Vilnius'
+2025-03-04 15:12:22 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected: 'Vilnius'
+2025-03-04 15:12:22 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:12:23 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'A. Domaševičiaus g.'
+2025-03-04 15:12:23 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected street: 'A. Domaševičiaus g.'.
+2025-03-04 15:12:23 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:12:23 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-04 15:12:23 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected house: '1'.
+2025-03-04 15:12:23 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:12:24 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-04 15:12:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected apartment: '1'.
+2025-03-04 15:12:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Confirm' button.
+2025-03-04 15:12:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered project date.
+2025-03-04 15:12:25 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job count: '1'.
+2025-03-04 15:12:25 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Next' button.
+2025-03-04 15:12:25 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:12:26 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Administratoriai'
+2025-03-04 15:12:26 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected job name: 'Administratoriai'.
+2025-03-04 15:12:26 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job function: 'Funkcija 1'.
+2025-03-04 15:12:27 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'RadioButtonWithDisabilities' option.
+2025-03-04 15:12:27 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Clicking on the dropdown button.
+2025-03-04 15:12:27 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 34 options in the dropdown.
+2025-03-04 15:12:27 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, kuriems suteiktas pabėgėlio statusas ar perkeliamojo asmens statusas, arba asmenys, kuriems suteikta papildoma ar laikinoji apsauga, ir asmenys, turintys teisę gauti laikinąją apsaugą, iki sprendimo dėl laikinosios apsaugos suteikimo (nesuteikimo) priėmimo, tačiau ne ilgiau kaip laikinosios apsaugos laikotarpiu'
+2025-03-04 15:12:27 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, kuriems suteiktas pabėgėlio statusas ar perkeliamojo asmens statusas, arba asmenys, kuriems suteikta papildoma ar laikinoji apsauga, ir asmenys, turintys teisę gauti laikinąją apsaugą, iki sprendimo dėl laikinosios apsaugos suteikimo (nesuteikimo) priėmimo, tačiau ne ilgiau kaip laikinosios apsaugos laikotarpiu'
+2025-03-04 15:12:27 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, turintys teisę į papildomas užimtumo garantijas pagal Lietuvos Respublikos valstybės įmonės Ignalinos atominės elektrinės darbuotojų papildomų užimtumo ir socialinių garantijų įstatymą'
+2025-03-04 15:12:27 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, turintys teisę į papildomas užimtumo garantijas pagal Lietuvos Respublikos valstybės įmonės Ignalinos atominės elektrinės darbuotojų papildomų užimtumo ir socialinių garantijų įstatymą'
+2025-03-04 15:12:27 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai iki 29 metų'
+2025-03-04 15:12:27 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai iki 29 metų'
+2025-03-04 15:12:27 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 30–40 procentų darbingumo lygis arba vidutinis neįgalumo lygis'
+2025-03-04 15:12:27 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 30–40 procentų darbingumo lygis arba vidutinis neįgalumo lygis'
+2025-03-04 15:12:27 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 45–55 procentų darbingumo lygis arba lengvas neįgalumo lygis'
+2025-03-04 15:12:27 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 45–55 procentų darbingumo lygis arba lengvas neįgalumo lygis'
+2025-03-04 15:12:27 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis'
+2025-03-04 15:12:28 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis'
+2025-03-04 15:12:28 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Attempting to close the dropdown.
+2025-03-04 15:12:38 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown should be closed now.
+2025-03-04 15:12:38 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected disabilities type: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis'.
+2025-03-04 15:12:38 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered disability information: 'Negalia 1'.
+2025-03-04 15:12:38 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:12:39 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Kita'
+2025-03-04 15:12:50 [main] ERROR l.i.u.p.SubmittedApplicationsPage - Timeout while waiting for dropdown to close with aria-expanded = 'false'.
+2025-03-04 15:12:50 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected time mode: 'Kita'.
+2025-03-04 15:12:50 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected time mode other: '6 val. per dieną ir 4 d. per savaitę'.
+2025-03-04 15:12:50 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered qualification: 'Kvalifikacija 1'.
+2025-03-04 15:12:50 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job date.
+2025-03-04 15:12:50 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered salary amount: '1200'.
+2025-03-04 15:12:50 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Temporary Job' radio button.
+2025-03-04 15:12:51 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Season Job' radio button.
+2025-03-04 15:12:51 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Energy' radio button.
+2025-03-04 15:12:51 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Repair' radio button.
+2025-03-04 15:12:51 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job description: 'Veikla 1'.
+2025-03-04 15:12:51 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered process description: 'Procesas 1'.
+2025-03-04 15:12:51 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered energy information: 'Energija 1'.
+2025-03-04 15:12:52 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered repair information: 'Remontas 1'.
+2025-03-04 15:12:52 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'PVM' radio button.
+2025-03-04 15:12:52 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:12:52 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Įsigyti'
+2025-03-04 15:12:52 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected necessary for job: 'Įsigyti'.
+2025-03-04 15:12:53 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool: 'Darbo priemonė 1'.
+2025-03-04 15:12:53 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool parameter one: 'Darbo priemonės 1 parametras 1'.
+2025-03-04 15:12:53 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool parameter two: 'Darbo priemonės 1 parametras 2'.
+2025-03-04 15:12:53 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool parameter three: 'Darbo priemonės 1 parametras 3'.
+2025-03-04 15:12:53 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered tool count: '1'.
+2025-03-04 15:12:54 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered price amount 1: '1000'.
+2025-03-04 15:12:54 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered own funds amount 1: '800'.
+2025-03-04 15:12:54 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Add' button.
+2025-03-04 15:12:54 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:12:54 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Remontuoti'
+2025-03-04 15:12:54 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected necessary for job 'to repair': 'Remontuoti'.
+2025-03-04 15:12:55 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected repair name: 'Remonto pavadinimas 1'.
+2025-03-04 15:12:55 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered repair information: 'Remonto aprašymas 1'.
+2025-03-04 15:12:55 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered price amount 2: '1000'.
+2025-03-04 15:12:55 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered own funds amount 2: '900'.
+2025-03-04 15:12:55 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered country percentage: '50'.
+2025-03-04 15:12:55 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered institution percentage: '50'.
+2025-03-04 15:12:55 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered municipality percentage: '50'.
+2025-03-04 15:12:56 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'De Minimis' radio button.
+2025-03-04 15:12:56 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered program name: 'Programa 1'.
+2025-03-04 15:12:56 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered project date from.
+2025-03-04 15:12:56 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered project date until.
+2025-03-04 15:12:56 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered support amount: '2000'.
+2025-03-04 15:12:56 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Next' button.
+2025-03-04 15:12:58 [main] ERROR l.i.u.t.SubmittedApplicationsPageTest - Test 'testFillNewVUIApplicationFA' failed with error: element click intercepted: Element <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-1-input" tabindex="0"> is not clickable at point (884, 354). Other element would receive the click: <p>...</p>
+  (Session info: chrome=133.0.6943.142)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e45a070555c5a5d41ec37e2e6af39f9a, clickElement {id=f.D3CEC5305DDA017093FCC0EC78046BB9.d.A8145325A006CAD16CD61ACBA21DDDDB.e.2677}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61910}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61910/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (e45a070555c5a5d41ec37e2e6af39f9a)] -> xpath: (//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[1]]
+Session ID: e45a070555c5a5d41ec37e2e6af39f9a
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-1-input" tabindex="0"> is not clickable at point (884, 354). Other element would receive the click: <p>...</p>
+  (Session info: chrome=133.0.6943.142)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e45a070555c5a5d41ec37e2e6af39f9a, clickElement {id=f.D3CEC5305DDA017093FCC0EC78046BB9.d.A8145325A006CAD16CD61ACBA21DDDDB.e.2677}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61910}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61910/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (e45a070555c5a5d41ec37e2e6af39f9a)] -> xpath: (//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[1]]
+Session ID: e45a070555c5a5d41ec37e2e6af39f9a
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at lt.insoft.uztis.pages.InvitationsPage.setCheckbox(InvitationsPage.java:481)
+	at lt.insoft.uztis.tests.SubmittedApplicationsPageTest.testFillNewVUIApplicationFA(SubmittedApplicationsPageTest.java:365)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-03-04 15:12:58 [main] INFO  l.insoft.uztis.tests.utils.TestUtils - Screenshot moved to C:\Users\ingrida.zadorozniene\Desktop\Asm\UZTIS\UZTIS_tests\test-output\screenshots\20250304\151258362_testFillNewVUIApplicationFA().png
+2025-03-04 15:14:57 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-04 15:14:57 [main] INFO  l.i.u.t.SubmittedApplicationsPageTest - Starting test:'testFillNewVUIPApplicationFA'
+2025-03-04 15:14:58 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - User logged in with test credentials.
+2025-03-04 15:14:58 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Opened 'Application Processing' menu.
+2025-03-04 15:14:58 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Application Forms' menu.
+2025-03-04 15:14:59 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved last description code text: 'TST-VUI-52'.
+2025-03-04 15:14:59 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Invitation' menu.
+2025-03-04 15:15:01 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected application section by code: 'TST-VUI-52'.
+2025-03-04 15:15:01 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Search' button.
+2025-03-04 15:15:01 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved invitation code: ''.
+2025-03-04 15:15:01 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Submitted Applications' menu.
+2025-03-04 15:15:02 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected invitation by code: 'TST-VUI-52'.
+2025-03-04 15:15:02 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Invitation code inserted.
+2025-03-04 15:15:03 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Action Application' button.
+2025-03-04 15:15:03 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'New Application' button.
+2025-03-04 15:15:03 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected the 'RadioButtonFA' option.
+2025-03-04 15:15:04 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered phone number: '61298745'.
+2025-03-04 15:15:04 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered email: 'test@autotest.com'.
+2025-03-04 15:15:04 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Clicking on the dropdown button.
+2025-03-04 15:15:25 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 1741 options in the dropdown.
+2025-03-04 15:15:25 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: ''
+2025-03-04 15:15:25 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'
+2025-03-04 15:15:25 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'
+2025-03-04 15:15:25 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Attempting to close the dropdown.
+2025-03-04 15:15:26 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected EVRK value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'.
+2025-03-04 15:15:26 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Address Component' button.
+2025-03-04 15:15:26 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:15:29 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Lietuva'
+2025-03-04 15:15:29 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected country: 'Lietuva'.
+2025-03-04 15:15:29 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown search field.
+2025-03-04 15:15:29 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown city is opened.
+2025-03-04 15:15:30 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Searched for value: 'Vilnius'
+2025-03-04 15:15:30 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected: 'Vilnius'
+2025-03-04 15:15:30 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:15:31 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'A. Domaševičiaus g.'
+2025-03-04 15:15:31 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected street: 'A. Domaševičiaus g.'.
+2025-03-04 15:15:31 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:15:32 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-04 15:15:32 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected house: '1'.
+2025-03-04 15:15:32 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:15:32 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-04 15:15:32 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected apartment: '1'.
+2025-03-04 15:15:32 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Confirm' button.
+2025-03-04 15:15:32 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered project date.
+2025-03-04 15:15:32 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job count: '1'.
+2025-03-04 15:15:33 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Next' button.
+2025-03-04 15:15:33 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:15:34 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Administratoriai'
+2025-03-04 15:15:34 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected job name: 'Administratoriai'.
+2025-03-04 15:15:34 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job function: 'Funkcija 1'.
+2025-03-04 15:15:34 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'RadioButtonWithDisabilities' option.
+2025-03-04 15:15:34 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Clicking on the dropdown button.
+2025-03-04 15:15:35 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 34 options in the dropdown.
+2025-03-04 15:15:35 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, kuriems suteiktas pabėgėlio statusas ar perkeliamojo asmens statusas, arba asmenys, kuriems suteikta papildoma ar laikinoji apsauga, ir asmenys, turintys teisę gauti laikinąją apsaugą, iki sprendimo dėl laikinosios apsaugos suteikimo (nesuteikimo) priėmimo, tačiau ne ilgiau kaip laikinosios apsaugos laikotarpiu'
+2025-03-04 15:15:35 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, kuriems suteiktas pabėgėlio statusas ar perkeliamojo asmens statusas, arba asmenys, kuriems suteikta papildoma ar laikinoji apsauga, ir asmenys, turintys teisę gauti laikinąją apsaugą, iki sprendimo dėl laikinosios apsaugos suteikimo (nesuteikimo) priėmimo, tačiau ne ilgiau kaip laikinosios apsaugos laikotarpiu'
+2025-03-04 15:15:35 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, turintys teisę į papildomas užimtumo garantijas pagal Lietuvos Respublikos valstybės įmonės Ignalinos atominės elektrinės darbuotojų papildomų užimtumo ir socialinių garantijų įstatymą'
+2025-03-04 15:15:35 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, turintys teisę į papildomas užimtumo garantijas pagal Lietuvos Respublikos valstybės įmonės Ignalinos atominės elektrinės darbuotojų papildomų užimtumo ir socialinių garantijų įstatymą'
+2025-03-04 15:15:35 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai iki 29 metų'
+2025-03-04 15:15:35 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai iki 29 metų'
+2025-03-04 15:15:35 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 30–40 procentų darbingumo lygis arba vidutinis neįgalumo lygis'
+2025-03-04 15:15:35 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 30–40 procentų darbingumo lygis arba vidutinis neįgalumo lygis'
+2025-03-04 15:15:35 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 45–55 procentų darbingumo lygis arba lengvas neįgalumo lygis'
+2025-03-04 15:15:35 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 45–55 procentų darbingumo lygis arba lengvas neįgalumo lygis'
+2025-03-04 15:15:35 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis'
+2025-03-04 15:15:36 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis'
+2025-03-04 15:15:36 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Attempting to close the dropdown.
+2025-03-04 15:15:36 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected disabilities type: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis'.
+2025-03-04 15:15:36 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered disability information: 'Negalia 1'.
+2025-03-04 15:15:36 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:15:37 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Kita'
+2025-03-04 15:15:37 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected time mode: 'Kita'.
+2025-03-04 15:15:37 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected time mode other: '6 val. per dieną ir 4 d. per savaitę'.
+2025-03-04 15:15:38 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered qualification: 'Kvalifikacija 1'.
+2025-03-04 15:15:38 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job date.
+2025-03-04 15:15:38 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered salary amount: '1200'.
+2025-03-04 15:15:38 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Temporary Job' radio button.
+2025-03-04 15:15:38 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Season Job' radio button.
+2025-03-04 15:15:39 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Energy' radio button.
+2025-03-04 15:15:39 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Repair' radio button.
+2025-03-04 15:15:39 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job description: 'Veikla 1'.
+2025-03-04 15:15:39 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered process description: 'Procesas 1'.
+2025-03-04 15:15:40 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered energy information: 'Energija 1'.
+2025-03-04 15:15:40 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered repair information: 'Remontas 1'.
+2025-03-04 15:15:40 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'PVM' radio button.
+2025-03-04 15:15:40 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:15:41 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Įsigyti'
+2025-03-04 15:15:41 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected necessary for job: 'Įsigyti'.
+2025-03-04 15:15:41 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool: 'Darbo priemonė 1'.
+2025-03-04 15:15:41 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool parameter one: 'Darbo priemonės 1 parametras 1'.
+2025-03-04 15:15:42 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool parameter two: 'Darbo priemonės 1 parametras 2'.
+2025-03-04 15:15:42 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool parameter three: 'Darbo priemonės 1 parametras 3'.
+2025-03-04 15:15:42 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered tool count: '1'.
+2025-03-04 15:15:42 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered price amount 1: '1000'.
+2025-03-04 15:15:43 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered own funds amount 1: '800'.
+2025-03-04 15:15:43 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Add' button.
+2025-03-04 15:15:43 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:15:43 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Remontuoti'
+2025-03-04 15:15:43 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected necessary for job 'to repair': 'Remontuoti'.
+2025-03-04 15:15:44 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected repair name: 'Remonto pavadinimas 1'.
+2025-03-04 15:15:44 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered repair information: 'Remonto aprašymas 1'.
+2025-03-04 15:15:44 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered price amount 2: '1000'.
+2025-03-04 15:15:44 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered own funds amount 2: '900'.
+2025-03-04 15:15:45 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered country percentage: '50'.
+2025-03-04 15:15:45 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered institution percentage: '50'.
+2025-03-04 15:15:45 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered municipality percentage: '50'.
+2025-03-04 15:15:45 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'De Minimis' radio button.
+2025-03-04 15:15:46 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered program name: 'Programa 1'.
+2025-03-04 15:15:46 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered project date from.
+2025-03-04 15:15:46 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered project date until.
+2025-03-04 15:15:46 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered support amount: '2000'.
+2025-03-04 15:15:47 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Next' button.
+2025-03-04 15:15:48 [main] ERROR l.i.u.t.SubmittedApplicationsPageTest - Test 'testFillNewVUIApplicationFA' failed with error: element click intercepted: Element <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-1-input" tabindex="0"> is not clickable at point (803, 354). Other element would receive the click: <strong>...</strong>
+  (Session info: chrome=133.0.6943.142)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [855192f6eda60f18ab4d5c874dd50ceb, clickElement {id=f.FE5E49693FE5E935CA2AB15F7CC423E5.d.C73223105AA4A2145265D7828E98D239.e.2685}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62030}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62030/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (855192f6eda60f18ab4d5c874dd50ceb)] -> xpath: (//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[1]]
+Session ID: 855192f6eda60f18ab4d5c874dd50ceb
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-1-input" tabindex="0"> is not clickable at point (803, 354). Other element would receive the click: <strong>...</strong>
+  (Session info: chrome=133.0.6943.142)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [855192f6eda60f18ab4d5c874dd50ceb, clickElement {id=f.FE5E49693FE5E935CA2AB15F7CC423E5.d.C73223105AA4A2145265D7828E98D239.e.2685}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62030}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62030/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (855192f6eda60f18ab4d5c874dd50ceb)] -> xpath: (//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[1]]
+Session ID: 855192f6eda60f18ab4d5c874dd50ceb
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at lt.insoft.uztis.pages.InvitationsPage.setCheckbox(InvitationsPage.java:481)
+	at lt.insoft.uztis.tests.SubmittedApplicationsPageTest.testFillNewVUIApplicationFA(SubmittedApplicationsPageTest.java:365)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-03-04 15:15:48 [main] INFO  l.insoft.uztis.tests.utils.TestUtils - Screenshot moved to C:\Users\ingrida.zadorozniene\Desktop\Asm\UZTIS\UZTIS_tests\test-output\screenshots\20250304\151548462_testFillNewVUIApplicationFA().png
+2025-03-04 15:23:39 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-04 15:23:39 [main] INFO  l.i.u.t.SubmittedApplicationsPageTest - Starting test:'testFillNewVUIPApplicationFA'
+2025-03-04 15:23:40 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - User logged in with test credentials.
+2025-03-04 15:23:40 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Opened 'Application Processing' menu.
+2025-03-04 15:23:40 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Application Forms' menu.
+2025-03-04 15:23:42 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved last description code text: 'TST-VUI-52'.
+2025-03-04 15:23:42 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Invitation' menu.
+2025-03-04 15:23:43 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected application section by code: 'TST-VUI-52'.
+2025-03-04 15:23:43 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Search' button.
+2025-03-04 15:23:43 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved invitation code: ''.
+2025-03-04 15:23:43 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Submitted Applications' menu.
+2025-03-04 15:23:45 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected invitation by code: 'TST-VUI-52'.
+2025-03-04 15:23:45 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Invitation code inserted.
+2025-03-04 15:23:45 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Action Application' button.
+2025-03-04 15:23:45 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'New Application' button.
+2025-03-04 15:23:46 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected the 'RadioButtonFA' option.
+2025-03-04 15:23:46 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered phone number: '61298745'.
+2025-03-04 15:23:46 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered email: 'test@autotest.com'.
+2025-03-04 15:23:46 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Clicking on the dropdown button.
+2025-03-04 15:24:04 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 1741 options in the dropdown.
+2025-03-04 15:24:04 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: ''
+2025-03-04 15:24:04 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'
+2025-03-04 15:24:04 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'
+2025-03-04 15:24:04 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Attempting to close the dropdown.
+2025-03-04 15:24:05 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected EVRK value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'.
+2025-03-04 15:24:05 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Address Component' button.
+2025-03-04 15:24:05 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:24:08 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Lietuva'
+2025-03-04 15:24:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected country: 'Lietuva'.
+2025-03-04 15:24:08 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown search field.
+2025-03-04 15:24:09 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown city is opened.
+2025-03-04 15:24:09 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Searched for value: 'Vilnius'
+2025-03-04 15:24:10 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected: 'Vilnius'
+2025-03-04 15:24:10 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:24:11 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'A. Domaševičiaus g.'
+2025-03-04 15:24:11 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected street: 'A. Domaševičiaus g.'.
+2025-03-04 15:24:11 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:24:12 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-04 15:24:12 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected house: '1'.
+2025-03-04 15:24:12 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:24:12 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-04 15:24:12 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected apartment: '1'.
+2025-03-04 15:24:12 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Confirm' button.
+2025-03-04 15:24:12 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered project date.
+2025-03-04 15:24:12 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job count: '1'.
+2025-03-04 15:24:13 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Next' button.
+2025-03-04 15:24:13 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:24:14 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Administratoriai'
+2025-03-04 15:24:14 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected job name: 'Administratoriai'.
+2025-03-04 15:24:14 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job function: 'Funkcija 1'.
+2025-03-04 15:24:14 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'RadioButtonWithDisabilities' option.
+2025-03-04 15:24:14 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Clicking on the dropdown button.
+2025-03-04 15:24:15 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 34 options in the dropdown.
+2025-03-04 15:24:15 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, kuriems suteiktas pabėgėlio statusas ar perkeliamojo asmens statusas, arba asmenys, kuriems suteikta papildoma ar laikinoji apsauga, ir asmenys, turintys teisę gauti laikinąją apsaugą, iki sprendimo dėl laikinosios apsaugos suteikimo (nesuteikimo) priėmimo, tačiau ne ilgiau kaip laikinosios apsaugos laikotarpiu'
+2025-03-04 15:24:15 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, kuriems suteiktas pabėgėlio statusas ar perkeliamojo asmens statusas, arba asmenys, kuriems suteikta papildoma ar laikinoji apsauga, ir asmenys, turintys teisę gauti laikinąją apsaugą, iki sprendimo dėl laikinosios apsaugos suteikimo (nesuteikimo) priėmimo, tačiau ne ilgiau kaip laikinosios apsaugos laikotarpiu'
+2025-03-04 15:24:15 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, turintys teisę į papildomas užimtumo garantijas pagal Lietuvos Respublikos valstybės įmonės Ignalinos atominės elektrinės darbuotojų papildomų užimtumo ir socialinių garantijų įstatymą'
+2025-03-04 15:24:15 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Asmenys, turintys teisę į papildomas užimtumo garantijas pagal Lietuvos Respublikos valstybės įmonės Ignalinos atominės elektrinės darbuotojų papildomų užimtumo ir socialinių garantijų įstatymą'
+2025-03-04 15:24:15 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai iki 29 metų'
+2025-03-04 15:24:15 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai iki 29 metų'
+2025-03-04 15:24:15 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 30–40 procentų darbingumo lygis arba vidutinis neįgalumo lygis'
+2025-03-04 15:24:15 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 30–40 procentų darbingumo lygis arba vidutinis neįgalumo lygis'
+2025-03-04 15:24:15 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 45–55 procentų darbingumo lygis arba lengvas neįgalumo lygis'
+2025-03-04 15:24:15 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas 45–55 procentų darbingumo lygis arba lengvas neįgalumo lygis'
+2025-03-04 15:24:15 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis'
+2025-03-04 15:24:15 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis'
+2025-03-04 15:24:15 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Attempting to close the dropdown.
+2025-03-04 15:24:16 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected disabilities type: 'Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis'.
+2025-03-04 15:24:16 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered disability information: 'Negalia 1'.
+2025-03-04 15:24:16 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:24:16 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Kita'
+2025-03-04 15:24:16 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected time mode: 'Kita'.
+2025-03-04 15:24:17 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected time mode other: '6 val. per dieną ir 4 d. per savaitę'.
+2025-03-04 15:24:17 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered qualification: 'Kvalifikacija 1'.
+2025-03-04 15:24:17 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job date.
+2025-03-04 15:24:18 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered salary amount: '1200'.
+2025-03-04 15:24:18 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Temporary Job' radio button.
+2025-03-04 15:24:18 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Season Job' radio button.
+2025-03-04 15:24:18 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Energy' radio button.
+2025-03-04 15:24:18 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Repair' radio button.
+2025-03-04 15:24:19 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job description: 'Veikla 1'.
+2025-03-04 15:24:19 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered process description: 'Procesas 1'.
+2025-03-04 15:24:19 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered energy information: 'Energija 1'.
+2025-03-04 15:24:19 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered repair information: 'Remontas 1'.
+2025-03-04 15:24:19 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'PVM' radio button.
+2025-03-04 15:24:19 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:24:20 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Įsigyti'
+2025-03-04 15:24:20 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected necessary for job: 'Įsigyti'.
+2025-03-04 15:24:21 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool: 'Darbo priemonė 1'.
+2025-03-04 15:24:21 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool parameter one: 'Darbo priemonės 1 parametras 1'.
+2025-03-04 15:24:21 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool parameter two: 'Darbo priemonės 1 parametras 2'.
+2025-03-04 15:24:21 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool parameter three: 'Darbo priemonės 1 parametras 3'.
+2025-03-04 15:24:22 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered tool count: '1'.
+2025-03-04 15:24:22 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered price amount 1: '1000'.
+2025-03-04 15:24:22 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered own funds amount 1: '800'.
+2025-03-04 15:24:22 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Add' button.
+2025-03-04 15:24:22 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-04 15:24:23 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Remontuoti'
+2025-03-04 15:24:23 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected necessary for job 'to repair': 'Remontuoti'.
+2025-03-04 15:24:23 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected repair name: 'Remonto pavadinimas 1'.
+2025-03-04 15:24:23 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered repair information: 'Remonto aprašymas 1'.
+2025-03-04 15:24:23 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered price amount 2: '1000'.
+2025-03-04 15:24:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered own funds amount 2: '900'.
+2025-03-04 15:24:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered country percentage: '50'.
+2025-03-04 15:24:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered institution percentage: '50'.
+2025-03-04 15:24:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered municipality percentage: '50'.
+2025-03-04 15:24:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'De Minimis' radio button.
+2025-03-04 15:24:25 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered program name: 'Programa 1'.
+2025-03-04 15:24:25 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered project date from.
+2025-03-04 15:24:25 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered project date until.
+2025-03-04 15:24:25 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered support amount: '2000'.
+2025-03-04 15:24:26 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Next' button.
+2025-03-04 15:24:27 [main] ERROR l.i.u.t.SubmittedApplicationsPageTest - Test 'testFillNewVUIApplicationFA' failed with error: element click intercepted: Element <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-3-input" tabindex="0"> is not clickable at point (671, 887). Other element would receive the click: <p>...</p>
+  (Session info: chrome=133.0.6943.142)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [35729e25d6da8fda98acb74330db6c55, clickElement {id=f.2FBB4714841DF8B6AA14E717A18B4FB3.d.F79EC28FF8B0845EBF5DCB9B4ABAC0C5.e.2683}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62328}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62328/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (35729e25d6da8fda98acb74330db6c55)] -> xpath: (//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[3]]
+Session ID: 35729e25d6da8fda98acb74330db6c55
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input type="checkbox" class="mdc-checkbox__native-control" id="mat-mdc-checkbox-3-input" tabindex="0"> is not clickable at point (671, 887). Other element would receive the click: <p>...</p>
+  (Session info: chrome=133.0.6943.142)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [35729e25d6da8fda98acb74330db6c55, clickElement {id=f.2FBB4714841DF8B6AA14E717A18B4FB3.d.F79EC28FF8B0845EBF5DCB9B4ABAC0C5.e.2683}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62328}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62328/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (35729e25d6da8fda98acb74330db6c55)] -> xpath: (//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[3]]
+Session ID: 35729e25d6da8fda98acb74330db6c55
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at lt.insoft.uztis.pages.InvitationsPage.setCheckbox(InvitationsPage.java:481)
+	at lt.insoft.uztis.tests.SubmittedApplicationsPageTest.testFillNewVUIApplicationFA(SubmittedApplicationsPageTest.java:365)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-03-04 15:24:27 [main] INFO  l.insoft.uztis.tests.utils.TestUtils - Screenshot moved to C:\Users\ingrida.zadorozniene\Desktop\Asm\UZTIS\UZTIS_tests\test-output\screenshots\20250304\152427616_testFillNewVUIApplicationFA().png

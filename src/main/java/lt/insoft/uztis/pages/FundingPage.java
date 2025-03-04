@@ -14,6 +14,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 public class FundingPage extends UztisPage{
 
     private static final Logger log = getLogger(lookup().lookupClass());
+    private static org.openqa.selenium.By By;
 
     public FundingPage(WebDriver driver) {
         super(driver);

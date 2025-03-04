@@ -8,8 +8,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 
-import java.util.List;
-
 import static java.lang.invoke.MethodHandles.lookup;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -368,8 +366,8 @@ public class ApplicationFormsPageTest extends UztisPageTest {
 
 
     @Test
-    void testCreateNewPvkApplication_toEdit() {
-        log.info("Starting test:'testCreateNewPvkApplication_toEdit'");
+    void testCreateNewPvkApplication() {
+        log.info("Starting test:'testCreateNewPvkApplication'");
 
         try {
             applicationFormsPage.login("test", "test");
@@ -445,9 +443,9 @@ public class ApplicationFormsPageTest extends UztisPageTest {
 
 //        TestUtils.takeScreenshot(driver, "testCreateNewVuiApplication");
 
-            log.info("Test 'testCreateNewPvkApplication_toEdit' completed successfully.");
+            log.info("Test 'testCreateNewPvkApplication' completed successfully.");
         } catch (AssertionError | Exception e) {
-            log.error("Test 'testCreateNewPvkApplication_toEdit' failed with error: {}", e.getMessage(), e);
+            log.error("Test 'testCreateNewPvkApplication' failed with error: {}", e.getMessage(), e);
             throw e;
         }
     }

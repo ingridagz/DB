@@ -82,8 +82,8 @@ public class InvitationsPageTest extends UztisPageTest {
     }
 
     @Test
-    void testCreateNewVuiInvitationDraft_toEdit() {
-        log.info("Starting test:'testCreateNewVuiInvitationDraft_toEdit'");
+    void testCreateNewVuiInvitationDraft() {
+        log.info("Starting test:'testCreateNewVuiInvitationDraft'");
 
         try {
             applicationFormsPage.login("test", "test");
@@ -132,9 +132,9 @@ public class InvitationsPageTest extends UztisPageTest {
 
 //        TestUtils.takeScreenshot(driver, "testCreateNewVuiInvitationDraft");
 
-            log.info("Test 'testCreateNewVuiInvitationDraft_toEdit' completed successfully.");
+            log.info("Test 'testCreateNewVuiInvitationDraft' completed successfully.");
         } catch (AssertionError | Exception e) {
-            log.error("Test 'testCreateNewVuiInvitationDraft_toEdit' failed with error: {}", e.getMessage(), e);
+            log.error("Test 'testCreateNewVuiInvitationDraft' failed with error: {}", e.getMessage(), e);
             throw e;
         }
     }
@@ -261,8 +261,8 @@ public class InvitationsPageTest extends UztisPageTest {
     }
 
     @Test
-    void testInsertVuiStatisticInformation() {
-        log.info("Starting test:'testInsertVuiStatisticInformation'");
+    void testInsertVui_PvkStatisticInformation() {
+        log.info("Starting test:'testInsertVui_PvkStatisticInformation'");
         try {
             applicationFormsPage.login("test", "test");
             log.debug("User logged in with test credentials");
@@ -302,10 +302,10 @@ public class InvitationsPageTest extends UztisPageTest {
             applicationFormsPage.verifySuccessMessage("Funkcija sėkmingai atlikta.");
             log.info("Verified success message");
 
-            log.info("Test 'testInsertVuiStatisticInformation' completed successfully.");
+            log.info("Test 'testInsertVui_PvkStatisticInformation' completed successfully.");
         } catch (AssertionError |
                  Exception e) {
-            log.error("Test 'testInsertVuiStatisticInformation' failed with error: {}", e.getMessage(), e);
+            log.error("Test 'testInsertVui_PvkStatisticInformation' failed with error: {}", e.getMessage(), e);
             throw e;
         }
     }
@@ -729,6 +729,6 @@ public class InvitationsPageTest extends UztisPageTest {
             throw e;
         }
     }
-
+//run test with statistic information
 
 }

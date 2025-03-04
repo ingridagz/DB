@@ -10,7 +10,6 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static java.lang.invoke.MethodHandles.lookup;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -30,7 +29,6 @@ public class InvitationsPage extends UztisPage {
     @FindBy(xpath = "//a[@href='/application/invitation/create']")
     WebElement buttonCreateNewInvitation;
 
-    //Dropdown
     @FindBy(xpath = "//mat-label[contains(text(), 'Paraiška')]")
     WebElement dropdownButtonApplication;
     @FindBy(css = "mat-option")
@@ -59,8 +57,6 @@ public class InvitationsPage extends UztisPage {
     @FindBy(xpath = "//common-button[@btnclass='btn btn--transparent secondary-color']//button")
     WebElement buttonAdd;
 
-    //    @FindBy(xpath = "//mat-label[contains(text(), 'Atvaizduojama informacija apie sumas')]")
-//    List<WebElement> dropdownButtonAmountsInformation;
     @FindBy(xpath = "(//mat-label[contains(text(), 'Atvaizduojama informacija apie sumas')]//following::mat-select)[1]")
     WebElement dropdownButtonAmountsInformation1;
     @FindBy(xpath = "(//mat-label[contains(text(), 'Atvaizduojama informacija apie sumas')]//following::mat-select)[2]")
@@ -88,16 +84,12 @@ public class InvitationsPage extends UztisPage {
     WebElement inputThirdEvaluationGrade;
 
     @FindBy(xpath = "(//common-decimal-input//input)[4]")
-//    @FindBy(xpath = "//common-decimal-input[@id='common-decimal-input-0']//input")
     WebElement inputSecondEvaluationGradeWeight;
     @FindBy(xpath = "(//common-decimal-input//input)[5]")
-//    @FindBy(xpath = "//common-decimal-input[@id='common-decimal-input-1']//input")
     WebElement inputThirdEvaluationGradeWeight;
 
-    //    @FindBy(xpath = "(//common-decimal-input//input)[14]")
-//    @FindBy(xpath = "//common-decimal-input[@id='common-decimal-input-2']//input")
     @FindBy(xpath = "//mat-label[contains(text(), 'Biudžetas, Eur')]/ancestor::mat-form-field//common-decimal-input/input")
-    WebElement inputB;
+    WebElement inputBudget;
 
     @FindBy(xpath = "(//common-decimal-input//input)[14]")
     WebElement inputBudgetKaunas;
@@ -130,10 +122,6 @@ public class InvitationsPage extends UztisPage {
 
     @FindBy(css = ".reverse-mobile .ng-star-inserted:nth-of-type(2)")
     WebElement buttonPublicationConfirmation;
-
-//    @FindBy(css = "[class='w-100']")
-////    WebElement successMessage;
-//    List<WebElement> successMessages;
 
     //------------------------------------------
     @FindBy(css = "common-button:nth-of-type(2) > .btn.btn--primary")
@@ -511,7 +499,7 @@ public class InvitationsPage extends UztisPage {
     }
 
     public void enterBudget(String amount) {
-        this.inputB.sendKeys(amount);
+        this.inputBudget.sendKeys(amount);
     }
 
     public void enterBudgetKaunas(String amount) {
@@ -555,7 +543,7 @@ public class InvitationsPage extends UztisPage {
     }
 
     //    arba C:\Users\ingrida.zadorozniene\Desktop\Asm\automatinis\IngridaZ_egzaminas\files\TXT.txt
-    //            C:\Users\ingrida.zadorozniene\TXT.txt
+    //         C:\Users\ingrida.zadorozniene\TXT.txt
     public void uploadFile() {
         String filePath = "C:\\Users\\ingrida.zadorozniene\\TXT.txt";
         WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
@@ -578,15 +566,6 @@ public class InvitationsPage extends UztisPage {
         buttonPublicationConfirmation.click();
     }
 
-
-//    public String getMessageText() {
-//        return successMessage.getText();
-//public List<String> getAllMessagesText() {
-//        return successMessages.stream()
-//                .map(WebElement::getText)
-//                .collect(Collectors.toList());
-//    }
-
     public void clickButtonSearch() {
         buttonSearch.click();
     }
@@ -599,15 +578,6 @@ public class InvitationsPage extends UztisPage {
         } catch (StaleElementReferenceException e) {
             wait.until(ExpectedConditions.elementToBeClickable(statusInvitationRowDraft)).click();
         }
-//        try {
-//            // Laukiame, kol elementas bus pasiekiamas ir paspaudžiam
-//            invitationRowDraft = wait.until(ExpectedConditions.elementToBeClickable(invitationRowDraft));
-//            invitationRowDraft.click();
-//        } catch (StaleElementReferenceException e) {
-//            // Jei elementas tapo pasenusiu, bandome dar kartą surasti ir paspausti
-//            invitationRowDraft = wait.until(ExpectedConditions.elementToBeClickable(invitationRowDraft));
-//            invitationRowDraft.click();
-//        }
     }
 
     public void clickInvitationRowPublishing() {
@@ -618,13 +588,6 @@ public class InvitationsPage extends UztisPage {
         } catch (StaleElementReferenceException e) {
             wait.until(ExpectedConditions.elementToBeClickable(statusInvitationRowPublishing)).click();
         }
-//        try {
-//            invitationRowPublishing = wait.until(ExpectedConditions.elementToBeClickable(invitationRowPublishing));
-//            invitationRowPublishing.click();
-//        } catch (StaleElementReferenceException e) {
-//            invitationRowPublishing = wait.until(ExpectedConditions.elementToBeClickable(invitationRowPublishing));
-//            invitationRowPublishing.click();
-//        }
     }
 
     public void clickInvitationRowPublicationStopped() {
@@ -635,13 +598,6 @@ public class InvitationsPage extends UztisPage {
         } catch (StaleElementReferenceException e) {
             wait.until(ExpectedConditions.elementToBeClickable(statusInvitationPublicationStopped)).click();
         }
-//        try {
-//            invitationPublicationStopped = wait.until(ExpectedConditions.elementToBeClickable(invitationPublicationStopped));
-//            invitationPublicationStopped.click();
-//        } catch (StaleElementReferenceException e) {
-//            invitationPublicationStopped = wait.until(ExpectedConditions.elementToBeClickable(invitationPublicationStopped));
-//            invitationPublicationStopped.click();
-//        }
     }
 
     public void clickInvitationRowArchived() {
@@ -650,16 +606,8 @@ public class InvitationsPage extends UztisPage {
         try {
             wait.until(ExpectedConditions.elementToBeClickable(statusInvitationArchived)).click();
         } catch (StaleElementReferenceException e) {
-            // Pakartojame bandymą tik jei pirmas nepavyko
             wait.until(ExpectedConditions.elementToBeClickable(statusInvitationArchived)).click();
         }
-//        try {
-//            invitationArchived = wait.until(ExpectedConditions.elementToBeClickable(invitationArchived));
-//            invitationArchived.click();
-//        } catch (StaleElementReferenceException e) {
-//            invitationArchived = wait.until(ExpectedConditions.elementToBeClickable(invitationArchived));
-//            invitationArchived.click();
-//        }
     }
 
     public void clickButtonAction() {
@@ -725,8 +673,6 @@ public class InvitationsPage extends UztisPage {
         WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
         fileInput.sendKeys(filePath);
     }
-
-
 }
 
 

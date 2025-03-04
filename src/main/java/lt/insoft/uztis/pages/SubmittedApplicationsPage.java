@@ -33,9 +33,6 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "//h2[.='Kvietimui pateiktos paraiškos']")
     WebElement labelSubmittedApplications;
 
-    @FindBy(xpath = "//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell']")
-    WebElement lastInvitationCode;
-
     @FindBy(xpath = "//mat-select[contains(@class, 'mat-mdc-select') and @aria-required='true']")
     WebElement dropdownButtonInvitation;
 
@@ -67,23 +64,17 @@ public class SubmittedApplicationsPage extends UztisPage {
     WebElement inputEMail;
 
     @FindBy(xpath = "//mat-label[contains(text(), 'Projekto teikėjo planuojama vykdyti veikla, kuriai prašoma subsidija, kodas pagal EVRK')]")
-    WebElement dropdownButtonEVRK;
+    WebElement dropdownButtonEVRK_VUI;
 
     //DVP
     @FindBy(xpath = "//mat-label[contains(text(), 'Paraiškos teikėjo vykdoma veikla, kodas pagal EVRK')]")
     WebElement dropdownButtonEVRK_DVP;
     //DVP
 
-//    @FindBy(xpath = "//mat-form-field[.//label[contains(., 'Planuojamos (-ų) steigti darbo vietos (-ų) adresas')]]//input")
-//    WebElement inputAddress;
-
-//    @FindBy(xpath = "//input[@class='primary-control mat-mdc-form-field-input-control mat-mdc-form-field-input' and @readonly]")
-//    @FindBy(xpath = "//span[matsuffix]//mat-icon[contains(text(), 'edit')]")
-//@FindBy(xpath = "//input[contains(@class, 'primary-control') and @readonly]")
-//@FindBy(xpath = "//div[contains(@class, 'mat-mdc-form-field-infix')]")
-//@FindBy(xpath = "//input[@id='common-text-input-25']")
-@FindBy(xpath = "(//mat-icon[contains(text(), 'edit')])[3]")
-WebElement addressComponent;
+    //address
+//----------------
+    @FindBy(xpath = "(//mat-icon[contains(text(), 'edit')])[3]")
+    WebElement addressComponent;
 
     @FindBy(xpath = "//mat-label[contains(text(), 'Valstybė')]/following::mat-select[1]")
     WebElement dropdownAddressCountry;
@@ -92,9 +83,6 @@ WebElement addressComponent;
     WebElement dropdownAddressCity;
     @FindBy(xpath = "//input[@placeholder='Ieškoti...']")
     WebElement dropdownAddressCitySearch;
-
-    @FindBy(xpath = "//common-button[@btntype='submit']//button")
-    WebElement buttonConfirm;
 
     @FindBy(xpath = "//mat-label[contains(text(), 'Gatvė')]/following::mat-select[1]")
     WebElement dropdownAddressStreet;
@@ -105,10 +93,9 @@ WebElement addressComponent;
     @FindBy(xpath = "//mat-label[contains(text(), 'Buto / patalpos Nr.')]/following::mat-select[1]")
     WebElement dropdownAddressApartment;
 
-    //DVP
-    @FindBy(xpath = "//mat-form-field[.//label[contains(., 'Planuojamos (-ų) pritaikyti darbo vietos (-ų) adresas')]]//input")
-    WebElement inputAddress_DVP;
-    //DVP
+    @FindBy(xpath = "//common-button[@btntype='submit']//button")
+    WebElement buttonConfirm;
+//------------------
 
     @FindBy(xpath = "//input[contains(@class, 'mat-datepicker-input')]")
     WebElement inputDate;
@@ -118,41 +105,39 @@ WebElement addressComponent;
 
     //application form step 2
     //------------------------------
-
     @FindBy(xpath = "//mat-label[contains(text(), 'Darbo vietos pavadinimas')]")
     WebElement dropdownButtonJobName;
 
     //DVP
     @FindBy(xpath = "//mat-label[contains(text(), 'Pritaikomos darbo vietos pavadinimas, kodas pagal profesijų klasifikatorių')]")
-    WebElement dropdownButtonJobNameAdaptableDVP;
+    WebElement dropdownButtonJobNameAdaptable_DVP;
 
     @FindBy(xpath = "//mat-label[contains(text(), 'Išlaidų tipas')]")
-    WebElement dropdownButtonExpensesTypDVP;
+    WebElement dropdownButtonExpensesTyp_DVP;
     //DVP
 
     @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[1]")
     WebElement inputJobFunction;
 
     @FindBy(xpath = "(//input[@type='radio' and @value='true'])[1]")
-    WebElement radioButtonWithDisabilitiesVUI;
+    WebElement radioButtonWithDisabilities_VUI;
 
     //DVP
     @FindBy(xpath = "(//input[@type='radio' and @value='true'])[1]")
-    WebElement radioButtonForAlreadyWorkingDVP_step1;
-
+    WebElement radioButtonForAlreadyWorking_DVP_step1;
     @FindBy(xpath = "(//input[@type='radio' and @value='true'])[2]")
-    WebElement radioButtonForNewWorkingDVP_step1;
+    WebElement radioButtonForNewWorking_DVP_step1;
 
     @FindBy(xpath = "(//input[@type='radio' and @value='false'])[3]")
-    WebElement radioButtonForAlreadyWorkingDVP_step2;
+    WebElement radioButtonForAlreadyWorking_DVP_step2;
     //DVP
 
     @FindBy(xpath = "//mat-label[contains(text(), 'Papildomai remiamo asmens tipas')]")
-    WebElement dropdownButtonDisabilitiesType;
+    WebElement dropdownButtonDisabilitiesType_VUI;
 
     //DVP
     @FindBy(xpath = "//mat-label[contains(text(), 'Asmens su negalia dalyvumo lygis')]")
-    WebElement dropdownButtonDisabilitiesLevelDVP;
+    WebElement dropdownButtonDisabilitiesLevel_DVP;
     //DVP
 
     @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[2]")
@@ -172,16 +157,13 @@ WebElement addressComponent;
 
     //DVP
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[1]")
-    WebElement inputJopDateDVP;
+    WebElement inputJopDate_DVP;
 
     @FindBy(xpath = "(//input[@type='radio' and @value='false'])[4]")
-    WebElement radioButtonTemporaryJobDVP;
+    WebElement radioButtonTemporaryJob_DVP;
 
     @FindBy(xpath = "(//input[@type='radio' and @value='false'])[5]")
-    WebElement radioButtonSeasonJobDVP;
-
-//    @FindBy(xpath = "(//input[@type='radio' and @value='false'])[6]")
-//    WebElement radioButtonPVM_DVP;
+    WebElement radioButtonSeasonJob_DVP;
     //DVP
 
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Planuojamas mokėti bruto darbo užmokestis, Eur')]//input")
@@ -222,12 +204,12 @@ WebElement addressComponent;
 
     //DVP
 //    @FindBy(xpath = "//label[contains(@class, 'mdc-floating-label') and .//mat-label[contains(., 'Reikalinga')]]")
-    //    @FindBy(xpath = "//label[contains(text(),'Reikalinga')]/following-sibling::common-select//mat-select")
+//    @FindBy(xpath = "//label[contains(text(),'Reikalinga')]/following-sibling::common-select//mat-select")
 //    @FindBy(xpath = "//mat-label[contains(text(), 'Reikalinga')]/following-sibling::div//mat-select")
 //    @FindBy(xpath = "//common-select[@id='common-select-9']//div[contains(@class, 'mat-mdc-select-trigger')]")
 //    @FindBy(xpath = "//common-select[contains(@class, 'common-select')]//mat-select")
-    @FindBy(xpath = "//mat-select[@id='mat-select-11']")
 //    @FindBy(xpath = "//mat-select[@aria-label='Reikalinga']")
+    @FindBy(xpath = "//mat-select[@id='mat-select-11']")
     WebElement dropdownButtonNecessaryForJobOneDVP;
 
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Darbo priemonės pavadinimas')]//input")
@@ -235,11 +217,7 @@ WebElement addressComponent;
 
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Išlaidų elemento pavadinimas')]//input")
     WebElement inputToolDVP;
-
     //DVP
-
-//    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Darbo priemonės pavadinimas')]//input")
-//    WebElement inputTool;
 
     @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Darbo priemonės techninis parametras')]]//input)[1]")
     WebElement inputToolParameterOne;
@@ -249,22 +227,21 @@ WebElement addressComponent;
     WebElement inputToolParameterThree;
 
     @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Išlaidų elemento techninis parametras')]]//input)[1]")
-    WebElement inputToolParameterOneDVP;
+    WebElement inputToolParameterOne_DVP;
     @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Išlaidų elemento techninis parametras')]]//input)[2]")
-    WebElement inputToolParameterTwoDVP;
+    WebElement inputToolParameterTwo_DVP;
     @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Išlaidų elemento techninis parametras')]]//input)[3]")
-    WebElement inputToolParameterThreeDVP;
+    WebElement inputToolParameterThree_DVP;
 
 
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Darbo priemonės kiekis, vnt.')]//input")
     WebElement inputToolsCount;
 
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Išlaidų elemento kiekis, vnt.')]//input")
-    WebElement inputToolsCountDVP;
+    WebElement inputToolsCount_DVP;
 
     @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Kaina, Eur')]//input)[1]")
     WebElement inputPriceOne;
-
 
     @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Kaina, Eur')]//input)[2]")
     WebElement inputPriceTwo;
@@ -275,7 +252,6 @@ WebElement addressComponent;
     @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Nuosavos lėšos, Eur')]//input)[2]")
     WebElement inputOwnFundsTwo;
 
-//    @FindBy(xpath = "//common-button//button[contains(@class, 'i-forms-repeater-button-add')]//mat-icon[text()='add']")
     @FindBy(xpath = "(//button[contains(@class, 'i-forms-repeater-button-add')])[4]")
     WebElement buttonAdd;
 
@@ -302,13 +278,13 @@ WebElement addressComponent;
     WebElement inputProjectDateFrom;
 
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[2]")
-    WebElement inputProjectDateFromDVP;
+    WebElement inputProjectDateFrom_DVP;
 
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[4]")
     WebElement inputProjectDateUntil;
 
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[3]")
-    WebElement inputProjectDateUntilDVP;
+    WebElement inputProjectDateUntil_DVP;
 
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Gautos paramos suma, Eur')]//input")
     WebElement inputSupportAmount;
@@ -392,12 +368,12 @@ WebElement addressComponent;
     //--------------
 
     @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Asmenų skaičius')]//input)[1]")
-    WebElement inputPersonCountOneDVP;
+    WebElement inputPersonCountOne_DVP;
 
     @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Asmenų skaičius')]//input)[2]")
-    WebElement inputPersonCountTwoDVP;
+    WebElement inputPersonCountTwo_DVP;
 
-    //Add Evaluators
+    //evaluations
     //---------------
 
     @FindBy(xpath = "//div[contains(@class, 'mat-mdc-form-field-infix')]//input[@type='text' and contains(@class, 'mat-datepicker-input')]")
@@ -410,51 +386,6 @@ WebElement addressComponent;
     @FindBy(xpath = "//common-button[@btnclass='btn btn--primary']//button[text()='Priskirti vertintojus']")
     WebElement buttonAddEvaluatorsConfirmation;
 
-    //---------------
-
-
-
-    public void enterFirstEvaluationEndDate() {
-        LocalDate today = LocalDate.now();
-        LocalDate futureDate = today.plusDays(1);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        String formattedFutureDate = futureDate.format(formatter);
-
-        if (firstEvaluationEndDate.isDisplayed() && firstEvaluationEndDate.isEnabled()) {
-            firstEvaluationEndDate.clear();
-            firstEvaluationEndDate.sendKeys(formattedFutureDate);
-        } else {
-            throw new RuntimeException("First date input is not interactable.");
-        }
-    }
-
-    public void enterSecondEvaluationEndDate() {
-        LocalDate today = LocalDate.now();
-        LocalDate futureDate = today.plusDays(2);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        String formattedFutureDate = futureDate.format(formatter);
-
-        if (secondEvaluationEndDate.isDisplayed() && secondEvaluationEndDate.isEnabled()) {
-            secondEvaluationEndDate.clear();
-            secondEvaluationEndDate.sendKeys(formattedFutureDate);
-        } else {
-            throw new RuntimeException("Second date input is not interactable.");
-        }
-    }
-
-    public void enterThirdEvaluationEndDate() {
-        LocalDate today = LocalDate.now();
-        LocalDate futureDate = today.plusDays(3);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        String formattedFutureDate = futureDate.format(formatter);
-
-        if (thirdEvaluationEndDate.isDisplayed() && thirdEvaluationEndDate.isEnabled()) {
-            thirdEvaluationEndDate.clear();
-            thirdEvaluationEndDate.sendKeys(formattedFutureDate);
-        } else {
-            throw new RuntimeException("Third date input is not interactable.");
-        }
-    }
 
 
     public void clickMenuSubmittedApplications() {
@@ -482,6 +413,8 @@ WebElement addressComponent;
         }
     }
 
+    //buttons
+    //-------------------
     public void clickButtonActionApplication() {
         buttonActionApplication.click();
     }
@@ -533,67 +466,11 @@ WebElement addressComponent;
         inputEMail.sendKeys(emailAddress);
     }
 
-//    public void selectValueByListEVRK(String valueToSelect) {
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//        try {
-//            // Paspaudžiame ant pasirinkimo lauko
-//            log.info("Located the dropdown button.");
-//            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonEVRK)).click();
-//
-//            // Laukiame, kol pasirodys pasirinkimai
-//            List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option//span")));
-//
-//            // Pridedame logą, kad pamatytume, kiek elementų surasta
-//            log.info("Found {} options in the dropdown.", options.size());
-//
-//            // Surandame ir pasirinkame reikšmę
-//            boolean optionSelected = false;
-//            for (WebElement option : options) {
-//                // Patikriname, ar tekstas tinka
-//                if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
-//                    // Pasirenkame reikšmę
-//                    option.click();
-//                    optionSelected = true;
-//                    log.info("Successfully selected the value: '{}'", valueToSelect);
-//                    break; // Pasirenkame tik pirmą reikšmę
-//                }
-//            }
-//
-//            // Jei reikšmė nerasta
-//            if (!optionSelected) {
-//                log.warn("The value '{}' was not found among the options.", valueToSelect);
-//                throw new RuntimeException("The value '" + valueToSelect + "' was not found in the dropdown.");
-//            }
-//
-//            // Laukiame, kol pasirinkimo sąrašas užsidarys
-//            try {
-//                // Patikriname, ar 'aria-expanded' atributas pasikeitė į 'false'
-//                wait.until(ExpectedConditions.attributeToBe(dropdownButtonEVRK, "aria-expanded", "false"));
-//                log.info("Dropdown closed successfully.");
-//            } catch (TimeoutException e) {
-//                log.error("Failed to close the dropdown with aria-expanded = 'false'. Attempting manual close.");
-//
-//                // Jeigu 'aria-expanded' nepasikeitė, bandykite uždaryti dropdown paspausdami už jo ribų
-//                try {
-//                    WebElement body = driver.findElement(By.className("cdk-overlay-backdrop"));
-//                    body.click(); // Paspaudžiame už dropdown ribų, kad uždarytumėte meniu
-//                    log.info("Manual close attempt for the dropdown using body click.");
-//                } catch (Exception ex) {
-//                    log.error("Failed to manually close the dropdown: {}", ex.getMessage());
-//                }
-//            }
-//
-//        } catch (Exception e) {
-//            log.error("Error selecting value from the list: {}", e.getMessage());
-//            throw new RuntimeException("Failed to select from the list", e);
-//        }
-//    }
-
-    public void selectValueByListEVRK(String valueToSelect) {
+    public void selectValueByListEVRK_VUI(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
             log.info("Clicking on the dropdown button.");
-            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonEVRK)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonEVRK_VUI)).click();
 
             // Laukiame, kol išskleidžiamas meniu bus matomas
             List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option//span")));
@@ -633,9 +510,9 @@ WebElement addressComponent;
             WebElement body = driver.findElement(By.tagName("body")); // Paspauskime į visą puslapio kūną, kuris yra tiksliai matomas
             actions.moveToElement(body).click().perform();
 
-            // Patikriname, ar meniu užsidarė
-            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//mat-option//span")));
-            log.info("Dropdown should be closed now.");
+//            // Patikriname, ar meniu užsidarė
+//            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//mat-option//span")));
+//            log.info("Dropdown should be closed now.");
 
         } catch (Exception e) {
             log.error("Error occurred while selecting value: {}", e.getMessage());
@@ -689,6 +566,8 @@ WebElement addressComponent;
         }
     }
 
+    //address
+    //----------------------------------
     public void clickAddressComponent() {
         try {
             // Laukiame, kol elementas bus matomas ir paspaudžiamas
@@ -743,15 +622,6 @@ WebElement addressComponent;
         } catch (TimeoutException e) {
             log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
         }
-    }
-
-
-    public void clickOnCityDropdown() {
-        dropdownAddressCity.click(); // Paspaudžia ant mat-form-field elemento
-    }
-
-    public void enterCityName(String cityName) {
-        dropdownAddressCitySearch.sendKeys(cityName); // Įrašo tekstą į paieškos lauką
     }
 
     public void selectDropdownAddressCity(String valueToSelect) {
@@ -834,13 +704,13 @@ WebElement addressComponent;
     }
 
     public void selectDropdownAddressHouse(String valueToSelect) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Ilgesnis laukimo laikas
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
         log.info("Located the dropdown button.");
         try {
             wait.until(ExpectedConditions.elementToBeClickable(dropdownAddressHouse));
             JavascriptExecutor js = (JavascriptExecutor) driver;
-            js.executeScript("arguments[0].scrollIntoView(true);", dropdownAddressHouse); // Užtikrinsime, kad elementas būtų matomas
+            js.executeScript("arguments[0].scrollIntoView(true);", dropdownAddressHouse);
             dropdownAddressHouse.click();
         } catch (Exception e) {
             log.error("Dropdown button click failed: {}", e.getMessage());
@@ -873,7 +743,6 @@ WebElement addressComponent;
             log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
         }
     }
-
 
     public void selectDropdownAddressApartment(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Ilgesnis laukimo laikas
@@ -915,13 +784,7 @@ WebElement addressComponent;
             log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
         }
     }
-
-    //DVP
-    public void enterAddress_DVP(String address) {
-        inputAddress_DVP.clear();
-        inputAddress_DVP.sendKeys(address);
-    }
-    //DVP
+//-------------------------------------
 
     public void enterDate() {
         LocalDate today = LocalDate.now();
@@ -944,15 +807,15 @@ WebElement addressComponent;
     }
 
     //DVP
-    public void clickRadioButtonForAlreadyWorkingDVP_step1() {
-        if (!radioButtonForAlreadyWorkingDVP_step1.isSelected()) {
-            radioButtonForAlreadyWorkingDVP_step1.click();
+    public void clickRadioButtonForAlreadyWorking_DVP_step1() {
+        if (!radioButtonForAlreadyWorking_DVP_step1.isSelected()) {
+            radioButtonForAlreadyWorking_DVP_step1.click();
         }
     }
 
-    public void clickRadioButtonForNewWorkingDVP_step1() {
-        if (!radioButtonForNewWorkingDVP_step1.isSelected()) {
-            radioButtonForNewWorkingDVP_step1.click();
+    public void clickRadioButtonForNewWorking_DVP_step1() {
+        if (!radioButtonForNewWorking_DVP_step1.isSelected()) {
+            radioButtonForNewWorking_DVP_step1.click();
         }
     }
     //DVP
@@ -1023,23 +886,23 @@ WebElement addressComponent;
             log.error("Failed to select dropdown option: {}", e.getMessage());
         }
 
-        try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonJobName, "aria-expanded", "false"));
-        } catch (TimeoutException e) {
-            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
-        }
+//        try {
+//            wait.until(ExpectedConditions.attributeToBe(dropdownButtonJobName, "aria-expanded", "false"));
+//        } catch (TimeoutException e) {
+//            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
+//        }
     }
 
     //DVP
-public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
+public void selectDropdownJobNameAdaptable_DVP(String valueToSelect) {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Ilgesnis laukimo laikas
 
     log.info("Located the dropdown button.");
     try {
-        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonJobNameAdaptableDVP));
+        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonJobNameAdaptable_DVP));
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView(true);", dropdownButtonJobNameAdaptableDVP); // Užtikrinsime, kad elementas būtų matomas
-        dropdownButtonJobNameAdaptableDVP.click();
+        js.executeScript("arguments[0].scrollIntoView(true);", dropdownButtonJobNameAdaptable_DVP); // Užtikrinsime, kad elementas būtų matomas
+        dropdownButtonJobNameAdaptable_DVP.click();
     } catch (Exception e) {
         log.error("Dropdown button click failed: {}", e.getMessage());
     }
@@ -1066,21 +929,21 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
     }
 
     try {
-        wait.until(ExpectedConditions.attributeToBe(dropdownButtonJobNameAdaptableDVP, "aria-expanded", "false"));
+        wait.until(ExpectedConditions.attributeToBe(dropdownButtonJobNameAdaptable_DVP, "aria-expanded", "false"));
     } catch (TimeoutException e) {
         log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
     }
 }
 
-    public void selectDropdownExpensesTypDVP(String valueToSelect) {
+    public void selectDropdownExpensesTyp_DVP(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Ilgesnis laukimo laikas
 
         log.info("Located the dropdown button.");
         try {
-            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonExpensesTypDVP));
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonExpensesTyp_DVP));
             JavascriptExecutor js = (JavascriptExecutor) driver;
-            js.executeScript("arguments[0].scrollIntoView(true);", dropdownButtonExpensesTypDVP); // Užtikrinsime, kad elementas būtų matomas
-            dropdownButtonExpensesTypDVP.click();
+            js.executeScript("arguments[0].scrollIntoView(true);", dropdownButtonExpensesTyp_DVP); // Užtikrinsime, kad elementas būtų matomas
+            dropdownButtonExpensesTyp_DVP.click();
         } catch (Exception e) {
             log.error("Dropdown button click failed: {}", e.getMessage());
         }
@@ -1106,11 +969,11 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
             log.error("Failed to select dropdown option: {}", e.getMessage());
         }
 
-        try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonExpensesTypDVP, "aria-expanded", "false"));
-        } catch (TimeoutException e) {
-            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
-        }
+//        try {
+//            wait.until(ExpectedConditions.attributeToBe(dropdownButtonExpensesTyp_DVP, "aria-expanded", "false"));
+//        } catch (TimeoutException e) {
+//            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
+//        }
     }
     //DVP
 
@@ -1119,26 +982,25 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
         inputJobFunction.sendKeys(text);
     }
 
-
     public void clickRadioButtonWithDisabilitiesVUI() {
-        if (!radioButtonWithDisabilitiesVUI.isSelected()) {
-            radioButtonWithDisabilitiesVUI.click();
+        if (!radioButtonWithDisabilities_VUI.isSelected()) {
+            radioButtonWithDisabilities_VUI.click();
         }
     }
 
     //DVP
-    public void clickRadioButtonForAlreadyWorkingDVP_step2() {
-        if (!radioButtonForAlreadyWorkingDVP_step2.isSelected()) {
-            radioButtonForAlreadyWorkingDVP_step2.click();
+    public void clickRadioButtonForAlreadyWorking_DVP_step2() {
+        if (!radioButtonForAlreadyWorking_DVP_step2.isSelected()) {
+            radioButtonForAlreadyWorking_DVP_step2.click();
         }
     }
     //DVP
 
-    public void selectValueByListDisabilitiesType(String valueToSelect) {
+    public void selectValueByListDisabilitiesType_VUI(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
             log.info("Clicking on the dropdown button.");
-            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonDisabilitiesType)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonDisabilitiesType_VUI)).click();
 
             // Laukiame, kol išskleidžiamas meniu bus matomas
             List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option//span")));
@@ -1179,8 +1041,8 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
             actions.moveToElement(body).click().perform();
 
             // Patikriname, ar meniu užsidarė
-            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//mat-option//span")));
-            log.info("Dropdown should be closed now.");
+//            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//mat-option//span")));
+//            log.info("Dropdown should be closed now.");
 
         } catch (Exception e) {
             log.error("Error occurred while selecting value: {}", e.getMessage());
@@ -1189,11 +1051,11 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
     }
 
     //DVP
-    public void selectValueByListDisabilitiesLevelDVP(String valueToSelect) {
+    public void selectValueByListDisabilitiesLevel_DVP(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
             log.info("Clicking on the dropdown button.");
-            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonDisabilitiesLevelDVP)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonDisabilitiesLevel_DVP)).click();
 
             List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option//span")));
             log.info("Found {} options in the dropdown.", options.size());
@@ -1237,8 +1099,6 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
     }
     //DVP
 
-
-
     public void enterDisabilities(String text) {
         inputDisabilities.clear();
         inputDisabilities.sendKeys(text);
@@ -1265,13 +1125,12 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
             log.warn("Dropdown value '{}' not found.", valueToSelect);
         }
 
-        try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonTimeMode, "aria-expanded", "false"));
-        } catch (TimeoutException e) {
-            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
-        }
+//        try {
+//            wait.until(ExpectedConditions.attributeToBe(dropdownButtonTimeMode, "aria-expanded", "false"));
+//        } catch (TimeoutException e) {
+//            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
+//        }
     }
-
 
     public void enterInputTimeModeOthers(String text) {
         inputTimeModeOthers.clear();
@@ -1299,16 +1158,16 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
     }
 
     //DVP
-    public void enterJobDateDVP() {
+    public void enterJobDate_DVP() {
         LocalDate today = LocalDate.now();
         LocalDate pastDate = today.plusYears(1).plusDays(1);
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String formattedPastDate = pastDate.format(formatter);
 
-        if (inputJopDateDVP.isDisplayed() && inputJopDateDVP.isEnabled()) {
-            inputJopDateDVP.clear();
-            inputJopDateDVP.sendKeys(formattedPastDate);
+        if (inputJopDate_DVP.isDisplayed() && inputJopDate_DVP.isEnabled()) {
+            inputJopDate_DVP.clear();
+            inputJopDate_DVP.sendKeys(formattedPastDate);
         } else {
             throw new RuntimeException("End date input is not interactable.");
         }
@@ -1326,9 +1185,9 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
         }
     }
 
-    public void clickRadioButtonTemporaryJobDVP() {
-        if (!radioButtonTemporaryJobDVP.isSelected()) {
-            radioButtonTemporaryJobDVP.click();
+    public void clickRadioButtonTemporaryJob_DVP() {
+        if (!radioButtonTemporaryJob_DVP.isSelected()) {
+            radioButtonTemporaryJob_DVP.click();
         }
     }
 
@@ -1338,9 +1197,9 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
         }
     }
 
-    public void clickRadioButtonSeasonJobDVP() {
-        if (!radioButtonSeasonJobDVP.isSelected()) {
-            radioButtonSeasonJobDVP.click();
+    public void clickRadioButtonSeasonJob_DVP() {
+        if (!radioButtonSeasonJob_DVP.isSelected()) {
+            radioButtonSeasonJob_DVP.click();
         }
     }
 
@@ -1404,11 +1263,11 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
             log.warn("Dropdown value '{}' not found.", valueToSelect);
         }
 
-        try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonNecessaryForJobOne, "aria-expanded", "false"));
-        } catch (TimeoutException e) {
-            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
-        }
+//        try {
+//            wait.until(ExpectedConditions.attributeToBe(dropdownButtonNecessaryForJobOne, "aria-expanded", "false"));
+//        } catch (TimeoutException e) {
+//            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
+//        }
     }
 
     public void selectDropdownNecessaryForJobTwo(String valueToSelect) {
@@ -1433,15 +1292,15 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
             log.warn("Dropdown value '{}' not found.", valueToSelect);
         }
 
-        try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonNecessaryForJobTwo, "aria-expanded", "false"));
-        } catch (TimeoutException e) {
-            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
-        }
+//        try {
+//            wait.until(ExpectedConditions.attributeToBe(dropdownButtonNecessaryForJobTwo, "aria-expanded", "false"));
+//        } catch (TimeoutException e) {
+//            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
+//        }
     }
 
     //DVP
-    public void selectDropdownNecessaryForJobOneDVP(String valueToSelect) {
+    public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 
@@ -1470,6 +1329,7 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
             log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
         }
     }
+
 //    public void selectDropdownNecessaryForJobOneDVP(String valueToSelect) {
 //        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 //
@@ -1505,13 +1365,12 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
 //    }
 //DVP
 
-
     public void enterTool(String tool) {
         inputTool.clear();
         inputTool.sendKeys(tool);
     }
 
-    public void enterToolDVP(String tool) {
+    public void enterTool_DVP(String tool) {
         inputToolDVP.clear();
         inputToolDVP.sendKeys(tool);
     }
@@ -1531,19 +1390,19 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
         inputToolParameterThree.sendKeys(parameter);
     }
 
-    public void enterToolParameterOneDVP(String parameter) {
-        inputToolParameterOneDVP.clear();
-        inputToolParameterOneDVP.sendKeys(parameter);
+    public void enterToolParameterOne_DVP(String parameter) {
+        inputToolParameterOne_DVP.clear();
+        inputToolParameterOne_DVP.sendKeys(parameter);
     }
 
-    public void enterToolParameterTwoDVP(String parameter) {
-        inputToolParameterTwoDVP.clear();
-        inputToolParameterTwoDVP.sendKeys(parameter);
+    public void enterToolParameterTwo_DVP(String parameter) {
+        inputToolParameterTwo_DVP.clear();
+        inputToolParameterTwo_DVP.sendKeys(parameter);
     }
 
-    public void enterToolParameterThreeDVP(String parameter) {
-        inputToolParameterThreeDVP.clear();
-        inputToolParameterThreeDVP.sendKeys(parameter);
+    public void enterToolParameterThree_DVP(String parameter) {
+        inputToolParameterThree_DVP.clear();
+        inputToolParameterThree_DVP.sendKeys(parameter);
     }
 
 
@@ -1552,9 +1411,9 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
         inputToolsCount.sendKeys(amount);
     }
 
-    public void enterToolsCountDVP(String amount) {
-        inputToolsCountDVP.clear();
-        inputToolsCountDVP.sendKeys(amount);
+    public void enterToolsCount_DVP(String amount) {
+        inputToolsCount_DVP.clear();
+        inputToolsCount_DVP.sendKeys(amount);
     }
 
     public void enterPriceOne(String amount) {
@@ -1634,16 +1493,16 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
         }
     }
 
-    public void enterProjectDateFromDVP() {
+    public void enterProjectDateFrom_DVP() {
         LocalDate today = LocalDate.now();
         LocalDate pastDate = today.minusDays(1);
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String formattedPastDate = pastDate.format(formatter);
 
-        if (inputProjectDateFromDVP.isDisplayed() && inputProjectDateFromDVP.isEnabled()) {
-            inputProjectDateFromDVP.clear();
-            inputProjectDateFromDVP.sendKeys(formattedPastDate);
+        if (inputProjectDateFrom_DVP.isDisplayed() && inputProjectDateFrom_DVP.isEnabled()) {
+            inputProjectDateFrom_DVP.clear();
+            inputProjectDateFrom_DVP.sendKeys(formattedPastDate);
         } else {
             throw new RuntimeException("End date input is not interactable.");
         }
@@ -1664,16 +1523,16 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
         }
     }
 
-    public void enterProjectDateUntilDVP() {
+    public void enterProjectDateUntil_DVP() {
         LocalDate today = LocalDate.now();
         LocalDate pastDate = today.plusYears(1);
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String formattedPastDate = pastDate.format(formatter);
 
-        if (inputProjectDateUntilDVP.isDisplayed() && inputProjectDateUntilDVP.isEnabled()) {
-            inputProjectDateUntilDVP.clear();
-            inputProjectDateUntilDVP.sendKeys(formattedPastDate);
+        if (inputProjectDateUntil_DVP.isDisplayed() && inputProjectDateUntil_DVP.isEnabled()) {
+            inputProjectDateUntil_DVP.clear();
+            inputProjectDateUntil_DVP.sendKeys(formattedPastDate);
         } else {
             throw new RuntimeException("End date input is not interactable.");
         }
@@ -1745,54 +1604,36 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
         public static final By RADIO_YES_11 = By.xpath("(//input[@type='radio' and @value='true'])[18]");
         public static final By RADIO_YES_12 = By.xpath("(//input[@type='radio' and @value='true'])[19]");
 
-
-
-//        // Metodas pasirinks reikiamą radio mygtuką pagal tekstą
-//        public static void selectRadioButton(WebDriver driver, By locator, boolean shouldBeSelected) {
-//            WebElement radioButton = driver.findElement(locator); // Radome elementą pagal lokatorių
-//
-//            // Patikriname, ar radio mygtukas turi būti pažymėtas
-//            if (radioButton.isSelected() != shouldBeSelected) {
-//                radioButton.click(); // Jei būsenos nesutampa, paspaudžiame
-//            }
-//        }
-
         public static void selectRadioButton(WebDriver driver, By locator, boolean shouldBeSelected) {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
             try {
-                // Laukiame, kol elementas taps paspaudžiamas
+
                 WebElement radioButton = wait.until(ExpectedConditions.elementToBeClickable(locator));
 
-                // Patikriname, ar radio mygtukas turi būti pažymėtas
                 if (radioButton.isSelected() != shouldBeSelected) {
-                    radioButton.click(); // Jei būsenos nesutampa, paspaudžiame
+                    radioButton.click();
                 }
             } catch (Exception e) {
                 log.error("Error selecting radio button: {}", e.getMessage());
-                // Jei elementas uždengtas arba negalime jo paspausti, bandome su JavaScript
                 JavascriptExecutor js = (JavascriptExecutor) driver;
                 WebElement radioButton = driver.findElement(locator);
-                js.executeScript("arguments[0].click();", radioButton); // Paspaudžiame per JavaScript
+                js.executeScript("arguments[0].click();", radioButton);
             }
         }
     }
 
-
     public void uploadFileStepFive() {
-        String filePath = "C:\\Users\\ingrida.zadorozniene\\TXT.txt";  // Failo kelias
+        String filePath = "C:\\Users\\ingrida.zadorozniene\\TXT.txt";
 
-        // Rasti visus failų įkėlimo elementus puslapyje
         List<WebElement> fileInputs = driver.findElements(By.xpath("//input[@type='file']"));
 
-        // Patikrinti, ar radome failų įkėlimo elementus
         if (fileInputs.isEmpty()) {
             log.warn("No file input elements found on the page.");
         } else {
-            // Įkelti failą į kiekvieną elementą
             for (WebElement fileInput : fileInputs) {
                 try {
-                    fileInput.sendKeys(filePath);  // Įkelti failą į elementą
+                    fileInput.sendKeys(filePath);
                     log.info("File uploaded successfully to an input element.");
                 } catch (Exception e) {
                     log.error("Failed to upload file to the input element: " + e.getMessage());
@@ -1851,22 +1692,59 @@ public void selectDropdownJobNameAdaptableDVP(String valueToSelect) {
         inputDocumentNameTen.sendKeys(count);
     }
 
-
     //DVP
-    public void enterPersonCountOneDVP(String count) {
-        inputPersonCountOneDVP.clear();
-        inputPersonCountOneDVP.sendKeys(count);
+    public void enterPersonCountOne_DVP(String count) {
+        inputPersonCountOne_DVP.clear();
+        inputPersonCountOne_DVP.sendKeys(count);
     }
 
-    public void enterPersonCountTwoDVP(String count) {
-        inputPersonCountTwoDVP.clear();
-        inputPersonCountTwoDVP.sendKeys(count);
+    public void enterPersonCountTwo_DVP(String count) {
+        inputPersonCountTwo_DVP.clear();
+        inputPersonCountTwo_DVP.sendKeys(count);
     }
 
+    //evaluations
 //---------------------------
+    public void enterFirstEvaluationEndDate() {
+        LocalDate today = LocalDate.now();
+        LocalDate futureDate = today.plusDays(1);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedFutureDate = futureDate.format(formatter);
 
+        if (firstEvaluationEndDate.isDisplayed() && firstEvaluationEndDate.isEnabled()) {
+            firstEvaluationEndDate.clear();
+            firstEvaluationEndDate.sendKeys(formattedFutureDate);
+        } else {
+            throw new RuntimeException("First date input is not interactable.");
+        }
+    }
 
+    public void enterSecondEvaluationEndDate() {
+        LocalDate today = LocalDate.now();
+        LocalDate futureDate = today.plusDays(2);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedFutureDate = futureDate.format(formatter);
 
+        if (secondEvaluationEndDate.isDisplayed() && secondEvaluationEndDate.isEnabled()) {
+            secondEvaluationEndDate.clear();
+            secondEvaluationEndDate.sendKeys(formattedFutureDate);
+        } else {
+            throw new RuntimeException("Second date input is not interactable.");
+        }
+    }
 
+    public void enterThirdEvaluationEndDate() {
+        LocalDate today = LocalDate.now();
+        LocalDate futureDate = today.plusDays(3);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedFutureDate = futureDate.format(formatter);
 
+        if (thirdEvaluationEndDate.isDisplayed() && thirdEvaluationEndDate.isEnabled()) {
+            thirdEvaluationEndDate.clear();
+            thirdEvaluationEndDate.sendKeys(formattedFutureDate);
+        } else {
+            throw new RuntimeException("Third date input is not interactable.");
+        }
+    }
+//----------------------------
 }

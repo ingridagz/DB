@@ -31,13 +31,6 @@ public class ApplicationFormsPage extends UztisPage {
     @FindBy(id = "kc-login")
     WebElement buttonLogin;
 
-    //Menu
-//    @FindBy(xpath = "//button/mat-icon[@role='img']")
-//    WebElement MenuAppProcessing;
-//    @FindBy(xpath = "//mat-expansion-panel[4]/mat-expansion-panel-header[@role='button']")
-//    @FindBy(xpath = "//mat-expansion-panel-header[.//span[contains(text(), 'Paraiškų tvarkymas')]]")
-//    @FindBy(xpath = "//mat-expansion-panel-header[.//span[contains(text(), 'Paraiškų tvarkymas')]]//mat-icon[text()='expand_more']")
-//    @FindBy(xpath = "//span[@class='mat-content mat-content-hide-toggle']//span[contains(text(), 'Paraiškų tvarkymas')]")
     @FindBy(xpath = "//mat-expansion-panel-header[@id='mat-expansion-panel-header-4']")
     WebElement buttonMenuApplicationProcessing;
 
@@ -48,42 +41,33 @@ public class ApplicationFormsPage extends UztisPage {
     @FindBy(xpath = "//a[@href='/application/description/create']")
     WebElement buttonCreateNewForm;
 
-    //Application code
     @FindBy(xpath = "//common-text-input/input")
     WebElement inputDescriptionCode;
 
-    //Submitted applications are assigned to
     @FindBy(xpath = "//input[@type='radio' and @value='REGIONAL']")
     WebElement radioButtonMunicipality;
     @FindBy(xpath = "//input[@type='radio' and @value='BRANCH']")
     WebElement radioButtonSection;
 
-    //Budget
     @FindBy(xpath = "(//input[@type='radio' and @value='REGIONAL'])[2]")
     WebElement radioButtonBudgetByMunicipality;
     @FindBy(xpath = "(//input[@type='radio' and @value='GLOBAL'])")
     WebElement radioButtonBudgetByCountry;
 
-    //Queue
     @FindBy(xpath = "(//input[@type='radio' and @value='true'])")
     WebElement radioButtonFinancedByQueue;
     @FindBy(xpath = "(//input[@type='radio' and @value='false'])")
     WebElement radioButtonFinancedWithoutQueue;
 
-    //Add
     @FindBy(css = ".btn.btn--transparent.ms-2.primary-color > span")
     WebElement buttonAdd;
 
-    //Dropdowns
     @FindBy(xpath = "//mat-label[contains(text(), 'Departamentas')]")
     WebElement dropdownButtonMunicipality;
-    //    List<WebElement> dropdownButtonMunicipality;
     @FindBy(xpath = "//mat-label[contains(text(), 'Departamentas / skyrius')]")
     WebElement dropdownButtonSection;
 
-
     @FindBy(xpath = "//mat-label[contains(text(), 'I etapo vertinimo forma')]")
-//    @FindBy(xpath = "//mat-option")
     WebElement dropdownButtonEvaluationOne;
     @FindBy(xpath = "//mat-label[contains(text(), 'II etapo vertinimo forma')]")
     WebElement dropdownButtonEvaluationTwo;
@@ -95,20 +79,16 @@ public class ApplicationFormsPage extends UztisPage {
     @FindBy(xpath = "//mat-form-field[.//mat-label[contains(text(), 'Reikšmė')]]//input")
     List<WebElement> valueSettingValue;
 
-    @FindBy(css = "mat-option")
+//    @FindBy(css = "mat-option")
 //    List<WebElement> dropdownText;
-    WebElement dropdownText;
+//    WebElement dropdownText;
 
     @FindBy(css = ".ms-2 > .btn.btn--transparent.secondary-color")
     WebElement buttonAddSetting;
 
-    //    @FindBy(css = "common-button > .btn.btn--primary-light-dashed")
-//    @FindBy(css = ".btn--primary-light-dashed")
     @FindBy(xpath = "//common-button[@btnclass='btn btn--primary-light-dashed']//button[@type='button']")
-//    @FindBy(xpath = "//button[.//mat-icon[text()='add']]")
     WebElement buttonPlus;
 
-    //Application name
     @FindBy(xpath = "//mat-form-field[.//mat-label[contains(text(), 'Paraiškos pavadinimas lietuvių kalba')]]//input")
     WebElement inputApplicationName;
 
@@ -118,16 +98,13 @@ public class ApplicationFormsPage extends UztisPage {
     @FindBy(id = "mat-button-toggle-0-button")
     WebElement buttonSaveForm;
 
-     //-------------------------------------------------------------------
+    //-------------------------------------------------------------------
 
     @FindBy(css = "tbody > tr:nth-of-type(1)")
     WebElement lastDescription;
 
     @FindBy(xpath = "//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell']")
     WebElement lastDescriptionCode;
-
-    @FindBy(xpath = "//input[@class='primary-control mat-mdc-form-field-input-control mat-mdc-form-field-input ng-untouched ng-pristine']")
-    WebElement lastDescriptionCodeInput;
 
     //-------------------------------------------------------------------
 
@@ -145,9 +122,11 @@ public class ApplicationFormsPage extends UztisPage {
     @FindBy(xpath = "(//mat-label[contains(text(), 'Dokumentas')])[3]")
     WebElement dropdownButtonDocument;
 
+    //messages
 //--------------------
     @FindBy(css = "[class='w-100']")
     List<WebElement> successMessages;
+
 
     public List<String> getAllMessagesText() {
         return successMessages.stream()
@@ -156,13 +135,13 @@ public class ApplicationFormsPage extends UztisPage {
     }
 
     public void verifySuccessMessage(String expectedMessage) {
-        List<String> actualMessages = getAllMessagesText(); // Gauti visas žinutės tekstas
+        List<String> actualMessages = getAllMessagesText();
 
         boolean messageFound = false;
         for (String message : actualMessages) {
             if (message.equals(expectedMessage)) {
-                messageFound = true; // Jei žinutė rasta, pažymime, kad ji yra
-                break; // Baigiame paiešką, nes radome norimą žinutę
+                messageFound = true;
+                break;
             }
         }
 
@@ -172,8 +151,9 @@ public class ApplicationFormsPage extends UztisPage {
             log.error("Failed to verify the success message: '{}'. Available messages: {}", expectedMessage, actualMessages); // Klaidos pranešimas su visų žinučių sąrašu
         }
     }
-//-------------------------
 
+    //Project progress
+    //-------------------------
     public void clickTabProjectProgress() {
         tabProjectProgress.click();
     }
@@ -206,7 +186,7 @@ public class ApplicationFormsPage extends UztisPage {
             log.error("Failed to close the dropdown with aria-expanded = 'false'.");
         }
     }
-
+    //---------------------
 
     public void login(String uname, String pword) {
         this.username.sendKeys(uname);
@@ -260,7 +240,6 @@ public class ApplicationFormsPage extends UztisPage {
         IntStream.range(0, 7)
                 .forEach(i -> {
                     buttonAddSetting.click();
-                    // Optionally add a wait or any logic you want between clicks
                 });
     }
 
@@ -290,7 +269,7 @@ public class ApplicationFormsPage extends UztisPage {
         }
     }
 
-    //enter text:
+    //inputs
     public void enterApplicationCode(String code) {
         this.inputDescriptionCode.sendKeys(code);
     }
@@ -335,7 +314,8 @@ public class ApplicationFormsPage extends UztisPage {
             radioButtonFinancedWithoutQueue.click();
         }
     }
-
+    //dropdowns
+    //-----------------------
     public void selectValueByListMunicipality(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
@@ -567,19 +547,8 @@ public class ApplicationFormsPage extends UztisPage {
         }
     }
 
+    //for invitations
     //-------------------------------------------------------------------
-
-//    public String getSuccessMessageText() {
-//        return successMessage.getText();
-//    }
-public List<String> getSuccessMessagesText() {
-    return successMessages.stream()
-            .map(WebElement::getText) // Iš kiekvieno elemento paimame tekstą
-            .collect(Collectors.toList());
-}
-
-    //-------------------------------------------------------------------
-
     public void clickLastDescription() {
         lastDescription.click();
     }
@@ -587,31 +556,6 @@ public List<String> getSuccessMessagesText() {
     public String getLastDescriptionCode() {
         return lastDescriptionCode.getText();
     }
-
-    //-------------------------------------------------------------------
-
-//    public void enterFormData(String json) {
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//
-//        // Palaukti, kol elementas bus matomas
-//        WebElement element = wait.until(ExpectedConditions.visibilityOf(formDataArea));
-//
-//        // Skaityti failo turinį kaip tekstą
-//        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream("data.csv")) {
-//            if (inputStream == null) {
-//                throw new IllegalArgumentException("Failas data.csv nerastas!");
-//            }
-//            String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
-//
-//            // Įrašyti turinį į lauką
-//            element.sendKeys(content);
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//            throw new RuntimeException("Klaida skaitant failo turinį: " + e.getMessage());
-//        }
-//    }
-
 
 }
 
