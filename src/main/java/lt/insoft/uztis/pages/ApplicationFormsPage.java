@@ -103,7 +103,8 @@ public class ApplicationFormsPage extends UztisPage {
     @FindBy(css = "tbody > tr:nth-of-type(1)")
     WebElement lastDescription;
 
-    @FindBy(xpath = "//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell']")
+//    @FindBy(xpath = "//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell']")
+    @FindBy(xpath = "//td[contains(@class, 'cdk-column-CODE') and @role='cell']")
     WebElement lastDescriptionCode;
 
     //-------------------------------------------------------------------

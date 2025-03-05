@@ -209,7 +209,8 @@ public class SubmittedApplicationsPage extends UztisPage {
 //    @FindBy(xpath = "//common-select[@id='common-select-9']//div[contains(@class, 'mat-mdc-select-trigger')]")
 //    @FindBy(xpath = "//common-select[contains(@class, 'common-select')]//mat-select")
 //    @FindBy(xpath = "//mat-select[@aria-label='Reikalinga']")
-    @FindBy(xpath = "//mat-select[@id='mat-select-11']")
+
+    @FindBy(xpath = "//mat-select[@id='mat-select-14']")
     WebElement dropdownButtonNecessaryForJobOneDVP;
 
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Darbo priemonės pavadinimas')]//input")

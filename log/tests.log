@@ -91920,3 +91920,1423 @@ Session ID: 35729e25d6da8fda98acb74330db6c55
 	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
 	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
 2025-03-04 15:24:27 [main] INFO  l.insoft.uztis.tests.utils.TestUtils - Screenshot moved to C:\Users\ingrida.zadorozniene\Desktop\Asm\UZTIS\UZTIS_tests\test-output\screenshots\20250304\152427616_testFillNewVUIApplicationFA().png
+2025-03-05 10:14:00 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-05 10:14:00 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Setup complete. ApplicationFormsPage initialized.
+2025-03-05 10:14:00 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Starting test:'testCreateNewDvpApplication'
+2025-03-05 10:14:00 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - User logged in with test credentials
+2025-03-05 10:14:00 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Opened 'Application Processing' menu.
+2025-03-05 10:14:01 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked on 'Application Forms' menu.
+2025-03-05 10:14:01 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked to create a new application form.
+2025-03-05 10:14:01 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Entered random application code: TST-DVP-36
+2025-03-05 10:14:01 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected 'Municipality' radio button.
+2025-03-05 10:14:01 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Located the dropdown button.
+2025-03-05 10:14:02 [main] WARN  l.i.uztis.pages.ApplicationFormsPage - The value 'Kauno departamentas' was not found among the options.
+2025-03-05 10:14:22 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-05 10:14:22 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Setup complete. ApplicationFormsPage initialized.
+2025-03-05 10:14:22 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Starting test:'testCreateNewDvpApplication'
+2025-03-05 10:14:22 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - User logged in with test credentials
+2025-03-05 10:14:23 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Opened 'Application Processing' menu.
+2025-03-05 10:14:23 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked on 'Application Forms' menu.
+2025-03-05 10:14:23 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked to create a new application form.
+2025-03-05 10:14:23 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Entered random application code: TST-DVP-22
+2025-03-05 10:14:24 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected 'Municipality' radio button.
+2025-03-05 10:14:24 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Located the dropdown button.
+2025-03-05 10:14:24 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Successfully selected the value: 'Kauno departamentas'
+2025-03-05 10:14:34 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Failed to close the dropdown with aria-expanded = 'false'.
+2025-03-05 10:14:34 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected a value from the 'Municipality' dropdown: 'Kauno departamentas'
+2025-03-05 10:14:34 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected 'Budget By Country' radio button.
+2025-03-05 10:14:35 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected 'Financed Without Queue' option.
+2025-03-05 10:14:35 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Located the dropdown button.
+2025-03-05 10:14:35 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Successfully selected the value: 'DVP paraiškos vertinimo forma - I etapas'
+2025-03-05 10:14:46 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Failed to close the dropdown with aria-expanded = 'false'.
+2025-03-05 10:14:46 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected a value from the 'EvaluationOne' dropdown: 'DVP paraiškos vertinimo forma - I etapas'
+2025-03-05 10:14:46 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked 'Plus' button.
+2025-03-05 10:14:46 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked 'Add' button seven times.
+2025-03-05 10:14:46 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 0
+2025-03-05 10:14:58 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 0 with aria-expanded = 'false'
+2025-03-05 10:14:58 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 1
+2025-03-05 10:15:08 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 1 with aria-expanded = 'false'
+2025-03-05 10:15:08 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 2
+2025-03-05 10:15:18 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 2 with aria-expanded = 'false'
+2025-03-05 10:15:18 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 3
+2025-03-05 10:15:29 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 3 with aria-expanded = 'false'
+2025-03-05 10:15:29 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 4
+2025-03-05 10:15:40 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 4 with aria-expanded = 'false'
+2025-03-05 10:15:40 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 5
+2025-03-05 10:15:50 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 5 with aria-expanded = 'false'
+2025-03-05 10:15:50 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 6
+2025-03-05 10:16:01 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 6 with aria-expanded = 'false'
+2025-03-05 10:16:01 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 7
+2025-03-05 10:16:11 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 7 with aria-expanded = 'false'
+2025-03-05 10:16:11 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 0
+2025-03-05 10:16:11 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '50' into field index: 0
+2025-03-05 10:16:11 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 1
+2025-03-05 10:16:12 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '924' into field index: 1
+2025-03-05 10:16:12 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 2
+2025-03-05 10:16:12 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '31' into field index: 2
+2025-03-05 10:16:12 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 3
+2025-03-05 10:16:12 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '4.7' into field index: 3
+2025-03-05 10:16:12 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 4
+2025-03-05 10:16:12 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '35' into field index: 4
+2025-03-05 10:16:12 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 5
+2025-03-05 10:16:12 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '20' into field index: 5
+2025-03-05 10:16:12 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 6
+2025-03-05 10:16:12 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '30' into field index: 6
+2025-03-05 10:16:12 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 7
+2025-03-05 10:16:12 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '60' into field index: 7
+2025-03-05 10:16:12 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Entered additional values and text.
+2025-03-05 10:16:12 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Entered application name: DVP paraiška
+2025-03-05 10:16:13 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked the 'Save' button.
+2025-03-05 10:16:13 [main] DEBUG l.i.uztis.pages.ApplicationFormsPage - Verified success message: 'Duomenys sėkmingai išsaugoti.'
+2025-03-05 10:16:13 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Verified success message
+2025-03-05 10:16:13 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Verified that the 'Save Form' button is displayed.
+2025-03-05 10:16:13 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Test 'testCreateNewDvpApplication' completed successfully.
+2025-03-05 13:19:55 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-05 13:19:55 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Setup complete. ApplicationFormsPage initialized.
+2025-03-05 13:19:55 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Starting test:'testAddContractDVP'
+2025-03-05 13:19:55 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - User logged in with test credentials
+2025-03-05 13:19:56 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Opened 'Application Processing' menu.
+2025-03-05 13:19:56 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked on 'Application Forms' menu.
+2025-03-05 13:19:56 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected the last application description.
+2025-03-05 13:19:57 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked 'Project Progress' tab.
+2025-03-05 13:19:57 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked the 'Edit' button.
+2025-03-05 13:19:57 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Located the dropdown button.
+2025-03-05 13:19:59 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Successfully selected the value: 'Darbo vietų pritaikymo ir finansavimo sutartis'
+2025-03-05 13:20:09 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Failed to close the dropdown with aria-expanded = 'false'.
+2025-03-05 13:20:09 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected a value from the 'Document' dropdown: 'Darbo vietų pritaikymo ir finansavimo sutartis'
+2025-03-05 13:20:09 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked the 'Save' button.
+2025-03-05 13:20:10 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Failed to verify the success message: 'Funkcija sėkmingai atlikta.'. Available messages: [Duomenys sėkmingai išsaugoti.]
+2025-03-05 13:20:10 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Verified success message
+2025-03-05 13:20:10 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Test 'testAddContractDVP' completed successfully.
+2025-03-05 13:20:50 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-05 13:20:50 [main] INFO  l.i.uztis.tests.InvitationsPageTest - Starting test:'testCreateNewDvpInvitation'
+2025-03-05 13:20:50 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - User logged in with test credentials
+2025-03-05 13:20:51 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Opened 'Application Processing' menu.
+2025-03-05 13:20:51 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked on 'Application Forms' menu.
+2025-03-05 13:20:51 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Navigating to application forms menu.
+2025-03-05 13:21:01 [main] ERROR l.i.uztis.tests.InvitationsPageTest - Test 'testCreateNewDvpInvitation' failed with error: no such element: Unable to locate element: {"method":"xpath","selector":"//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell']"}
+  (Session info: chrome=133.0.6943.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c6ea4e6bcc9d5d95b2f2c65c406c0b84, findElement {value=//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60161}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60161/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c6ea4e6bcc9d5d95b2f2c65c406c0b84
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell']"}
+  (Session info: chrome=133.0.6943.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c6ea4e6bcc9d5d95b2f2c65c406c0b84, findElement {value=//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60161}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60161/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c6ea4e6bcc9d5d95b2f2c65c406c0b84
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+	at lt.insoft.uztis.pages.ApplicationFormsPage.getLastDescriptionCode(ApplicationFormsPage.java:557)
+	at lt.insoft.uztis.tests.InvitationsPageTest.testCreateNewDvpInvitation(InvitationsPageTest.java:456)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-03-05 13:21:01 [main] INFO  l.insoft.uztis.tests.utils.TestUtils - Screenshot moved to C:\Users\ingrida.zadorozniene\Desktop\Asm\UZTIS\UZTIS_tests\test-output\screenshots\20250305\132101483_testCreateNewDvpInvitation().png
+2025-03-05 13:21:15 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-05 13:21:15 [main] INFO  l.i.uztis.tests.InvitationsPageTest - Starting test:'testCreateNewDvpInvitation'
+2025-03-05 13:21:15 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - User logged in with test credentials
+2025-03-05 13:21:16 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Opened 'Application Processing' menu.
+2025-03-05 13:21:16 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked on 'Application Forms' menu.
+2025-03-05 13:21:16 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Navigating to application forms menu.
+2025-03-05 13:21:26 [main] ERROR l.i.uztis.tests.InvitationsPageTest - Test 'testCreateNewDvpInvitation' failed with error: no such element: Unable to locate element: {"method":"xpath","selector":"//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell']"}
+  (Session info: chrome=133.0.6943.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [725a13a5d71f57b887e23f4649467c14, findElement {value=//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60202}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60202/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 725a13a5d71f57b887e23f4649467c14
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell']"}
+  (Session info: chrome=133.0.6943.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [725a13a5d71f57b887e23f4649467c14, findElement {value=//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60202}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60202/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 725a13a5d71f57b887e23f4649467c14
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+	at lt.insoft.uztis.pages.ApplicationFormsPage.getLastDescriptionCode(ApplicationFormsPage.java:557)
+	at lt.insoft.uztis.tests.InvitationsPageTest.testCreateNewDvpInvitation(InvitationsPageTest.java:456)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-03-05 13:21:26 [main] INFO  l.insoft.uztis.tests.utils.TestUtils - Screenshot moved to C:\Users\ingrida.zadorozniene\Desktop\Asm\UZTIS\UZTIS_tests\test-output\screenshots\20250305\132126506_testCreateNewDvpInvitation().png
+2025-03-05 13:23:12 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-05 13:23:12 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Setup complete. ApplicationFormsPage initialized.
+2025-03-05 13:23:12 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Starting test:'testCreateNewVuiApplication'
+2025-03-05 13:23:13 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - User logged in with test credentials
+2025-03-05 13:23:13 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Opened 'Application Processing' menu.
+2025-03-05 13:23:13 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked on 'Application Forms' menu.
+2025-03-05 13:23:14 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked to create a new application form.
+2025-03-05 13:23:14 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Entered random application code: TST-VUI-03
+2025-03-05 13:23:14 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected 'Section' radio button.
+2025-03-05 13:23:14 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Located the dropdown button.
+2025-03-05 13:23:14 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Successfully selected the value: 'Skyrius 1'
+2025-03-05 13:23:25 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Failed to close the dropdown with aria-expanded = 'false'.
+2025-03-05 13:23:25 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected a value from the 'Section' dropdown: 'Skyrius 1'
+2025-03-05 13:23:25 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected 'Budget by Municipality' option.
+2025-03-05 13:23:25 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected 'Financed Without Queue' option.
+2025-03-05 13:23:25 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked 'Add' button.
+2025-03-05 13:23:25 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Located the dropdown button.
+2025-03-05 13:23:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Successfully selected the value: 'VUI paraiškos vertinimo forma - I etapas'
+2025-03-05 13:23:36 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Failed to close the dropdown with aria-expanded = 'false'.
+2025-03-05 13:23:36 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected a value from the 'EvaluationOne' dropdown: 'VUI paraiškos vertinimo forma - I etapas'
+2025-03-05 13:23:36 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Located the dropdown button.
+2025-03-05 13:23:37 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Successfully selected the value: 'VUI paraiškos vertinimo forma - II etapas'
+2025-03-05 13:23:48 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Failed to close the dropdown with aria-expanded = 'false'.
+2025-03-05 13:23:48 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected a value from the 'EvaluationTwon' dropdown: 'VUI paraiškos vertinimo forma - II etapas'
+2025-03-05 13:23:48 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Located the dropdown button.
+2025-03-05 13:23:48 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Successfully selected the value: 'VUI paraiškos vertinimo forma - III etapas'
+2025-03-05 13:23:58 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Failed to close the dropdown with aria-expanded = 'false'.
+2025-03-05 13:23:58 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected a value from the 'EvaluationThree' dropdown: 'VUI paraiškos vertinimo forma - III etapas'
+2025-03-05 13:23:58 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked 'Plus' button.
+2025-03-05 13:23:59 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked 'Add' button seven times.
+2025-03-05 13:23:59 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 0
+2025-03-05 13:24:09 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 0 with aria-expanded = 'false'
+2025-03-05 13:24:09 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 1
+2025-03-05 13:24:21 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 1 with aria-expanded = 'false'
+2025-03-05 13:24:21 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 2
+2025-03-05 13:24:31 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 2 with aria-expanded = 'false'
+2025-03-05 13:24:31 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 3
+2025-03-05 13:24:42 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 3 with aria-expanded = 'false'
+2025-03-05 13:24:42 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 4
+2025-03-05 13:24:53 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 4 with aria-expanded = 'false'
+2025-03-05 13:24:53 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 5
+2025-03-05 13:25:04 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 5 with aria-expanded = 'false'
+2025-03-05 13:25:04 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 6
+2025-03-05 13:25:15 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 6 with aria-expanded = 'false'
+2025-03-05 13:25:15 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing dropdown index: 7
+2025-03-05 13:25:26 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Timeout while waiting for dropdown to close at index: 7 with aria-expanded = 'false'
+2025-03-05 13:25:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 0
+2025-03-05 13:25:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '50' into field index: 0
+2025-03-05 13:25:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 1
+2025-03-05 13:25:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '924' into field index: 1
+2025-03-05 13:25:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 2
+2025-03-05 13:25:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '31' into field index: 2
+2025-03-05 13:25:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 3
+2025-03-05 13:25:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '4.7' into field index: 3
+2025-03-05 13:25:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 4
+2025-03-05 13:25:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '35' into field index: 4
+2025-03-05 13:25:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 5
+2025-03-05 13:25:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '20' into field index: 5
+2025-03-05 13:25:26 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 6
+2025-03-05 13:25:27 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '30' into field index: 6
+2025-03-05 13:25:27 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Processing input field index: 7
+2025-03-05 13:25:27 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Entered value '60' into field index: 7
+2025-03-05 13:25:27 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Entered additional values and text.
+2025-03-05 13:25:27 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Entered application name: VUI paraiška
+2025-03-05 13:25:27 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked the 'Save' button.
+2025-03-05 13:25:27 [main] DEBUG l.i.uztis.pages.ApplicationFormsPage - Verified success message: 'Duomenys sėkmingai išsaugoti.'
+2025-03-05 13:25:27 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Verified success message
+2025-03-05 13:25:27 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Verified that the 'Save Form' button is displayed.
+2025-03-05 13:25:27 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Test 'testCreateNewVuiApplication' completed successfully.
+2025-03-05 13:25:43 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-05 13:25:43 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Setup complete. ApplicationFormsPage initialized.
+2025-03-05 13:25:43 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Starting test:'testEditAndSaveVuiApplication'
+2025-03-05 13:25:44 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - User logged in with test credentials
+2025-03-05 13:25:44 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Opened 'Application Processing' menu.
+2025-03-05 13:25:44 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked on 'Application Forms' menu.
+2025-03-05 13:25:45 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected the last application description.
+2025-03-05 13:25:46 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked the 'Edit' button.
+2025-03-05 13:25:46 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected 'Municipality' radio button.
+2025-03-05 13:25:46 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Located the dropdown button.
+2025-03-05 13:25:46 [main] INFO  l.i.uztis.pages.ApplicationFormsPage - Successfully selected the value: 'Kauno departamentas'
+2025-03-05 13:25:57 [main] ERROR l.i.uztis.pages.ApplicationFormsPage - Failed to close the dropdown with aria-expanded = 'false'.
+2025-03-05 13:25:57 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected a value from the 'Municipality' dropdown: 'Kauno departamentas'
+2025-03-05 13:25:57 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected 'Budget By Country' radio button.
+2025-03-05 13:25:57 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Selected 'Financed By Queue' radio button.
+2025-03-05 13:25:57 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Entered new application name: _paredaguota
+2025-03-05 13:25:57 [main] DEBUG l.i.u.tests.ApplicationFormsPageTest - Clicked the 'Save' button.
+2025-03-05 13:25:57 [main] DEBUG l.i.uztis.pages.ApplicationFormsPage - Verified success message: 'Duomenys sėkmingai išsaugoti.'
+2025-03-05 13:25:57 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Verified success message
+2025-03-05 13:25:57 [main] INFO  l.i.u.tests.ApplicationFormsPageTest - Test 'testEditAndSaveVuiApplication' completed successfully.
+2025-03-05 13:26:24 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-05 13:26:24 [main] INFO  l.i.uztis.tests.InvitationsPageTest - Starting test:'testCreateNewVuiInvitationDraft'
+2025-03-05 13:26:24 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - User logged in with test credentials
+2025-03-05 13:26:24 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Opened 'Application Processing' menu.
+2025-03-05 13:26:24 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked on 'Application Forms' menu.
+2025-03-05 13:26:24 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Navigating to application forms menu.
+2025-03-05 13:26:34 [main] ERROR l.i.uztis.tests.InvitationsPageTest - Test 'testCreateNewVuiInvitationDraft' failed with error: no such element: Unable to locate element: {"method":"xpath","selector":"//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell']"}
+  (Session info: chrome=133.0.6943.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [92524564362bcc042a101f2e5b705094, findElement {using=xpath, value=//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60444}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60444/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 92524564362bcc042a101f2e5b705094
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell']"}
+  (Session info: chrome=133.0.6943.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [92524564362bcc042a101f2e5b705094, findElement {using=xpath, value=//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-CODE mat-column-CODE ng-star-inserted' and @role='cell']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60444}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60444/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 92524564362bcc042a101f2e5b705094
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+	at lt.insoft.uztis.pages.ApplicationFormsPage.getLastDescriptionCode(ApplicationFormsPage.java:557)
+	at lt.insoft.uztis.tests.InvitationsPageTest.testCreateNewVuiInvitationDraft(InvitationsPageTest.java:95)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-03-05 13:26:35 [main] INFO  l.insoft.uztis.tests.utils.TestUtils - Screenshot moved to C:\Users\ingrida.zadorozniene\Desktop\Asm\UZTIS\UZTIS_tests\test-output\screenshots\20250305\132635060_testCreateNewVuiInvitationDraft().png
+2025-03-05 13:31:28 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-05 13:31:28 [main] INFO  l.i.uztis.tests.InvitationsPageTest - Starting test:'testCreateNewDvpInvitation'
+2025-03-05 13:31:29 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - User logged in with test credentials
+2025-03-05 13:31:29 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Opened 'Application Processing' menu.
+2025-03-05 13:31:29 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked on 'Application Forms' menu.
+2025-03-05 13:31:29 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Navigating to application forms menu.
+2025-03-05 13:31:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Retrieved last description code text: 'TST-DVP-22'.
+2025-03-05 13:31:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked on 'Invitation' menu.
+2025-03-05 13:31:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked 'Create New Application Form'.
+2025-03-05 13:31:31 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected section by code: 'TST-DVP-22'.
+2025-03-05 13:31:31 [main] INFO  l.insoft.uztis.pages.InvitationsPage - Located the dropdown button.
+2025-03-05 13:31:43 [main] ERROR l.insoft.uztis.pages.InvitationsPage - Timeout while waiting for dropdown to close with aria-expanded = 'false'.
+2025-03-05 13:31:43 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected invitation number from the list.
+2025-03-05 13:31:43 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered current date.
+2025-03-05 13:31:43 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered start time: 00:00.
+2025-03-05 13:31:44 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered end date.
+2025-03-05 13:31:44 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered end time: 11:11.
+2025-03-05 13:31:44 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered publication end date.
+2025-03-05 13:31:45 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Added additional values.
+2025-03-05 13:31:45 [main] INFO  l.insoft.uztis.pages.InvitationsPage - Located the dropdown button.
+2025-03-05 13:31:45 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected the value: 'Didžiausia galima paramos suma aplinkos darbo vietai, Eur'
+2025-03-05 13:31:45 [main] INFO  l.insoft.uztis.pages.InvitationsPage - Located the dropdown button.
+2025-03-05 13:31:46 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected the value: 'Didžiausia galima paramos suma, Eur'
+2025-03-05 13:31:46 [main] INFO  l.insoft.uztis.pages.InvitationsPage - Located the dropdown button.
+2025-03-05 13:31:46 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected the value: 'Didžiausia galima paramos suma vienai darbo vietai, Eur'
+2025-03-05 13:31:46 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered value: 11000
+2025-03-05 13:31:47 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered value: 12000
+2025-03-05 13:31:47 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered value: 13000
+2025-03-05 13:31:47 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Checked 'Legal Entities' checkbox.
+2025-03-05 13:31:47 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Unchecked 'Persons Registered with Employment Service' checkbox.
+2025-03-05 13:31:47 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Checked 'Persons Registered as Employers' checkbox.
+2025-03-05 13:31:47 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered budget: '2000'.
+2025-03-05 13:31:47 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered description text: 'Aprašo tekstas'.
+2025-03-05 13:31:48 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered applicants text: 'Pareiškėjų tekstas'.
+2025-03-05 13:31:48 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered expenditures text: 'Išlaidų tekstas'.
+2025-03-05 13:31:48 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered legislation text: 'Teisės aktų tekstas'.
+2025-03-05 13:31:48 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered education text: 'Mokymų tekstas'.
+2025-03-05 13:31:48 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - File uploaded.
+2025-03-05 13:31:48 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked 'Publish'.
+2025-03-05 13:31:58 [main] ERROR l.i.uztis.tests.InvitationsPageTest - Test 'testCreateNewDvpInvitation' failed with error: no such element: Unable to locate element: {"method":"css selector","selector":".reverse-mobile .ng-star-inserted:nth-of-type(2)"}
+  (Session info: chrome=133.0.6943.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [725b7707c2f908b3af4f7770a0e19702, findElement {value=.reverse-mobile .ng-star-inserted:nth-of-type(2), using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60653}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60653/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 725b7707c2f908b3af4f7770a0e19702
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".reverse-mobile .ng-star-inserted:nth-of-type(2)"}
+  (Session info: chrome=133.0.6943.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [725b7707c2f908b3af4f7770a0e19702, findElement {value=.reverse-mobile .ng-star-inserted:nth-of-type(2), using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60653}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60653/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 725b7707c2f908b3af4f7770a0e19702
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at lt.insoft.uztis.pages.InvitationsPage.clickButtonPublicationConfirmation(InvitationsPage.java:566)
+	at lt.insoft.uztis.tests.InvitationsPageTest.testCreateNewDvpInvitation(InvitationsPageTest.java:558)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-03-05 13:31:58 [main] INFO  l.insoft.uztis.tests.utils.TestUtils - Screenshot moved to C:\Users\ingrida.zadorozniene\Desktop\Asm\UZTIS\UZTIS_tests\test-output\screenshots\20250305\133158949_testCreateNewDvpInvitation().png
+2025-03-05 13:35:29 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-05 13:35:29 [main] INFO  l.i.uztis.tests.InvitationsPageTest - Starting test:'testCreateNewDvpInvitation'
+2025-03-05 13:35:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - User logged in with test credentials
+2025-03-05 13:35:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Opened 'Application Processing' menu.
+2025-03-05 13:35:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked on 'Application Forms' menu.
+2025-03-05 13:35:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Navigating to application forms menu.
+2025-03-05 13:35:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Retrieved last description code text: 'TST-DVP-22'.
+2025-03-05 13:35:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked on 'Invitation' menu.
+2025-03-05 13:35:31 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked 'Create New Application Form'.
+2025-03-05 13:35:31 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected section by code: 'TST-DVP-22'.
+2025-03-05 13:35:31 [main] INFO  l.insoft.uztis.pages.InvitationsPage - Located the dropdown button.
+2025-03-05 13:35:43 [main] ERROR l.insoft.uztis.pages.InvitationsPage - Timeout while waiting for dropdown to close with aria-expanded = 'false'.
+2025-03-05 13:35:43 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected invitation number from the list.
+2025-03-05 13:35:43 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered current date.
+2025-03-05 13:35:44 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered start time: 00:00.
+2025-03-05 13:35:44 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered end date.
+2025-03-05 13:35:44 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered end time: 11:11.
+2025-03-05 13:35:44 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered publication end date.
+2025-03-05 13:35:45 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Added additional values.
+2025-03-05 13:35:45 [main] INFO  l.insoft.uztis.pages.InvitationsPage - Located the dropdown button.
+2025-03-05 13:35:45 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected the value: 'Didžiausia galima paramos suma aplinkos darbo vietai, Eur'
+2025-03-05 13:35:45 [main] INFO  l.insoft.uztis.pages.InvitationsPage - Located the dropdown button.
+2025-03-05 13:35:46 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected the value: 'Didžiausia galima paramos suma, Eur'
+2025-03-05 13:35:46 [main] INFO  l.insoft.uztis.pages.InvitationsPage - Located the dropdown button.
+2025-03-05 13:35:47 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected the value: 'Didžiausia galima paramos suma vienai darbo vietai, Eur'
+2025-03-05 13:35:47 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered value: 11000
+2025-03-05 13:35:47 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered value: 12000
+2025-03-05 13:35:48 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered value: 13000
+2025-03-05 13:35:48 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Checked 'Legal Entities' checkbox.
+2025-03-05 13:35:48 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Unchecked 'Persons Registered with Employment Service' checkbox.
+2025-03-05 13:35:48 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Checked 'Persons Registered as Employers' checkbox.
+2025-03-05 13:35:48 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered budget: '2000'.
+2025-03-05 13:35:48 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered description text: 'Aprašo tekstas'.
+2025-03-05 13:35:48 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered applicants text: 'Pareiškėjų tekstas'.
+2025-03-05 13:35:49 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered expenditures text: 'Išlaidų tekstas'.
+2025-03-05 13:35:49 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered legislation text: 'Teisės aktų tekstas'.
+2025-03-05 13:35:49 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered education text: 'Mokymų tekstas'.
+2025-03-05 13:35:49 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - File uploaded.
+2025-03-05 13:35:49 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked 'Publish'.
+2025-03-05 13:35:50 [main] ERROR l.i.uztis.tests.InvitationsPageTest - Test 'testCreateNewDvpInvitation' failed with error: element click intercepted: Element <button type="submit" class="btn btn--primary">...</button> is not clickable at point (1578, 991). Other element would receive the click: <div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div>
+  (Session info: chrome=133.0.6943.142)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cc358534a998615686cf71449c8295c3, clickElement {id=f.D66E2D180EF2911446A64DE95352F5AB.d.D52420678AFD18AD5CA537C6548C13ED.e.300}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60887}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60887/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (cc358534a998615686cf71449c8295c3)] -> css selector: button.btn.btn--primary]
+Session ID: cc358534a998615686cf71449c8295c3
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="submit" class="btn btn--primary">...</button> is not clickable at point (1578, 991). Other element would receive the click: <div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div>
+  (Session info: chrome=133.0.6943.142)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cc358534a998615686cf71449c8295c3, clickElement {id=f.D66E2D180EF2911446A64DE95352F5AB.d.D52420678AFD18AD5CA537C6548C13ED.e.300}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60887}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60887/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (cc358534a998615686cf71449c8295c3)] -> css selector: button.btn.btn--primary]
+Session ID: cc358534a998615686cf71449c8295c3
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at lt.insoft.uztis.pages.InvitationsPage.clickButtonPublicationConfirmation(InvitationsPage.java:567)
+	at lt.insoft.uztis.tests.InvitationsPageTest.testCreateNewDvpInvitation(InvitationsPageTest.java:558)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-03-05 13:35:50 [main] INFO  l.insoft.uztis.tests.utils.TestUtils - Screenshot moved to C:\Users\ingrida.zadorozniene\Desktop\Asm\UZTIS\UZTIS_tests\test-output\screenshots\20250305\133550803_testCreateNewDvpInvitation().png
+2025-03-05 13:36:16 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-05 13:36:16 [main] INFO  l.i.uztis.tests.InvitationsPageTest - Starting test:'testCreateNewDvpInvitation'
+2025-03-05 13:36:17 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - User logged in with test credentials
+2025-03-05 13:36:17 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Opened 'Application Processing' menu.
+2025-03-05 13:36:17 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked on 'Application Forms' menu.
+2025-03-05 13:36:17 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Navigating to application forms menu.
+2025-03-05 13:36:17 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Retrieved last description code text: 'TST-DVP-22'.
+2025-03-05 13:36:17 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked on 'Invitation' menu.
+2025-03-05 13:36:18 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked 'Create New Application Form'.
+2025-03-05 13:36:18 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected section by code: 'TST-DVP-22'.
+2025-03-05 13:36:18 [main] INFO  l.insoft.uztis.pages.InvitationsPage - Located the dropdown button.
+2025-03-05 13:36:30 [main] ERROR l.insoft.uztis.pages.InvitationsPage - Timeout while waiting for dropdown to close with aria-expanded = 'false'.
+2025-03-05 13:36:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected invitation number from the list.
+2025-03-05 13:36:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered current date.
+2025-03-05 13:36:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered start time: 00:00.
+2025-03-05 13:36:30 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered end date.
+2025-03-05 13:36:31 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered end time: 11:11.
+2025-03-05 13:36:31 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered publication end date.
+2025-03-05 13:36:31 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Added additional values.
+2025-03-05 13:36:31 [main] INFO  l.insoft.uztis.pages.InvitationsPage - Located the dropdown button.
+2025-03-05 13:36:32 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected the value: 'Didžiausia galima paramos suma aplinkos darbo vietai, Eur'
+2025-03-05 13:36:32 [main] INFO  l.insoft.uztis.pages.InvitationsPage - Located the dropdown button.
+2025-03-05 13:36:33 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected the value: 'Didžiausia galima paramos suma, Eur'
+2025-03-05 13:36:33 [main] INFO  l.insoft.uztis.pages.InvitationsPage - Located the dropdown button.
+2025-03-05 13:36:33 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Selected the value: 'Didžiausia galima paramos suma vienai darbo vietai, Eur'
+2025-03-05 13:36:33 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered value: 11000
+2025-03-05 13:36:33 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered value: 12000
+2025-03-05 13:36:34 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered value: 13000
+2025-03-05 13:36:34 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Checked 'Legal Entities' checkbox.
+2025-03-05 13:36:34 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Unchecked 'Persons Registered with Employment Service' checkbox.
+2025-03-05 13:36:34 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Checked 'Persons Registered as Employers' checkbox.
+2025-03-05 13:36:34 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered budget: '2000'.
+2025-03-05 13:36:34 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered description text: 'Aprašo tekstas'.
+2025-03-05 13:36:34 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered applicants text: 'Pareiškėjų tekstas'.
+2025-03-05 13:36:35 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered expenditures text: 'Išlaidų tekstas'.
+2025-03-05 13:36:35 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered legislation text: 'Teisės aktų tekstas'.
+2025-03-05 13:36:35 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Entered education text: 'Mokymų tekstas'.
+2025-03-05 13:36:35 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - File uploaded.
+2025-03-05 13:36:35 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Clicked 'Publish'.
+2025-03-05 13:36:35 [main] DEBUG l.i.uztis.tests.InvitationsPageTest - Publication confirmed.
+2025-03-05 13:36:37 [main] DEBUG l.i.uztis.pages.ApplicationFormsPage - Verified success message: 'Funkcija sėkmingai atlikta.'
+2025-03-05 13:36:37 [main] INFO  l.i.uztis.tests.InvitationsPageTest - Verified success message
+2025-03-05 13:36:37 [main] INFO  l.i.uztis.tests.InvitationsPageTest - Test 'testCreateNewDvpInvitation' completed successfully.
+2025-03-05 13:40:24 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-05 13:40:24 [main] INFO  l.i.u.t.SubmittedApplicationsPageTest - Starting test:'testFillNewDVPApplicationFA'
+2025-03-05 13:40:25 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - User logged in with test credentials.
+2025-03-05 13:40:25 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Opened 'Application Processing' menu.
+2025-03-05 13:40:25 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Application Forms' menu.
+2025-03-05 13:40:26 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved last description code text: 'TST-DVP-22'.
+2025-03-05 13:40:26 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Invitation' menu.
+2025-03-05 13:40:27 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected application section by code: 'TST-DVP-22'.
+2025-03-05 13:40:27 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Search' button.
+2025-03-05 13:40:27 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved invitation code: ''.
+2025-03-05 13:40:27 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Submitted Applications' menu.
+2025-03-05 13:40:28 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected invitation by code: 'TST-DVP-22'.
+2025-03-05 13:40:28 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Invitation code inserted.
+2025-03-05 13:40:28 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Action Application' button.
+2025-03-05 13:40:28 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'New Application' button.
+2025-03-05 13:40:29 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected the 'RadioButtonFA' option.
+2025-03-05 13:40:29 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered phone number: '61298745'.
+2025-03-05 13:40:29 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered email: 'test@autotest.com'.
+2025-03-05 13:40:29 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Checked 'For workplace adaptation' checkbox 1.
+2025-03-05 13:40:30 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Checked 'For environmental adaptation' checkbox 2.
+2025-03-05 13:40:30 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:40:51 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 1741 options in the dropdown.
+2025-03-05 13:40:51 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'
+2025-03-05 13:41:01 [main] ERROR l.i.u.p.SubmittedApplicationsPage - Failed to close the dropdown with aria-expanded = 'false'. Attempting manual close.
+2025-03-05 13:41:01 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Manual close attempt for the dropdown using body click.
+2025-03-05 13:41:01 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected EVRK value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'.
+2025-03-05 13:41:02 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Address Component' button.
+2025-03-05 13:41:02 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:41:05 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Lietuva'
+2025-03-05 13:41:05 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected country: 'Lietuva'.
+2025-03-05 13:41:05 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown search field.
+2025-03-05 13:41:05 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown city is opened.
+2025-03-05 13:41:05 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Searched for value: 'Vilnius'
+2025-03-05 13:41:06 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected: 'Vilnius'
+2025-03-05 13:41:06 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:41:07 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'A. Domaševičiaus g.'
+2025-03-05 13:41:07 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected street: 'A. Domaševičiaus g.'.
+2025-03-05 13:41:07 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:41:07 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-05 13:41:07 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected house: '1'.
+2025-03-05 13:41:07 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:41:07 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-05 13:41:07 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected apartment: '1'.
+2025-03-05 13:41:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Confirm' button.
+2025-03-05 13:41:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'For already working' option.
+2025-03-05 13:41:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered person count1: '1'.
+2025-03-05 13:41:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'For new working' option.
+2025-03-05 13:41:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered person count2: '1'.
+2025-03-05 13:41:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Next' button after checkboxes.
+2025-03-05 13:41:08 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:41:09 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Administratoriai'
+2025-03-05 13:41:39 [main] ERROR l.i.u.p.SubmittedApplicationsPage - Timeout while waiting for dropdown to close with aria-expanded = 'false'.
+2025-03-05 13:41:39 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected adaptable job name: 'Administratoriai'.
+2025-03-05 13:41:40 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job date.
+2025-03-05 13:41:40 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job function: 'Funkcija 1'.
+2025-03-05 13:41:40 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'For already working' 'no' option.
+2025-03-05 13:41:40 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Clicking on the dropdown button.
+2025-03-05 13:41:41 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 6 options in the dropdown.
+2025-03-05 13:41:41 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Lengvo neįgalumo lygis ar 45-55 procentų dalyvumo lygis (iki 2023 m. gruodžio 31 d. – 45-55 procentų darbingumo lygis)'
+2025-03-05 13:41:41 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Lengvo neįgalumo lygis ar 45-55 procentų dalyvumo lygis (iki 2023 m. gruodžio 31 d. – 45-55 procentų darbingumo lygis)'
+2025-03-05 13:41:41 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Sunkaus neįgalumo lygis ar neviršijantis 25 procentų dalyvumo lygis (iki 2023 metų gruodžio 31 dienos – iki 25 procentų darbingumo lygis)'
+2025-03-05 13:41:41 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Sunkaus neįgalumo lygis ar neviršijantis 25 procentų dalyvumo lygis (iki 2023 metų gruodžio 31 dienos – iki 25 procentų darbingumo lygis)'
+2025-03-05 13:41:41 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Attempting to close the dropdown.
+2025-03-05 13:41:51 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown should be closed now.
+2025-03-05 13:41:51 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected disabilities type: 'Sunkaus neįgalumo lygis ar neviršijantis 25 procentų dalyvumo lygis (iki 2023 metų gruodžio 31 dienos – iki 25 procentų darbingumo lygis)'.
+2025-03-05 13:41:51 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered disability information: 'Negalia 1'.
+2025-03-05 13:41:52 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered qualification: 'Kvalifikacija 1'.
+2025-03-05 13:41:52 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job description: 'Darbo vietos aprašymas 1'.
+2025-03-05 13:41:52 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered equipment description: 'Priemonių įsigyjimas 1'.
+2025-03-05 13:41:52 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered work information: 'Darbai 1'.
+2025-03-05 13:41:52 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:41:52 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Kita'
+2025-03-05 13:41:52 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected time mode: 'Kita'.
+2025-03-05 13:41:53 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected time mode other: '6 val. per dieną ir 4 d. per savaitę'.
+2025-03-05 13:41:53 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered salary amount: '1200'.
+2025-03-05 13:41:53 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Temporary Job' radio button.
+2025-03-05 13:41:53 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Season Job' radio button.
+2025-03-05 13:41:53 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'PVM' radio button.
+2025-03-05 13:41:53 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:41:54 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Darbo vietos pritaikymui'
+2025-03-05 13:41:54 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected adaptable job name: 'Darbo vietos pritaikymui'.
+2025-03-05 13:42:14 [main] ERROR l.i.u.t.SubmittedApplicationsPageTest - Test 'testFillNewDVPApplicationFA' failed with error: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //mat-select[@id='mat-select-11']' (tried for 10 second(s) with 500 milliseconds interval)
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //mat-select[@id='mat-select-11']' (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at lt.insoft.uztis.pages.SubmittedApplicationsPage.selectDropdownNecessaryForJobOne_DVP(SubmittedApplicationsPage.java:1307)
+	at lt.insoft.uztis.tests.SubmittedApplicationsPageTest.testFillNewDVPApplicationFA(SubmittedApplicationsPageTest.java:706)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//mat-select[@id='mat-select-11']"}
+  (Session info: chrome=133.0.6943.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9b3e64e5754539f523c74b099cfe0e2a, findElement {using=xpath, value=//mat-select[@id='mat-select-11']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61231}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61231/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9b3e64e5754539f523c74b099cfe0e2a
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 70 common frames omitted
+2025-03-05 13:42:14 [main] INFO  l.insoft.uztis.tests.utils.TestUtils - Screenshot moved to C:\Users\ingrida.zadorozniene\Desktop\Asm\UZTIS\UZTIS_tests\test-output\screenshots\20250305\134214694_testFillNewDVPApplicationFA().png
+2025-03-05 13:47:37 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-05 13:47:38 [main] INFO  l.i.u.t.SubmittedApplicationsPageTest - Starting test:'testFillNewDVPApplicationFA'
+2025-03-05 13:47:38 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - User logged in with test credentials.
+2025-03-05 13:47:38 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Opened 'Application Processing' menu.
+2025-03-05 13:47:39 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Application Forms' menu.
+2025-03-05 13:47:39 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved last description code text: 'TST-DVP-22'.
+2025-03-05 13:47:39 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Invitation' menu.
+2025-03-05 13:47:40 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected application section by code: 'TST-DVP-22'.
+2025-03-05 13:47:40 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Search' button.
+2025-03-05 13:47:40 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved invitation code: ''.
+2025-03-05 13:47:40 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Submitted Applications' menu.
+2025-03-05 13:47:41 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected invitation by code: 'TST-DVP-22'.
+2025-03-05 13:47:41 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Invitation code inserted.
+2025-03-05 13:47:42 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Action Application' button.
+2025-03-05 13:47:42 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'New Application' button.
+2025-03-05 13:47:42 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected the 'RadioButtonFA' option.
+2025-03-05 13:47:43 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered phone number: '61298745'.
+2025-03-05 13:47:43 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered email: 'test@autotest.com'.
+2025-03-05 13:47:43 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Checked 'For workplace adaptation' checkbox 1.
+2025-03-05 13:47:43 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Checked 'For environmental adaptation' checkbox 2.
+2025-03-05 13:47:43 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:48:05 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 1741 options in the dropdown.
+2025-03-05 13:48:05 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'
+2025-03-05 13:48:15 [main] ERROR l.i.u.p.SubmittedApplicationsPage - Failed to close the dropdown with aria-expanded = 'false'. Attempting manual close.
+2025-03-05 13:48:15 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Manual close attempt for the dropdown using body click.
+2025-03-05 13:48:15 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected EVRK value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'.
+2025-03-05 13:48:16 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Address Component' button.
+2025-03-05 13:48:16 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:48:19 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Lietuva'
+2025-03-05 13:48:19 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected country: 'Lietuva'.
+2025-03-05 13:48:19 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown search field.
+2025-03-05 13:48:19 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown city is opened.
+2025-03-05 13:48:20 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Searched for value: 'Vilnius'
+2025-03-05 13:48:20 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected: 'Vilnius'
+2025-03-05 13:48:21 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:48:21 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'A. Domaševičiaus g.'
+2025-03-05 13:48:21 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected street: 'A. Domaševičiaus g.'.
+2025-03-05 13:48:21 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:48:22 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-05 13:48:22 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected house: '1'.
+2025-03-05 13:48:22 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:48:23 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-05 13:48:23 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected apartment: '1'.
+2025-03-05 13:48:23 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Confirm' button.
+2025-03-05 13:48:23 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'For already working' option.
+2025-03-05 13:48:23 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered person count1: '1'.
+2025-03-05 13:48:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'For new working' option.
+2025-03-05 13:48:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered person count2: '1'.
+2025-03-05 13:48:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Next' button after checkboxes.
+2025-03-05 13:48:24 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:48:25 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Administratoriai'
+2025-03-05 13:48:55 [main] ERROR l.i.u.p.SubmittedApplicationsPage - Timeout while waiting for dropdown to close with aria-expanded = 'false'.
+2025-03-05 13:48:55 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected adaptable job name: 'Administratoriai'.
+2025-03-05 13:48:55 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job date.
+2025-03-05 13:48:55 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job function: 'Funkcija 1'.
+2025-03-05 13:48:56 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'For already working' 'no' option.
+2025-03-05 13:48:56 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Clicking on the dropdown button.
+2025-03-05 13:48:56 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 6 options in the dropdown.
+2025-03-05 13:48:56 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Lengvo neįgalumo lygis ar 45-55 procentų dalyvumo lygis (iki 2023 m. gruodžio 31 d. – 45-55 procentų darbingumo lygis)'
+2025-03-05 13:48:56 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Lengvo neįgalumo lygis ar 45-55 procentų dalyvumo lygis (iki 2023 m. gruodžio 31 d. – 45-55 procentų darbingumo lygis)'
+2025-03-05 13:48:56 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Sunkaus neįgalumo lygis ar neviršijantis 25 procentų dalyvumo lygis (iki 2023 metų gruodžio 31 dienos – iki 25 procentų darbingumo lygis)'
+2025-03-05 13:48:56 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Sunkaus neįgalumo lygis ar neviršijantis 25 procentų dalyvumo lygis (iki 2023 metų gruodžio 31 dienos – iki 25 procentų darbingumo lygis)'
+2025-03-05 13:48:56 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Attempting to close the dropdown.
+2025-03-05 13:49:07 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown should be closed now.
+2025-03-05 13:49:07 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected disabilities type: 'Sunkaus neįgalumo lygis ar neviršijantis 25 procentų dalyvumo lygis (iki 2023 metų gruodžio 31 dienos – iki 25 procentų darbingumo lygis)'.
+2025-03-05 13:49:07 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered disability information: 'Negalia 1'.
+2025-03-05 13:49:07 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered qualification: 'Kvalifikacija 1'.
+2025-03-05 13:49:07 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job description: 'Darbo vietos aprašymas 1'.
+2025-03-05 13:49:07 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered equipment description: 'Priemonių įsigyjimas 1'.
+2025-03-05 13:49:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered work information: 'Darbai 1'.
+2025-03-05 13:49:08 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:49:08 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Kita'
+2025-03-05 13:49:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected time mode: 'Kita'.
+2025-03-05 13:49:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected time mode other: '6 val. per dieną ir 4 d. per savaitę'.
+2025-03-05 13:49:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered salary amount: '1200'.
+2025-03-05 13:49:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Temporary Job' radio button.
+2025-03-05 13:49:08 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Season Job' radio button.
+2025-03-05 13:49:09 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'PVM' radio button.
+2025-03-05 13:49:09 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:49:09 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Darbo vietos pritaikymui'
+2025-03-05 13:49:09 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected adaptable job name: 'Darbo vietos pritaikymui'.
+2025-03-05 13:49:29 [main] ERROR l.i.u.t.SubmittedApplicationsPageTest - Test 'testFillNewDVPApplicationFA' failed with error: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //mat-select[contains(@class, 'mat-select')]' (tried for 10 second(s) with 500 milliseconds interval)
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //mat-select[contains(@class, 'mat-select')]' (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at lt.insoft.uztis.pages.SubmittedApplicationsPage.selectDropdownNecessaryForJobOne_DVP(SubmittedApplicationsPage.java:1309)
+	at lt.insoft.uztis.tests.SubmittedApplicationsPageTest.testFillNewDVPApplicationFA(SubmittedApplicationsPageTest.java:706)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//mat-select[contains(@class, 'mat-select')]"}
+  (Session info: chrome=133.0.6943.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [150822fb5fecf87d8ff0f259d44b217c, findElement {value=//mat-select[contains(@class, 'mat-select')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61745}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61745/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 150822fb5fecf87d8ff0f259d44b217c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 70 common frames omitted
+2025-03-05 13:49:29 [main] INFO  l.insoft.uztis.tests.utils.TestUtils - Screenshot moved to C:\Users\ingrida.zadorozniene\Desktop\Asm\UZTIS\UZTIS_tests\test-output\screenshots\20250305\134929643_testFillNewDVPApplicationFA().png
+2025-03-05 13:50:43 [main] INFO  lt.insoft.uztis.tests.UztisPageTest - Navigated to https://uztisdev.asseco.lt/home
+2025-03-05 13:50:43 [main] INFO  l.i.u.t.SubmittedApplicationsPageTest - Starting test:'testFillNewDVPApplicationFA'
+2025-03-05 13:50:43 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - User logged in with test credentials.
+2025-03-05 13:50:44 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Opened 'Application Processing' menu.
+2025-03-05 13:50:44 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Application Forms' menu.
+2025-03-05 13:50:44 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved last description code text: 'TST-DVP-22'.
+2025-03-05 13:50:44 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Invitation' menu.
+2025-03-05 13:50:45 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected application section by code: 'TST-DVP-22'.
+2025-03-05 13:50:45 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Search' button.
+2025-03-05 13:50:45 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Retrieved invitation code: ''.
+2025-03-05 13:50:45 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Submitted Applications' menu.
+2025-03-05 13:50:47 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected invitation by code: 'TST-DVP-22'.
+2025-03-05 13:50:47 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Invitation code inserted.
+2025-03-05 13:50:47 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Action Application' button.
+2025-03-05 13:50:47 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'New Application' button.
+2025-03-05 13:50:48 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected the 'RadioButtonFA' option.
+2025-03-05 13:50:48 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered phone number: '61298745'.
+2025-03-05 13:50:48 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered email: 'test@autotest.com'.
+2025-03-05 13:50:48 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Checked 'For workplace adaptation' checkbox 1.
+2025-03-05 13:50:48 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Checked 'For environmental adaptation' checkbox 2.
+2025-03-05 13:50:48 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:51:10 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 1741 options in the dropdown.
+2025-03-05 13:51:10 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'
+2025-03-05 13:51:20 [main] ERROR l.i.u.p.SubmittedApplicationsPage - Failed to close the dropdown with aria-expanded = 'false'. Attempting manual close.
+2025-03-05 13:51:20 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Manual close attempt for the dropdown using body click.
+2025-03-05 13:51:20 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected EVRK value: '01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas'.
+2025-03-05 13:51:21 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked on 'Address Component' button.
+2025-03-05 13:51:21 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:51:24 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Lietuva'
+2025-03-05 13:51:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected country: 'Lietuva'.
+2025-03-05 13:51:24 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown search field.
+2025-03-05 13:51:24 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown city is opened.
+2025-03-05 13:51:24 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Searched for value: 'Vilnius'
+2025-03-05 13:51:25 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected: 'Vilnius'
+2025-03-05 13:51:25 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:51:26 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'A. Domaševičiaus g.'
+2025-03-05 13:51:26 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected street: 'A. Domaševičiaus g.'.
+2025-03-05 13:51:26 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:51:26 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-05 13:51:26 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected house: '1'.
+2025-03-05 13:51:26 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:51:27 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: '1'
+2025-03-05 13:51:27 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected apartment: '1'.
+2025-03-05 13:51:27 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Confirm' button.
+2025-03-05 13:51:27 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'For already working' option.
+2025-03-05 13:51:28 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered person count1: '1'.
+2025-03-05 13:51:28 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'For new working' option.
+2025-03-05 13:51:28 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered person count2: '1'.
+2025-03-05 13:51:28 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Clicked 'Next' button after checkboxes.
+2025-03-05 13:51:28 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:51:29 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Administratoriai'
+2025-03-05 13:51:59 [main] ERROR l.i.u.p.SubmittedApplicationsPage - Timeout while waiting for dropdown to close with aria-expanded = 'false'.
+2025-03-05 13:51:59 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected adaptable job name: 'Administratoriai'.
+2025-03-05 13:51:59 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job date.
+2025-03-05 13:52:00 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job function: 'Funkcija 1'.
+2025-03-05 13:52:00 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'For already working' 'no' option.
+2025-03-05 13:52:00 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Clicking on the dropdown button.
+2025-03-05 13:52:00 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Found 6 options in the dropdown.
+2025-03-05 13:52:00 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Lengvo neįgalumo lygis ar 45-55 procentų dalyvumo lygis (iki 2023 m. gruodžio 31 d. – 45-55 procentų darbingumo lygis)'
+2025-03-05 13:52:00 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Lengvo neįgalumo lygis ar 45-55 procentų dalyvumo lygis (iki 2023 m. gruodžio 31 d. – 45-55 procentų darbingumo lygis)'
+2025-03-05 13:52:00 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Checking option: 'Sunkaus neįgalumo lygis ar neviršijantis 25 procentų dalyvumo lygis (iki 2023 metų gruodžio 31 dienos – iki 25 procentų darbingumo lygis)'
+2025-03-05 13:52:00 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Sunkaus neįgalumo lygis ar neviršijantis 25 procentų dalyvumo lygis (iki 2023 metų gruodžio 31 dienos – iki 25 procentų darbingumo lygis)'
+2025-03-05 13:52:00 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Attempting to close the dropdown.
+2025-03-05 13:52:11 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Dropdown should be closed now.
+2025-03-05 13:52:11 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected disabilities type: 'Sunkaus neįgalumo lygis ar neviršijantis 25 procentų dalyvumo lygis (iki 2023 metų gruodžio 31 dienos – iki 25 procentų darbingumo lygis)'.
+2025-03-05 13:52:11 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered disability information: 'Negalia 1'.
+2025-03-05 13:52:11 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered qualification: 'Kvalifikacija 1'.
+2025-03-05 13:52:11 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered job description: 'Darbo vietos aprašymas 1'.
+2025-03-05 13:52:11 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered equipment description: 'Priemonių įsigyjimas 1'.
+2025-03-05 13:52:12 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered work information: 'Darbai 1'.
+2025-03-05 13:52:12 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:52:12 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Kita'
+2025-03-05 13:52:12 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected time mode: 'Kita'.
+2025-03-05 13:52:12 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected time mode other: '6 val. per dieną ir 4 d. per savaitę'.
+2025-03-05 13:52:12 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered salary amount: '1200'.
+2025-03-05 13:52:12 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Temporary Job' radio button.
+2025-03-05 13:52:12 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'Season Job' radio button.
+2025-03-05 13:52:13 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected 'PVM' radio button.
+2025-03-05 13:52:13 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Located the dropdown button.
+2025-03-05 13:52:13 [main] INFO  l.i.u.p.SubmittedApplicationsPage - Successfully selected the value: 'Darbo vietos pritaikymui'
+2025-03-05 13:52:13 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected adaptable job name: 'Darbo vietos pritaikymui'.
+2025-03-05 13:52:13 [main] DEBUG l.i.u.p.SubmittedApplicationsPage - Located the dropdown button 'Reikalinga'.
+2025-03-05 13:52:14 [main] WARN  l.i.u.p.SubmittedApplicationsPage - Dropdown value 'Įsigyti' not found.
+2025-03-05 13:52:24 [main] ERROR l.i.u.p.SubmittedApplicationsPage - Timeout while waiting for dropdown to close with aria-expanded = 'false'.
+2025-03-05 13:52:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected necessary for job: 'Įsigyti'.
+2025-03-05 13:52:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool: 'Darbo priemonė 1'.
+2025-03-05 13:52:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool parameter one: 'Darbo priemonės 1 parametras 1'.
+2025-03-05 13:52:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool parameter two: 'Darbo priemonės 1 parametras 2'.
+2025-03-05 13:52:24 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Selected tool parameter three: 'Darbo priemonės 1 parametras 3'.
+2025-03-05 13:52:25 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered tool count: '1'.
+2025-03-05 13:52:25 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered price amount: '1000'.
+2025-03-05 13:52:25 [main] DEBUG l.i.u.t.SubmittedApplicationsPageTest - Entered own funds amount: '800'.
+2025-03-05 13:52:26 [main] ERROR l.i.u.t.SubmittedApplicationsPageTest - Test 'testFillNewDVPApplicationFA' failed with error: element click intercepted: Element <input type="radio" class="mdc-radio__native-control" id="mat-radio-14-input" name="mat-radio-group-7" value="true" tabindex="0"> is not clickable at point (360, 993). Other element would receive the click: <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"></div>
+  (Session info: chrome=133.0.6943.142)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [38a96a14160d00d2f806701c8cc1a118, clickElement {id=f.392BE545B91163619C41B2DA78D70839.d.5D53BF9C764EA13053D8D39EA9A8B2A3.e.2414}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61960}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61960/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (38a96a14160d00d2f806701c8cc1a118)] -> xpath: (//input[@type='radio' and @value='true'])[7]]
+Session ID: 38a96a14160d00d2f806701c8cc1a118
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input type="radio" class="mdc-radio__native-control" id="mat-radio-14-input" name="mat-radio-group-7" value="true" tabindex="0"> is not clickable at point (360, 993). Other element would receive the click: <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"></div>
+  (Session info: chrome=133.0.6943.142)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [38a96a14160d00d2f806701c8cc1a118, clickElement {id=f.392BE545B91163619C41B2DA78D70839.d.5D53BF9C764EA13053D8D39EA9A8B2A3.e.2414}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\INGRID~1.ZAD\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61960}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61960/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (38a96a14160d00d2f806701c8cc1a118)] -> xpath: (//input[@type='radio' and @value='true'])[7]]
+Session ID: 38a96a14160d00d2f806701c8cc1a118
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at lt.insoft.uztis.pages.SubmittedApplicationsPage.clickRadioButtonDeMinimis(SubmittedApplicationsPage.java:1473)
+	at lt.insoft.uztis.tests.SubmittedApplicationsPageTest.testFillNewDVPApplicationFA(SubmittedApplicationsPageTest.java:737)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-03-05 13:52:26 [main] INFO  l.insoft.uztis.tests.utils.TestUtils - Screenshot moved to C:\Users\ingrida.zadorozniene\Desktop\Asm\UZTIS\UZTIS_tests\test-output\screenshots\20250305\135226554_testFillNewDVPApplicationFA().png

@@ -114,13 +114,13 @@ public class InvitationsPage extends UztisPage {
     WebElement inputEducation;
 
     @FindBy(css = "common-button:nth-of-type(2) > .btn.btn--primary")
-//    @FindBy(css = "button.btn--primary")
     WebElement buttonSave;
-    //    @FindBy(css = "common-button:nth-of-type(3) > .btn.btn--accent")
+
     @FindBy(css = "button.btn--accent")
     WebElement buttonPublish;
 
-    @FindBy(css = ".reverse-mobile .ng-star-inserted:nth-of-type(2)")
+
+    @FindBy(css = ".reverse-mobile button.btn.btn--primary")
     WebElement buttonPublicationConfirmation;
 
     //------------------------------------------
