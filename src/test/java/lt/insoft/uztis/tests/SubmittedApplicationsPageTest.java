@@ -361,6 +361,11 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Clicked 'Next' button.");
 
             //--------------------
+//            invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationOne, true);
+//            log.debug("Checked 'For workplace adaptation' checkbox 1.");
+//
+//            invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationTwo, true);
+//            log.debug("Checked 'For environmental adaptation' checkbox 2.");
 
                 SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationOne, true);
                 log.debug("Checked 'Legal Entities' checkbox 1.");
@@ -622,9 +627,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.clickRadioButtonForAlreadyWorking_DVP_step1();
             log.debug("Selected 'For already working' option.");
 
-            String jobCount1 = "1";
-            submittedApplicationsPage.enterPersonCountOne_DVP(jobCount1);
-            log.debug("Entered person count1: '{}'.", jobCount1);
+//            String jobCount1 = "1";
+//            submittedApplicationsPage.enterPersonCountOne_DVP(jobCount1);
+//            log.debug("Entered person count1: '{}'.", jobCount1);
 
             submittedApplicationsPage.clickRadioButtonForNewWorking_DVP_step1();
             log.debug("Selected 'For new working' option.");
@@ -653,7 +658,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.clickRadioButtonForAlreadyWorking_DVP_step2();
             log.debug("Selected 'For already working' 'no' option.");
 
-            String disabilitiesLevel = "Sunkaus neįgalumo lygis ar neviršijantis 25 procentų dalyvumo lygis (iki 2023 metų gruodžio 31 dienos – iki 25 procentų darbingumo lygis)";
+            String disabilitiesLevel = "Lengvo neįgalumo lygis ar 45-55 procentų dalyvumo lygis (iki 2023 m. gruodžio 31 d. – 45-55 procentų darbingumo lygis)";
             submittedApplicationsPage.selectValueByListDisabilitiesLevel_DVP(disabilitiesLevel);
             log.debug("Selected disabilities type: '{}'.", disabilitiesLevel);
 
@@ -734,6 +739,33 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterOwnFundsOne(amount3);
             log.debug("Entered own funds amount: '{}'.", amount3);
 
+            submittedApplicationsPage.clickButtonAdd();
+            log.debug("Clicked 'Add' button.");
+
+            String type2 = "Aplinkos pritaikymui";
+            submittedApplicationsPage.selectDropdownExpensesTyp_DVP_2(type2);
+            log.debug("Selected adaptable job name: '{}'.", type2);
+
+            String necessaryForJob_2 = "Remontuoti";
+            submittedApplicationsPage.selectDropdownNecessaryForJobOne_DVP_2(necessaryForJob_2);
+            log.debug("Selected necessary for job: '{}'.", necessaryForJob_2);
+
+            String tool1_2 = "Darbo priemonė 2 remontui";
+            submittedApplicationsPage.enterTool_DVP_2(tool1_2);
+            log.debug("Selected tool: '{}'.", tool1_2);
+
+            String toolCount1_2 = "2";
+            submittedApplicationsPage.enterToolsCount_DVP_2(toolCount1_2);
+            log.debug("Entered tool count: '{}'.", toolCount1_2);
+
+            String amount2_2 = "1000";
+            submittedApplicationsPage.enterPriceTwo(amount2_2);
+            log.debug("Entered price amount: '{}'.", amount2_2);
+
+            String amount3_2 = "900";
+            submittedApplicationsPage.enterOwnFundsTwo(amount3_2);
+            log.debug("Entered own funds amount: '{}'.", amount3_2);
+
             submittedApplicationsPage.clickRadioButtonDeMinimis();
             log.debug("Selected 'De Minimis' radio button.");
 
@@ -751,27 +783,18 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterSupportAmount(amount4);
             log.debug("Entered support amount: '{}'.", amount4);
 
-//            submittedApplicationsPage.clickButtonNext();
-//            log.debug("Clicked 'Next' button.");
+            submittedApplicationsPage.clickButtonNext();
+            log.debug("Clicked 'Next' button.");
 
             //--------------------
-//            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationOne, true);
-//            log.debug("Checked 'Legal Entities' checkbox 1.");
-//
-//            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationTwo, true);
-//            log.debug("Checked 'Legal Entities' checkbox 2.");
+            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationThree, true);
+            log.debug("Checked 'Legal Entities' checkbox 1.");
 
-//            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationThree, true);
-//            log.debug("Checked 'Legal Entities' checkbox 3.");
+            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationFour, true);
+            log.debug("Checked 'Legal Entities' checkbox 2.");
 
-            invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationThree, true);
-            log.debug("Checked 'For workplace adaptation' checkbox 1.");
-
-            invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationFour, true);
-            log.debug("Checked 'For workplace adaptation' checkbox 2.");
-
-            invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationFive, true);
-            log.debug("Checked 'For workplace adaptation' checkbox 3.");
+            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationFive, true);
+            log.debug("Checked 'Legal Entities' checkbox 3.");
 
             log.debug("Test finished: All 'Legal Entities' checkboxes checked successfully.");
 
@@ -848,9 +871,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterDocumentNameEight(documentName8);
             log.debug("Entered program name: '{}'.", documentName8);
 
-            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationDocument, true);
+            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationDocument_DVP, true);
             log.debug("Checked 'ConfirmationDocument'");
-            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationApplication, true);
+            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationApplication_DVP, true);
             log.debug("Checked 'ConfirmationApplication'");
 
             submittedApplicationsPage.clickButtonReview();
