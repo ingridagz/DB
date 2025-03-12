@@ -52,12 +52,8 @@ public class EvaluationsPage extends UztisPage{
     @FindBy(xpath = "//button[text()='Tęsti']")
     WebElement buttonContinue;
 
-//    @FindBy(xpath = "//common-button[@class='ng-star-inserted']//button[text()='Tvirtinti įvertinimą']")
-//    @FindBy(xpath = "//common-button//button[text()='Tvirtinti įvertinimą']")
-//    @FindBy(xpath = "//common-button//button[@class='btn btn--primary']")
-//    @FindBy(xpath = "//common-button[@class='ng-star-inserted']//button[@class='btn btn--primary']")
-//    @FindBy(css = "common-button .btn.btn--primary")
-    @FindBy(css = ".reverse-mobile .ng-star-inserted:nth-of-type(2)")
+//    @FindBy(css = ".reverse-mobile .ng-star-inserted:nth-of-type(2)")
+    @FindBy(css = ".reverse-mobile .btn--primary")
     WebElement buttonConfirmConfirmation;
 
     @FindBy(xpath = "//span[@class='status status-success' and text()='Įvertinta']")

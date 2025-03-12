@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 
 import static java.lang.invoke.MethodHandles.lookup;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.slf4j.LoggerFactory.getLogger;
 
 public class ApplicationFormsPageTest extends UztisPageTest {
@@ -81,7 +80,8 @@ public class ApplicationFormsPageTest extends UztisPageTest {
         }
     }
 
-
+//Po "test...create..." paleisti testą "test...edit...", kitaip neveiks kvietimo kūrimo/publikavimo testas.
+// Po "test...create..." rankiniu būdu įkelti VUI dinaminę formą.
     @Test
     void testCreateNewVuiApplication() {
         log.info("Starting test:'testCreateNewVuiApplication'");

@@ -364,13 +364,13 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[5]")
     public WebElement checkboxConfirmationDocument;
 
-    @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[6]")
+    @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[7]")
     public WebElement checkboxConfirmationDocument_DVP;
 
     @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[6]")
     public WebElement checkboxConfirmationApplication;
 
-    @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[7]")
+    @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[8]")
     public WebElement checkboxConfirmationApplication_DVP;
 
     @FindBy(xpath = "//common-button/button[contains(text(), 'Peržiūrėti')]")
@@ -1374,7 +1374,6 @@ public void selectDropdownJobNameAdaptable_DVP(String valueToSelect) {
 public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-    // Užtikriname, kad dropdown yra matomas ir paspaudžiamas
     try {
         wait.until(ExpectedConditions.visibilityOf(dropdownButtonNecessaryForJobOne_DVP));
         wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonNecessaryForJobOne_DVP)).click();
@@ -1419,18 +1418,18 @@ public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
     }
 
     // Palaukiame, kol dropdown užsidarys
-    try {
-        wait.until(ExpectedConditions.attributeToBe(dropdownButtonNecessaryForJobOne_DVP, "aria-expanded", "false"));
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//mat-option")));
-    } catch (TimeoutException e) {
-        log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.", e);
-    }
+//    try {
+//        wait.until(ExpectedConditions.attributeToBe(dropdownButtonNecessaryForJobOne_DVP, "aria-expanded", "false"));
+//        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//mat-option")));
+//    } catch (TimeoutException e) {
+//        log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.", e);
+//    }
 
     // Jei dropdown vis tiek nepasirinktas, bandome patikrinti faktinę pasirinktą reikšmę
-    String selectedValue = dropdownButtonNecessaryForJobOne_DVP.getText().trim();
-    if (!selectedValue.equalsIgnoreCase(valueToSelect)) {
-        log.error("Dropdown value mismatch! Expected '{}', but found '{}'", valueToSelect, selectedValue);
-    }
+//    String selectedValue = dropdownButtonNecessaryForJobOne_DVP.getText().trim();
+//    if (!selectedValue.equalsIgnoreCase(valueToSelect)) {
+//        log.error("Dropdown value mismatch! Expected '{}', but found '{}'", valueToSelect, selectedValue);
+//    }
 }
 
     public void selectDropdownNecessaryForJobOne_DVP_2(String valueToSelect) {
@@ -1766,16 +1765,20 @@ public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
 
     public void uploadFileStepFive() {
         String filePath = "C:\\Users\\ingrida.zadorozniene\\TXT.txt";
-
         List<WebElement> fileInputs = driver.findElements(By.xpath("//input[@type='file']"));
 
         if (fileInputs.isEmpty()) {
             log.warn("No file input elements found on the page.");
         } else {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+
             for (WebElement fileInput : fileInputs) {
                 try {
                     fileInput.sendKeys(filePath);
                     log.info("File uploaded successfully to an input element.");
+
+                    wait.until(ExpectedConditions.attributeToBeNotEmpty(fileInput, "value"));
+
                 } catch (Exception e) {
                     log.error("Failed to upload file to the input element: " + e.getMessage());
                 }

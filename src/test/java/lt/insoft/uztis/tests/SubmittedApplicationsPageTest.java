@@ -475,13 +475,13 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             //--------------------
 
-//            submittedApplicationsPage.clickButtonSubmit();
-//            log.debug("Clicked 'Submit' button after checkboxes.");
-//
-//            submittedApplicationsPage.clickButtonSubmitConfirmation();
-//            log.debug("Clicked 'SubmitConfirmation' button after checkboxes.");
-//
-//            invitationsPage.verifySuccessMessage("Paraiška sėkmingai pateikta ir užregistruota.");
+            submittedApplicationsPage.clickButtonSubmit();
+            log.debug("Clicked 'Submit' button after checkboxes.");
+
+            submittedApplicationsPage.clickButtonSubmitConfirmation();
+            log.debug("Clicked 'SubmitConfirmation' button after checkboxes.");
+
+            applicationFormsPage.verifySuccessMessage("Paraiška sėkmingai pateikta ir užregistruota.");
 
             log.info("Test 'testFillNewVUIApplicationFA' completed successfully.");
         } catch (AssertionError | Exception e) {
@@ -901,9 +901,6 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             throw e;
         }
     }
-
-    //ĮVESTI Į DB REDION_ID IR MINICIPALITY_ID (kol kas)
-
 
 
 
