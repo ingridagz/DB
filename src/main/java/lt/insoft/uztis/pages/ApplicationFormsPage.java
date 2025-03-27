@@ -129,6 +129,9 @@ public class ApplicationFormsPage extends UztisPage {
     List<WebElement> successMessages;
 
 
+
+
+
     public List<String> getAllMessagesText() {
         return successMessages.stream()
                 .map(WebElement::getText)

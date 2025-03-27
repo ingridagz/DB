@@ -51,6 +51,9 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "//button[contains(@class, 'i-forms-stepper-button-next') and normalize-space(text())='Toliau']")
     WebElement buttonNext;
 
+    @FindBy(xpath = "//button[contains(@class, 'i-forms-stepper-button-previous') and normalize-space(text())='Atgal']")
+    WebElement buttonPrevious;
+
     @FindBy(xpath = "//input[@id='phone']")
     WebElement phoneInput;
 
@@ -158,6 +161,9 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[3]")
     WebElement inputQualification;
 
+    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[4]")
+    WebElement inputSalaryDescription;
+
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[2]")
     WebElement inputJopDate;
 
@@ -181,22 +187,22 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "(//input[@type='radio' and @value='false'])[3]")
     WebElement radioButtonSeasonJob;
 
-    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[4]")
+    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[5]")
     WebElement inputJobDescription;
 
-    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[5]")
+    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[6]")
     WebElement inputProsesDescriptionVUI_equipmentDescriptionDVP;
 
     @FindBy(xpath = "(//input[@type='radio' and @value='true'])[4]")
     WebElement radioButtonEnergy;
 
-    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[6]")
+    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[7]")
     WebElement inputEnergyInformationVUI_workInformationDVP;
 
     @FindBy(xpath = "(//input[@type='radio' and @value='true'])[5]")
     WebElement radioButtonRepair;
 
-    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[7]")
+    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[8]")
     WebElement inputRepairInformation;
 
     @FindBy(xpath = "(//input[@type='radio' and @value='false'])[6]")
@@ -270,7 +276,7 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Remonto darbų pavadinimas')]//input")
     WebElement inputRepairName;
 
-    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[8]")
+    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[9]")
     WebElement inputRepairDescription;
 
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Valstybės institucijos, įstaigos (proc.)')]//input")
@@ -463,6 +469,10 @@ public class SubmittedApplicationsPage extends UztisPage {
 
     public void clickButtonConfirm() {
         buttonConfirm.click();
+    }
+
+    public void clickButtonPrevious() {
+        buttonPrevious.click();
     }
 
     public boolean isButtonNextDisplayed() {
@@ -1248,6 +1258,11 @@ public void selectDropdownJobNameAdaptable_DVP(String valueToSelect) {
     public void enterSalary(String amount) {
         inputSalary.clear();
         inputSalary.sendKeys(amount);
+    }
+
+    public void enterSalaryDescription(String text) {
+        inputSalaryDescription.clear();
+        inputSalaryDescription.sendKeys(text);
     }
 
     public void clickRadioButtonTemporaryJob() {

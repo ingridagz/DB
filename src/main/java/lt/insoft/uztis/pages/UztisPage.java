@@ -10,4 +10,12 @@ public class UztisPage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+
+    public static void stay() {
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+        }
+    }
 }
+

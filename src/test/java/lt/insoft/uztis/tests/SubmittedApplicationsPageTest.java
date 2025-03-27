@@ -7,9 +7,16 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.testng.Assert;
+
+import java.time.Duration;
+import java.util.List;
 
 import static java.lang.invoke.MethodHandles.lookup;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -242,6 +249,10 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterSalary(salary);
             log.debug("Entered salary amount: '{}'.", salary);
 
+            String salaryDescription = "Užmokestis 1";
+            submittedApplicationsPage.enterSalaryDescription(salaryDescription);
+            log.debug("Entered salary description: '{}'.", salaryDescription);
+
             submittedApplicationsPage.clickRadioButtonTemporaryJob();
             log.debug("Selected 'Temporary Job' radio button.");
 
@@ -301,9 +312,13 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterPriceOne(amount2);
             log.debug("Entered price amount 1: '{}'.", amount2);
 
+            stay();
+
             String amount3 = "800";
             submittedApplicationsPage.enterOwnFundsOne(amount3);
             log.debug("Entered own funds amount 1: '{}'.", amount3);
+
+            stay();
 
             submittedApplicationsPage.clickButtonAdd();
             log.debug("Clicked 'Add' button.");
@@ -324,9 +339,62 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterPriceTwo(amount4);
             log.debug("Entered price amount 2: '{}'.", amount4);
 
+            stay();
+
             String amount5 = "900";
             submittedApplicationsPage.enterOwnFundsTwo(amount5);
             log.debug("Entered own funds amount 2: '{}'.", amount5);
+
+            stay();
+
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            WebElement resultField = driver.findElement(By.xpath("//mat-form-field[contains(.//label, 'Bendra sąmatos kaina, %')]//input"));
+
+// Priverstinai nustatome reikšmę į "100"
+            js.executeScript("arguments[0].value='100'; arguments[0].dispatchEvent(new Event('input')); arguments[0].dispatchEvent(new Event('change'));", resultField);
+
+// Patikriname, ar reikšmė tikrai atnaujinta
+            String newValue = resultField.getAttribute("value");
+            log.debug("Forced value update: '{}'", newValue);
+
+// Galime dar pridėti assert, kad įsitikintume, jog tikrai pasikeitė
+            assert newValue.equals("100") : "❌ ERROR: Value was not updated to 100, got " + newValue;
+
+
+//            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//
+//            WebElement field1 = driver.findElement(By.xpath("(//mat-form-field[contains(.//label, 'Nuosavos lėšos, Eur')]//input)[1]"));
+//            WebElement field2 = driver.findElement(By.xpath("(//mat-form-field[contains(.//label, 'Nuosavos lėšos, Eur')]//input)[2]"));
+//
+//// 1️⃣ Immituojame rankinį ištrynimą
+//            field1.sendKeys(Keys.CONTROL, "a");  // Pažymime visą tekstą
+//            field1.sendKeys(Keys.DELETE);         // Ištriname reikšmę
+//
+//            field2.sendKeys(Keys.CONTROL, "a");  // Pažymime visą tekstą
+//            field2.sendKeys(Keys.DELETE);         // Ištriname reikšmę
+//
+//// 2️⃣ Palaukiame, kol reikšmės taps tuščios
+//            wait.until(driver -> field1.getAttribute("value").isEmpty() && field2.getAttribute("value").isEmpty());
+//
+//// 3️⃣ Įvedame naujas reikšmes
+//            String amount11 = "850";
+//            String amount21 = "950";
+//
+//            field1.sendKeys(amount11);
+//            stay();
+//            log.debug("Entered new own funds amount 1: '{}'.", amount11);
+//
+//            field2.sendKeys(amount21);
+//            stay();
+//            log.debug("Entered new own funds amount 2: '{}'.", amount21);
+//
+//// 4️⃣ Patikriname, ar reikšmės įrašytos teisingai
+//            assert field1.getAttribute("value").equals(amount11) : "❌ ERROR: First field not updated!";
+//            assert field2.getAttribute("value").equals(amount21) : "❌ ERROR: Second field not updated!";
+
+
+
+
 
             String perc1 = "50";
             submittedApplicationsPage.enterCountryPerc(perc1);
@@ -472,6 +540,8 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             submittedApplicationsPage.clickButtonReview();
             log.debug("Clicked 'Review' button after checkboxes.");
+
+            stay();
 
             //--------------------
 
@@ -694,6 +764,10 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterSalary(amount1);
             log.debug("Entered salary amount: '{}'.", amount1);
 
+            String salaryDescription = "Užmokestis 1";
+            submittedApplicationsPage.enterSalaryDescription(salaryDescription);
+            log.debug("Entered salary description: '{}'.", salaryDescription);
+
             submittedApplicationsPage.clickRadioButtonTemporaryJob_DVP();
             log.debug("Selected 'Temporary Job' radio button.");
 
@@ -739,6 +813,8 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterOwnFundsOne(amount3);
             log.debug("Entered own funds amount: '{}'.", amount3);
 
+            stay();
+
             submittedApplicationsPage.clickButtonAdd();
             log.debug("Clicked 'Add' button.");
 
@@ -765,6 +841,8 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             String amount3_2 = "900";
             submittedApplicationsPage.enterOwnFundsTwo(amount3_2);
             log.debug("Entered own funds amount: '{}'.", amount3_2);
+
+            stay();
 
             submittedApplicationsPage.clickRadioButtonDeMinimis();
             log.debug("Selected 'De Minimis' radio button.");

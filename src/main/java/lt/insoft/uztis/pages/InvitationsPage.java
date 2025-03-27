@@ -71,11 +71,14 @@ public class InvitationsPage extends UztisPage {
     @FindBy(xpath = "(//mat-form-field[.//mat-label[contains(text(), 'Reikšmė')]]//input)[3]")
     WebElement amountInputThree;
 
+
     @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[1]")
-    public WebElement checkboxLegalEntities;
+    public WebElement checkboxConfirm;
     @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[2]")
-    public WebElement checkboxPersonsRegisteredWithEmploymentService;
+    public WebElement checkboxLegalEntities;
     @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[3]")
+    public WebElement checkboxPersonsRegisteredWithEmploymentService;
+    @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[4]")
     public WebElement checkboxPersonsRegisteredWithEmploymentServiceAsEmployers;
 
     @FindBy(xpath = "(//common-integer-input//input)[2]")
@@ -136,7 +139,7 @@ public class InvitationsPage extends UztisPage {
     @FindBy(xpath = "//tr[td/span[contains(text(), 'Archyvuotas')]]")
     WebElement statusInvitationArchived;
 
-    @FindBy(css = ".mat-mdc-menu-trigger.ng-star-inserted")
+    @FindBy(css = ".btn--primary-light-menu")
     WebElement buttonAction;
 
     @FindBy(xpath = "//button[mat-icon[text()='assignment_late']]")

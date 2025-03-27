@@ -118,15 +118,15 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.clickButtonAdd();
             log.debug("Clicked 'Add' button.");
 
-            String valueToSelect1 = "VUI paraiškos vertinimo forma - I etapas";
+            String valueToSelect1 = "VUI atitiktis URP";
             applicationFormsPage.selectValuesByListEvaluationOne(valueToSelect1);
             log.debug("Selected a value from the 'EvaluationOne' dropdown: '{}'", valueToSelect1);
 
-            String valueToSelect2 = "VUI paraiškos vertinimo forma - II etapas";
+            String valueToSelect2 = "VUI atitiktis kokybės kriterijams";
             applicationFormsPage.selectValuesByListEvaluationTwo(valueToSelect2);
             log.debug("Selected a value from the 'EvaluationTwon' dropdown: '{}'", valueToSelect2);
 
-            String valueToSelect3 = "VUI paraiškos vertinimo forma - III etapas";
+            String valueToSelect3 = "VUI gynimo vertinimo forma";
             applicationFormsPage.selectValuesByListEvaluationThree(valueToSelect3);
             log.debug("Selected a value from the 'EvaluationThree' dropdown: '{}'", valueToSelect3);
 
@@ -287,7 +287,7 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.clickRadioButtonFinancedWithoutQueue();
             log.debug("Selected 'Financed Without Queue' option.");
 
-            String valueToSelect1 = "DVP paraiškos vertinimo forma - I etapas";
+            String valueToSelect1 = "DVP atitiktis URP";
             applicationFormsPage.selectValuesByListEvaluationOne(valueToSelect1);
             log.debug("Selected a value from the 'EvaluationOne' dropdown: '{}'", valueToSelect1);
 
@@ -401,15 +401,15 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.clickButtonAdd();
             log.debug("Clicked 'Add' button.");
 
-            String valueToSelect1 = "PVK paraiškos vertinimo forma - I etapas";
+            String valueToSelect1 = "PVK atitiktis URP";
             applicationFormsPage.selectValuesByListEvaluationOne(valueToSelect1);
             log.debug("Selected a value from the 'EvaluationOne' dropdown: '{}'", valueToSelect1);
 
-            String valueToSelect2 = "PVK paraiškos vertinimo forma - II etapas";
+            String valueToSelect2 = "PVK atitiktis kokybės kriterijams";
             applicationFormsPage.selectValuesByListEvaluationTwo(valueToSelect2);
             log.debug("Selected a value from the 'EvaluationTwon' dropdown: '{}'", valueToSelect2);
 
-            String valueToSelect3 = "PVK paraiškos vertinimo forma - III etapas";
+            String valueToSelect3 = "PVK gynimo vertinimo forma";
             applicationFormsPage.selectValuesByListEvaluationThree(valueToSelect3);
             log.debug("Selected a value from the 'EvaluationThree' dropdown: '{}'", valueToSelect3);
 
