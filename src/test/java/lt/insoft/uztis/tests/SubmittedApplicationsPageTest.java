@@ -6,17 +6,9 @@ import lt.insoft.uztis.pages.SubmittedApplicationsPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.*;
 import org.slf4j.Logger;
 import org.testng.Assert;
-
-import java.time.Duration;
-import java.util.List;
 
 import static java.lang.invoke.MethodHandles.lookup;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -29,6 +21,8 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
     protected SubmittedApplicationsPage submittedApplicationsPage;
 
     private void navigateToSubmittedApplicationsMenu() {
+        applicationFormsPage.clickMenuExpand();
+        applicationFormsPage.clickMenuMore();
         applicationFormsPage.openMenuApplicationProcessing();
         log.debug("Opened 'Application Processing' menu.");
         submittedApplicationsPage.clickMenuSubmittedApplications();
@@ -36,6 +30,8 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
     }
 
     public  void getAndInsertInvitationCodeText() {
+        applicationFormsPage.clickMenuExpand();
+        applicationFormsPage.clickMenuMore();
         applicationFormsPage.openMenuApplicationProcessing();
         log.debug("Opened 'Application Processing' menu.");
 
@@ -335,66 +331,33 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterRepairDescription(repairDescription1);
             log.debug("Entered repair information: '{}'.", repairDescription1);
 
-            String amount4 = "1000";
-            submittedApplicationsPage.enterPriceTwo(amount4);
-            log.debug("Entered price amount 2: '{}'.", amount4);
+
+            String amount2_1 = "1000";
+            submittedApplicationsPage.enterPriceTwo(amount2_1);
+            log.debug("Entered price amount 2: '{}'.", amount2_1);
 
             stay();
 
-            String amount5 = "900";
-            submittedApplicationsPage.enterOwnFundsTwo(amount5);
-            log.debug("Entered own funds amount 2: '{}'.", amount5);
+            String amount3_1 = "900";
+            submittedApplicationsPage.enterOwnFundsTwo(amount3_1);
+            log.debug("Entered own funds amount 2: '{}'.", amount3_1);
 
             stay();
 
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            WebElement resultField = driver.findElement(By.xpath("//mat-form-field[contains(.//label, 'Bendra sąmatos kaina, %')]//input"));
+            submittedApplicationsPage.clickButtonAddRemoved();
+            log.debug("Clicked 'AddRemoved' button.");
 
-// Priverstinai nustatome reikšmę į "100"
-            js.executeScript("arguments[0].value='100'; arguments[0].dispatchEvent(new Event('input')); arguments[0].dispatchEvent(new Event('change'));", resultField);
+            stay();
 
-// Patikriname, ar reikšmė tikrai atnaujinta
-            String newValue = resultField.getAttribute("value");
-            log.debug("Forced value update: '{}'", newValue);
+            submittedApplicationsPage.clickButtonRemove();
+            log.debug("Clicked 'Remove' button.");
 
-// Galime dar pridėti assert, kad įsitikintume, jog tikrai pasikeitė
-            assert newValue.equals("100") : "❌ ERROR: Value was not updated to 100, got " + newValue;
+            stay();
 
+            submittedApplicationsPage.clickButtonRemoveConfirmation();
+            log.debug("Clicked 'Remove Confirmation' button.");
 
-//            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//
-//            WebElement field1 = driver.findElement(By.xpath("(//mat-form-field[contains(.//label, 'Nuosavos lėšos, Eur')]//input)[1]"));
-//            WebElement field2 = driver.findElement(By.xpath("(//mat-form-field[contains(.//label, 'Nuosavos lėšos, Eur')]//input)[2]"));
-//
-//// 1️⃣ Immituojame rankinį ištrynimą
-//            field1.sendKeys(Keys.CONTROL, "a");  // Pažymime visą tekstą
-//            field1.sendKeys(Keys.DELETE);         // Ištriname reikšmę
-//
-//            field2.sendKeys(Keys.CONTROL, "a");  // Pažymime visą tekstą
-//            field2.sendKeys(Keys.DELETE);         // Ištriname reikšmę
-//
-//// 2️⃣ Palaukiame, kol reikšmės taps tuščios
-//            wait.until(driver -> field1.getAttribute("value").isEmpty() && field2.getAttribute("value").isEmpty());
-//
-//// 3️⃣ Įvedame naujas reikšmes
-//            String amount11 = "850";
-//            String amount21 = "950";
-//
-//            field1.sendKeys(amount11);
-//            stay();
-//            log.debug("Entered new own funds amount 1: '{}'.", amount11);
-//
-//            field2.sendKeys(amount21);
-//            stay();
-//            log.debug("Entered new own funds amount 2: '{}'.", amount21);
-//
-//// 4️⃣ Patikriname, ar reikšmės įrašytos teisingai
-//            assert field1.getAttribute("value").equals(amount11) : "❌ ERROR: First field not updated!";
-//            assert field2.getAttribute("value").equals(amount21) : "❌ ERROR: Second field not updated!";
-
-
-
-
+            stay();
 
             String perc1 = "50";
             submittedApplicationsPage.enterCountryPerc(perc1);
@@ -764,9 +727,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterSalary(amount1);
             log.debug("Entered salary amount: '{}'.", amount1);
 
-            String salaryDescription = "Užmokestis 1";
-            submittedApplicationsPage.enterSalaryDescription(salaryDescription);
-            log.debug("Entered salary description: '{}'.", salaryDescription);
+            String salaryDescription_DVP = "Užmokestis 1";
+            submittedApplicationsPage.enterSalaryDescription_DVP(salaryDescription_DVP);
+            log.debug("Entered salary description: '{}'.", salaryDescription_DVP);
 
             submittedApplicationsPage.clickRadioButtonTemporaryJob_DVP();
             log.debug("Selected 'Temporary Job' radio button.");
@@ -830,6 +793,10 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterTool_DVP_2(tool1_2);
             log.debug("Selected tool: '{}'.", tool1_2);
 
+            String workDescription_DVP = "Remonto darbai 1";
+            submittedApplicationsPage.enterWorkDescriptionDVP(workDescription_DVP);
+            log.debug("Entered work information: '{}'.", workDescription_DVP);
+
             String toolCount1_2 = "2";
             submittedApplicationsPage.enterToolsCount_DVP_2(toolCount1_2);
             log.debug("Entered tool count: '{}'.", toolCount1_2);
@@ -841,6 +808,21 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             String amount3_2 = "900";
             submittedApplicationsPage.enterOwnFundsTwo(amount3_2);
             log.debug("Entered own funds amount: '{}'.", amount3_2);
+
+            stay();
+
+            submittedApplicationsPage.clickButtonAddRemoved();
+            log.debug("Clicked 'AddRemoved' button.");
+
+            stay();
+
+            submittedApplicationsPage.clickButtonRemove();
+            log.debug("Clicked 'Remove' button.");
+
+            stay();
+
+            submittedApplicationsPage.clickButtonRemoveConfirmation();
+            log.debug("Clicked 'Remove Confirmation' button.");
 
             stay();
 

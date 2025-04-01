@@ -29,6 +29,8 @@ public class EvaluationsPageTest extends UztisPageTest{
     protected EvaluationsPage evaluationsPage;
 
     private void navigateToEvaluationsMenu() {
+        applicationFormsPage.clickMenuExpand();
+        applicationFormsPage.clickMenuMore();
         applicationFormsPage.openMenuApplicationProcessing();
         log.debug("Opened 'Application Processing' menu.");
         evaluationsPage.clickMenuEvaluations();

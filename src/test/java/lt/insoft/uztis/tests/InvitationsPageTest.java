@@ -20,6 +20,8 @@ public class InvitationsPageTest extends UztisPageTest {
 
 
     public void navigateToInvitationMenu() {
+        applicationFormsPage.clickMenuExpand();
+        applicationFormsPage.clickMenuMore();
         applicationFormsPage.openMenuApplicationProcessing();
         log.debug("Opened 'Application Processing' menu.");
         invitationsPage.clickMenuInvitation();
@@ -27,6 +29,8 @@ public class InvitationsPageTest extends UztisPageTest {
     }
 
     public void navigateToApplicationFormsMenu() {
+        applicationFormsPage.clickMenuExpand();
+        applicationFormsPage.clickMenuMore();
         applicationFormsPage.openMenuApplicationProcessing();
         log.debug("Opened 'Application Processing' menu.");
         applicationFormsPage.clickMenuApplicationForms();

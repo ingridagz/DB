@@ -164,6 +164,9 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[4]")
     WebElement inputSalaryDescription;
 
+    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[4]")
+    WebElement inputSalaryDescription_DVP;
+
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[2]")
     WebElement inputJopDate;
 
@@ -198,6 +201,9 @@ public class SubmittedApplicationsPage extends UztisPage {
 
     @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[7]")
     WebElement inputEnergyInformationVUI_workInformationDVP;
+
+    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[8]")
+    WebElement inputWorkDescription_DVP;
 
     @FindBy(xpath = "(//input[@type='radio' and @value='true'])[5]")
     WebElement radioButtonRepair;
@@ -269,6 +275,15 @@ public class SubmittedApplicationsPage extends UztisPage {
 
     @FindBy(xpath = "(//button[contains(@class, 'i-forms-repeater-button-add')])[4]")
     WebElement buttonAdd;
+
+    @FindBy(xpath = "(//button[contains(@class, 'i-forms-repeater-button-add')])[5]")
+    WebElement buttonAddRemoved;
+
+    @FindBy(xpath = "(//button[contains(@class, 'i-forms-repeater-button-remove')])[3]")
+    WebElement buttonRemove;
+
+    @FindBy(css = "common-button:nth-of-type(2) > .btn.btn--primary")
+    WebElement buttonRemoveConfirmation;
 
     @FindBy(xpath = "(//button[contains(@class, 'i-forms-repeater-button-add')])[5]")
     WebElement buttonAddJobPlace;
@@ -382,7 +397,8 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "//common-button/button[contains(text(), 'Peržiūrėti')]")
     WebElement buttonReview;
 
-    @FindBy(xpath = "//common-button/button[contains(text(), 'Pateikti')]")
+//    @FindBy(xpath = "//common-button/button[contains(text(), 'Pateikti')]")
+    @FindBy(css = "common-button:nth-of-type(3) > .btn.btn--primary")
     WebElement buttonSubmit;
 
     @FindBy(xpath = "//common-button//button[@type='button' and contains(text(), 'Pateikti vertinimui')]")
@@ -1265,6 +1281,11 @@ public void selectDropdownJobNameAdaptable_DVP(String valueToSelect) {
         inputSalaryDescription.sendKeys(text);
     }
 
+    public void enterSalaryDescription_DVP(String text) {
+        inputSalaryDescription_DVP.clear();
+        inputSalaryDescription_DVP.sendKeys(text);
+    }
+
     public void clickRadioButtonTemporaryJob() {
         if (!radioButtonTemporaryJob.isSelected()) {
             radioButtonTemporaryJob.click();
@@ -1308,6 +1329,11 @@ public void selectDropdownJobNameAdaptable_DVP(String valueToSelect) {
     public void enterEnergyInformationVUI_workInformationDVP(String text) {
         inputEnergyInformationVUI_workInformationDVP.clear();
         inputEnergyInformationVUI_workInformationDVP.sendKeys(text);
+    }
+
+    public void enterWorkDescriptionDVP(String text) {
+        inputWorkDescription_DVP.clear();
+        inputWorkDescription_DVP.sendKeys(text);
     }
 
     public void clickRadioButtonRepair() {
@@ -1594,6 +1620,24 @@ public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
     public void clickButtonAdd() {
         if (!buttonAdd.isSelected()) {
             buttonAdd.click();
+        }
+    }
+
+    public void clickButtonAddRemoved() {
+        if (!buttonAddRemoved.isSelected()) {
+            buttonAddRemoved.click();
+        }
+    }
+
+    public void clickButtonRemove() {
+        if (!buttonRemove.isSelected()) {
+            buttonRemove.click();
+        }
+    }
+
+    public void clickButtonRemoveConfirmation() {
+        if (!buttonRemoveConfirmation.isSelected()) {
+            buttonRemoveConfirmation.click();
         }
     }
 

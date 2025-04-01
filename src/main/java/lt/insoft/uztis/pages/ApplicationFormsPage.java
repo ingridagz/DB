@@ -31,7 +31,13 @@ public class ApplicationFormsPage extends UztisPage {
     @FindBy(id = "kc-login")
     WebElement buttonLogin;
 
-    @FindBy(xpath = "//mat-expansion-panel-header[@id='mat-expansion-panel-header-4']")
+    @FindBy(xpath = "//mat-icon[contains(@class, 'material-symbols-outlined')]")
+    WebElement buttonMenuExpand;
+
+    @FindBy(xpath = "//span[text()='Daugiau']")
+    WebElement buttonMenuMore;
+
+    @FindBy(xpath = "//mat-expansion-panel-header[.//span[text()='Paraiškų tvarkymas'] and .//mat-icon[text()='expand_more']]")
     WebElement buttonMenuApplicationProcessing;
 
     @FindBy(xpath = "//a[@href='/application/description']")
@@ -220,6 +226,14 @@ public class ApplicationFormsPage extends UztisPage {
     }
 
     //buttons
+    public void clickMenuExpand() {
+        buttonMenuExpand.click();
+    }
+
+    public void clickMenuMore() {
+        buttonMenuMore.click();
+    }
+
     public void clickMenuApplicationProcessing() {
         buttonMenuApplicationProcessing.click();
     }

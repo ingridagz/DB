@@ -17,6 +17,8 @@ public class ApplicationFormsPageTest extends UztisPageTest {
     private ApplicationFormsPage applicationFormsPage;
 
     public void navigateToApplicationFormsMenu() {
+        applicationFormsPage.clickMenuExpand();
+        applicationFormsPage.clickMenuMore();
         applicationFormsPage.openMenuApplicationProcessing();
         log.debug("Opened 'Application Processing' menu.");
         applicationFormsPage.clickMenuApplicationForms();
