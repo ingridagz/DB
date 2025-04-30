@@ -523,6 +523,9 @@ public class InvitationsPageTest extends UztisPageTest {
             invitationsPage.enterValueThree(value3);
             log.debug("Entered value: {}", value3);
 
+            invitationsPage.setCheckbox(invitationsPage.checkboxConfirm, true);
+            log.debug("Checked 'Legal Entities' checkbox.");
+
             invitationsPage.setCheckbox(invitationsPage.checkboxLegalEntities, true);
             log.debug("Checked 'Legal Entities' checkbox.");
 
@@ -650,6 +653,9 @@ public class InvitationsPageTest extends UztisPageTest {
             String value3 = "13000";
             invitationsPage.enterValueThree(value3);
             log.debug("Entered value: {}", value3);
+
+            invitationsPage.setCheckbox(invitationsPage.checkboxConfirm, true);
+            log.debug("Checked 'Legal Entities' checkbox.");
 
             invitationsPage.setCheckbox(invitationsPage.checkboxLegalEntities, false);
             log.debug("Checked 'Legal Entities' checkbox.");

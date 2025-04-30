@@ -164,7 +164,7 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[4]")
     WebElement inputSalaryDescription;
 
-    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[4]")
+    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[7]")
     WebElement inputSalaryDescription_DVP;
 
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[2]")
@@ -200,10 +200,13 @@ public class SubmittedApplicationsPage extends UztisPage {
     WebElement radioButtonEnergy;
 
     @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[7]")
-    WebElement inputEnergyInformationVUI_workInformationDVP;
+    WebElement inputEnergyInformationVUI;
+
+    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[4]")
+    WebElement inputWorkInformationDVP;
 
     @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[8]")
-    WebElement inputWorkDescription_DVP;
+    WebElement inputRepairWorkDescription_DVP;
 
     @FindBy(xpath = "(//input[@type='radio' and @value='true'])[5]")
     WebElement radioButtonRepair;
@@ -1241,7 +1244,7 @@ public void selectDropdownJobNameAdaptable_DVP(String valueToSelect) {
 
     public void enterJobDate() {
         LocalDate today = LocalDate.now();
-        LocalDate pastDate = today.plusYears(1).plusDays(1);
+        LocalDate pastDate = today.plusMonths(3).plusDays(15);
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String formattedPastDate = pastDate.format(formatter);
@@ -1257,7 +1260,7 @@ public void selectDropdownJobNameAdaptable_DVP(String valueToSelect) {
     //DVP
     public void enterJobDate_DVP() {
         LocalDate today = LocalDate.now();
-        LocalDate pastDate = today.plusYears(1).plusDays(1);
+        LocalDate pastDate = today.plusMonths(3).plusDays(15);
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String formattedPastDate = pastDate.format(formatter);
@@ -1326,14 +1329,19 @@ public void selectDropdownJobNameAdaptable_DVP(String valueToSelect) {
         }
     }
 
-    public void enterEnergyInformationVUI_workInformationDVP(String text) {
-        inputEnergyInformationVUI_workInformationDVP.clear();
-        inputEnergyInformationVUI_workInformationDVP.sendKeys(text);
+    public void enterEnergyInformationVUI(String text) {
+        inputEnergyInformationVUI.clear();
+        inputEnergyInformationVUI.sendKeys(text);
+    }
+
+    public void enterWorkInformationDVP(String text) {
+        inputWorkInformationDVP.clear();
+        inputWorkInformationDVP.sendKeys(text);
     }
 
     public void enterWorkDescriptionDVP(String text) {
-        inputWorkDescription_DVP.clear();
-        inputWorkDescription_DVP.sendKeys(text);
+        inputRepairWorkDescription_DVP.clear();
+        inputRepairWorkDescription_DVP.sendKeys(text);
     }
 
     public void clickRadioButtonRepair() {

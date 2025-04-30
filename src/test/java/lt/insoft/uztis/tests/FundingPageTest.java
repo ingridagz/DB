@@ -18,6 +18,8 @@ public class FundingPageTest extends UztisPageTest{
     protected FundingPage fundingPage;
 
     private void navigateToFundingMenu() {
+        applicationFormsPage.clickMenuExpand();
+        applicationFormsPage.clickMenuMore();
         applicationFormsPage.openMenuApplicationProcessing();
         log.debug("Opened 'Application Processing' menu.");
         fundingPage.clickMenuFundingQueue();
@@ -25,6 +27,8 @@ public class FundingPageTest extends UztisPageTest{
     }
 
     public  void getAndInsertInvitationCodeText() {
+        applicationFormsPage.clickMenuExpand();
+        applicationFormsPage.clickMenuMore();
         applicationFormsPage.openMenuApplicationProcessing();
         log.debug("Opened 'Application Processing' menu.");
 

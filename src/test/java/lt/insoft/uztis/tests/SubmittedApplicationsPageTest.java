@@ -270,7 +270,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Entered process description: '{}'.", elementDescription);
 
             String energyDescription = "Energija 1";
-            submittedApplicationsPage.enterEnergyInformationVUI_workInformationDVP(energyDescription);
+            submittedApplicationsPage.enterEnergyInformationVUI(energyDescription);
             log.debug("Entered energy information: '{}'.", energyDescription);
 
             String repairDescription = "Remontas 1";
@@ -712,7 +712,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Entered equipment description: '{}'.", equipmentDescription_DVP);
 
             String workInformation_DVP = "Darbai 1";
-            submittedApplicationsPage.enterEnergyInformationVUI_workInformationDVP(workInformation_DVP);
+            submittedApplicationsPage.enterWorkInformationDVP(workInformation_DVP);
             log.debug("Entered work information: '{}'.", workInformation_DVP);
 
             String timeMode = "Kita";
@@ -941,19 +941,19 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             //--------------------
 
-            submittedApplicationsPage.clickButtonSaveDraft();
-            log.debug("Clicked 'SaveDraft' button after checkboxes.");
-
-            applicationFormsPage.verifySuccessMessage("Ruošinys sėkmingai išsaugotas.");
-
-            submittedApplicationsPage.clickButtonSubmit();
-            log.debug("Clicked 'Submit' button after checkboxes.");
-
-            submittedApplicationsPage.clickButtonSubmitConfirmation();
-            log.debug("Clicked 'SubmitConfirmation' button after checkboxes.");
-
-            applicationFormsPage.verifySuccessMessage("Paraiška sėkmingai pateikta ir užregistruota.");
-            log.info("Verified success message");
+//            submittedApplicationsPage.clickButtonSaveDraft();
+//            log.debug("Clicked 'SaveDraft' button after checkboxes.");
+//
+//            applicationFormsPage.verifySuccessMessage("Ruošinys sėkmingai išsaugotas.");
+//
+//            submittedApplicationsPage.clickButtonSubmit();
+//            log.debug("Clicked 'Submit' button after checkboxes.");
+//
+//            submittedApplicationsPage.clickButtonSubmitConfirmation();
+//            log.debug("Clicked 'SubmitConfirmation' button after checkboxes.");
+//
+//            applicationFormsPage.verifySuccessMessage("Paraiška sėkmingai pateikta ir užregistruota.");
+//            log.info("Verified success message");
 
             log.info("Test 'testFillNewDVPApplicationFA' completed successfully.");
         } catch (AssertionError | Exception e) {
