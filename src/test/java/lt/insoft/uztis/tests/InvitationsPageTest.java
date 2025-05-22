@@ -62,8 +62,10 @@ public class InvitationsPageTest extends UztisPageTest {
         log.info("Starting test:'testNavigateToInvitationPageTest'");
 
         try {
-            applicationFormsPage.login("test", "test");
+            TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
+//            applicationFormsPage.login("evaluation_chief", "test");
+//            log.debug("User logged in with test credentials");
 
             navigateToInvitationMenu();
             log.debug("Navigating to invitation forms menu.");
@@ -90,8 +92,10 @@ public class InvitationsPageTest extends UztisPageTest {
         log.info("Starting test:'testCreateNewVuiInvitationDraft'");
 
         try {
-            applicationFormsPage.login("test", "test");
+            TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
+//            applicationFormsPage.login("evaluation_chief", "test");
+//            log.debug("User logged in with test credentials");
 
             navigateToApplicationFormsMenu();
             log.debug("Navigating to application forms menu.");
@@ -148,8 +152,10 @@ public class InvitationsPageTest extends UztisPageTest {
         log.info("Starting test:'testEditAndPublishVuiInvitationDraft'");
 
         try {
-            applicationFormsPage.login("test", "test");
+            TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
+//            applicationFormsPage.login("evaluation_chief", "test");
+//            log.debug("User logged in with test credentials");
 
             navigateToApplicationFormsMenu();
             log.debug("Navigating to application forms menu.");
@@ -271,8 +277,10 @@ public class InvitationsPageTest extends UztisPageTest {
     void testInsertVui_PvkStatisticInformation() {
         log.info("Starting test:'testInsertVui_PvkStatisticInformation'");
         try {
-            applicationFormsPage.login("test", "test");
+            TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
+//            applicationFormsPage.login("evaluation_chief", "test");
+//            log.debug("User logged in with test credentials");
 
             navigateToApplicationFormsMenu();
             log.debug("Navigating to invitation forms menu.");
@@ -322,8 +330,10 @@ public class InvitationsPageTest extends UztisPageTest {
         log.info("Starting test:'testStopPublicationVuiInvitation'");
 
         try {
-            applicationFormsPage.login("test", "test");
+            TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
+//            applicationFormsPage.login("evaluation_chief", "test");
+//            log.debug("User logged in with test credentials");
 
             navigateToApplicationFormsMenu();
             log.debug("Navigating to application forms menu.");
@@ -369,8 +379,10 @@ public class InvitationsPageTest extends UztisPageTest {
         log.info("Starting test:'testArchiveVuiInvitation'");
 
         try {
-            applicationFormsPage.login("test", "test");
+            TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
+//            applicationFormsPage.login("evaluation_chief", "test");
+//            log.debug("User logged in with test credentials");
 
             navigateToApplicationFormsMenu();
             log.debug("Navigating to application forms menu.");
@@ -416,8 +428,10 @@ public class InvitationsPageTest extends UztisPageTest {
         log.info("Starting test:'testDeleteVuiInvitation'");
 
         try {
-            applicationFormsPage.login("test", "test");
+            TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
+//            applicationFormsPage.login("evaluation_chief", "test");
+//            log.debug("User logged in with test credentials");
 
             navigateToApplicationFormsMenu();
             log.debug("Navigating to application forms menu.");
@@ -454,8 +468,10 @@ public class InvitationsPageTest extends UztisPageTest {
         log.info("Starting test:'testCreateNewDvpInvitation'");
 
         try {
-            applicationFormsPage.login("test", "test");
+            TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
+//            applicationFormsPage.login("evaluation_chief", "test");
+//            log.debug("User logged in with test credentials");
 
             navigateToApplicationFormsMenu();
             log.debug("Navigating to application forms menu.");
@@ -585,8 +601,10 @@ public class InvitationsPageTest extends UztisPageTest {
         log.info("Starting test:'testCreateNewPvkInvitation'");
 
         try {
-            applicationFormsPage.login("test", "test");
+            TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
+//            applicationFormsPage.login("evaluation_chief", "test");
+//            log.debug("User logged in with test credentials");
 
             navigateToApplicationFormsMenu();
             log.debug("Navigating to application forms menu.");

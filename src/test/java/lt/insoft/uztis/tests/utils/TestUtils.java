@@ -1,9 +1,7 @@
 package lt.insoft.uztis.tests.utils;
 
 import org.apache.commons.lang3.RandomStringUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.slf4j.Logger;
 
 import java.io.File;
@@ -59,6 +57,37 @@ public class TestUtils {
     private static String getSystemTime() {
         return DateTimeFormatter.ofPattern("HHmmssSSS").format(LocalDateTime.now());
     }
+
+
+    public static final String DEFAULT_USERNAME = "evaluation_chief";
+    public static final String DEFAULT_PASSWORD = "test";
+
+//    evaluation_chief / test — Vaitkuvienė Lijana
+//    evaluation_specialist / test — Palikevičius Marius
+
+    public static void loginAllTests(WebDriver driver) {
+        login(driver, DEFAULT_USERNAME, DEFAULT_PASSWORD);
+    }
+
+
+    public static void login(WebDriver driver, String uname, String pword) {
+        try {
+            WebElement username = driver.findElement(By.id("username"));
+            WebElement password = driver.findElement(By.id("password"));
+            WebElement buttonLogin = driver.findElement(By.id("kc-login"));
+
+            username.sendKeys(uname);
+            password.sendKeys(pword);
+            buttonLogin.click();
+
+            log.info("Login attempt with user: {}", uname);
+        } catch (NoSuchElementException e) {
+            log.error("Login failed – element not found: {}", e.getMessage());
+            throw e;
+        }
+    }
+
+
 
 //    public static String getRandomCode() {
 //        // Generuojame 2 atsitiktinius skaitmenis

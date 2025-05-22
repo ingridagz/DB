@@ -48,6 +48,14 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "//button[contains(@class, 'mat-mdc-menu-item') and .//span[contains(text(), 'Priskirti vertintojus')]]")
     WebElement buttonAddEvaluators;
 
+
+
+    @FindBy(xpath = "//button[contains(@class, 'mat-mdc-menu-item') and .//span[contains(text(), 'Kurti projektus')]]")
+    WebElement buttonCreateProjects;
+
+
+
+
     @FindBy(xpath = "//button[contains(@class, 'i-forms-stepper-button-next') and normalize-space(text())='Toliau']")
     WebElement buttonNext;
 
@@ -435,7 +443,9 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "//common-button[@btnclass='btn btn--primary']//button[text()='Priskirti vertintojus']")
     WebElement buttonAddEvaluatorsConfirmation;
 
-
+//    @FindBy(xpath = "//common-button[@btnclass='btn btn--primary']//button[text()='Kurti projektus']")
+    @FindBy(xpath = "//button[contains(normalize-space(text()), 'Kurti projektus')]")
+    WebElement buttonProjectsConfirmation;
 
     public void clickMenuSubmittedApplications() {
         buttonMenuSubmittedApplications.click();
@@ -482,8 +492,16 @@ public class SubmittedApplicationsPage extends UztisPage {
         buttonAddEvaluators.click();
     }
 
+    public void clickButtonCreateProjects() {
+        buttonCreateProjects.click();
+    }
+
     public void clickButtonAddEvaluatorsConfirmation() {
         buttonAddEvaluatorsConfirmation.click();
+    }
+
+    public void clickButtonProjectsConfirmation() {
+        buttonProjectsConfirmation.click();
     }
 
     public void clickButtonConfirm() {

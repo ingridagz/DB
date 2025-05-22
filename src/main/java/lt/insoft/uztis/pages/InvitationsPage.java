@@ -22,6 +22,10 @@ public class InvitationsPage extends UztisPage {
         super(driver);
     }
 
+
+    @FindBy(id = "kc-login")
+    WebElement buttonLogin;
+
     @FindBy(xpath = "//a[@href='/application/invitation']")
     WebElement buttonMenuInvitation;
     @FindBy(xpath = "//h2[.='Kvietimai teikti paraiškas']")
@@ -611,6 +615,10 @@ public class InvitationsPage extends UztisPage {
         } catch (StaleElementReferenceException e) {
             wait.until(ExpectedConditions.elementToBeClickable(statusInvitationArchived)).click();
         }
+    }
+
+    public void clickButtonLogin() {
+        buttonLogin.click();
     }
 
     public void clickButtonAction() {

@@ -4,6 +4,7 @@ import lt.insoft.uztis.pages.ApplicationFormsPage;
 import lt.insoft.uztis.pages.EvaluationsPage;
 import lt.insoft.uztis.pages.InvitationsPage;
 import lt.insoft.uztis.pages.SubmittedApplicationsPage;
+import lt.insoft.uztis.tests.utils.TestUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -51,8 +52,10 @@ public class EvaluationsPageTest extends UztisPageTest{
         log.info("Starting test:'testNavigateToEvaluationsPage'");
 
         try {
-            applicationFormsPage.login("test", "test");
+            TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
+//            applicationFormsPage.login("evaluation_chief", "test");
+//            log.debug("User logged in with test credentials");
 
             navigateToEvaluationsMenu();
             log.debug("Navigating to evaluations menu.");

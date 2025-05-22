@@ -1,6 +1,7 @@
 package lt.insoft.uztis.tests;
 
 import lt.insoft.uztis.pages.*;
+import lt.insoft.uztis.tests.utils.TestUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -71,8 +72,10 @@ public class FundingPageTest extends UztisPageTest{
         log.info("Starting test:'testNavigateToFundingPage'");
 
         try {
-            applicationFormsPage.login("test", "test");
+            TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
+//            applicationFormsPage.login("evaluation_chief", "test");
+//            log.debug("User logged in with test credentials");
 
             navigateToFundingMenu();
             log.debug("Navigating to funding menu.");
@@ -89,9 +92,10 @@ public class FundingPageTest extends UztisPageTest{
         log.info("Starting test:'testFundApplication'");
 
         try {
-
-            applicationFormsPage.login("test", "test");
+            TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
+//            applicationFormsPage.login("evaluation_chief", "test");
+//            log.debug("User logged in with test credentials");
 
             getAndInsertInvitationCodeText();
             log.debug("Invitation code inserted.");

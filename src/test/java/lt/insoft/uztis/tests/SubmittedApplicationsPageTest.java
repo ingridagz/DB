@@ -3,6 +3,7 @@ package lt.insoft.uztis.tests;
 import lt.insoft.uztis.pages.ApplicationFormsPage;
 import lt.insoft.uztis.pages.InvitationsPage;
 import lt.insoft.uztis.pages.SubmittedApplicationsPage;
+import lt.insoft.uztis.tests.utils.TestUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -73,8 +74,10 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
         log.info("Starting test:'testNavigateToSubmittedApplicationsPage'");
 
         try {
-            applicationFormsPage.login("test", "test");
+            TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
+//            applicationFormsPage.login("evaluation_chief", "test");
+//            log.debug("User logged in with test credentials");
 
             navigateToSubmittedApplicationsMenu();
             log.debug("Navigating to submitted applications menu.");
@@ -99,8 +102,10 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
         log.info("Starting test:'testGoToSubmitApplication'");
 
         try {
-            applicationFormsPage.login("test", "test");
+            TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
+//            applicationFormsPage.login("evaluation_chief", "test");
+//            log.debug("User logged in with test credentials");
 
             getAndInsertInvitationCodeText();
 
@@ -127,8 +132,10 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
         log.info("Starting test:'testFillNewVUIPApplicationFA'");
 
         try {
-            applicationFormsPage.login("test", "test");
-            log.debug("User logged in with test credentials.");
+            TestUtils.loginAllTests(driver);
+            log.debug("User logged in with test credentials");
+//            applicationFormsPage.login("evaluation_chief", "test");
+//            log.debug("User logged in with test credentials.");
 
             getAndInsertInvitationCodeText();
             log.debug("Invitation code inserted.");
@@ -529,8 +536,10 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
         log.info("Starting test:'testAddEvaluators'");
 
         try {
-            applicationFormsPage.login("test", "test");
-            log.debug("User logged in with test credentials.");
+            TestUtils.loginAllTests(driver);
+            log.debug("User logged in with test credentials");
+//            applicationFormsPage.login("evaluation_chief", "test");
+//            log.debug("User logged in with test credentials.");
 
             getAndInsertInvitationCodeText();
             log.debug("Invitation code inserted.");
@@ -561,7 +570,39 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.error("Test 'testAddEvaluators' failed with error: {}", e.getMessage(), e);
             throw e;
         }
+    }
 
+    @Test
+    void testCreateProjects() {
+
+        log.info("Starting test:'testCreateProjects'");
+
+        try {
+            TestUtils.loginAllTests(driver);
+            log.debug("User logged in with test credentials");
+//            applicationFormsPage.login("evaluation_chief", "test");
+//            log.debug("User logged in with test credentials.");
+
+            getAndInsertInvitationCodeText();
+            log.debug("Invitation code inserted.");
+
+            submittedApplicationsPage.clickButtonActionApplication();
+            log.debug("Clicked on 'Action Application' button.");
+
+            submittedApplicationsPage.clickButtonCreateProjects();
+            log.debug("Clicked on 'Create Projects' button.");
+
+            submittedApplicationsPage.clickButtonProjectsConfirmation();
+            log.debug("Clicked on 'Create Projects' confirmation button.");
+
+            applicationFormsPage.verifySuccessMessage("Projektai sėkmingai sukurti..");
+            log.info("Verified success message");
+
+            log.info("Test 'testCreateProjects' completed successfully.");
+        } catch (AssertionError | Exception e) {
+            log.error("Test 'testCreateProjects' failed with error: {}", e.getMessage(), e);
+            throw e;
+        }
     }
 
 
@@ -571,8 +612,10 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
         log.info("Starting test:'testFillNewDVPApplicationFA'");
 
         try {
-            applicationFormsPage.login("test", "test");
-            log.debug("User logged in with test credentials.");
+            TestUtils.loginAllTests(driver);
+            log.debug("User logged in with test credentials");
+//            applicationFormsPage.login("evaluation_chief", "test");
+//            log.debug("User logged in with test credentials.");
 
             getAndInsertInvitationCodeText();
             log.debug("Invitation code inserted.");
