@@ -2,6 +2,8 @@ package lt.insoft.uztis.tests.utils;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 
 import java.io.File;
@@ -10,11 +12,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import static java.lang.invoke.MethodHandles.lookup;
+import static lt.insoft.uztis.tests.utils.FailureWatcher.driver;
 import static org.slf4j.LoggerFactory.getLogger;
 
 public class TestUtils {
@@ -59,7 +63,7 @@ public class TestUtils {
     }
 
 
-    public static final String DEFAULT_USERNAME = "evaluation_chief";
+    public static final String DEFAULT_USERNAME = "adele.kutiene@uzt.lt";
     public static final String DEFAULT_PASSWORD = "test";
 
 //    evaluation_chief / test — Vaitkuvienė Lijana
@@ -87,7 +91,10 @@ public class TestUtils {
         }
     }
 
-
+    public static void clickOutsideDropdown(WebDriver driver) {
+        WebElement body = driver.findElement(By.cssSelector("h3.my-3"));
+        body.click();
+    }
 
 //    public static String getRandomCode() {
 //        // Generuojame 2 atsitiktinius skaitmenis

@@ -18,6 +18,8 @@ import org.openqa.selenium.WebDriver;
 import static java.lang.invoke.MethodHandles.lookup;
 import static org.slf4j.LoggerFactory.getLogger;
 
+
+
 public class SubmittedApplicationsPage extends UztisPage {
 
     private static final Logger log = getLogger(lookup().lookupClass());
@@ -68,14 +70,19 @@ public class SubmittedApplicationsPage extends UztisPage {
     //application form step 1
     //------------------------------
 
-    @FindBy(xpath = "//input[@name='mat-radio-group-0' and @value='FA']")
+//    @FindBy(xpath = "//input[@name='mat-radio-group-0' and @value='FA']")
+//    @FindBy(xpath = "//input[@name=\"mat-radio-group-0\" and @value=\"PERSON\"]")
+@FindBy(xpath = "//input[@type='radio' and @value='PERSON']")
     WebElement radioButtonFA;
+
+    @FindBy(xpath = "//mat-label[contains(text(), 'Projekto teikėjo planuojama vykdyti veikla, kuriai prašoma subsidija, kodas pagal EVRK')]")
+    WebElement dropdownButtonEVRK_VUI;
 
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'El. pašto adresas')]//input")
     WebElement inputEMail;
 
-    @FindBy(xpath = "//mat-label[contains(text(), 'Projekto teikėjo planuojama vykdyti veikla, kuriai prašoma subsidija, kodas pagal EVRK')]")
-    WebElement dropdownButtonEVRK_VUI;
+    @FindBy(xpath = "//mat-select[contains(@class, \"mat-mdc-select\")]")
+    WebElement dropdownButtonApplicant;
 
     //DVP
     @FindBy(xpath = "//mat-label[contains(text(), 'Paraiškos teikėjo vykdoma veikla, kodas pagal EVRK')]")
@@ -93,7 +100,7 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "//mat-label[contains(text(), 'Miestas')]/ancestor::mat-form-field")
     WebElement dropdownAddressCity;
     @FindBy(xpath = "//input[@placeholder='Ieškoti...']")
-    WebElement dropdownAddressCitySearch;
+    WebElement dropdownSearch;
 
     @FindBy(xpath = "//mat-label[contains(text(), 'Gatvė')]/following::mat-select[1]")
     WebElement dropdownAddressStreet;
@@ -433,6 +440,9 @@ public class SubmittedApplicationsPage extends UztisPage {
     //evaluations
     //---------------
 
+    @FindBy(xpath = "//mat-label[contains(text(), 'Vertintojas')]/following::mat-select[1]")
+    WebElement dropdownButtonEvaluator;
+
     @FindBy(xpath = "//div[contains(@class, 'mat-mdc-form-field-infix')]//input[@type='text' and contains(@class, 'mat-datepicker-input')]")
     WebElement firstEvaluationEndDate;
     @FindBy(xpath = "(//div[contains(@class, 'mat-mdc-form-field-infix')]//input[@type='text' and contains(@class, 'mat-datepicker-input')])[2]")
@@ -487,6 +497,7 @@ public class SubmittedApplicationsPage extends UztisPage {
             buttonAddJobPlace.click();
         }
     }
+
 
     public void clickButtonAddEvaluators() {
         buttonAddEvaluators.click();
@@ -543,6 +554,8 @@ public class SubmittedApplicationsPage extends UztisPage {
         inputEMail.sendKeys(emailAddress);
     }
 
+
+
     public void selectValueByListEVRK_VUI(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
@@ -597,6 +610,48 @@ public class SubmittedApplicationsPage extends UztisPage {
         }
     }
 
+
+
+    public void selectValueApplicant_FA(String valueToSelect) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonApplicant)).click();
+            log.info("Dropdown opened.");
+
+            WebElement searchInput = wait.until(ExpectedConditions.visibilityOf(dropdownSearch));
+            searchInput.clear();
+            searchInput.sendKeys(valueToSelect);
+            log.debug("Entered search: '{}'", valueToSelect);
+
+            // Trumpas laukimas, kol dropdown persikraus
+            Thread.sleep(500);
+
+            // Tikslus xpath pagal realų DOM
+            String xpath = String.format("//mat-option//span[contains(text(), '%s')]", valueToSelect);
+            WebElement option = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+
+            // Paspaudžiam pasirinkimą
+            try {
+                option.click();
+            } catch (Exception e) {
+                log.warn("Normalus click nepavyko, bandau JS click: {}", e.getMessage());
+                js.executeScript("arguments[0].click();", option);
+            }
+
+            log.info("Pasirinkta reikšmė: '{}'", option.getText().trim());
+
+            // Palaukiam, kol dropdown užsidarys
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//mat-option")));
+
+        } catch (Exception e) {
+            log.error("Nepavyko pasirinkti reikšmės '{}': {}", valueToSelect, e.getMessage(), e);
+            throw new RuntimeException("Nepavyko pasirinkti reikšmės iš dropdown'o: " + valueToSelect, e);
+        }
+    }
+
+
     public void selectValueByListEVRK_DVP(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
@@ -642,6 +697,7 @@ public class SubmittedApplicationsPage extends UztisPage {
             throw new RuntimeException("Failed to select from the list", e);
         }
     }
+
 
     //address
     //----------------------------------
@@ -715,9 +771,9 @@ public class SubmittedApplicationsPage extends UztisPage {
         }
 
         try {
-            wait.until(ExpectedConditions.elementToBeClickable(dropdownAddressCitySearch)).click();
-            dropdownAddressCitySearch.clear();
-            dropdownAddressCitySearch.sendKeys(valueToSelect);
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownSearch)).click();
+            dropdownSearch.clear();
+            dropdownSearch.sendKeys(valueToSelect);
 
             // Laukiame, kol atsiras bent vienas variantas
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//mat-option")));
@@ -1934,6 +1990,184 @@ public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
 
     //evaluations
 //---------------------------
+
+//    public void selectValueByListEvaluators(String valueToSelect) {
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+//
+//        log.info("Located the dropdown search field.");
+//
+//        try {
+//            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonEvaluator)).click();
+//            log.info("Dropdown city is opened.");
+//        } catch (Exception e) {
+//            log.error("Dropdown city click failed: {}", e.getMessage());
+//            return;
+//        }
+//
+//        try {
+//            wait.until(ExpectedConditions.elementToBeClickable(dropdownSearch)).click();
+//            dropdownSearch.clear();
+//            dropdownSearch.sendKeys(valueToSelect);
+//
+//            // Laukiame, kol atsiras bent vienas variantas
+//            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//mat-option")));
+//
+//            log.info("Searched for value: '{}'", valueToSelect);
+//        } catch (Exception e) {
+//            log.error("Failed to enter search value: {}", e.getMessage());
+//            return;
+//        }
+//
+//        try {
+//            String optionXPath = "//mat-option//span[contains(@class, 'area-center') and text()='" + valueToSelect + "']";
+//            WebElement correctOption = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(optionXPath)));
+//            correctOption.click();
+//
+//            log.info("Successfully selected: '{}'", valueToSelect);
+//        } catch (Exception e) {
+//            log.error("Failed to select correct dropdown option: {}", e.getMessage());
+//        }
+//    }
+
+//    public void selectValueByListEvaluators(String valueToSelect) {
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+//
+//        log.info("Trying to open evaluator dropdown.");
+//
+//        try {
+//            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonEvaluator)).click();
+//            log.info("Dropdown opened.");
+//        } catch (Exception e) {
+//            log.error("Failed to open dropdown: {}", e.getMessage());
+//            return;
+//        }
+//
+//        try {
+//            wait.until(ExpectedConditions.elementToBeClickable(dropdownSearch)).click();
+//            dropdownSearch.clear();
+//            dropdownSearch.sendKeys(valueToSelect);
+//            log.info("Search value entered: '{}'", valueToSelect);
+//
+//            // Laukiame, kol pasirodys bent vienas pasirinkimas
+//            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//mat-option")));
+//        } catch (Exception e) {
+//            log.error("Failed to search for value: {}", e.getMessage());
+//            return;
+//        }
+//
+//        try {
+//            // Tikslus tekstas su normalize-space
+//            String optionXPath = "//mat-option//span[contains(@class, 'area-center') and normalize-space(text())='" + valueToSelect + "']";
+//            WebElement correctOption = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(optionXPath)));
+//            correctOption.click();
+//            log.info("Successfully selected evaluator: '{}'", valueToSelect);
+//
+//            // Patikriname, ar pasirinktas tekstas atsispindi dropdown'e
+//            wait.until(ExpectedConditions.textToBePresentInElementLocated(
+//                    By.cssSelector("mat-select span.mat-select-value-text"),
+//                    valueToSelect
+//            ));
+//        } catch (Exception e) {
+//            log.error("Failed to select the correct dropdown option: {}", e.getMessage());
+//        }
+//    }
+
+
+    public void clickElementByTextInDropdown(String visibleText) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
+        try {
+            String optionXPath = "//mat-option//span[normalize-space(text())='" + visibleText + "']";
+            WebElement optionToClick = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(optionXPath)));
+            optionToClick.click();
+            log.info("Clicked on dropdown item with text: '{}'", visibleText);
+        } catch (Exception e) {
+            log.error("Could not find or click dropdown option '{}': {}", visibleText, e.getMessage());
+            throw e;
+        }
+    }
+
+//    public void selectValueByListEvaluators(String valueToSelect) {
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+//
+//        try {
+//            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonEvaluator)).click();
+//            log.info("Evaluator dropdown opened.");
+//
+//            wait.until(ExpectedConditions.elementToBeClickable(dropdownSearch)).click();
+//            dropdownSearch.clear();
+//            dropdownSearch.sendKeys(valueToSelect);
+//
+//            // Laukiam, kol bent viena opcija atsiras
+//            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//mat-option")));
+//
+//            // Naudojam bendrą metodą
+//            clickElementByTextInDropdown(valueToSelect);
+//
+//            // Patvirtinam, kad pasirinkta reikšmė atsidūrė dropdown'e
+//            wait.until(ExpectedConditions.textToBePresentInElementLocated(
+//                    By.cssSelector("mat-select span.mat-select-value-text"),
+//                    valueToSelect
+//            ));
+//        } catch (Exception e) {
+//            log.error("Failed in selectValueByListEvaluators: {}", e.getMessage());
+//            throw e;
+//        }
+//    }
+
+    public void clickOutsideDropdown() {
+        WebElement header = driver.findElement(By.cssSelector("h3.my-3"));
+        header.click();
+    }
+
+    private String normalize(String s) {
+        if (s == null) return "";
+        return s.replaceAll("\\s+", " ").trim().toLowerCase();
+    }
+
+    public void selectValueByListEvaluators(String valueToSelect) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonEvaluator)).click();
+            log.info("Evaluator dropdown opened.");
+
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownSearch)).click();
+            dropdownSearch.clear();
+            dropdownSearch.sendKeys(valueToSelect);
+
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//mat-option")));
+
+            clickElementByTextInDropdown(valueToSelect);
+
+            clickOutsideDropdown();
+
+            // Palaukiam, kol dropdown užsidarys (t.y. nebeliks mat-option elementų)
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//mat-option")));
+
+            // Tikrinam ar pasirinktas tekstas matomas teisingai
+            wait.until(driver -> {
+                try {
+                    String selectedText = driver.findElement(
+                            By.cssSelector(".mat-mdc-select-value-text mat-select-trigger span span")
+                    ).getText().trim();
+                    log.debug("Dropdown selected evaluator raw text: '{}'", selectedText);
+                    return normalize(selectedText).contains(normalize(valueToSelect));
+                } catch (Exception e) {
+                    log.warn("Nepavyko gauti pasirinktos reikšmės: {}", e.getMessage());
+                    return false;
+                }
+            });
+
+            log.info("Evaluator successfully selected: {}", valueToSelect);
+
+        } catch (Exception e) {
+            log.error("Failed in selectValueByListEvaluators: {}", e.getMessage(), e);
+            throw e;
+        }
+    }
+
+
     public void enterFirstEvaluationEndDate() {
         LocalDate today = LocalDate.now();
         LocalDate futureDate = today.plusDays(1);

@@ -76,8 +76,6 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
         try {
             TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
-//            applicationFormsPage.login("evaluation_chief", "test");
-//            log.debug("User logged in with test credentials");
 
             navigateToSubmittedApplicationsMenu();
             log.debug("Navigating to submitted applications menu.");
@@ -104,8 +102,6 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
         try {
             TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
-//            applicationFormsPage.login("evaluation_chief", "test");
-//            log.debug("User logged in with test credentials");
 
             getAndInsertInvitationCodeText();
 
@@ -134,8 +130,6 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
         try {
             TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
-//            applicationFormsPage.login("evaluation_chief", "test");
-//            log.debug("User logged in with test credentials.");
 
             getAndInsertInvitationCodeText();
             log.debug("Invitation code inserted.");
@@ -149,13 +143,20 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.clickRadioButtonFA();
             log.debug("Selected the 'RadioButtonFA' option.");
 
-            String phoneNumber = "61298745";
-            submittedApplicationsPage.enterPhoneNumber(phoneNumber);
-            log.debug("Entered phone number: '{}'.", phoneNumber);
+            String applicant = "Pavardenis GR777";
+            submittedApplicationsPage.selectValueApplicant_FA(applicant);
+            log.debug("Selected applicant: '{}'.", applicant);
 
-            String emailInput = "test@autotest.com";
-            submittedApplicationsPage.enterEmailAddress(emailInput);
-            log.debug("Entered email: '{}'.", emailInput);
+//            submittedApplicationsPage.clickRadioButtonFA();
+//            log.debug("Selected the 'RadioButtonFA' option.");
+//
+//            String phoneNumber = "61298745";
+//            submittedApplicationsPage.enterPhoneNumber(phoneNumber);
+//            log.debug("Entered phone number: '{}'.", phoneNumber);
+//
+//            String emailInput = "test@autotest.com";
+//            submittedApplicationsPage.enterEmailAddress(emailInput);
+//            log.debug("Entered email: '{}'.", emailInput);
 
             String evrk = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
             submittedApplicationsPage.selectValueByListEVRK_VUI(evrk);
@@ -531,15 +532,13 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
     }
 
     @Test
-    void testAddEvaluators() {
+    void testAddEvaluators_VUI_PVK() throws InterruptedException {
 
         log.info("Starting test:'testAddEvaluators'");
 
         try {
             TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
-//            applicationFormsPage.login("evaluation_chief", "test");
-//            log.debug("User logged in with test credentials.");
 
             getAndInsertInvitationCodeText();
             log.debug("Invitation code inserted.");
@@ -558,6 +557,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             submittedApplicationsPage.enterThirdEvaluationEndDate();
             log.debug("Entered third evaluation date.");
+
+            String expectedEvaluator = "Adelė Kutienė";
+            submittedApplicationsPage.selectValueByListEvaluators(expectedEvaluator);
 
             submittedApplicationsPage.clickButtonAddEvaluatorsConfirmation();
             log.debug("Clicked on 'Add Evaluators' confirmation button.");
@@ -580,8 +582,6 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
         try {
             TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
-//            applicationFormsPage.login("evaluation_chief", "test");
-//            log.debug("User logged in with test credentials.");
 
             getAndInsertInvitationCodeText();
             log.debug("Invitation code inserted.");
@@ -629,13 +629,18 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.clickRadioButtonFA();
             log.debug("Selected the 'RadioButtonFA' option.");
 
-            String phoneNumber = "61298745";
-            submittedApplicationsPage.enterPhoneNumber(phoneNumber);
-            log.debug("Entered phone number: '{}'.", phoneNumber);
+            String applicant = "Pavardenis GR777";
+            submittedApplicationsPage.selectValueApplicant_FA(applicant);
+            log.debug("Selected applicant: '{}'.", applicant);
 
-            String emailInput = "test@autotest.com";
-            submittedApplicationsPage.enterEmailAddress(emailInput);
-            log.debug("Entered email: '{}'.", emailInput);
+
+//            String phoneNumber = "61298745";
+//            submittedApplicationsPage.enterPhoneNumber(phoneNumber);
+//            log.debug("Entered phone number: '{}'.", phoneNumber);
+//
+//            String emailInput = "test@autotest.com";
+//            submittedApplicationsPage.enterEmailAddress(emailInput);
+//            log.debug("Entered email: '{}'.", emailInput);
 
             //DVP
             invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationOne, true);
@@ -984,19 +989,19 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             //--------------------
 
-//            submittedApplicationsPage.clickButtonSaveDraft();
-//            log.debug("Clicked 'SaveDraft' button after checkboxes.");
-//
-//            applicationFormsPage.verifySuccessMessage("Ruošinys sėkmingai išsaugotas.");
-//
-//            submittedApplicationsPage.clickButtonSubmit();
-//            log.debug("Clicked 'Submit' button after checkboxes.");
-//
-//            submittedApplicationsPage.clickButtonSubmitConfirmation();
-//            log.debug("Clicked 'SubmitConfirmation' button after checkboxes.");
-//
-//            applicationFormsPage.verifySuccessMessage("Paraiška sėkmingai pateikta ir užregistruota.");
-//            log.info("Verified success message");
+            submittedApplicationsPage.clickButtonSaveDraft();
+            log.debug("Clicked 'SaveDraft' button after checkboxes.");
+
+            applicationFormsPage.verifySuccessMessage("Ruošinys sėkmingai išsaugotas.");
+
+            submittedApplicationsPage.clickButtonSubmit();
+            log.debug("Clicked 'Submit' button after checkboxes.");
+
+            submittedApplicationsPage.clickButtonSubmitConfirmation();
+            log.debug("Clicked 'SubmitConfirmation' button after checkboxes.");
+
+            applicationFormsPage.verifySuccessMessage("Paraiška sėkmingai pateikta ir užregistruota.");
+            log.info("Verified success message");
 
             log.info("Test 'testFillNewDVPApplicationFA' completed successfully.");
         } catch (AssertionError | Exception e) {
@@ -1005,6 +1010,41 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
         }
     }
 
+    @Test
+    void testAddEvaluators_DVP() {
 
+        log.info("Starting test:'testAddEvaluators'");
+
+        try {
+            TestUtils.loginAllTests(driver);
+            log.debug("User logged in with test credentials");
+
+            getAndInsertInvitationCodeText();
+            log.debug("Invitation code inserted.");
+
+            submittedApplicationsPage.clickButtonActionApplication();
+            log.debug("Clicked on 'Action Application' button.");
+
+            submittedApplicationsPage.clickButtonAddEvaluators();
+            log.debug("Clicked on 'Add Evaluators' button.");
+
+            submittedApplicationsPage.enterFirstEvaluationEndDate();
+            log.debug("Entered first evaluation date.");
+
+            String expectedEvaluator = "Adelė Kutienė";
+            submittedApplicationsPage.selectValueByListEvaluators(expectedEvaluator);
+
+            submittedApplicationsPage.clickButtonAddEvaluatorsConfirmation();
+            log.debug("Clicked on 'Add Evaluators' confirmation button.");
+
+            applicationFormsPage.verifySuccessMessage("Paraiškų vertinimai sėkmingai priskirti vertintojams.");
+            log.info("Verified success message");
+
+            log.info("Test 'testAddEvaluators' completed successfully.");
+        } catch (AssertionError | Exception e) {
+            log.error("Test 'testAddEvaluators' failed with error: {}", e.getMessage(), e);
+            throw e;
+        }
+    }
 
 }

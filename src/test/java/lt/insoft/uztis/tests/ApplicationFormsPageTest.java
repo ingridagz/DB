@@ -57,8 +57,6 @@ public class ApplicationFormsPageTest extends UztisPageTest {
 
             TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
-//            applicationFormsPage.login("evaluation_chief", "test");
-//            log.debug("User logged in with test credentials");
 
             navigateToApplicationFormsMenu();
 
@@ -96,8 +94,6 @@ public class ApplicationFormsPageTest extends UztisPageTest {
 
             TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
-//            applicationFormsPage.login("evaluation_chief", "test");
-//            log.debug("User logged in with test credentials");
 
             navigateToApplicationFormsMenu();
 
@@ -111,7 +107,7 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             //Pateiktos paraiškos priskiriamos:
             applicationFormsPage.clickRadioButtonSection();
             log.debug("Selected 'Section' radio button.");
-            String valueToSelectS = "Skyrius 1";
+            String valueToSelectS = "Priemonių organizavimo departamentas / Priemonių organizavimo 1-asis skyrius";
             applicationFormsPage.selectValueByListSection(valueToSelectS);
             log.debug("Selected a value from the 'Section' dropdown: '{}'", valueToSelectS);
 
@@ -184,8 +180,6 @@ public class ApplicationFormsPageTest extends UztisPageTest {
 
             TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
-//            applicationFormsPage.login("evaluation_chief", "test");
-//            log.debug("User logged in with test credentials");
 
             navigateToApplicationFormsMenu();
 
@@ -198,7 +192,7 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             //Pateiktos paraiškos priskiriamos:
             applicationFormsPage.clickRadioButtonMunicipality();
             log.debug("Selected 'Municipality' radio button.");
-            String valueToSelectM = "Kauno departamentas";
+            String valueToSelectM = "Priemonių organizavimo departamentas";
             applicationFormsPage.selectValueByListMunicipality(valueToSelectM);
             log.debug("Selected a value from the 'Municipality' dropdown: '{}'", valueToSelectM);
 
@@ -237,8 +231,6 @@ public class ApplicationFormsPageTest extends UztisPageTest {
 
             TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
-//            applicationFormsPage.login("evaluation_chief", "test");
-//            log.debug("User logged in with test credentials");
 
             navigateToApplicationFormsMenu();
 
@@ -287,8 +279,6 @@ public class ApplicationFormsPageTest extends UztisPageTest {
 
             TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
-//            applicationFormsPage.login("evaluation_chief", "test");
-//            log.debug("User logged in with test credentials");
 
             navigateToApplicationFormsMenu();
 
@@ -302,7 +292,7 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             //Pateiktos paraiškos priskiriamos:
             applicationFormsPage.clickRadioButtonMunicipality();
             log.debug("Selected 'Municipality' radio button.");
-            String valueToSelectM = "Kauno departamentas";
+            String valueToSelectM = "Priemonių organizavimo departamentas";
             applicationFormsPage.selectValueByListMunicipality(valueToSelectM);
             log.debug("Selected a value from the 'Municipality' dropdown: '{}'", valueToSelectM);
 
@@ -332,19 +322,19 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.enterApplicationName(applicationName);
             log.debug("Entered application name: {}", applicationName);
 
-//            applicationFormsPage.clickButtonSave();
-//            log.debug("Clicked the 'Save' button.");
+            applicationFormsPage.clickButtonSave();
+            log.debug("Clicked the 'Save' button.");
 
             //ĮDĖTI DINAMINĘ FORMĄ RANKINIU BŪDU, nes:
             //neveikia:
 //        applicationFormsPage.enterFormData("");
 
-//            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
-//            log.info("Verified success message");
-//
-//            boolean isSaveFormButtonVisible = applicationFormsPage.isButtonSaveFormDisplayed();
-//            Assertions.assertTrue(isSaveFormButtonVisible, "Save form button should be displayed.");
-//            log.info("Verified that the 'Save Form' button is displayed.");
+            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            log.info("Verified success message");
+
+            boolean isSaveFormButtonVisible = applicationFormsPage.isButtonSaveFormDisplayed();
+            Assertions.assertTrue(isSaveFormButtonVisible, "Save form button should be displayed.");
+            log.info("Verified that the 'Save Form' button is displayed.");
 
 //        TestUtils.takeScreenshot(driver, "testCreateNewVuiApplication");
 
@@ -363,8 +353,6 @@ public class ApplicationFormsPageTest extends UztisPageTest {
 
             TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
-//            applicationFormsPage.login("evaluation_chief", "test");
-//            log.debug("User logged in with test credentials");
 
             navigateToApplicationFormsMenu();
 
@@ -411,8 +399,6 @@ public class ApplicationFormsPageTest extends UztisPageTest {
 
             TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
-//            applicationFormsPage.login("evaluation_chief", "test");
-//            log.debug("User logged in with test credentials");
 
             navigateToApplicationFormsMenu();
 
@@ -426,7 +412,7 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             //Pateiktos paraiškos priskiriamos:
             applicationFormsPage.clickRadioButtonMunicipality();
             log.debug("Selected 'Municipality' radio button.");
-            String valueToSelectM = "Kauno departamentas";
+            String valueToSelectM = "Priemonių organizavimo departamentas";
             applicationFormsPage.selectValueByListMunicipality(valueToSelectM);
             log.debug("Selected a value from the 'Municipality' dropdown: '{}'", valueToSelectM);
 
@@ -468,8 +454,8 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.enterApplicationName(applicationName);
             log.debug("Entered application name: {}", applicationName);
 
-//            applicationFormsPage.clickButtonSave();
-//            log.debug("Clicked the 'Save' button.");
+            applicationFormsPage.clickButtonSave();
+            log.debug("Clicked the 'Save' button.");
 
             //ĮDĖTI DINAMINĘ FORMĄ RANKINIU BŪDU, nes:
             //neveikia:
@@ -499,8 +485,6 @@ public class ApplicationFormsPageTest extends UztisPageTest {
 
             TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
-//            applicationFormsPage.login("evaluation_chief", "test");
-//            log.debug("User logged in with test credentials");
 
             navigateToApplicationFormsMenu();
 
