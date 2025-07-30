@@ -7,7 +7,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -90,18 +93,5 @@ public class TestUtils {
             throw e;
         }
     }
-
-    public static void clickOutsideDropdown(WebDriver driver) {
-        WebElement body = driver.findElement(By.cssSelector("h3.my-3"));
-        body.click();
-    }
-
-//    public static String getRandomCode() {
-//        // Generuojame 2 atsitiktinius skaitmenis
-//        String randomDigits = RandomStringUtils.randomNumeric(2);
-//        // Pridedame "TST-" prie atsitiktinių skaitmenų
-//        return "TST-" + randomDigits;
-//    }
-
 
 }

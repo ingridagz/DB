@@ -106,6 +106,9 @@ public class ApplicationFormsPage extends UztisPage {
     @FindBy(id = "mat-button-toggle-0-button")
     WebElement buttonSaveForm;
 
+    @FindBy(xpath = "//mat-icon[text()='save']")
+    WebElement buttonSaveDynamicForm;
+
     //-------------------------------------------------------------------
 
     @FindBy(css = "tbody > tr:nth-of-type(1)")
@@ -355,6 +358,16 @@ public class ApplicationFormsPage extends UztisPage {
             log.error("Button SaveForm is not displayed", e);
             return false;
         }
+    }
+
+    public void clickButtonSaveDynamicForm() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(
+                By.cssSelector(".snackbar-container, .toast-message, .mat-snack-bar-container")));
+
+        wait.until(ExpectedConditions.elementToBeClickable(buttonSaveDynamicForm));
+        buttonSaveDynamicForm.click();
     }
 
     public boolean isButtonEditDisplayed() {

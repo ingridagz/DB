@@ -7,7 +7,21 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
+
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.time.Duration;
 
 import static java.lang.invoke.MethodHandles.lookup;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -272,7 +286,7 @@ public class ApplicationFormsPageTest extends UztisPageTest {
 //-----------------------------------------------------
 
     @Test
-    void testCreateNewDvpApplication() {
+    void testCreateNewDvpApplication() throws IOException, AWTException {
         log.info("Starting test:'testCreateNewDvpApplication'");
 
         try {
@@ -325,18 +339,30 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.clickButtonSave();
             log.debug("Clicked the 'Save' button.");
 
-            //ĮDĖTI DINAMINĘ FORMĄ RANKINIU BŪDU, nes:
-            //neveikia:
-//        applicationFormsPage.enterFormData("");
-
             applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
             log.info("Verified success message");
+
+            String json = new String(Files.readAllBytes(Paths.get("C:\\Users\\ingrida.zadorozniene\\Desktop\\Asm\\UZTIS\\UZTIS_tests\\src\\test\\resources\\DVP.json")));
+
+            StringSelection selection = new StringSelection(json);
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
+
+            Robot robot = new Robot();
+            robot.delay(500); // wait a bit
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_CONTROL);
 
             boolean isSaveFormButtonVisible = applicationFormsPage.isButtonSaveFormDisplayed();
             Assertions.assertTrue(isSaveFormButtonVisible, "Save form button should be displayed.");
             log.info("Verified that the 'Save Form' button is displayed.");
 
-//        TestUtils.takeScreenshot(driver, "testCreateNewVuiApplication");
+            applicationFormsPage.clickButtonSaveDynamicForm();
+            log.debug("Clicked 'SaveDynamicForm' button");
+
+            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            log.info("Verified success message");
 
             log.info("Test 'testCreateNewDvpApplication' completed successfully.");
         } catch (AssertionError | Exception e) {
