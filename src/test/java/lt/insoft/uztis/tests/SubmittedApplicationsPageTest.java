@@ -171,7 +171,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectDropdownAddressCountry(country);
             log.debug("Selected country: '{}'.", country);
 
-            String citySearchTerm = "Vilnius";
+            String citySearchTerm = "Klaipėda";
 
             try {
                 submittedApplicationsPage.selectDropdownAddressCity(citySearchTerm);
@@ -188,17 +188,17 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
                 Assert.fail("Test failed: " + e.getMessage());
             }
 
-            String street = "A. Domaševičiaus g.";
+            String street = "Agluonos g.";
             submittedApplicationsPage.selectDropdownAddressStreet(street);
             log.debug("Selected street: '{}'.", street);
 
-            String house = "1";
+            String house = "2";
             submittedApplicationsPage.selectDropdownAddressHouse(house);
             log.debug("Selected house: '{}'.", house);
 
-            String apartment = "1";
-            submittedApplicationsPage.selectDropdownAddressApartment(apartment);
-            log.debug("Selected apartment: '{}'.", apartment);
+//            String apartment = "1";
+//            submittedApplicationsPage.selectDropdownAddressApartment(apartment);
+//            log.debug("Selected apartment: '{}'.", apartment);
 
             submittedApplicationsPage.clickButtonConfirm();
             log.debug("Clicked 'Confirm' button.");
@@ -669,7 +669,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectDropdownAddressCountry(country);
             log.debug("Selected country: '{}'.", country);
 
-            String citySearchTerm = "Vilnius";
+            String citySearchTerm = "Klaipėda";
 
             try {
                 // Iškviečiame metodą, kuris įveda ir pasirenka miestą
@@ -688,17 +688,17 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
                 Assert.fail("Test failed: " + e.getMessage());
             }
 
-            String street = "A. Domaševičiaus g.";
+            String street = "Agluonos g.";
             submittedApplicationsPage.selectDropdownAddressStreet(street);
             log.debug("Selected street: '{}'.", street);
 
-            String house = "1";
+            String house = "2";
             submittedApplicationsPage.selectDropdownAddressHouse(house);
             log.debug("Selected house: '{}'.", house);
 
-            String apartment = "1";
-            submittedApplicationsPage.selectDropdownAddressApartment(apartment);
-            log.debug("Selected apartment: '{}'.", apartment);
+//            String apartment = "1";
+//            submittedApplicationsPage.selectDropdownAddressApartment(apartment);
+//            log.debug("Selected apartment: '{}'.", apartment);
 
             submittedApplicationsPage.clickButtonConfirm();
             log.debug("Clicked 'Confirm' button.");

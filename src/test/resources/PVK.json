@@ -1,0 +1,5185 @@
+{
+	"component": "stepper",
+	"data": {
+		"class": null,
+		"label": "Žingsnių grupė",
+		"visible": null,
+		"initialStepIndex": {
+			"function": "if (data.backFromPreview) {\n    return component.totalSteps() - 1;\n}\n\nreturn 0;",
+			"type": "MULTI_LINE_EDITOR"
+		},
+		"preserveLayoutInPreview": true
+	},
+	"children": [
+		{
+			"component": "stepper-step",
+			"data": {
+				"class": null,
+				"label": {
+					"type": "STRING",
+					"function": "Informacija apie paraiškos teikėją"
+				},
+				"style": null,
+				"visible": null,
+				"contextHelp": {
+					"type": "STRING",
+					"function": "${data?.revisionData?.['stepper-step_0']  !== undefined ? 'Reikalingas duomenų patikslinimas.' : ''}${data?.revisionData?.['stepper-step_0'] ? ' ' + data?.revisionData?.['stepper-step_0'] : ''}"
+				},
+				"bootstrapClasses": "row",
+				"preserveLayoutInPreview": true
+			},
+			"children": [
+				{
+					"component": "h3",
+					"data": {
+						"class": null,
+						"label": "Antraštė 3",
+						"visible": null,
+						"textValue": {
+							"type": "STRING",
+							"function": "Informacija apie paraiškos teikėją"
+						},
+						"preserveLayoutInPreview": true
+					}
+				},
+				{
+					"component": "client-account-selection",
+					"dataModelPath": "clientAccountSelection",
+					"data": {
+						"label": "Teikėjo informacija",
+						"visible": null,
+						"disabled": null,
+						"validators": {
+							"required": [
+								{
+									"key": "requiredValidation",
+									"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+									"value": {
+										"type": "SIMPLE",
+										"function": "true"
+									}
+								}
+							]
+						},
+						"dataModelValue": null,
+						"radioGroupLabel": {
+							"type": "STRING",
+							"function": "Pareiškėjo tipas"
+						},
+						"internalUserView": {
+							"type": "SIMPLE",
+							"function": "data?.internalUser"
+						},
+						"userSelectionLabel": {
+							"type": "STRING",
+							"function": "Paraiškos teikėjas"
+						},
+						"radioGroupContextHelp": {
+							"type": "STRING",
+							"function": ""
+						},
+						"disablePersonSelection": {
+							"type": "SIMPLE",
+							"function": "!data?.registeredPersons && !data?.registeredPersonsAsEmployers"
+						},
+						"userSelectionContextHelp": {
+							"type": "STRING",
+							"function": ""
+						},
+						"disableLegalEntitySelection": {
+							"type": "SIMPLE",
+							"function": "!data?.legalPersons"
+						}
+					}
+				},
+				{
+					"component": "container",
+					"data": {
+						"label": null,
+						"visible": {
+							"type": "SIMPLE",
+							"function": "model.clientAccountSelection"
+						},
+						"bootstrapClasses": "",
+						"preserveLayoutInPreview": true
+					},
+					"children": [
+						{
+							"component": "container",
+							"data": {
+								"class": null,
+								"label": "Konteineris",
+								"visible": null,
+								"bootstrapClasses": "d-flex row",
+								"preserveLayoutInPreview": true
+							},
+							"children": [
+								{
+									"component": "container",
+									"data": {
+										"label": "Konteineris",
+										"visible": null,
+										"bootstrapClasses": "row d-flex",
+										"preserveLayoutInPreview": false
+									},
+									"children": [
+										{
+											"component": "text-input",
+											"dataModelPath": "legalPersonCode",
+											"data": {
+												"class": null,
+												"label": {
+													"type": "STRING",
+													"function": "JAR kodas"
+												},
+												"visible": {
+													"type": "SIMPLE",
+													"function": "model.clientAccountSelection?.clientAccountType === 'LEGAL_ENTITY'"
+												},
+												"disabled": {
+													"type": "SIMPLE",
+													"function": "true"
+												},
+												"maxLength": {
+													"type": "SIMPLE",
+													"function": "255"
+												},
+												"validators": {
+													"required": [
+														{
+															"key": "requiredValidation",
+															"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+															"value": {
+																"type": "SIMPLE",
+																"function": "true"
+															}
+														}
+													]
+												},
+												"contextHelp": {
+													"type": "STRING",
+													"function": "${data?.revisionData?.['legalPersonCode'] ? data?.revisionData?.['legalPersonCode'] : ''}"
+												},
+												"dataModelValue": {
+													"expression": {
+														"type": "SIMPLE",
+														"function": "model.legalPersonCode ?? model.clientAccountSelection?.legalCode"
+													},
+													"calculationType": "AFTER_CHANGE"
+												},
+												"bootstrapClasses": "col-lg-4 col-md-6 col-sm-12"
+											}
+										},
+										{
+											"component": "text-input",
+											"dataModelPath": "personCode",
+											"data": {
+												"label": {
+													"type": "STRING",
+													"function": "Asmens kodas"
+												},
+												"visible": {
+													"type": "SIMPLE",
+													"function": "model.clientAccountSelection?.clientAccountType === 'PERSON'"
+												},
+												"disabled": {
+													"type": "SIMPLE",
+													"function": "true"
+												},
+												"maxLength": {
+													"type": "SIMPLE",
+													"function": "255"
+												},
+												"validators": {
+													"required": [
+														{
+															"key": "requiredValidation",
+															"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+															"value": {
+																"type": "SIMPLE",
+																"function": "true"
+															}
+														}
+													]
+												},
+												"contextHelp": {
+													"type": "STRING",
+													"function": "${data?.revisionData?.['personCode'] ? data?.revisionData?.['personCode'] : ''}"
+												},
+												"dataModelValue": {
+													"expression": {
+														"type": "SIMPLE",
+														"function": "model.personCode ?? model.clientAccountSelection?.personalCode"
+													},
+													"calculationType": "AFTER_CHANGE"
+												},
+												"bootstrapClasses": "col-lg-4 col-md-6 col-sm-12"
+											}
+										}
+									]
+								},
+								{
+									"component": "container",
+									"data": {
+										"label": "Konteineris",
+										"visible": null,
+										"bootstrapClasses": "d-flex row",
+										"preserveLayoutInPreview": false
+									},
+									"children": [
+										{
+											"component": "text-input",
+											"dataModelPath": "individualCertificateNo",
+											"data": {
+												"label": {
+													"type": "STRING",
+													"function": "Pažymos numeris"
+												},
+												"visible": {
+													"type": "SIMPLE",
+													"function": "model.clientAccountSelection?.clientAccountType === 'PERSON'"
+												},
+												"disabled": {
+													"type": "SIMPLE",
+													"function": "true"
+												},
+												"maxLength": {
+													"type": "SIMPLE",
+													"function": "255"
+												},
+												"validators": {
+													"required": [
+														{
+															"key": "requiredValidation",
+															"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+															"value": {
+																"type": "SIMPLE",
+																"function": "true"
+															}
+														}
+													]
+												},
+												"contextHelp": {
+													"type": "STRING",
+													"function": "${data?.revisionData?.['individualCertificateNo'] ? data?.revisionData?.['individualCertificateNo'] : ''}"
+												},
+												"dataModelValue": {
+													"expression": {
+														"type": "STRING",
+														"function": "12345678"
+													},
+													"calculationType": "IMMEDIATE"
+												},
+												"bootstrapClasses": "col-lg-4 col-md-6 col-sm-12"
+											}
+										}
+									]
+								},
+								{
+									"component": "container",
+									"data": {
+										"label": "Konteineris",
+										"visible": null,
+										"bootstrapClasses": "d-flex row",
+										"preserveLayoutInPreview": false
+									},
+									"children": [
+										{
+											"component": "text-input",
+											"dataModelPath": "pvmCode",
+											"data": {
+												"label": {
+													"type": "STRING",
+													"function": "PVM kodas"
+												},
+												"visible": null,
+												"disabled": {
+													"type": "SIMPLE",
+													"function": "true"
+												},
+												"maxLength": {
+													"type": "SIMPLE",
+													"function": "255"
+												},
+												"validators": {
+													"required": [
+														{
+															"key": "requiredValidation",
+															"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+															"value": {
+																"type": "SIMPLE",
+																"function": "true"
+															}
+														}
+													]
+												},
+												"contextHelp": {
+													"type": "STRING",
+													"function": "${data?.revisionData?.['pvmCode'] ? data?.revisionData?.['pvmCode'] : ''}"
+												},
+												"dataModelValue": {
+													"expression": {
+														"type": "SIMPLE",
+														"function": "model.clientAccountSelection?.vatCode ? (model.pvmCode || model.clientAccountSelection?.vatCode) : ''"
+													},
+													"calculationType": "AFTER_CHANGE"
+												},
+												"bootstrapClasses": "col-lg-4 col-md-6 col-sm-12"
+											}
+										}
+									]
+								},
+								{
+									"component": "address",
+									"dataModelPath": "address",
+									"data": {
+										"label": {
+											"type": "STRING",
+											"function": "Adresas"
+										},
+										"visible": null,
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "true"
+										},
+										"validators": {
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['address'] ? data?.revisionData?.['address'] : ''}"
+										},
+										"visibleFields": 4,
+										"dataModelValue": {
+											"expression": {
+												"type": "SIMPLE",
+												"function": "model.clientAccountSelection?.address"
+											},
+											"calculationType": "AFTER_CHANGE"
+										},
+										"requiredFields": 3,
+										"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+									}
+								},
+								{
+									"component": "text-input",
+									"dataModelPath": "legalPersonOwner",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "Įmonės vadovas"
+										},
+										"visible": {
+											"type": "SIMPLE",
+											"function": "model.clientAccountSelection?.clientAccountType === 'LEGAL_ENTITY'"
+										},
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "true"
+										},
+										"maxLength": {
+											"type": "SIMPLE",
+											"function": "255"
+										},
+										"validators": {
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['legalPersonOwner'] ? data?.revisionData?.['legalPersonOwner'] : ''}"
+										},
+										"dataModelValue": {
+											"expression": {
+												"type": "STRING",
+												"function": "Vadoviukas Vadoviauskas"
+											},
+											"calculationType": "IMMEDIATE"
+										},
+										"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+									}
+								},
+								{
+									"component": "checkbox",
+									"dataModelPath": "unemployed",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "Paraiškos teikėjas yra registruotas bedarbiu"
+										},
+										"visible": {
+											"type": "SIMPLE",
+											"function": "model.clientAccountSelection?.clientAccountType === 'PERSON'"
+										},
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "true"
+										},
+										"validators": {
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['unemployed'] ? data?.revisionData?.['unemployed'] : ''}"
+										},
+										"dataModelValue": {
+											"expression": {
+												"type": "SIMPLE",
+												"function": "true"
+											},
+											"calculationType": "IMMEDIATE"
+										},
+										"bootstrapClasses": "d-flex"
+									}
+								},
+								{
+									"component": "container",
+									"data": {
+										"class": {
+											"type": "STRING",
+											"function": "gap-1 flex-wrap pb-2"
+										},
+										"label": "Konteineris",
+										"visible": null,
+										"hideInPreview": true,
+										"bootstrapClasses": "d-flex",
+										"preserveLayoutInPreview": true
+									},
+									"children": [
+										{
+											"component": "paragraph",
+											"data": {
+												"class": {
+													"type": "STRING",
+													"function": "m-0"
+												},
+												"label": "Pastraipa",
+												"visible": null,
+												"textValue": {
+													"type": "STRING",
+													"function": "Netikslūs duomenys? Keitimus galite atlikti"
+												},
+												"preserveLayoutInPreview": true
+											}
+										},
+										{
+											"component": "link",
+											"data": {
+												"class": null,
+												"label": "Nuoroda",
+												"visible": null,
+												"textValue": {
+													"type": "STRING",
+													"function": "savo profilyje >"
+												},
+												"preserveLayoutInPreview": true
+											}
+										}
+									]
+								}
+							]
+						},
+						{
+							"component": "container",
+							"data": {
+								"class": null,
+								"label": "Konteineris",
+								"visible": null,
+								"bootstrapClasses": "d-flex row",
+								"preserveLayoutInPreview": true
+							},
+							"children": [
+								{
+									"component": "h3",
+									"data": {
+										"class": {
+											"type": "STRING",
+											"function": "pt-3"
+										},
+										"label": "Antraštė 3",
+										"visible": null,
+										"textValue": {
+											"type": "STRING",
+											"function": "Kontaktinė informacija"
+										},
+										"preserveLayoutInPreview": true
+									}
+								},
+								{
+									"component": "container",
+									"data": {
+										"class": null,
+										"label": "Konteineris",
+										"bootstrapClasses": "d-flex row",
+										"preserveLayoutInPreview": false
+									},
+									"children": [
+										{
+											"component": "phone-input",
+											"dataModelPath": "phoneNumber",
+											"data": {
+												"class": null,
+												"label": {
+													"type": "STRING",
+													"function": "Telefono numeris"
+												},
+												"visible": null,
+												"disabled": {
+													"type": "SIMPLE",
+													"function": "data?.revisionData && data?.revisionData?.['phoneNumber'] === undefined"
+												},
+												"validators": {
+													"required": [
+														{
+															"key": "requiredValidation",
+															"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+															"value": {
+																"type": "SIMPLE",
+																"function": "true"
+															}
+														}
+													]
+												},
+												"contextHelp": {
+													"type": "STRING",
+													"function": "${data?.revisionData?.['phoneNumber'] ? data?.revisionData?.['phoneNumber'] : ''}"
+												},
+												"dataModelValue": {
+													"expression": {
+														"type": "SIMPLE",
+														"function": "model.clientAccountSelection ? (model.phoneNumber|| model.clientAccountSelection?.phoneNumber) : ''"
+													},
+													"calculationType": "AFTER_CHANGE"
+												},
+												"showPlaceholder": true,
+												"bootstrapClasses": "col-lg-4 col-md-6 col-sm-12",
+												"validatePhoneNumber": true
+											}
+										}
+									]
+								},
+								{
+									"component": "text-input",
+									"dataModelPath": "emailAddress",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "El. pašto adresas"
+										},
+										"visible": null,
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "data?.revisionData && data?.revisionData?.['emailAddress'] === undefined"
+										},
+										"maxLength": {
+											"type": "SIMPLE",
+											"function": "255"
+										},
+										"validators": {
+											"email": null,
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['emailAddress'] ? data?.revisionData?.['emailAddress'] : ''}"
+										},
+										"dataModelValue": {
+											"expression": {
+												"type": "SIMPLE",
+												"function": "model.clientAccountSelection ? (model.emailAddress|| model.clientAccountSelection?.email) : ''"
+											},
+											"calculationType": "AFTER_CHANGE"
+										},
+										"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+									}
+								},
+								{
+									"component": "h3",
+									"data": {
+										"class": {
+											"type": "STRING",
+											"function": "pt-3"
+										},
+										"label": "Antraštė 3",
+										"visible": null,
+										"textValue": {
+											"type": "STRING",
+											"function": "Steigiama darbo vieta"
+										},
+										"preserveLayoutInPreview": true
+									}
+								},
+								{
+									"component": "radio-group",
+									"dataModelPath": "establishmentOfJob",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "Steigiama darbo vieta"
+										},
+										"visible": null,
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "data?.revisionData && data?.revisionData?.['establishmentOfJob'] === undefined"
+										},
+										"validators": {
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['establishmentOfJob'] ? data?.revisionData?.['establishmentOfJob'] : ''}"
+										},
+										"optionsList": {
+											"type": "STATIC_OPTIONS_LIST",
+											"staticOptionList": [
+												{
+													"label": " Steigiama darbo vieta sau",
+													"value": "jobForYourself"
+												},
+												{
+													"label": "Steigiama darbo vieta sau ir Užimtumo tarnybos siųstam bedarbiui (siųstiems bedarbiams)",
+													"value": "jobForYourselfAndOthers"
+												}
+											]
+										},
+										"dataModelValue": null,
+										"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12 row",
+										"displayOptionsInline": false
+									}
+								},
+								{
+									"component": "container",
+									"data": {
+										"label": "Konteineris",
+										"bootstrapClasses": "d-flex row",
+										"preserveLayoutInPreview": false
+									},
+									"children": [
+										{
+											"component": "integer-input",
+											"dataModelPath": "jobPlacesCount",
+											"data": {
+												"class": null,
+												"label": {
+													"type": "STRING",
+													"function": "Planuojamų steigti darbo vietų skaičius"
+												},
+												"visible": null,
+												"disabled": {
+													"type": "SIMPLE",
+													"function": "(model.establishmentOfJob === 'jobForYourself') || (data?.revisionData && data?.revisionData?.['jobPlacesCount'] === undefined)"
+												},
+												"maxValue": {
+													"type": "STRING",
+													"function": "2147483647"
+												},
+												"minValue": {
+													"type": "MULTI_LINE_EDITOR",
+													"function": "return model.establishmentOfJob === 'jobForYourselfAndOthers' ? 2 : 0;"
+												},
+												"validators": {
+													"required": [
+														{
+															"key": "requiredValidation",
+															"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+															"value": {
+																"type": "SIMPLE",
+																"function": "true"
+															}
+														}
+													]
+												},
+												"contextHelp": {
+													"type": "STRING",
+													"function": "${data?.revisionData?.['jobPlacesCount'] ? data?.revisionData?.['jobPlacesCount'] : ''}"
+												},
+												"dataModelValue": {
+													"expression": {
+														"type": "MULTI_LINE_EDITOR",
+														"function": "return model.establishmentOfJob === 'jobForYourself' ? '1' : (model.jobPlacesCount ? model.jobPlacesCount : '');"
+													},
+													"calculationType": "AFTER_CHANGE"
+												},
+												"bootstrapClasses": "col-lg-4 col-md-6 col-sm-12"
+											}
+										}
+									]
+								},
+								{
+									"component": "h3",
+									"data": {
+										"class": {
+											"type": "STRING",
+											"function": "pt-3"
+										},
+										"label": "Antraštė 3",
+										"style": null,
+										"visible": null,
+										"textValue": {
+											"type": "STRING",
+											"function": "Planuojama vykdyti veikla"
+										},
+										"preserveLayoutInPreview": true
+									}
+								},
+								{
+									"component": "select",
+									"dataModelPath": "activityType",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "Planuojama steigti veiklos forma"
+										},
+										"visible": null,
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "data?.revisionData && data?.revisionData?.['activityType'] === undefined"
+										},
+										"validators": {
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['activityType'] ? data?.revisionData?.['activityType'] : ''}"
+										},
+										"optionsList": {
+											"type": "STATIC_OPTIONS_LIST",
+											"staticOptionList": [
+												{
+													"label": "Individuali įmonė",
+													"value": "II"
+												},
+												{
+													"label": "Mažoji bendrija",
+													"value": "MB"
+												},
+												{
+													"label": "Uždara akcinė bendrovė",
+													"value": "UAB"
+												},
+												{
+													"label": "Viešoji įstaiga",
+													"value": "VI"
+												}
+											]
+										},
+										"dataModelValue": null,
+										"showEmptyValue": false,
+										"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+									}
+								},
+								{
+									"component": "paragraph",
+									"data": {
+										"class": {
+											"type": "STRING",
+											"function": "help-text"
+										},
+										"label": "Pastraipa",
+										"visible": null,
+										"textValue": {
+											"type": "STRING",
+											"function": "Pagal Lietuvos Respublikos Užimtumo įstatymo 47 straipsnio 1 dalį „asmenys darbo vietas sau arba sau ir Užimtumo tarnybos siųstam bedarbiui (siųstiems bedarbiams) steigia labai mažose įmonėse, kaip jos apibrėžtos Lietuvos Respublikos smulkiojo ir vidutinio verslo plėtros įstatyme."
+										},
+										"hideInPreview": true,
+										"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+										"preserveLayoutInPreview": true
+									}
+								},
+								{
+									"component": "address",
+									"dataModelPath": "addressToShowinList",
+									"data": {
+										"label": {
+											"type": "STRING",
+											"function": "Planuojamos (-ų) steigti darbo vietos (-ų) adresas"
+										},
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "data?.revisionData && data?.revisionData?.['addressToShowinList'] === undefined"
+										},
+										"validators": {
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['addressToShowinList'] ? data?.revisionData?.['addressToShowinList'] : ''}"
+										},
+										"visibleFields": 4,
+										"requiredFields": 3,
+										"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+									}
+								},
+								{
+									"component": "select",
+									"dataModelPath": "activityCode",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "Planuojama vykdyti veikla, kodas pagal EVRK"
+										},
+										"visible": null,
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "data?.revisionData && data?.revisionData?.['activityCode'] === undefined"
+										},
+										"compareBy": {
+											"type": "STRING",
+											"function": "code"
+										},
+										"validators": {
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['activityCode'] ? data?.revisionData?.['activityCode'] : ''}"
+										},
+										"optionsList": {
+											"type": "PREDEFINED_OPTIONS_LIST",
+											"optionsFromUrl": null,
+											"staticOptionList": null,
+											"predefinedOptions": {
+												"source": "evrkCodes",
+												"labelPath": "nameLt",
+												"valuePath": ""
+											}
+										},
+										"dataModelValue": null,
+										"showEmptyValue": false,
+										"showClearButton": true,
+										"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12",
+										"showOptionSearch": true,
+										"multipleOptionsSelect": true
+									}
+								},
+								{
+									"component": "radio-group",
+									"dataModelPath": "selfEmployedCancelled",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "Savarankiška veikla nebuvo vykdyta ir nutraukta?"
+										},
+										"visible": {
+											"type": "SIMPLE",
+											"function": "model.unemployed  && model.clientAccountSelection?.clientAccountType === 'PERSON'"
+										},
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "data?.revisionData && data?.revisionData?.['selfEmployedCancelled'] === undefined"
+										},
+										"validators": {
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['selfEmployedCancelled'] ? data?.revisionData?.['selfEmployedCancelled'] : ''}"
+										},
+										"optionsList": {
+											"type": "STATIC_OPTIONS_LIST",
+											"staticOptionList": [
+												{
+													"label": "Taip",
+													"value": "true"
+												},
+												{
+													"label": "Ne",
+													"value": "false"
+												}
+											]
+										},
+										"dataModelValue": null,
+										"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12",
+										"displayOptionsInline": true
+									}
+								},
+								{
+									"component": "radio-group",
+									"dataModelPath": "selfEmployed",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": " Ar šiuo metu vykdote savarankišką veiklą?"
+										},
+										"visible": {
+											"type": "SIMPLE",
+											"function": "!model.unemployed && model.clientAccountSelection?.clientAccountType === 'PERSON'"
+										},
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "data?.revisionData && data?.revisionData?.['selfEmployed'] === undefined"
+										},
+										"validators": {
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['selfEmployed'] ? data?.revisionData?.['selfEmployed'] : ''}"
+										},
+										"optionsList": {
+											"type": "STATIC_OPTIONS_LIST",
+											"staticOptionList": [
+												{
+													"label": "Taip",
+													"value": "true"
+												},
+												{
+													"label": "Ne",
+													"value": "false"
+												}
+											]
+										},
+										"dataModelValue": null,
+										"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12",
+										"displayOptionsInline": true
+									}
+								},
+								{
+									"component": "paragraph",
+									"data": {
+										"class": {
+											"type": "STRING",
+											"function": "help-text"
+										},
+										"label": "Pastraipa",
+										"visible": {
+											"type": "SIMPLE",
+											"function": "!model.unemployed && model.clientAccountSelection?.clientAccountType === 'PERSON'"
+										},
+										"textValue": {
+											"type": "STRING",
+											"function": "Jei vykdote savarankišką veiklą, veikla iki sutarties pasirašymo turės būti nutraukta."
+										},
+										"hideInPreview": true,
+										"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+										"preserveLayoutInPreview": true
+									}
+								},
+								{
+									"component": "select",
+									"dataModelPath": "activityWasCancelled",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "Vykdyta veikla (-os), kuri buvo nutraukta, kodas pagal EVRK"
+										},
+										"visible": {
+											"type": "SIMPLE",
+											"function": "model.selfEmployedCancelled === 'true'"
+										},
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "data?.revisionData && data?.revisionData?.['activityWasCancelled'] === undefined"
+										},
+										"compareBy": {
+											"type": "STRING",
+											"function": "code"
+										},
+										"validators": {
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['activityWasCancelled'] ? data?.revisionData?.['activityWasCancelled'] : ''}"
+										},
+										"optionsList": {
+											"type": "PREDEFINED_OPTIONS_LIST",
+											"optionsFromUrl": null,
+											"staticOptionList": null,
+											"predefinedOptions": {
+												"source": "evrkCodes",
+												"labelPath": "nameLt",
+												"valuePath": ""
+											}
+										},
+										"dataModelValue": null,
+										"showEmptyValue": false,
+										"showClearButton": true,
+										"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12",
+										"showOptionSearch": true,
+										"multipleOptionsSelect": true
+									}
+								},
+								{
+									"component": "paragraph",
+									"data": {
+										"class": {
+											"type": "STRING",
+											"function": "help-text"
+										},
+										"label": "Pastraipa",
+										"visible": {
+											"type": "SIMPLE",
+											"function": "model.selfEmployedCancelled === 'true'"
+										},
+										"textValue": {
+											"type": "STRING",
+											"function": "Nutrauktos veiklos kodas negali sutapti su planuojamos vykdyti veiklos kodu. Pvz.: planuojamos vykdyti veiklos „31.09 Kitų baldų gamyba“ ir nutrauktos veiklos „31.02 Virtuvės baldų gamyba“ variantas būtų neteisingas."
+										},
+										"hideInPreview": true,
+										"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+										"preserveLayoutInPreview": true
+									}
+								},
+								{
+									"component": "form-validation",
+									"data": {
+										"class": null,
+										"label": "Formos validacija",
+										"visible": {
+											"type": "SIMPLE",
+											"function": "model.selfEmployedCancelled === 'true'"
+										},
+										"validators": {
+											"evrkCodesDuplicateValidator": null
+										},
+										"hideInPreview": true,
+										"dataModelValue": {
+											"expression": {
+												"type": "MULTI_LINE_EDITOR",
+												"function": "    if (!model.activityCode || model.activityCode.length === 0 || !model.activityWasCancelled || model.activityWasCancelled.length === 0) {\r\n      return false;\r\n    }\r\n    let newActivityCodes = model.activityCode.map(it => {\r\n      const code = it.code;\r\n      const index = code.indexOf('.');\r\n      return index === -1 ? code : code.substring(0, index);\r\n    });\r\n    newActivityCodes = [...new Set(newActivityCodes)];\r\n    return model.activityWasCancelled\r\n      .map(it => it.code)\r\n      .some(oldCode => newActivityCodes.some(newCode => oldCode.startsWith(newCode + '.') || oldCode === newCode));"
+											},
+											"calculationType": "AFTER_CHANGE"
+										}
+									}
+								},
+								{
+									"component": "select",
+									"dataModelPath": "activityWillBeCancelled",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": " Vykdomos veiklos, kuri bus nutraukta, kodas pagal EVRK"
+										},
+										"visible": {
+											"type": "SIMPLE",
+											"function": "model.selfEmployed === 'true'"
+										},
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "data?.revisionData && data?.revisionData?.['activityWillBeCancelled'] === undefined"
+										},
+										"compareBy": {
+											"type": "STRING",
+											"function": "code"
+										},
+										"validators": {
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['activityWillBeCancelled'] ? data?.revisionData?.['activityWillBeCancelled'] : ''}"
+										},
+										"optionsList": {
+											"type": "PREDEFINED_OPTIONS_LIST",
+											"optionsFromUrl": null,
+											"staticOptionList": null,
+											"predefinedOptions": {
+												"source": "evrkCodes",
+												"labelPath": "nameLt",
+												"valuePath": ""
+											}
+										},
+										"dataModelValue": null,
+										"showEmptyValue": false,
+										"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12",
+										"showOptionSearch": true
+									}
+								},
+								{
+									"component": "paragraph",
+									"data": {
+										"class": {
+											"type": "STRING",
+											"function": "help-text"
+										},
+										"label": "Pastraipa",
+										"visible": {
+											"type": "SIMPLE",
+											"function": "model.selfEmployed === 'true'"
+										},
+										"textValue": {
+											"type": "STRING",
+											"function": "Nutraukiamos veiklos kodas negali sutapti su planuojamos vykdyti veiklos kodu. Pvz.: planuojamos vykdyti veiklos „31.09 Kitų baldų gamyba“ ir nutrauktos veiklos „31.02 Virtuvės baldų gamyba“ variantas būtų neteisingas."
+										},
+										"hideInPreview": true,
+										"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+										"preserveLayoutInPreview": true
+									}
+								},
+								{
+									"component": "form-validation",
+									"data": {
+										"class": null,
+										"label": "Formos validacija",
+										"visible": {
+											"type": "SIMPLE",
+											"function": "model.selfEmployed === 'true'"
+										},
+										"validators": {
+											"evrkCodesDuplicateValidator": null
+										},
+										"hideInPreview": true,
+										"dataModelValue": {
+											"expression": {
+												"type": "MULTI_LINE_EDITOR",
+												"function": "    if (!model.activityCode || model.activityCode.length === 0 || !model.activityWillBeCancelled?.code) {\r\n      return false;\r\n    }\r\n    let newActivityCodes = model.activityCode.map(it => {\r\n      const code = it.code;\r\n      const index = code.indexOf('.');\r\n      return index === -1 ? code : code.substring(0, index);\r\n    });\r\n    newActivityCodes = [...new Set(newActivityCodes)];\r\n    const oldCode = model.activityWillBeCancelled.code;\r\n    return newActivityCodes.some(newCode => oldCode.startsWith(newCode + '.') || oldCode === newCode);"
+											},
+											"calculationType": "AFTER_CHANGE"
+										}
+									}
+								},
+								{
+									"component": "checkbox-group",
+									"dataModelPath": "priorities",
+									"data": {
+										"class": {
+											"type": "STRING",
+											"function": "bold-label"
+										},
+										"label": {
+											"type": "STRING",
+											"function": "Paramos verslui kurti (darbo vietoms steigti) prioritetas (-ai), kurį (-iuos) atitinka planuojama steigti darbo vieta (-os) (toliau – Prioritetas)"
+										},
+										"style": null,
+										"visible": null,
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "data?.revisionData && data?.revisionData?.['priorities'] === undefined"
+										},
+										"validators": {
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['priorities'] ? data?.revisionData?.['priorities'] : ''}"
+										},
+										"optionsList": {
+											"type": "STATIC_OPTIONS_LIST",
+											"staticOptionList": [
+												{
+													"label": "1.1. padeda įgyvendinti skaitmeninės transformacijos tikslą, jeigu vykdant veiklą bus naudojamos, gaminamos ar vystomos skaitmeninės technologijos ar sprendimai (robotikos sprendimai, 3D spausdinimas, skaitmeninės inžinerijos sprendimai, procesų skaitmeninimas, automatika ir pramoninės automatizavimo technologijos, gamybos įrenginių valdikliai ir vykdikliai, didelių duomenų rinkinių apdorojimo infrastruktūros paslaugos, dirbtinis intelektas ir virtualioji ar papildytoji realybė (kai kuriami jais grįsti sprendimai));",
+													"value": "1.1."
+												},
+												{
+													"label": "1.2.1. vykdant veiklą sumažės gamtos ar kitų išteklių naudojimas ir (arba) atliekų kiekis arba gaminami gaminiai atitinka bent vieną iš šių sąlygų:",
+													"value": "1.2.1."
+												},
+												{
+													"label": "1.2.1.1. eksploatacijos laikotarpis bus ilgesnis, palyginti su rinkoje esančiais tais pačiais gaminiais, ir (arba) bus galimybė lengviau juos restauruoti ar pataisyti;",
+													"value": "1.2.1.1."
+												},
+												{
+													"label": "1.2.1.2. yra greičiau biologiškai suyrantys, palyginti su rinkoje esančiais tais pačiais gaminiais;",
+													"value": "1.2.1.2."
+												},
+												{
+													"label": "1.2.2. bus teikiamos gaminių taisymo ir (arba) atnaujinimo paslaugos;",
+													"value": "1.2.2."
+												},
+												{
+													"label": "1.2.3. gaminiai ar veikla bus skirti aplinkos taršai sumažinti ir (arba) oro, vandens, įskaitant paviršinį, požeminį ir jūros, telkinių būklei ir dirvožemio kokybei pagerinti;",
+													"value": "1.2.3."
+												},
+												{
+													"label": "1.2.4. bus vykdoma netinkamų naudoti daiktų perdirbimo į antrines žaliavas veikla;",
+													"value": "1.2.4."
+												}
+											]
+										},
+										"dataModelValue": null,
+										"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12",
+										"preserveLayoutInPreview": false
+									}
+								},
+								{
+									"component": "paragraph",
+									"data": {
+										"class": {
+											"type": "STRING",
+											"function": "help-text"
+										},
+										"label": "Pastraipa",
+										"visible": null,
+										"textValue": {
+											"type": "STRING",
+											"function": "Nurodyti bent vieną iš Lietuvos Respublikos socialinės apsaugos ir darbo ministro, Lietuvos Respublikos ekonomikos ir inovacijų ministro, Lietuvos Respublikos aplinkos ministro 2024 m. balandžio 3 d. įsakymo Nr. A1-252/4-184/D1-108 „Dėl paramos verslui kurti (darbo vietoms steigti) teikimo 2024 metais prioritetų nustatymo“ 1.1 arba 1.2.1-1.2.4 papunkčiuose nustatytą (-us) prioritetą (-us). 1.2.1.1 ., 1.2.1.2. papunkčius galima rinktis tik tokiu atveju, jei gaminami gaminiai. Jei planuojama (-os) steigti darbo vieta (-os) atitinka kelis prioritetus – varnele pažymėti visus atitinkančius prioritetus."
+										},
+										"hideInPreview": true,
+										"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+										"preserveLayoutInPreview": true
+									}
+								},
+								{
+									"component": "text-area",
+									"dataModelPath": "prioritiesReasoning",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "Išsamus nurodyto (-ų) prioriteto (-tų) pagrindimas"
+										},
+										"visible": null,
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "data?.revisionData && data?.revisionData?.['prioritiesReasoning'] === undefined"
+										},
+										"rowCount": {
+											"type": "SIMPLE",
+											"function": "4"
+										},
+										"maxSymbols": {
+											"type": "SIMPLE",
+											"function": "2000"
+										},
+										"validators": {
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['prioritiesReasoning'] ? data?.revisionData?.['prioritiesReasoning'] : ''}"
+										},
+										"showSymbolCount": true,
+										"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+									}
+								},
+								{
+									"component": "paragraph",
+									"data": {
+										"class": {
+											"type": "STRING",
+											"function": "help-text"
+										},
+										"label": "Pastraipa",
+										"visible": null,
+										"textValue": {
+											"type": "STRING",
+											"function": "Būtina pagrįsti kiekvieną pasirinktą prioritetą, išsamiai nurodant kaip nurodytas Prioritetas (-ai) bus pritaikomas steigiamoje (-ose) darbo vietoje (-ose)."
+										},
+										"hideInPreview": true,
+										"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+										"preserveLayoutInPreview": true
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"component": "stepper-step",
+			"data": {
+				"class": null,
+				"label": {
+					"type": "STRING",
+					"function": "Planuojamos steigti darbo vietos"
+				},
+				"contextHelp": {
+					"type": "STRING",
+					"function": "${data?.revisionData?.['stepper-step_1']  !== undefined ? 'Reikalingas duomenų patikslinimas.' : ''}${data?.revisionData?.['stepper-step_1'] ? ' ' + data?.revisionData?.['stepper-step_1'] : ''}"
+				},
+				"bootstrapClasses": "d-flex row",
+				"preserveLayoutInPreview": true
+			},
+			"children": [
+				{
+					"component": "h3",
+					"data": {
+						"class": {
+							"type": "STRING",
+							"function": "pt-3"
+						},
+						"label": "Antraštė 3",
+						"textValue": {
+							"type": "STRING",
+							"function": "Planuojamos steigti darbo vietos"
+						},
+						"preserveLayoutInPreview": true
+					}
+				},
+				{
+					"component": "repeater",
+					"dataModelPath": "workPlaces",
+					"dataModelIterable": true,
+					"data": {
+						"class": null,
+						"label": "Pasikartojanti forma",
+						"maxRows": null,
+						"minRows": {
+							"type": "STRING",
+							"function": "1"
+						},
+						"visible": null,
+						"disabled": {
+							"type": "SIMPLE",
+							"function": "(data?.revisionData && !data?.revisionData?.['stepper-step_1'])"
+						},
+						"validators": {},
+						"showAddItem": {
+							"type": "SIMPLE",
+							"function": "model.establishmentOfJob === 'jobForYourselfAndOthers'"
+						},
+						"addItemLabel": {
+							"type": "STRING",
+							"function": "Pridėti darbo vietą"
+						},
+						"dataModelValue": null,
+						"showRemoveItem": {
+							"type": "SIMPLE",
+							"function": "true"
+						},
+						"removeItemLabel": {
+							"type": "STRING",
+							"function": "Šalinti"
+						},
+						"bootstrapClasses": "d-flex row",
+						"showAddFirstItem": true,
+						"addFirstItemLabel": {
+							"type": "STRING",
+							"function": "Pridėti darbo vietą"
+						},
+						"preserveLayoutInPreview": true,
+						"showRemoveItemConfirmation": true
+					},
+					"children": [
+						{
+							"component": "h4",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "pt-3"
+								},
+								"label": "Antraštė 4",
+								"visible": null,
+								"textValue": {
+									"type": "STRING",
+									"function": "Darbo vieta ${row.index + 1}"
+								},
+								"preserveLayoutInPreview": true
+							}
+						},
+						{
+							"component": "radio-group",
+							"dataModelPath": "workCreatedFor",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Steigiama darbo vieta"
+								},
+								"visible": null,
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "true"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									]
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.workCreatedFor'] ? data?.revisionData?.['workPlaces.workCreatedFor'] : ''}"
+								},
+								"optionsList": {
+									"type": "STATIC_OPTIONS_LIST",
+									"staticOptionList": [
+										{
+											"label": "Sau",
+											"value": "self"
+										},
+										{
+											"label": "Kitam bedarbiui",
+											"value": "otherUnemployed"
+										}
+									]
+								},
+								"dataModelValue": {
+									"expression": {
+										"type": "MULTI_LINE_EDITOR",
+										"function": "return row.index === 0 ? 'self' : 'otherUnemployed';"
+									},
+									"calculationType": "AFTER_CHANGE"
+								},
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+							}
+						},
+						{
+							"component": "select",
+							"dataModelPath": "profession",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Steigiamos darbo vietos pavadinimas, kodas pagal profesijų klasifikatorių"
+								},
+								"visible": null,
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.profession'] === undefined"
+								},
+								"compareBy": {
+									"type": "STRING",
+									"function": "code"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									]
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.profession'] ? data?.revisionData?.['workPlaces.profession'] : ''}"
+								},
+								"optionsList": {
+									"type": "PREDEFINED_OPTIONS_LIST",
+									"optionsFromUrl": null,
+									"staticOptionList": null,
+									"predefinedOptions": {
+										"source": "professions",
+										"labelPath": "nameLt",
+										"valuePath": ""
+									}
+								},
+								"dataModelValue": null,
+								"showEmptyValue": false,
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12",
+								"showOptionSearch": true
+							}
+						},
+						{
+							"component": "text-area",
+							"dataModelPath": "workPlaceDescription",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Darbo funkcijos (pareigybės aprašymas)"
+								},
+								"visible": null,
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.workPlaceDescription'] === undefined"
+								},
+								"rowCount": {
+									"type": "SIMPLE",
+									"function": "4"
+								},
+								"maxSymbols": {
+									"type": "SIMPLE",
+									"function": "2000"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									]
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.workPlaceDescription'] ? data?.revisionData?.['workPlaces.workPlaceDescription'] : ''}"
+								},
+								"dataModelValue": null,
+								"showSymbolCount": true,
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+							}
+						},
+						{
+							"component": "paragraph",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "help-text"
+								},
+								"label": "Pastraipa",
+								"visible": null,
+								"textValue": {
+									"type": "STRING",
+									"function": "Nurodyti steigiamoje darbo vietoje įdarbinto darbuotojo:\n 1) Atliekamas darbo funkcijas ir pareigas.\n 2) Teises.\n 3) Atsakomybes.\n 4) Pavaldumą."
+								},
+								"hideInPreview": true,
+								"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+								"preserveLayoutInPreview": true
+							}
+						},
+						{
+							"component": "text-area",
+							"dataModelPath": "qualifications",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Kvalifikacija, kompetencija, profesiniai įgūdžiai, bendrieji gebėjimai"
+								},
+								"visible": {
+									"type": "SIMPLE",
+									"function": "model?.workPlaces?.[row.index]?.workCreatedFor === 'otherUnemployed'"
+								},
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.qualifications'] === undefined"
+								},
+								"rowCount": {
+									"type": "SIMPLE",
+									"function": "4"
+								},
+								"maxSymbols": {
+									"type": "SIMPLE",
+									"function": "2000"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									]
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.qualifications'] ? data?.revisionData?.['workPlaces.qualifications'] : ''}"
+								},
+								"dataModelValue": null,
+								"showSymbolCount": true,
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+							}
+						},
+						{
+							"component": "paragraph",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "help-text"
+								},
+								"label": "Pastraipa",
+								"visible": {
+									"type": "SIMPLE",
+									"function": "model?.workPlaces[row.index]?.workCreatedFor === 'otherUnemployed'"
+								},
+								"textValue": {
+									"type": "STRING",
+									"function": "Nurodyti įsteigtoje darbo vietoje įdarbintam darbuotojui keliamus kvalifikacinius reikalavimus, kompetencijas, profesinius įgūdžius, bendruosius gebėjimus."
+								},
+								"hideInPreview": true,
+								"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+								"preserveLayoutInPreview": true
+							}
+						},
+						{
+							"component": "h4",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "pt-3"
+								},
+								"label": "Antraštė 4",
+								"visible": {
+									"type": "SIMPLE",
+									"function": "model?.workPlaces?.[row.index]?.workCreatedFor === 'self'"
+								},
+								"textValue": {
+									"type": "STRING",
+									"function": "Paraiškos teikėjo kvalifikacija ir/arba darbo patirtis atlikti darbo funkcijas numatomoje steigti darbo vietoje"
+								},
+								"preserveLayoutInPreview": true
+							}
+						},
+						{
+							"component": "radio-group",
+							"dataModelPath": "qualificationMatchesJob",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Ar paraiškos teikėjas turi įgytą kvalifikaciją (išsilavinimą) pagal planuojamą steigti darbo vietą?"
+								},
+								"visible": {
+									"type": "SIMPLE",
+									"function": "model?.workPlaces?.[row.index]?.workCreatedFor === 'self'"
+								},
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.qualificationMatchesJob'] === undefined"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									]
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.qualificationMatchesJob'] ? data?.revisionData?.['workPlaces.qualificationMatchesJob'] : ''}"
+								},
+								"optionsList": {
+									"type": "STATIC_OPTIONS_LIST",
+									"staticOptionList": [
+										{
+											"label": "Taip",
+											"value": "true"
+										},
+										{
+											"label": "Ne",
+											"value": "false"
+										}
+									]
+								},
+								"dataModelValue": null,
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12",
+								"displayOptionsInline": true
+							}
+						},
+						{
+							"component": "text-area",
+							"dataModelPath": "applicantQualifications",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Kvalifikacija (įgytas išsilavinimas) pagal planuojamą steigti darbo vietą"
+								},
+								"visible": {
+									"type": "SIMPLE",
+									"function": "model?.workPlaces?.[row.index]?.qualificationMatchesJob === 'true'"
+								},
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.applicantQualifications'] === undefined"
+								},
+								"rowCount": {
+									"type": "SIMPLE",
+									"function": "4"
+								},
+								"maxSymbols": {
+									"type": "SIMPLE",
+									"function": "2000"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									]
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.applicantQualifications'] ? data?.revisionData?.['workPlaces.applicantQualifications'] : ''}"
+								},
+								"showSymbolCount": true,
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+							}
+						},
+						{
+							"component": "paragraph",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "help-text"
+								},
+								"label": "Pastraipa",
+								"visible": {
+									"type": "SIMPLE",
+									"function": "model?.workPlaces?.[row.index]?.qualificationMatchesJob === 'true'"
+								},
+								"textValue": {
+									"type": "STRING",
+									"function": "Jeigu paraiškos teikėjas turi įgytą kvalifikaciją steigiamai darbo vietai, būtina nurodyti kurioje mokymo įstaigoje, kada ir koks išsilavinimas (kvalifikacija) yra įgyta."
+								},
+								"hideInPreview": true,
+								"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+								"preserveLayoutInPreview": true
+							}
+						},
+						{
+							"component": "radio-group",
+							"dataModelPath": "longJobExperience",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Ar paraiškos teikėjo darbo patirtis ilgesnė nei 6 mėn. pagal naujai planuojamą steigti darbo vietą?"
+								},
+								"visible": {
+									"type": "SIMPLE",
+									"function": "model?.workPlaces?.[row.index]?.workCreatedFor === 'self'"
+								},
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.longJobExperience'] === undefined"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									]
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.longJobExperience'] ? data?.revisionData?.['workPlaces.longJobExperience'] : ''}"
+								},
+								"optionsList": {
+									"type": "STATIC_OPTIONS_LIST",
+									"staticOptionList": [
+										{
+											"label": "Taip",
+											"value": "true"
+										},
+										{
+											"label": "Ne",
+											"value": "false"
+										}
+									]
+								},
+								"dataModelValue": null,
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12",
+								"displayOptionsInline": true
+							}
+						},
+						{
+							"component": "text-area",
+							"dataModelPath": "jobExperienceDescription",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Darbo patirties aprašymas pagal planuojamą steigti darbo vietą"
+								},
+								"visible": {
+									"type": "SIMPLE",
+									"function": "model?.workPlaces?.[row.index]?.longJobExperience=== 'true'"
+								},
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.jobExperienceDescription'] === undefined"
+								},
+								"rowCount": {
+									"type": "SIMPLE",
+									"function": "4"
+								},
+								"maxSymbols": {
+									"type": "SIMPLE",
+									"function": "2000"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									]
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.jobExperienceDescription'] ? data?.revisionData?.['workPlaces.jobExperienceDescription'] : ''}"
+								},
+								"showSymbolCount": true,
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+							}
+						},
+						{
+							"component": "paragraph",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "help-text"
+								},
+								"label": "Pastraipa",
+								"visible": {
+									"type": "SIMPLE",
+									"function": "model?.workPlaces?.[row.index]?.longJobExperience=== 'true'"
+								},
+								"textValue": {
+									"type": "STRING",
+									"function": "Nurodykite darbdavio pavadinimas, profesijos (pareigų) pavadinimas, darbo pagal nurodytą profesiją laikotarpis, kita informacija, įrodanti darbo patirtį pagal planuojamos steigti darbo vietos profesiją ilgesnę nei šeši mėnesiai."
+								},
+								"hideInPreview": true,
+								"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+								"preserveLayoutInPreview": true
+							}
+						},
+						{
+							"component": "radio-group",
+							"dataModelPath": "additionalSupport",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Ar asmuo yra darbo rinkoje papildomai remiamas asmuo?"
+								},
+								"visible": null,
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.additionalSupport'] === undefined"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									]
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.additionalSupport'] ? data?.revisionData?.['workPlaces.additionalSupport'] : ''}"
+								},
+								"optionsList": {
+									"type": "STATIC_OPTIONS_LIST",
+									"staticOptionList": [
+										{
+											"label": "Taip",
+											"value": "true"
+										},
+										{
+											"label": "Ne",
+											"value": "false"
+										}
+									]
+								},
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12",
+								"displayOptionsInline": true
+							}
+						},
+						{
+							"component": "select",
+							"dataModelPath": "unemployedTargetGroup",
+							"data": {
+								"label": {
+									"type": "STRING",
+									"function": "Papildomai remiamo asmens tipas"
+								},
+								"visible": {
+									"type": "SIMPLE",
+									"function": "model?.workPlaces?.[row.index]?.additionalSupport === 'true'"
+								},
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.unemployedTargetGroup'] === undefined"
+								},
+								"compareBy": {
+									"type": "STRING",
+									"function": "code"
+								},
+								"validators": {},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.unemployedTargetGroup'] ? data?.revisionData?.['workPlaces.unemployedTargetGroup'] : ''}"
+								},
+								"optionsList": {
+									"type": "PREDEFINED_OPTIONS_LIST",
+									"optionsFromUrl": null,
+									"staticOptionList": null,
+									"predefinedOptions": {
+										"source": "unemployedTargetGroup",
+										"labelPath": "nameLt",
+										"valuePath": ""
+									}
+								},
+								"dataModelValue": null,
+								"showEmptyValue": true,
+								"showClearButton": true,
+								"bootstrapClasses": "col-lg-12 col-md-12 col-sm-12",
+								"multipleOptionsSelect": true
+							}
+						},
+						{
+							"component": "h4",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "pt-3"
+								},
+								"label": "Antraštė 4",
+								"visible": null,
+								"textValue": {
+									"type": "STRING",
+									"function": "Trumpas planuojamos steigti darbo vietos aprašymas"
+								},
+								"preserveLayoutInPreview": true
+							}
+						},
+						{
+							"component": "text-area",
+							"dataModelPath": "jobDescription",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Planuojamos steigti darbo vietos aprašymas"
+								},
+								"visible": null,
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.jobDescription'] === undefined"
+								},
+								"rowCount": {
+									"type": "SIMPLE",
+									"function": "4"
+								},
+								"maxSymbols": {
+									"type": "SIMPLE",
+									"function": "2000"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									]
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.jobDescription'] ? data?.revisionData?.['workPlaces.jobDescription'] : ''}"
+								},
+								"showSymbolCount": true,
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+							}
+						},
+						{
+							"component": "paragraph",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "help-text"
+								},
+								"label": "Pastraipa",
+								"visible": null,
+								"textValue": {
+									"type": "STRING",
+									"function": "Trumpai aprašyti numatomą vykdyti veiklą: kokie gaminiai bus gaminami ar kokios paslaugos bus teikiamos, kur bus vykdoma veikla, kaip bus organizuojamas darbas – ar darbo vietai reikalingos patalpos, ar darbo vieta bus mobili, jei mobili, kiek laiko bus vykdoma veikla pas klientą ir kiek įmonės buveinėje, kur bus laikomos darbo priemonės, nurodyti ir kitą svarbią informaciją."
+								},
+								"hideInPreview": true,
+								"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+								"preserveLayoutInPreview": true
+							}
+						},
+						{
+							"component": "text-area",
+							"dataModelPath": "processDescription",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Technologinio proceso aprašymas"
+								},
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.processDescription'] === undefined"
+								},
+								"rowCount": {
+									"type": "SIMPLE",
+									"function": "4"
+								},
+								"maxSymbols": {
+									"type": "SIMPLE",
+									"function": "2000"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									]
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.processDescription'] ? data?.revisionData?.['workPlaces.processDescription'] : ''}"
+								},
+								"showSymbolCount": true,
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+							}
+						},
+						{
+							"component": "paragraph",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "help-text"
+								},
+								"label": "Pastraipa",
+								"visible": null,
+								"textValue": {
+									"type": "STRING",
+									"function": "Technologinis darbo proceso aprašymas, kiekvienos planuojamos įsigyti darbo priemonės poreikio pagrindimas pagal steigiamos darbo vietos darbo pobūdį."
+								},
+								"hideInPreview": true,
+								"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+								"preserveLayoutInPreview": true
+							}
+						},
+						{
+							"component": "radio-group",
+							"dataModelPath": "workPlaceRenovation",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Ar planuojami patalpų remonto darbai? "
+								},
+								"visible": null,
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.workPlaceRenovation'] === undefined"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									]
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.workPlaceRenovation'] ? data?.revisionData?.['workPlaces.workPlaceRenovation'] : ''}"
+								},
+								"optionsList": {
+									"type": "STATIC_OPTIONS_LIST",
+									"staticOptionList": [
+										{
+											"label": "Taip",
+											"value": "true"
+										},
+										{
+											"label": "Ne",
+											"value": "false"
+										}
+									]
+								},
+								"dataModelValue": null,
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12",
+								"displayOptionsInline": true
+							}
+						},
+						{
+							"component": "text-area",
+							"dataModelPath": "workPlaceRenovationDescription",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Patalpų remonto darbų aprašymas"
+								},
+								"visible": {
+									"type": "SIMPLE",
+									"function": "model?.workPlaces[row.index]?.workPlaceRenovation === 'true'"
+								},
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.workPlaceRenovationDescription'] === undefined"
+								},
+								"rowCount": {
+									"type": "SIMPLE",
+									"function": "4"
+								},
+								"maxSymbols": {
+									"type": "SIMPLE",
+									"function": "2000"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									]
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.workPlaceRenovationDescription'] ? data?.revisionData?.['workPlaces.workPlaceRenovationDescription'] : ''}"
+								},
+								"showSymbolCount": true,
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+							}
+						},
+						{
+							"component": "paragraph",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "help-text"
+								},
+								"label": "Pastraipa",
+								"visible": {
+									"type": "SIMPLE",
+									"function": "model?.workPlaces[row.index]?.workPlaceRenovation === 'true'"
+								},
+								"textValue": {
+									"type": "STRING",
+									"function": "Aprašyti kokie bus atlikti patalpų, kuriose bus įsteigta darbo vieta, remonto darbai, pagrindimui galima pridėti patalpų iki remonto nuotraukas, pasirenkant paraiškos priedų sąraše punktą „kiti dokumentai“."
+								},
+								"hideInPreview": true,
+								"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+								"preserveLayoutInPreview": true
+							}
+						},
+						{
+							"component": "container",
+							"data": {
+								"class": null,
+								"label": "Konteineris",
+								"visible": null,
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12",
+								"preserveLayoutInPreview": false
+							},
+							"children": [
+								{
+									"component": "date-input",
+									"dataModelPath": "workPlaceCreationDate",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "Darbo vietos planuojama įsteigimo data"
+										},
+										"minDate": null,
+										"visible": null,
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "data?.revisionData && data?.revisionData?.['workPlaces.workPlaceCreationDate'] === undefined"
+										},
+										"validators": {
+											"date": [
+												{
+													"key": "minDate",
+													"label": "IFormsValidatorConfig.validators.date.params.minDate",
+													"value": {
+														"type": "MULTI_LINE_EDITOR",
+														"function": "const acceptanceEndDateTime = DateUtils.parseISO(data.acceptanceEndDateTime);\nreturn DateUtils.format(DateUtils.add(acceptanceEndDateTime, {days: Number(data.PLANNED_ESTABLISHED_JOB_DAYS)}), 'yyyy-MM-dd');"
+													}
+												},
+												{
+													"key": "maxDate",
+													"label": "IFormsValidatorConfig.validators.date.params.maxDate",
+													"value": {
+														"type": "STRING",
+														"bindings": [],
+														"function": ""
+													}
+												}
+											],
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['workPlaces.workPlaceCreationDate'] ? data?.revisionData?.['workPlaces.workPlaceCreationDate'] : ''}"
+										},
+										"bootstrapClasses": "col-lg-6 col-md-12 col-sm-12"
+									}
+								}
+							]
+						},
+						{
+							"component": "paragraph",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "help-text"
+								},
+								"label": "Pastraipa",
+								"visible": null,
+								"textValue": {
+									"type": "STRING",
+									"function": "Darbo vietos turi būti įsteigtos per 10 mėnesių nuo sutarties pasirašymo dienos."
+								},
+								"hideInPreview": true,
+								"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+								"preserveLayoutInPreview": true
+							}
+						},
+						{
+							"component": "select",
+							"dataModelPath": "workingHours",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Darbo laiko norma ir darbo laiko režimas"
+								},
+								"visible": null,
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.workingHours'] === undefined"
+								},
+								"compareBy": {
+									"type": "STRING",
+									"function": "code"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									]
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.workingHours'] ? data?.revisionData?.['workPlaces.workingHours'] : ''}"
+								},
+								"optionsList": {
+									"type": "PREDEFINED_OPTIONS_LIST",
+									"optionsFromUrl": null,
+									"staticOptionList": null,
+									"predefinedOptions": {
+										"source": "vUIWorkingTimeMode",
+										"labelPath": "nameLt",
+										"valuePath": ""
+									}
+								},
+								"showEmptyValue": false,
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+							}
+						},
+						{
+							"component": "paragraph",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "help-text"
+								},
+								"label": "Pastraipa",
+								"visible": null,
+								"textValue": {
+									"type": "STRING",
+									"function": "Įvardinkite kiek valandų per savaitę dirbs įdarbintas darbuotojas. Nurodyti, ar steigiama darbo vieta atitiks Lietuvos Respublikos darbo kodekse numatytą savaitės darbo laiko trukmę."
+								},
+								"hideInPreview": true,
+								"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+								"preserveLayoutInPreview": true
+							}
+						},
+						{
+							"component": "text-input",
+							"dataModelPath": "workingHoursOther",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Darbo laiko norma ir darbo laiko režimas"
+								},
+								"visible": {
+									"type": "SIMPLE",
+									"function": "model.workPlaces[row.index]?.workingHours?.code === 'OTHER'"
+								},
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.workingHoursOther'] === undefined"
+								},
+								"maxLength": {
+									"type": "SIMPLE",
+									"function": "255"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									]
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.workingHoursOther'] ? data?.revisionData?.['workPlaces.workingHoursOther'] : ''}"
+								},
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+							}
+						},
+						{
+							"component": "decimal-input",
+							"dataModelPath": "jobWage",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Planuojamas mokėti bruto darbo užmokestis arba su darbo santykiais susijusios pajamos per mėn., Eur"
+								},
+								"visible": null,
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.jobWage'] === undefined"
+								},
+								"maxValue": {
+									"type": "STRING",
+									"function": "20"
+								},
+								"minValue": {
+									"type": "STRING",
+									"function": "0"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									],
+									"numberValidator": [
+										{
+											"key": "minNumber",
+											"label": "IFormsValidatorConfig.validators.numberValidator.params.minNumber",
+											"value": {
+												"type": "MULTI_LINE_EDITOR",
+												"function": "const createdForSelf = model?.workPlaces?.[row.index]?.workCreatedFor === 'self';\nconst createdForOther = model?.workPlaces?.[row.index]?.workCreatedFor === 'otherUnemployed';\nconst fullTime = model?.workPlaces?.[row.index]?.workingHours?.code === '8H_5D';\nconst validCompanyType = model?.activityType === 'UAB' || model?.activityType === 'VI';\n\nif ((createdForSelf && validCompanyType && fullTime) \n|| (createdForOther && fullTime)) {\n    return data.MINIMUM_WAGE_EUR\n}\nreturn 0;"
+											}
+										},
+										{
+											"key": "maxNumber",
+											"label": "IFormsValidatorConfig.validators.numberValidator.params.maxNumber",
+											"value": null
+										}
+									],
+									"nonZeroNumberValidator": null
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.jobWage'] ? data?.revisionData?.['workPlaces.jobWage'] : ''}"
+								},
+								"decimalPlaces": {
+									"type": "STRING",
+									"function": "2"
+								},
+								"dataModelValue": null,
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12",
+								"previewAllDecimalPlaces": true
+							}
+						},
+						{
+							"component": "paragraph",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "help-text"
+								},
+								"label": "Pastraipa",
+								"visible": null,
+								"textValue": {
+									"type": "STRING",
+									"function": "Turi būti mokamas didesnis nei MMA darbo užmokestis už kvalifikuotą darbą, dirbant pilną darbo laiką."
+								},
+								"hideInPreview": true,
+								"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+								"preserveLayoutInPreview": true
+							}
+						},
+						{
+							"component": "text-area",
+							"dataModelPath": "paymentType",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Darbo užmokesčio mokėjimo tvarka"
+								},
+								"visible": null,
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.paymentType'] === undefined"
+								},
+								"rowCount": {
+									"type": "SIMPLE",
+									"function": "4"
+								},
+								"maxSymbols": {
+									"type": "SIMPLE",
+									"function": "2000"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									]
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.paymentType'] ? data?.revisionData?.['workPlaces.paymentType'] : ''}"
+								},
+								"showSymbolCount": true,
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+							}
+						},
+						{
+							"component": "paragraph",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "help-text"
+								},
+								"label": "Pastraipa",
+								"visible": null,
+								"textValue": {
+									"type": "STRING",
+									"function": "Prašome nurodyti kas mėnesį planuojamo mokėti darbo užmokesčio mokėjimo tvarką."
+								},
+								"hideInPreview": true,
+								"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+								"preserveLayoutInPreview": true
+							}
+						},
+						{
+							"component": "radio-group",
+							"dataModelPath": "temporaryWork",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Darbo vieta steigiama laikiniems darbams?"
+								},
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.temporaryWork'] === undefined"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									],
+									"seasonWorkApplicationRulesValidator": null
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.temporaryWork'] ? data?.revisionData?.['workPlaces.temporaryWork'] : ''}"
+								},
+								"optionsList": {
+									"type": "STATIC_OPTIONS_LIST",
+									"staticOptionList": [
+										{
+											"label": "Taip",
+											"value": "true"
+										},
+										{
+											"label": "Ne",
+											"value": "false"
+										}
+									]
+								},
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12",
+								"displayOptionsInline": true
+							}
+						},
+						{
+							"component": "paragraph",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "help-text"
+								},
+								"label": "Pastraipa",
+								"visible": null,
+								"textValue": {
+									"type": "STRING",
+									"function": "Vertinama pagal Sezoninių darbų sąrašą, patvirtintą Lietuvos Respublikos Vyriausybės 2017 m. birželio 21 d. nutarimu Nr. 496 „Dėl Lietuvos Respublikos darbo kodekso įgyvendinimo“."
+								},
+								"hideInPreview": true,
+								"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+								"preserveLayoutInPreview": true
+							}
+						},
+						{
+							"component": "radio-group",
+							"dataModelPath": "seasonalWork",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Darbo vieta steigiama sezoniniams darbams?"
+								},
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && data?.revisionData?.['workPlaces.seasonalWork'] === undefined"
+								},
+								"validators": {
+									"required": [
+										{
+											"key": "requiredValidation",
+											"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+											"value": {
+												"type": "SIMPLE",
+												"function": "true"
+											}
+										}
+									],
+									"seasonWorkApplicationRulesValidator": null
+								},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['workPlaces.seasonalWork'] ? data?.revisionData?.['workPlaces.seasonalWork'] : ''}"
+								},
+								"optionsList": {
+									"type": "STATIC_OPTIONS_LIST",
+									"staticOptionList": [
+										{
+											"label": "Taip",
+											"value": "true"
+										},
+										{
+											"label": "Ne",
+											"value": "false"
+										}
+									]
+								},
+								"dataModelValue": null,
+								"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12",
+								"displayOptionsInline": true
+							}
+						},
+						{
+							"component": "h4",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "pt-3"
+								},
+								"label": "Antraštė 4",
+								"textValue": {
+									"type": "STRING",
+									"function": "Darbo vietos steigimo veiklos ir sąmata"
+								},
+								"preserveLayoutInPreview": true
+							}
+						},
+						{
+							"component": "html-text",
+							"data": {
+								"class": null,
+								"label": "HTML tekstas",
+								"textValue": {
+									"type": "STRING",
+									"function": "<p><strong style=\"background-color: rgb(255, 255, 255);\">Pastaba: </strong><span style=\"background-color: rgb(255, 255, 255);\"> Reikalavimas apmokėti ne mažiau kaip 35 procentus darbo vietoms steigti reikalingų lėšų </span><strong style=\"background-color: rgb(255, 255, 255);\">netaikomas, jeigu darbo vieta steigiama tik sau.</strong></p><p><span style=\"background-color: rgb(255, 255, 255);\">Jei steigiama darbo vieta sau ir Užimtumo tarnybos siųstam bedarbiui (siųstiems bedarbiams) įdarbinti, subsidijos gavėjas </span><strong style=\"background-color: rgb(255, 255, 255);\">privalo apmokėti ne mažiau kaip 35 procentus</strong><span style=\"background-color: rgb(255, 255, 255);\"> kiekvienos darbo vietos steigimo išlaidų, išskyrus atvejus, kai įdarbinami asmenys su negalia (už kiekvieną darbuotoją su negalia, kuriam nustatytas sunkaus neįgalumo lygis ar 25 procentų neviršijantis dalyvumo lygis (iki 2023 m. gruodžio 31 d. – iki 25 procentų darbingumo lygis), – </span><strong style=\"background-color: rgb(255, 255, 255);\">20 procentų</strong><span style=\"background-color: rgb(255, 255, 255);\">; už darbuotoją su negalia, kuriam nustatytas vidutinio neįgalumo lygis ar 30–40 procentų dalyvumo lygis (iki 2023 m. gruodžio 31 d. – 30-40 procentų darbingumo lygis), – </span><strong style=\"background-color: rgb(255, 255, 255);\">30 procentų</strong><span style=\"background-color: rgb(255, 255, 255);\">). Darbdavys savo sprendimu gali nustatyti didesnę nuosavų lėšų dalį, skiriamą darbo vietų steigimo išlaidoms apmokėti.</span></p>"
+								}
+							}
+						},
+						{
+							"component": "html-text",
+							"data": {
+								"label": "HTML tekstas",
+								"textValue": {
+									"type": "STRING",
+									"function": "<p><strong style=\"background-color: rgb(255, 255, 255);\">Pastaba: </strong><span style=\"background-color: rgb(255, 255, 255);\">Kiekvienos atskirai darbo vietos subsidijos dydis negali viršyti maksimalaus leidžiamo subsidijos dydžio vienai darbo vietai steigti (31 Lietuvos Respublikos Vyriausybės patvirtintos minimaliosios mėnesinės algos dydžio);</span></p>"
+								}
+							}
+						},
+						{
+							"component": "html-text",
+							"data": {
+								"class": null,
+								"label": "HTML tekstas",
+								"textValue": {
+									"type": "STRING",
+									"function": "<p><strong style=\"background-color: rgb(255, 255, 255);\">Išlaidos remontui negali viršyti 50 proc. visos subsidijos steigiamoms darbo vietoms dydžio.</strong></p>"
+								}
+							}
+						},
+						{
+							"component": "html-text",
+							"data": {
+								"label": "HTML tekstas",
+								"textValue": {
+									"type": "STRING",
+									"function": "<p><span style=\"background-color: rgb(255, 255, 255);\">Visos išlaidos privalo būti paskirstytos pagal planuojamas steigti darbo vietas, numatant kiekvienai darbo vietai atskirai konkrečiam išlaidų elementui subsidijos ir nuosavų lėšų dalį. Kiekviena planuojama steigti darbo vieta detalizuojama nurodant konkretų išlaidų elementą ir jų kiekius (pvz., jeigu projektui įgyvendinti reikalinga tam tikra įranga ar įrengimas, nurodykite). Paraiškos sąmatoje išlaidų elementai negali būti nurodyti su konkrečiais prekinių ženklų pavadinimais. Visos reikalingos išlaidos nurodomos su PVM.</span></p>"
+								}
+							}
+						},
+						{
+							"component": "repeater",
+							"dataModelPath": "workPlaceEstimates",
+							"dataModelIterable": true,
+							"data": {
+								"class": null,
+								"label": "Pasikartojanti forma",
+								"maxRows": null,
+								"minRows": {
+									"type": "STRING",
+									"function": "1"
+								},
+								"visible": null,
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "data?.revisionData && !data?.revisionData?.['stepper-step_1']"
+								},
+								"validators": {},
+								"showAddItem": {
+									"type": "SIMPLE",
+									"function": "true"
+								},
+								"addItemLabel": {
+									"type": "STRING",
+									"function": "Pridėti"
+								},
+								"showRemoveItem": {
+									"type": "SIMPLE",
+									"function": "true"
+								},
+								"removeItemLabel": {
+									"type": "STRING",
+									"function": "Šalinti"
+								},
+								"bootstrapClasses": "d-flex row",
+								"showAddFirstItem": true,
+								"addFirstItemLabel": {
+									"type": "STRING",
+									"function": "Pridėti"
+								},
+								"preserveLayoutInPreview": true,
+								"showRemoveItemConfirmation": true
+							},
+							"children": [
+								{
+									"component": "h4",
+									"data": {
+										"class": null,
+										"label": "Antraštė 4",
+										"visible": null,
+										"textValue": {
+											"type": "STRING",
+											"function": "${row.parent.index + 1}. ${row.index + 1}"
+										},
+										"preserveLayoutInPreview": true
+									}
+								},
+								{
+									"component": "select",
+									"dataModelPath": "workPlacePurchase",
+									"data": {
+										"label": {
+											"type": "STRING",
+											"function": "Darbo vietai įsteigti reikalinga"
+										},
+										"visible": null,
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "data?.revisionData && data?.revisionData?.['workPlaces.workPlaceEstimates.workPlacePurchase'] === undefined"
+										},
+										"compareBy": {
+											"type": "STRING",
+											"function": "code"
+										},
+										"validators": {
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['workPlaces.workPlaceEstimates.workPlacePurchase'] ? data?.revisionData?.['workPlaces.workPlaceEstimates.workPlacePurchase'] : ''}"
+										},
+										"optionsList": {
+											"type": "PREDEFINED_OPTIONS_LIST",
+											"optionsFromUrl": null,
+											"staticOptionList": null,
+											"predefinedOptions": {
+												"source": "workPlacePurchases",
+												"labelPath": "nameLt",
+												"valuePath": ""
+											}
+										},
+										"dataModelValue": null,
+										"showEmptyValue": false,
+										"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12",
+										"expressionOnChange": null,
+										"evaluateExpressionOnChange": false
+									}
+								},
+								{
+									"component": "form-validation",
+									"data": {
+										"class": null,
+										"label": "Formos validacija",
+										"visible": null,
+										"validators": {
+											"applicationNotForRepairErrorValidator": null
+										},
+										"hideInPreview": true,
+										"dataModelValue": {
+											"expression": {
+												"type": "MULTI_LINE_EDITOR",
+												"function": "if (model.workPlaces[row.parent.index]?.workPlaceRenovation === 'false') {\n    return model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workPlacePurchase;\n}\nreturn null;"
+											},
+											"calculationType": "AFTER_CHANGE"
+										}
+									}
+								},
+								{
+									"component": "text-input",
+									"dataModelPath": "workEquipmentDescription",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "Darbo priemonės pavadinimas"
+										},
+										"visible": {
+											"type": "MULTI_LINE_EDITOR",
+											"function": "const workPlacePurchase = model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workPlacePurchase;\nreturn workPlacePurchase && !workPlacePurchase.attributeValues?.attributeDefinition?.code?.includes('REPAIR');"
+										},
+										"disabled": {
+											"type": "MULTI_LINE_EDITOR",
+											"function": "const workPlacePurchaseEditable = data?.revisionData?.['workPlaces.workPlaceEstimates.workPlacePurchase'] !== undefined;\n\nreturn data?.revisionData && !workPlacePurchaseEditable && data?.revisionData?.['workPlaces.workPlaceEstimates.workEquipmentDescription'] === undefined;"
+										},
+										"maxLength": {
+											"type": "SIMPLE",
+											"function": "255"
+										},
+										"validators": {
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['workPlaces.workPlaceEstimates.workEquipmentDescription'] ? data?.revisionData?.['workPlaces.workPlaceEstimates.workEquipmentDescription'] : ''}"
+										},
+										"dataModelValue": null,
+										"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+									}
+								},
+								{
+									"component": "html-text",
+									"data": {
+										"class": null,
+										"label": "HTML tekstas",
+										"visible": {
+											"type": "MULTI_LINE_EDITOR",
+											"function": "const workPlacePurchase = model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workPlacePurchase;\nreturn workPlacePurchase && !workPlacePurchase.attributeValues?.attributeDefinition?.code?.includes('REPAIR');"
+										},
+										"textValue": {
+											"type": "STRING",
+											"function": "<p><strong>Pastaba:</strong> Galima įsigyti tik naujas darbo priemones, būtinas tiesioginių funkcijų steigiamoje darbo vietoje atlikimui užtikrinti - darbo procese naudojamos transporto priemonės, darbo įrenginiai (aparatai, prietaisai, įrankiai, įtaisai ar kiti reikmenys), priskirtini ilgalaikiam materialiajam turtui, taip pat licencijuota programinė įranga, kai jos licencija galioja ne trumpiau kaip 36 mėnesius nuo darbo vietos įsteigimo dienos.ograminė įranga, kai jos licencija galioja ne trumpiau kaip 36 mėnesius nuo darbo vietos įsteigimo dienos.</p>"
+										}
+									}
+								},
+								{
+									"component": "text-input",
+									"dataModelPath": "repairWorkType",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "Remonto darbų pavadinimas"
+										},
+										"visible": {
+											"type": "MULTI_LINE_EDITOR",
+											"function": "const workPlacePurchase = model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workPlacePurchase;\nreturn workPlacePurchase?.attributeValues?.attributeDefinition?.code?.includes('REPAIR') || false;"
+										},
+										"disabled": {
+											"type": "MULTI_LINE_EDITOR",
+											"function": "const workPlacePurchaseEditable = data?.revisionData?.['workPlaces.workPlaceEstimates.workPlacePurchase'] !== undefined;\n\nreturn data?.revisionData && !workPlacePurchaseEditable && data?.revisionData?.['workPlaces.workPlaceEstimates.repairWorkType'] === undefined;"
+										},
+										"maxLength": {
+											"type": "SIMPLE",
+											"function": "255"
+										},
+										"validators": {
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['workPlaces.workPlaceEstimates.repairWorkType'] ? data?.revisionData?.['workPlaces.workPlaceEstimates.repairWorkType'] : ''}"
+										},
+										"dataModelValue": null,
+										"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+									}
+								},
+								{
+									"component": "paragraph",
+									"data": {
+										"class": {
+											"type": "STRING",
+											"function": "help-text"
+										},
+										"label": "Pastraipa",
+										"visible": {
+											"type": "MULTI_LINE_EDITOR",
+											"function": "const workPlacePurchase = model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workPlacePurchase;\nreturn workPlacePurchase?.attributeValues?.attributeDefinition?.code?.includes('REPAIR') || false;"
+										},
+										"textValue": {
+											"type": "STRING",
+											"function": "Išlaidos remontui negali viršyti 50 proc. visos subsidijos steigiamoms darbo vietoms dydžio."
+										},
+										"hideInPreview": true,
+										"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+										"preserveLayoutInPreview": true
+									}
+								},
+								{
+									"component": "text-area",
+									"dataModelPath": "repairWorkDescription",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "Remonto darbų aprašymas ir apimtis"
+										},
+										"visible": {
+											"type": "MULTI_LINE_EDITOR",
+											"function": "const workPlacePurchase = model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workPlacePurchase;\nreturn workPlacePurchase?.attributeValues?.attributeDefinition?.code?.includes('REPAIR') || false;"
+										},
+										"disabled": {
+											"type": "MULTI_LINE_EDITOR",
+											"function": "const workPlacePurchaseEditable = data?.revisionData?.['workPlaces.workPlaceEstimates.workPlacePurchase'] !== undefined;\n\nreturn data?.revisionData && !workPlacePurchaseEditable && data?.revisionData?.['workPlaces.workPlaceEstimates.repairWorkDescription'] === undefined;"
+										},
+										"rowCount": {
+											"type": "SIMPLE",
+											"function": "4"
+										},
+										"maxSymbols": {
+											"type": "SIMPLE",
+											"function": "2000"
+										},
+										"validators": {
+											"required": [
+												{
+													"key": "requiredValidation",
+													"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+													"value": {
+														"type": "SIMPLE",
+														"function": "true"
+													}
+												}
+											]
+										},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['workPlaces.workPlaceEstimates.repairWorkDescription'] ? data?.revisionData?.['workPlaces.workPlaceEstimates.repairWorkDescription'] : ''}"
+										},
+										"showSymbolCount": true,
+										"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12"
+									}
+								},
+								{
+									"component": "container",
+									"data": {
+										"class": null,
+										"label": "Konteineris",
+										"visible": {
+											"type": "MULTI_LINE_EDITOR",
+											"function": "const workPlacePurchase = model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workPlacePurchase;\nreturn workPlacePurchase && !workPlacePurchase.attributeValues?.attributeDefinition?.code?.includes('REPAIR');"
+										},
+										"bootstrapClasses": "col-lg-8 col-md-12 col-sm-12",
+										"preserveLayoutInPreview": true
+									},
+									"children": [
+										{
+											"component": "repeater",
+											"dataModelPath": "workEqupmentTechnicalCharacteristics",
+											"dataModelIterable": true,
+											"data": {
+												"class": null,
+												"label": "Pasikartojanti forma",
+												"maxRows": {
+													"type": "STRING",
+													"function": "8"
+												},
+												"minRows": {
+													"type": "STRING",
+													"function": "3"
+												},
+												"visible": null,
+												"disabled": {
+													"type": "MULTI_LINE_EDITOR",
+													"function": "const workPlacePurchaseEditable = data?.revisionData?.['workPlaces.workPlaceEstimates.workPlacePurchase'] !== undefined;\n\nreturn data?.revisionData && !workPlacePurchaseEditable && data?.revisionData?.['workPlaces.workPlaceEstimates.workEqupmentTechnicalCharacteristics.workEquipmentTechnicalCharacteristic'] === undefined;"
+												},
+												"validators": {},
+												"showAddItem": {
+													"type": "SIMPLE",
+													"function": "true"
+												},
+												"addItemLabel": {
+													"type": "STRING",
+													"function": "Pridėti"
+												},
+												"showRemoveItem": {
+													"type": "SIMPLE",
+													"function": "true"
+												},
+												"removeItemLabel": {
+													"type": "STRING",
+													"function": "Šalinti"
+												},
+												"bootstrapClasses": "col-lg-12 col-md-12 col-sm-12 d-flex",
+												"showAddFirstItem": true,
+												"addFirstItemLabel": {
+													"type": "STRING",
+													"function": "Pridėti"
+												},
+												"preserveLayoutInPreview": true
+											},
+											"children": [
+												{
+													"component": "text-input",
+													"dataModelPath": "workEquipmentTechnicalCharacteristic",
+													"data": {
+														"class": null,
+														"label": {
+															"type": "STRING",
+															"function": "Darbo priemonės techninis parametras"
+														},
+														"visible": null,
+														"disabled": {
+															"type": "MULTI_LINE_EDITOR",
+															"function": "const workPlacePurchaseEditable = data?.revisionData?.['workPlaces.workPlaceEstimates.workPlacePurchase'] !== undefined;\n\nreturn data?.revisionData && !workPlacePurchaseEditable && data?.revisionData?.['workPlaces.workPlaceEstimates.workEqupmentTechnicalCharacteristics.workEquipmentTechnicalCharacteristic'] === undefined;"
+														},
+														"maxLength": {
+															"type": "SIMPLE",
+															"function": "255"
+														},
+														"validators": {
+															"required": [
+																{
+																	"key": "requiredValidation",
+																	"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+																	"value": {
+																		"type": "SIMPLE",
+																		"function": "true"
+																	}
+																}
+															]
+														},
+														"contextHelp": {
+															"type": "STRING",
+															"function": "${data?.revisionData?.['workPlaces.workPlaceEstimates.workEqupmentTechnicalCharacteristics.workEquipmentTechnicalCharacteristic'] ? data?.revisionData?.['workPlaces.workPlaceEstimates.workEqupmentTechnicalCharacteristics.workEquipmentTechnicalCharacteristic'] : ''}"
+														},
+														"bootstrapClasses": "col-lg-12 col-md-12 col-sm-12"
+													}
+												}
+											]
+										}
+									]
+								},
+								{
+									"component": "paragraph",
+									"data": {
+										"class": {
+											"type": "STRING",
+											"function": "help-text"
+										},
+										"label": "Pastraipa",
+										"visible": {
+											"type": "MULTI_LINE_EDITOR",
+											"function": "const workPlacePurchase = model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workPlacePurchase;\nreturn workPlacePurchase && !workPlacePurchase.attributeValues?.attributeDefinition?.code?.includes('REPAIR');"
+										},
+										"textValue": {
+											"type": "STRING",
+											"function": "Planuojamos įsigyti darbo priemonės pagrindiniai techniniai duomenys ar techninės charakteristikos, matmenys, ilgis, plotis, gylis, galingumas ir pan., padedantys identifikuoti planuojamą įsigyti darbo priemonę."
+										},
+										"hideInPreview": true,
+										"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+										"preserveLayoutInPreview": true
+									}
+								},
+								{
+									"component": "container",
+									"data": {
+										"class": {
+											"type": "STRING",
+											"function": "flex-column"
+										},
+										"label": "Konteineris",
+										"visible": null,
+										"bootstrapClasses": "d-flex",
+										"preserveLayoutInPreview": true
+									},
+									"children": [
+										{
+											"component": "decimal-input",
+											"dataModelPath": "workEquipmentCount",
+											"data": {
+												"class": null,
+												"label": {
+													"type": "STRING",
+													"function": "Darbo priemonės kiekis, vnt."
+												},
+												"visible": {
+													"type": "MULTI_LINE_EDITOR",
+													"function": "const workPlacePurchase = model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workPlacePurchase;\nreturn workPlacePurchase && !workPlacePurchase.attributeValues?.attributeDefinition?.code?.includes('REPAIR');"
+												},
+												"disabled": {
+													"type": "MULTI_LINE_EDITOR",
+													"function": "const workPlacePurchaseEditable = data?.revisionData?.['workPlaces.workPlaceEstimates.workPlacePurchase'] !== undefined;\n\nreturn data?.revisionData && !workPlacePurchaseEditable && data?.revisionData?.['workPlaces.workPlaceEstimates.workEquipmentCount'] === undefined;"
+												},
+												"maxValue": {
+													"type": "STRING",
+													"function": "20"
+												},
+												"minValue": {
+													"type": "STRING",
+													"function": "0"
+												},
+												"validators": {
+													"required": [
+														{
+															"key": "requiredValidation",
+															"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+															"value": {
+																"type": "SIMPLE",
+																"function": "true"
+															}
+														}
+													],
+													"nonZeroNumberValidator": null
+												},
+												"contextHelp": {
+													"type": "STRING",
+													"function": "${data?.revisionData?.['workPlaces.workPlaceEstimates.workEquipmentCount'] ? data?.revisionData?.['workPlaces.workPlaceEstimates.workEquipmentCount'] : ''}"
+												},
+												"decimalPlaces": {
+													"type": "STRING",
+													"function": "2"
+												},
+												"dataModelValue": null,
+												"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+												"previewAllDecimalPlaces": true
+											}
+										},
+										{
+											"component": "decimal-input",
+											"dataModelPath": "workEquipmentFunds",
+											"data": {
+												"class": null,
+												"label": {
+													"type": "STRING",
+													"function": "Kaina, Eur"
+												},
+												"visible": null,
+												"disabled": {
+													"type": "SIMPLE",
+													"function": "data?.revisionData && data?.revisionData?.['workPlaces.workPlaceEstimates.workEquipmentFunds'] === undefined"
+												},
+												"maxValue": {
+													"type": "STRING",
+													"function": "20"
+												},
+												"minValue": {
+													"type": "STRING",
+													"function": "0"
+												},
+												"validators": {
+													"required": [
+														{
+															"key": "requiredValidation",
+															"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+															"value": {
+																"type": "SIMPLE",
+																"function": "true"
+															}
+														}
+													],
+													"nonZeroNumberValidator": null
+												},
+												"contextHelp": {
+													"type": "STRING",
+													"function": "${data?.revisionData?.['workPlaces.workPlaceEstimates.workEquipmentFunds'] ? data?.revisionData?.['workPlaces.workPlaceEstimates.workEquipmentFunds'] : ''}"
+												},
+												"decimalPlaces": {
+													"type": "STRING",
+													"function": "2"
+												},
+												"dataModelValue": null,
+												"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+												"previewAllDecimalPlaces": true
+											}
+										},
+										{
+											"component": "decimal-input",
+											"dataModelPath": "workEquipmentOwnFunds",
+											"data": {
+												"class": null,
+												"label": {
+													"type": "STRING",
+													"function": "Nuosavos lėšos, Eur"
+												},
+												"visible": null,
+												"disabled": {
+													"type": "SIMPLE",
+													"function": "data?.revisionData && data?.revisionData?.['workPlaces.workPlaceEstimates.workEquipmentOwnFunds'] === undefined"
+												},
+												"maxValue": {
+													"type": "STRING",
+													"function": "20"
+												},
+												"minValue": {
+													"type": "STRING",
+													"function": "0"
+												},
+												"validators": {
+													"required": [
+														{
+															"key": "requiredValidation",
+															"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+															"value": {
+																"type": "SIMPLE",
+																"function": "true"
+															}
+														}
+													]
+												},
+												"contextHelp": {
+													"type": "STRING",
+													"function": "${data?.revisionData?.['workPlaces.workPlaceEstimates.workEquipmentOwnFunds'] ? data?.revisionData?.['workPlaces.workPlaceEstimates.workEquipmentOwnFunds'] : ''}"
+												},
+												"decimalPlaces": {
+													"type": "STRING",
+													"function": "2"
+												},
+												"dataModelValue": null,
+												"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+												"previewAllDecimalPlaces": true
+											}
+										},
+										{
+											"component": "form-validation",
+											"data": {
+												"label": "Formos validacija",
+												"visible": {
+													"type": "SIMPLE",
+													"function": "model.establishmentOfJob === 'jobForYourselfAndOthers'"
+												},
+												"validators": {
+													"nonZeroNumberValidator": null
+												},
+												"hideInPreview": true,
+												"dataModelValue": {
+													"expression": {
+														"type": "SIMPLE",
+														"function": "model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workEquipmentOwnFunds"
+													},
+													"calculationType": "AFTER_CHANGE"
+												}
+											}
+										},
+										{
+											"component": "form-validation",
+											"data": {
+												"class": null,
+												"label": "Formos validacija",
+												"visible": {
+													"type": "SIMPLE",
+													"function": "model.establishmentOfJob === 'jobForYourselfAndOthers'"
+												},
+												"validators": {
+													"applicationOwnFundsValidator": [
+														{
+															"key": "unemployedTargetGroup",
+															"label": "IFormsValidatorConfig.validators.applicationOwnFundsValidator.params.unemployedTargetGroup",
+															"value": {
+																"type": "SIMPLE",
+																"function": "model.workPlaces[row.parent.index]?.unemployedTargetGroup"
+															}
+														}
+													]
+												},
+												"hideInPreview": true,
+												"dataModelValue": {
+													"expression": {
+														"type": "SIMPLE",
+														"function": "model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workEquipmentOwnFundsPercent"
+													},
+													"calculationType": "AFTER_CHANGE"
+												}
+											}
+										},
+										{
+											"component": "decimal-input",
+											"dataModelPath": "workEquipmentOwnFundsPercent",
+											"data": {
+												"class": null,
+												"label": {
+													"type": "STRING",
+													"function": "Nuosavos lėšos, %"
+												},
+												"visible": null,
+												"disabled": {
+													"type": "SIMPLE",
+													"function": "true"
+												},
+												"maxValue": {
+													"type": "STRING",
+													"function": "20"
+												},
+												"minValue": {
+													"type": "STRING",
+													"function": "0"
+												},
+												"validators": {},
+												"contextHelp": {
+													"type": "STRING",
+													"function": "${data?.revisionData?.['workPlaces.workPlaceEstimates.workEquipmentOwnFundsPercent'] ? data?.revisionData?.['workPlaces.workPlaceEstimates.workEquipmentOwnFundsPercent'] : ''}"
+												},
+												"decimalPlaces": {
+													"type": "STRING",
+													"function": "2"
+												},
+												"dataModelValue": {
+													"expression": {
+														"type": "MULTI_LINE_EDITOR",
+														"function": "const ownFunds = model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workEquipmentOwnFunds;\nconst totalCost = model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workEquipmentFunds;\n\nif (!ownFunds || !totalCost) {\n return 0;   \n}\n\nconst ownFundsPercent = (ownFunds * 100 / totalCost);\n\nif (ownFundsPercent < 0) {\n    return 0;   \n}\n\nreturn ownFundsPercent.toFixed(2);"
+													},
+													"calculationType": "AFTER_CHANGE"
+												},
+												"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+												"previewAllDecimalPlaces": true
+											}
+										},
+										{
+											"component": "decimal-input",
+											"dataModelPath": "workEquipmentAmountOfSubsidies",
+											"data": {
+												"class": null,
+												"label": {
+													"type": "STRING",
+													"function": "Subsidijos lėšos, Eur"
+												},
+												"visible": null,
+												"disabled": {
+													"type": "SIMPLE",
+													"function": "true"
+												},
+												"maxValue": {
+													"type": "STRING",
+													"function": "20"
+												},
+												"minValue": {
+													"type": "STRING",
+													"function": "0"
+												},
+												"validators": {},
+												"contextHelp": {
+													"type": "STRING",
+													"function": "${data?.revisionData?.['workPlaces.workPlaceEstimates.workEquipmentAmountOfSubsidies'] ? data?.revisionData?.['workPlaces.workPlaceEstimates.workEquipmentAmountOfSubsidies'] : ''}"
+												},
+												"decimalPlaces": {
+													"type": "STRING",
+													"function": "2"
+												},
+												"dataModelValue": {
+													"expression": {
+														"type": "MULTI_LINE_EDITOR",
+														"function": "const ownFunds = model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workEquipmentOwnFunds;\nconst totalCost = model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workEquipmentFunds;\n\nif (!ownFunds || !totalCost) {\n return 0;   \n}\n\nconst subsidyFunds = totalCost - ownFunds;\n\nif (subsidyFunds < 0) {\n    return 0;   \n}\n\nreturn subsidyFunds.toFixed(2);"
+													},
+													"calculationType": "AFTER_CHANGE"
+												},
+												"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+												"previewAllDecimalPlaces": true
+											}
+										},
+										{
+											"component": "form-validation",
+											"data": {
+												"label": "Formos validacija",
+												"visible": null,
+												"validators": {
+													"applicationExceedingSubsidyAmountValidator": null
+												},
+												"hideInPreview": true,
+												"dataModelValue": {
+													"expression": {
+														"type": "SIMPLE",
+														"function": "model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workEquipmentAmountOfSubsidies"
+													},
+													"calculationType": "AFTER_CHANGE"
+												}
+											}
+										},
+										{
+											"component": "form-validation",
+											"data": {
+												"class": null,
+												"label": "Formos validacija",
+												"visible": {
+													"type": "SIMPLE",
+													"function": "!!model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workEquipmentOwnFunds"
+												},
+												"validators": {
+													"numberValidator": [
+														{
+															"key": "minNumber",
+															"label": "IFormsValidatorConfig.validators.numberValidator.params.minNumber",
+															"value": {
+																"type": "SIMPLE",
+																"function": "0"
+															}
+														},
+														{
+															"key": "maxNumber",
+															"label": "IFormsValidatorConfig.validators.numberValidator.params.maxNumber",
+															"value": {
+																"type": "STRING",
+																"bindings": [],
+																"function": ""
+															}
+														}
+													],
+													"nonZeroNumberValidator": null
+												},
+												"hideInPreview": true,
+												"dataModelValue": {
+													"expression": {
+														"type": "SIMPLE",
+														"function": "model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workEquipmentAmountOfSubsidies"
+													},
+													"calculationType": "AFTER_CHANGE"
+												}
+											}
+										},
+										{
+											"component": "decimal-input",
+											"dataModelPath": "workEquipmentAmountOfSubsidiesPercent",
+											"data": {
+												"class": null,
+												"label": {
+													"type": "STRING",
+													"function": "Subsidijos lėšos, %"
+												},
+												"visible": null,
+												"disabled": {
+													"type": "SIMPLE",
+													"function": "true"
+												},
+												"maxValue": {
+													"type": "STRING",
+													"function": "20"
+												},
+												"minValue": {
+													"type": "STRING",
+													"function": "0"
+												},
+												"validators": {},
+												"contextHelp": {
+													"type": "STRING",
+													"function": "${data?.revisionData?.['workPlaces.workPlaceEstimates.workEquipmentAmountOfSubsidiesPercent'] ? data?.revisionData?.['workPlaces.workPlaceEstimates.workEquipmentAmountOfSubsidiesPercent'] : ''}"
+												},
+												"decimalPlaces": {
+													"type": "STRING",
+													"function": "2"
+												},
+												"dataModelValue": {
+													"expression": {
+														"type": "MULTI_LINE_EDITOR",
+														"function": "const subsidies = model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workEquipmentAmountOfSubsidies;\n\nconst totalCost = model.workPlaces[row.parent.index]?.workPlaceEstimates[row.index]?.workEquipmentFunds;\n\nif (!subsidies || !totalCost) {\n return 0;   \n}\n\nconst subsidiesPercent = (subsidies * 100 / totalCost);\n\nif (subsidiesPercent < 0) {\n    return 0;   \n}\n\nreturn subsidiesPercent.toFixed(2);"
+													},
+													"calculationType": "AFTER_CHANGE"
+												},
+												"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+												"previewAllDecimalPlaces": true
+											}
+										}
+									]
+								}
+							]
+						},
+						{
+							"component": "h3",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "pt-3"
+								},
+								"label": "Antraštė 3",
+								"textValue": {
+									"type": "STRING",
+									"function": "Iš viso sąmata darbo vietai Nr. ${row.index + 1}\t"
+								},
+								"preserveLayoutInPreview": true
+							}
+						},
+						{
+							"component": "container",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "flex-column"
+								},
+								"label": "Konteineris",
+								"visible": null,
+								"bootstrapClasses": "d-flex",
+								"preserveLayoutInPreview": true
+							},
+							"children": [
+								{
+									"component": "decimal-input",
+									"dataModelPath": "totalFundsForOneWorkPlace",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "Bendra darbo vietos kaina, Eur"
+										},
+										"visible": null,
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "true"
+										},
+										"maxValue": {
+											"type": "STRING",
+											"function": "20"
+										},
+										"minValue": {
+											"type": "STRING",
+											"function": "0"
+										},
+										"validators": {},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['workPlaces.totalFundsForOneWorkPlace'] ? data?.revisionData?.['workPlaces.totalFundsForOneWorkPlace'] : ''}"
+										},
+										"decimalPlaces": {
+											"type": "STRING",
+											"function": "2"
+										},
+										"dataModelValue": {
+											"expression": {
+												"type": "SIMPLE",
+												"function": "FormUtils.sum(model.workPlaces[row.index]?.workPlaceEstimates.workEquipmentFunds)?.toFixed(2)"
+											},
+											"calculationType": "AFTER_CHANGE"
+										},
+										"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+										"previewAllDecimalPlaces": true
+									}
+								},
+								{
+									"component": "decimal-input",
+									"dataModelPath": "workPlaceFundsPercent",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "Bendra darbo vietos kaina, %"
+										},
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "true"
+										},
+										"maxValue": {
+											"type": "STRING",
+											"function": "20"
+										},
+										"minValue": {
+											"type": "STRING",
+											"function": "0"
+										},
+										"validators": {},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['workPlaces.workPlaceFundsPercent'] ? data?.revisionData?.['workPlaces.workPlaceFundsPercent'] : ''}"
+										},
+										"decimalPlaces": {
+											"type": "STRING",
+											"function": "2"
+										},
+										"dataModelValue": {
+											"expression": {
+												"type": "MULTI_LINE_EDITOR",
+												"function": "const ownFundsPercent = model.workPlaces[row.index]?.totalOwnFundsProcForOneWorkPlace;\n\nconst subsidyFundsPercent = model.workPlaces[row.index]?.totalAmountOfSubsidiesProcForOneWorkPlace;\n\nif (isNaN(Number(ownFundsPercent)) || isNaN(Number(subsidyFundsPercent))) {\n return 0;  \n}\n\nreturn (Number(ownFundsPercent) + Number(subsidyFundsPercent)).toFixed(2);"
+											},
+											"calculationType": "AFTER_CHANGE"
+										},
+										"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+										"previewAllDecimalPlaces": true
+									}
+								},
+								{
+									"component": "decimal-input",
+									"dataModelPath": "totalOwnFundsForOneWorkPlace",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "Nuosavos lėšos, Eur"
+										},
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "true"
+										},
+										"maxValue": {
+											"type": "STRING",
+											"function": "20"
+										},
+										"minValue": {
+											"type": "STRING",
+											"function": "0"
+										},
+										"validators": {},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['workPlaces.totalOwnFundsForOneWorkPlace'] ? data?.revisionData?.['workPlaces.totalOwnFundsForOneWorkPlace'] : ''}"
+										},
+										"decimalPlaces": {
+											"type": "STRING",
+											"function": "2"
+										},
+										"dataModelValue": {
+											"expression": {
+												"type": "SIMPLE",
+												"function": "FormUtils.sum(model.workPlaces[row.index]?.workPlaceEstimates.workEquipmentOwnFunds)?.toFixed(2)"
+											},
+											"calculationType": "AFTER_CHANGE"
+										},
+										"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+										"preserveLayoutInPreview": false,
+										"previewAllDecimalPlaces": true
+									}
+								},
+								{
+									"component": "decimal-input",
+									"dataModelPath": "totalOwnFundsProcForOneWorkPlace",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "Nuosavos lėšos, %"
+										},
+										"visible": null,
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "true"
+										},
+										"maxValue": {
+											"type": "STRING",
+											"function": "20"
+										},
+										"minValue": {
+											"type": "STRING",
+											"function": "0"
+										},
+										"validators": {},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['workPlaces.totalOwnFundsProcForOneWorkPlace'] ? data?.revisionData?.['workPlaces.totalOwnFundsProcForOneWorkPlace'] : ''}"
+										},
+										"decimalPlaces": {
+											"type": "STRING",
+											"function": "2"
+										},
+										"dataModelValue": {
+											"expression": {
+												"type": "MULTI_LINE_EDITOR",
+												"function": "const ownFunds = model.workPlaces[row.index]?.totalOwnFundsForOneWorkPlace;\nconst totalCost = model.workPlaces[row.index]?.totalFundsForOneWorkPlace;\n\nif (!ownFunds || !totalCost) {\n return 0;   \n}\n\nconst ownFundsPercent = (ownFunds * 100 / totalCost);\n\nif (ownFundsPercent < 0 || isNaN(ownFundsPercent)) {\n    return 0;   \n}\n\nreturn ownFundsPercent.toFixed(2);"
+											},
+											"calculationType": "AFTER_CHANGE"
+										},
+										"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+										"previewAllDecimalPlaces": true
+									}
+								},
+								{
+									"component": "form-validation",
+									"data": {
+										"class": null,
+										"label": "Formos validacija",
+										"visible": {
+											"type": "SIMPLE",
+											"function": "model.establishmentOfJob === 'jobForYourselfAndOthers'"
+										},
+										"validators": {
+											"applicationOwnFundsValidator": [
+												{
+													"key": "unemployedTargetGroup",
+													"label": "IFormsValidatorConfig.validators.applicationOwnFundsValidator.params.unemployedTargetGroup",
+													"value": {
+														"type": "SIMPLE",
+														"function": "model.workPlaces[row.index]?.unemployedTargetGroup"
+													}
+												}
+											]
+										},
+										"hideInPreview": true,
+										"dataModelValue": {
+											"expression": {
+												"type": "SIMPLE",
+												"function": "model.workPlaces[row.index]?.totalOwnFundsProcForOneWorkPlace"
+											},
+											"calculationType": "AFTER_CHANGE"
+										}
+									}
+								},
+								{
+									"component": "decimal-input",
+									"dataModelPath": "totalAmountOfSubsidiesForOneWorkPlace",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "Subsidijos lėšos, Eur"
+										},
+										"visible": null,
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "true"
+										},
+										"maxValue": {
+											"type": "STRING",
+											"function": "20"
+										},
+										"minValue": {
+											"type": "STRING",
+											"function": "0"
+										},
+										"validators": {},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['workPlaces.totalAmountOfSubsidiesForOneWorkPlace'] ? data?.revisionData?.['workPlaces.totalAmountOfSubsidiesForOneWorkPlace'] : ''}"
+										},
+										"decimalPlaces": {
+											"type": "STRING",
+											"function": "2"
+										},
+										"dataModelValue": {
+											"expression": {
+												"type": "SIMPLE",
+												"function": "FormUtils.sum(model.workPlaces[row.index]?.workPlaceEstimates?.workEquipmentAmountOfSubsidies)?.toFixed(2)"
+											},
+											"calculationType": "AFTER_CHANGE"
+										},
+										"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+										"previewAllDecimalPlaces": true
+									}
+								},
+								{
+									"component": "form-validation",
+									"data": {
+										"label": "Formos validacija",
+										"visible": null,
+										"validators": {
+											"applicationExceedingSubsidyAmountValidator": null
+										},
+										"hideInPreview": true,
+										"dataModelValue": {
+											"expression": {
+												"type": "SIMPLE",
+												"function": "model.workPlaces[row.index]?.totalAmountOfSubsidiesForOneWorkPlace"
+											},
+											"calculationType": "AFTER_CHANGE"
+										}
+									}
+								},
+								{
+									"component": "decimal-input",
+									"dataModelPath": "totalAmountOfSubsidiesProcForOneWorkPlace",
+									"data": {
+										"class": null,
+										"label": {
+											"type": "STRING",
+											"function": "Subsidijos lėšos, %"
+										},
+										"disabled": {
+											"type": "SIMPLE",
+											"function": "true"
+										},
+										"maxValue": {
+											"type": "STRING",
+											"function": "20"
+										},
+										"minValue": {
+											"type": "STRING",
+											"function": "0"
+										},
+										"validators": {},
+										"contextHelp": {
+											"type": "STRING",
+											"function": "${data?.revisionData?.['workPlaces.totalAmountOfSubsidiesProcForOneWorkPlace'] ? data?.revisionData?.['workPlaces.totalAmountOfSubsidiesProcForOneWorkPlace'] : ''}"
+										},
+										"decimalPlaces": {
+											"type": "STRING",
+											"function": "2"
+										},
+										"dataModelValue": {
+											"expression": {
+												"type": "MULTI_LINE_EDITOR",
+												"function": "const subsidies = model.workPlaces[row.index]?.totalAmountOfSubsidiesForOneWorkPlace;\n\nconst totalCost = model.workPlaces[row.index]?.totalFundsForOneWorkPlace;\n\nif (!subsidies || !totalCost) {\n return 0;   \n}\n\nconst subsidiesPercent = (subsidies * 100 / totalCost);\n\nif (subsidiesPercent < 0 || isNaN(subsidiesPercent)) {\n    return 0;   \n}\n\nreturn subsidiesPercent.toFixed(2);"
+											},
+											"calculationType": "AFTER_CHANGE"
+										},
+										"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+										"previewAllDecimalPlaces": true
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"component": "form-validation",
+					"data": {
+						"class": null,
+						"label": "Formos validacija",
+						"validators": {
+							"applicationJobCountValidator": [
+								{
+									"key": "jobPlacesCount",
+									"label": "IFormsValidatorConfig.validators.applicationJobCountValidator.params.jobPlacesCount",
+									"value": {
+										"type": "SIMPLE",
+										"function": "model.jobPlacesCount"
+									}
+								}
+							]
+						},
+						"hideInPreview": true,
+						"dataModelValue": {
+							"expression": {
+								"type": "SIMPLE",
+								"function": "model.workPlaces?.filter(it => !!it).length"
+							},
+							"calculationType": "AFTER_CHANGE"
+						},
+						"validateOnSubmit": true
+					}
+				},
+				{
+					"component": "h3",
+					"data": {
+						"class": {
+							"type": "STRING",
+							"function": "pt-3"
+						},
+						"label": "Antraštė 3",
+						"textValue": {
+							"type": "STRING",
+							"function": "Bendra sąmata (iš viso)"
+						},
+						"preserveLayoutInPreview": true
+					}
+				},
+				{
+					"component": "container",
+					"data": {
+						"class": {
+							"type": "STRING",
+							"function": "flex-column"
+						},
+						"label": "Konteineris",
+						"bootstrapClasses": "d-flex",
+						"preserveLayoutInPreview": true
+					},
+					"children": [
+						{
+							"component": "decimal-input",
+							"dataModelPath": "totalFunds",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Bendra sąmatos kaina, Eur"
+								},
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "true"
+								},
+								"maxValue": {
+									"type": "STRING",
+									"function": "20"
+								},
+								"minValue": {
+									"type": "STRING",
+									"function": "0"
+								},
+								"validators": {},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['totalFunds'] ? data?.revisionData?.['totalFunds'] : ''}"
+								},
+								"decimalPlaces": {
+									"type": "STRING",
+									"function": "2"
+								},
+								"dataModelValue": {
+									"expression": {
+										"type": "SIMPLE",
+										"function": "FormUtils.sum(model.workPlaces.totalFundsForOneWorkPlace)?.toFixed(2)"
+									},
+									"calculationType": "AFTER_CHANGE"
+								},
+								"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+								"previewAllDecimalPlaces": true
+							}
+						},
+						{
+							"component": "decimal-input",
+							"dataModelPath": "totalFundsPercent",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Bendra sąmatos kaina, %"
+								},
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "true"
+								},
+								"maxValue": {
+									"type": "STRING",
+									"function": "20"
+								},
+								"minValue": {
+									"type": "STRING",
+									"function": "0"
+								},
+								"validators": {},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['totalFundsPercent'] ? data?.revisionData?.['totalFundsPercent'] : ''}"
+								},
+								"decimalPlaces": {
+									"type": "STRING",
+									"function": "2"
+								},
+								"dataModelValue": {
+									"expression": {
+										"type": "MULTI_LINE_EDITOR",
+										"function": "const ownFundsPercent = model.totalOwnFundsProc;\n\nconst subsidyFundsPercent = model.totalAmountOfSubsidiesPercent;\n\nif (isNaN(Number(ownFundsPercent)) || isNaN(Number(subsidyFundsPercent))) {\n return 0;  \n}\n\nreturn (Number(ownFundsPercent) + Number(subsidyFundsPercent)).toFixed(2);"
+									},
+									"calculationType": "AFTER_CHANGE"
+								},
+								"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+								"previewAllDecimalPlaces": true
+							}
+						},
+						{
+							"component": "decimal-input",
+							"dataModelPath": "totalOwnFunds",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Nuosavos lėšos, Eur"
+								},
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "true"
+								},
+								"maxValue": {
+									"type": "STRING",
+									"function": "20"
+								},
+								"minValue": {
+									"type": "STRING",
+									"function": "0"
+								},
+								"validators": {},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['totalOwnFunds'] ? data?.revisionData?.['totalOwnFunds'] : ''}"
+								},
+								"decimalPlaces": {
+									"type": "STRING",
+									"function": "2"
+								},
+								"dataModelValue": {
+									"expression": {
+										"type": "SIMPLE",
+										"function": "FormUtils.sum(model.workPlaces.totalOwnFundsForOneWorkPlace)?.toFixed(2)"
+									},
+									"calculationType": "AFTER_CHANGE"
+								},
+								"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+								"preserveLayoutInPreview": false,
+								"previewAllDecimalPlaces": true
+							}
+						},
+						{
+							"component": "decimal-input",
+							"dataModelPath": "totalOwnFundsProc",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Nuosavos lėšos, %"
+								},
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "true"
+								},
+								"maxValue": {
+									"type": "STRING",
+									"function": "20"
+								},
+								"minValue": {
+									"type": "STRING",
+									"function": "0"
+								},
+								"validators": {},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['totalOwnFundsProc'] ? data?.revisionData?.['totalOwnFundsProc'] : ''}"
+								},
+								"decimalPlaces": {
+									"type": "STRING",
+									"function": "2"
+								},
+								"dataModelValue": {
+									"expression": {
+										"type": "MULTI_LINE_EDITOR",
+										"function": "const ownFunds = model.totalOwnFunds;\nconst totalCost = model.totalFunds;\n\nif (!ownFunds || !totalCost) {\n return 0;   \n}\n\nconst ownFundsPercent = (ownFunds * 100 / totalCost);\n\nif (ownFundsPercent < 0 || isNaN(ownFundsPercent)) {\n    return 0;   \n}\n\nreturn ownFundsPercent.toFixed(2);"
+									},
+									"calculationType": "AFTER_CHANGE"
+								},
+								"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+								"previewAllDecimalPlaces": true
+							}
+						},
+						{
+							"component": "decimal-input",
+							"dataModelPath": "totalAmountOfSubsidies",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Subsidijos lėšos, Eur"
+								},
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "true"
+								},
+								"maxValue": {
+									"type": "STRING",
+									"function": "20"
+								},
+								"minValue": {
+									"type": "STRING",
+									"function": "0"
+								},
+								"validators": {},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['totalAmountOfSubsidies'] ? data?.revisionData?.['totalAmountOfSubsidies'] : ''}"
+								},
+								"decimalPlaces": {
+									"type": "STRING",
+									"function": "2"
+								},
+								"dataModelValue": {
+									"expression": {
+										"type": "SIMPLE",
+										"function": "FormUtils.sum(model.workPlaces.totalAmountOfSubsidiesForOneWorkPlace)?.toFixed(2);"
+									},
+									"calculationType": "AFTER_CHANGE"
+								},
+								"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+								"previewAllDecimalPlaces": true
+							}
+						},
+						{
+							"component": "form-validation",
+							"data": {
+								"class": null,
+								"label": "Formos validacija",
+								"validators": {
+									"applicationExceedingRepairSubsidyAmountValidator": [
+										{
+											"key": "subsidiesForRepairAmount",
+											"label": "IFormsValidatorConfig.validators.applicationExceedingRepairSubsidyAmountValidator.params.subsidiesForRepairAmount",
+											"value": {
+												"type": "MULTI_LINE_EDITOR",
+												"function": "const bindings = 'model.workPlaces.workPlaceEstimates.workPlacePurchase model.totalAmountOfSubsidies';\nconst estimates = model.workPlaces.workPlaceEstimates;\nconst repairEstimates = estimates.filter(it => it?.workPlacePurchase?.attributeValues?.some(prop => prop.attributeDefinition?.code === 'REPAIR'));\n\nreturn FormUtils.sum(repairEstimates.map(it => it.workEquipmentAmountOfSubsidies));"
+											}
+										}
+									]
+								},
+								"hideInPreview": true,
+								"dataModelValue": {
+									"expression": {
+										"type": "SIMPLE",
+										"function": "model.totalAmountOfSubsidies"
+									},
+									"calculationType": "AFTER_CHANGE"
+								}
+							}
+						},
+						{
+							"component": "decimal-input",
+							"dataModelPath": "totalAmountOfSubsidiesPercent",
+							"data": {
+								"class": null,
+								"label": {
+									"type": "STRING",
+									"function": "Subsidijos lėšos, %"
+								},
+								"visible": null,
+								"disabled": {
+									"type": "SIMPLE",
+									"function": "true"
+								},
+								"maxValue": {
+									"type": "STRING",
+									"function": "20"
+								},
+								"minValue": {
+									"type": "STRING",
+									"function": "0"
+								},
+								"validators": {},
+								"contextHelp": {
+									"type": "STRING",
+									"function": "${data?.revisionData?.['totalAmountOfSubsidiesPercent'] ? data?.revisionData?.['totalAmountOfSubsidiesPercent'] : ''}"
+								},
+								"decimalPlaces": {
+									"type": "STRING",
+									"function": "2"
+								},
+								"dataModelValue": {
+									"expression": {
+										"type": "MULTI_LINE_EDITOR",
+										"function": "const subsidies = model.totalAmountOfSubsidies;\n\nconst totalCost = model.totalFunds;\n\nif (!subsidies || !totalCost) {\n return 0;   \n}\n\nconst subsidiesPercent = (subsidies * 100 / totalCost);\n\nif (subsidiesPercent < 0 || isNaN(subsidiesPercent)) {\n    return 0;   \n}\n\nreturn subsidiesPercent.toFixed(2);"
+									},
+									"calculationType": "AFTER_CHANGE"
+								},
+								"bootstrapClasses": "col-lg-4 col-md-12 col-sm-12",
+								"previewAllDecimalPlaces": true
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"component": "stepper-step",
+			"data": {
+				"label": {
+					"type": "STRING",
+					"function": "Dokumentai ir sutikimas"
+				},
+				"contextHelp": {
+					"type": "STRING",
+					"function": "${data?.revisionData?.['stepper-step_2']  !== undefined ? 'Reikalingas duomenų patikslinimas.' : ''}${data?.revisionData?.['stepper-step_2'] ? ' ' + data?.revisionData?.['stepper-step_2'] : ''}"
+				},
+				"bootstrapClasses": "d-flex row",
+				"preserveLayoutInPreview": true
+			},
+			"children": [
+				{
+					"component": "h3",
+					"data": {
+						"label": "Antraštė 3",
+						"textValue": {
+							"type": "STRING",
+							"function": "Dokumentai"
+						},
+						"preserveLayoutInPreview": true
+					}
+				},
+				{
+					"component": "file-input",
+					"dataModelPath": "file_input_1",
+					"data": {
+						"class": null,
+						"label": {
+							"type": "STRING",
+							"function": "Patalpų, valdomų turto valdymo teise, remonto darbų, darbo vietos įrengimo projektai ir jų sąmatos."
+						},
+						"visible": {
+							"type": "MULTI_LINE_EDITOR",
+							"function": "const bindings = 'model.workPlaces.workPlaceRenovation model.file_input_1';\n\nreturn model.workPlaces?.some(it => it.workPlaceRenovation === 'true');"
+						},
+						"disabled": {
+							"type": "SIMPLE",
+							"function": "data?.revisionData && data?.revisionData?.['file_input_1'] === undefined"
+						},
+						"fileLimit": null,
+						"validators": {
+							"required": [
+								{
+									"key": "requiredValidation",
+									"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+									"value": {
+										"type": "SIMPLE",
+										"function": "true"
+									}
+								}
+							]
+						},
+						"contextHelp": {
+							"type": "STRING",
+							"function": "${data?.revisionData?.['file_input_1'] ? data?.revisionData?.['file_input_1'] : ''}"
+						},
+						"dataModelValue": null,
+						"fileInputLabel": {
+							"type": "STRING",
+							"function": "Nutempti dokumentus čia arba paspausti „Pasirinktite“."
+						},
+						"totalSizeLimit": {
+							"type": "STRING",
+							"function": "100"
+						},
+						"allowedFileTypes": [
+							".7Z",
+							".ADOC",
+							".BMP",
+							".DOC",
+							".DOCX",
+							".JPEG",
+							".JPG",
+							".ODS",
+							".ODT",
+							".PDF",
+							".PNG",
+							".RTF",
+							".TXT",
+							".XLS",
+							".XLSX",
+							".ZIP"
+						],
+						"fileNameNotUnique": true,
+						"uploadButtonLabel": {
+							"type": "STRING",
+							"function": "Pasirinktite"
+						},
+						"showLabelInPreview": true,
+						"showDocumentNameInput": true
+					}
+				},
+				{
+					"component": "file-input",
+					"dataModelPath": "file_input_2",
+					"data": {
+						"label": {
+							"type": "STRING",
+							"function": "Steigiamai darbo vietai reikalingų darbo priemonių poreikio pagrindimas pagal darbo pobūdį (technologinis darbo proceso aprašymas ir kt.)."
+						},
+						"visible": {
+							"type": "MULTI_LINE_EDITOR",
+							"function": "const bindings = 'model.workPlaces.workPlaceEstimates.workPlacePurchase model.file_input_2';\n\nreturn model.workPlaces?.flatMap(it => it.workPlaceEstimates.map(it => it.workPlacePurchase?.code)).some(it => it === 'TO_REPAIR');"
+						},
+						"disabled": {
+							"type": "SIMPLE",
+							"function": "data?.revisionData && data?.revisionData?.['file_input_2'] === undefined"
+						},
+						"fileLimit": null,
+						"validators": {
+							"required": [
+								{
+									"key": "requiredValidation",
+									"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+									"value": {
+										"type": "SIMPLE",
+										"function": "true"
+									}
+								}
+							]
+						},
+						"contextHelp": {
+							"type": "STRING",
+							"function": "${data?.revisionData?.['file_input_2'] ? data?.revisionData?.['file_input_2'] : ''}"
+						},
+						"fileInputLabel": {
+							"type": "STRING",
+							"function": "Nutempti dokumentus čia arba paspausti „Pasirinktite“."
+						},
+						"totalSizeLimit": {
+							"type": "STRING",
+							"function": "100"
+						},
+						"allowedFileTypes": [
+							".7Z",
+							".ADOC",
+							".BMP",
+							".DOC",
+							".DOCX",
+							".JPEG",
+							".JPG",
+							".ODS",
+							".ODT",
+							".PDF",
+							".PNG",
+							".RTF",
+							".TXT",
+							".XLS",
+							".XLSX",
+							".ZIP"
+						],
+						"fileNameNotUnique": true,
+						"uploadButtonLabel": {
+							"type": "STRING",
+							"function": "Pasirinktite"
+						},
+						"showLabelInPreview": true,
+						"showDocumentNameInput": true
+					}
+				},
+				{
+					"component": "file-input",
+					"dataModelPath": "file_input_3",
+					"data": {
+						"label": {
+							"type": "STRING",
+							"function": "Ne mažiau kaip 3 tiekėjų pasiūlymų dėl planuojamų įsigyti naujų darbo priemonių ir (ar) ne mažiau kaip 3 tiekėjų pasiūlymų dėl planuojamų remonto darbų patalpose, reikalingose darbo vietoms įrengti (jeigu remontui prašoma subsidija)."
+						},
+						"visible": null,
+						"disabled": {
+							"type": "SIMPLE",
+							"function": "data?.revisionData && data?.revisionData?.['file_input_3'] === undefined"
+						},
+						"fileLimit": null,
+						"validators": {
+							"required": [
+								{
+									"key": "requiredValidation",
+									"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+									"value": {
+										"type": "SIMPLE",
+										"function": "true"
+									}
+								}
+							]
+						},
+						"contextHelp": {
+							"type": "STRING",
+							"function": "${data?.revisionData?.['file_input_3'] ? data?.revisionData?.['file_input_3'] : ''}"
+						},
+						"fileInputLabel": {
+							"type": "STRING",
+							"function": "Nutempti dokumentus čia arba paspausti „Pasirinktite“."
+						},
+						"totalSizeLimit": {
+							"type": "STRING",
+							"function": "100"
+						},
+						"allowedFileTypes": [
+							".7Z",
+							".ADOC",
+							".BMP",
+							".DOC",
+							".DOCX",
+							".JPEG",
+							".JPG",
+							".ODS",
+							".ODT",
+							".PDF",
+							".PNG",
+							".RTF",
+							".TXT",
+							".XLS",
+							".XLSX",
+							".ZIP"
+						],
+						"fileNameNotUnique": true,
+						"uploadButtonLabel": {
+							"type": "STRING",
+							"function": "Pasirinktite"
+						},
+						"showLabelInPreview": true,
+						"showDocumentNameInput": true
+					}
+				},
+				{
+					"component": "file-input",
+					"dataModelPath": "file_input_4",
+					"data": {
+						"label": {
+							"type": "STRING",
+							"function": "Dokumentų, patvirtinančių turto, jeigu jis būtinas darbo vietoms steigti, valdymo teisę ne mažiau kaip 36 mėnesius nuo numatomos darbo vietos įsteigimo dienos (pavyzdžiui: Nekilnojamojo turto registro išrašų, nuomos, panaudos sutarčių), jeigu šių duomenų nėra Nekilnojamojo turto registre kopijos."
+						},
+						"visible": {
+							"type": "MULTI_LINE_EDITOR",
+							"function": "const bindings = 'model.workPlaces.workPlaceRenovation model.file_input_4';\n\nreturn model.workPlaces?.some(it => it.workPlaceRenovation === 'true');"
+						},
+						"disabled": {
+							"type": "SIMPLE",
+							"function": "data?.revisionData && data?.revisionData?.['file_input_4'] === undefined"
+						},
+						"fileLimit": null,
+						"validators": {
+							"required": [
+								{
+									"key": "requiredValidation",
+									"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+									"value": {
+										"type": "SIMPLE",
+										"function": "true"
+									}
+								}
+							]
+						},
+						"contextHelp": {
+							"type": "STRING",
+							"function": "${data?.revisionData?.['file_input_4'] ? data?.revisionData?.['file_input_4'] : ''}"
+						},
+						"fileInputLabel": {
+							"type": "STRING",
+							"function": "Nutempti dokumentus čia arba paspausti „Pasirinktite“."
+						},
+						"totalSizeLimit": {
+							"type": "STRING",
+							"function": "100"
+						},
+						"allowedFileTypes": [
+							".7Z",
+							".ADOC",
+							".BMP",
+							".DOC",
+							".DOCX",
+							".JPEG",
+							".JPG",
+							".ODS",
+							".ODT",
+							".PDF",
+							".PNG",
+							".RTF",
+							".TXT",
+							".XLS",
+							".XLSX",
+							".ZIP"
+						],
+						"fileNameNotUnique": true,
+						"uploadButtonLabel": {
+							"type": "STRING",
+							"function": "Pasirinktite"
+						},
+						"showLabelInPreview": true,
+						"showDocumentNameInput": true
+					}
+				},
+				{
+					"component": "file-input",
+					"dataModelPath": "file_input_5",
+					"data": {
+						"label": {
+							"type": "STRING",
+							"function": "Vykdomai veiklai reikalingų leidimų, licencijų (jeigu informacijos apie juos nėra Licencijų informacinėje sistemoje), kuriuos PVK paraiškos teikėjas gali gauti teikdamas paraišką, kopijos."
+						},
+						"visible": null,
+						"disabled": {
+							"type": "SIMPLE",
+							"function": "data?.revisionData && data?.revisionData?.['file_input_5'] === undefined"
+						},
+						"fileLimit": null,
+						"validators": {},
+						"contextHelp": {
+							"type": "STRING",
+							"function": "${data?.revisionData?.['file_input_5'] ? data?.revisionData?.['file_input_5'] : ''}"
+						},
+						"fileInputLabel": {
+							"type": "STRING",
+							"function": "Nutempti dokumentus čia arba paspausti „Pasirinktite“."
+						},
+						"totalSizeLimit": {
+							"type": "STRING",
+							"function": "100"
+						},
+						"allowedFileTypes": [
+							".7Z",
+							".ADOC",
+							".BMP",
+							".DOC",
+							".DOCX",
+							".JPEG",
+							".JPG",
+							".ODS",
+							".ODT",
+							".PDF",
+							".PNG",
+							".RTF",
+							".TXT",
+							".XLS",
+							".XLSX",
+							".ZIP"
+						],
+						"fileNameNotUnique": true,
+						"uploadButtonLabel": {
+							"type": "STRING",
+							"function": "Pasirinktite"
+						},
+						"showLabelInPreview": true,
+						"showDocumentNameInput": true
+					}
+				},
+				{
+					"component": "file-input",
+					"dataModelPath": "file_input_6",
+					"data": {
+						"label": {
+							"type": "STRING",
+							"function": "Viešosios įstaigos Inovacijų agentūra verslo mokymų platformoje „Verslo e. gidas“ mokymų baigimo pažymėjimo kopija."
+						},
+						"visible": null,
+						"disabled": {
+							"type": "SIMPLE",
+							"function": "data?.revisionData && data?.revisionData?.['file_input_6'] === undefined"
+						},
+						"fileLimit": null,
+						"validators": {
+							"required": [
+								{
+									"key": "requiredValidation",
+									"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+									"value": {
+										"type": "SIMPLE",
+										"function": "true"
+									}
+								}
+							]
+						},
+						"contextHelp": {
+							"type": "STRING",
+							"function": "${data?.revisionData?.['file_input_6'] ? data?.revisionData?.['file_input_6'] : ''}"
+						},
+						"fileInputLabel": {
+							"type": "STRING",
+							"function": "Nutempti dokumentus čia arba paspausti „Pasirinktite“."
+						},
+						"totalSizeLimit": {
+							"type": "STRING",
+							"function": "100"
+						},
+						"allowedFileTypes": [
+							".7Z",
+							".ADOC",
+							".BMP",
+							".DOC",
+							".DOCX",
+							".JPEG",
+							".JPG",
+							".ODS",
+							".ODT",
+							".PDF",
+							".PNG",
+							".RTF",
+							".TXT",
+							".XLS",
+							".XLSX",
+							".ZIP"
+						],
+						"fileNameNotUnique": true,
+						"uploadButtonLabel": {
+							"type": "STRING",
+							"function": "Pasirinktite"
+						},
+						"showLabelInPreview": true,
+						"showDocumentNameInput": true
+					}
+				},
+				{
+					"component": "file-input",
+					"dataModelPath": "file_input_7",
+					"data": {
+						"label": {
+							"type": "STRING",
+							"function": "Dokumentų, įrodančių, kad PVK paraiškos teikėjas priklauso vienai iš tikslinių grupių (PVK paraiškos teikėjo faktiškai auginamo vaiko (įvaikio) iki 8 m. gimimo liudijimo, išrašo iš Gyventojų registro, patvirtinančio, kad PVK paraiškos teikėjas buvo deklaravęs išvykimą iš Lietuvos Respublikos) kopijos."
+						},
+						"visible": {
+							"type": "MULTI_LINE_EDITOR",
+							"function": "const bindings = 'model.workPlaces.additionalSupport model.file_input_7';\n\nreturn model.workPlaces?.some(it => it.additionalSupport === 'true');"
+						},
+						"disabled": {
+							"type": "SIMPLE",
+							"function": "data?.revisionData && data?.revisionData?.['file_input_7'] === undefined"
+						},
+						"fileLimit": null,
+						"validators": {},
+						"contextHelp": {
+							"type": "STRING",
+							"function": "${data?.revisionData?.['file_input_7'] ? data?.revisionData?.['file_input_7'] : ''}"
+						},
+						"fileInputLabel": {
+							"type": "STRING",
+							"function": "Nutempti dokumentus čia arba paspausti „Pasirinktite“."
+						},
+						"totalSizeLimit": {
+							"type": "STRING",
+							"function": "100"
+						},
+						"allowedFileTypes": [
+							".7Z",
+							".ADOC",
+							".BMP",
+							".DOC",
+							".DOCX",
+							".JPEG",
+							".JPG",
+							".ODS",
+							".ODT",
+							".PDF",
+							".PNG",
+							".RTF",
+							".TXT",
+							".XLS",
+							".XLSX",
+							".ZIP"
+						],
+						"fileNameNotUnique": true,
+						"uploadButtonLabel": {
+							"type": "STRING",
+							"function": "Pasirinktite"
+						},
+						"showLabelInPreview": true,
+						"showDocumentNameInput": true
+					}
+				},
+				{
+					"component": "file-input",
+					"dataModelPath": "file_input_8",
+					"data": {
+						"label": {
+							"type": "STRING",
+							"function": "Dokumentų, įrodančių, kad bent kartą pasibaigė PVK paraiškos teikėjo darbo santykiai dirbant užsienyje arba jis nutraukė savarankišką veiklą (-as) užsienyje (pvz. darbo sutartys ar darbo sutartį atitinkantys dokumentai, veiklos vykdymą ir nutraukimą įrodantys dokumentai ir pan.), kopijos."
+						},
+						"visible": null,
+						"disabled": {
+							"type": "SIMPLE",
+							"function": "data?.revisionData && data?.revisionData?.['file_input_8'] === undefined"
+						},
+						"fileLimit": null,
+						"validators": {},
+						"contextHelp": {
+							"type": "STRING",
+							"function": "${data?.revisionData?.['file_input_8'] ? data?.revisionData?.['file_input_8'] : ''}"
+						},
+						"fileInputLabel": {
+							"type": "STRING",
+							"function": "Nutempti dokumentus čia arba paspausti „Pasirinktite“."
+						},
+						"totalSizeLimit": {
+							"type": "STRING",
+							"function": "100"
+						},
+						"allowedFileTypes": [
+							".7Z",
+							".ADOC",
+							".BMP",
+							".DOC",
+							".DOCX",
+							".JPEG",
+							".JPG",
+							".ODS",
+							".ODT",
+							".PDF",
+							".PNG",
+							".RTF",
+							".TXT",
+							".XLS",
+							".XLSX",
+							".ZIP"
+						],
+						"fileNameNotUnique": true,
+						"uploadButtonLabel": {
+							"type": "STRING",
+							"function": "Pasirinktite"
+						},
+						"showLabelInPreview": true,
+						"showDocumentNameInput": true
+					}
+				},
+				{
+					"component": "file-input",
+					"dataModelPath": "file_input_9",
+					"data": {
+						"label": {
+							"type": "STRING",
+							"function": "Kiti dokumentai (pridedami kiti dokumentai, kurie leistų Užimtumo tarnybai geriau suprasti paraišką, įvertinti kuriamą verslą ir jo steigėją)."
+						},
+						"disabled": {
+							"type": "SIMPLE",
+							"function": "data?.revisionData && data?.revisionData?.['file_input_9'] === undefined"
+						},
+						"fileLimit": null,
+						"validators": {},
+						"contextHelp": {
+							"type": "STRING",
+							"function": "${data?.revisionData?.['file_input_9'] ? data?.revisionData?.['file_input_9'] : ''}"
+						},
+						"fileInputLabel": {
+							"type": "STRING",
+							"function": "Nutempti dokumentus čia arba paspausti „Pasirinktite“."
+						},
+						"totalSizeLimit": {
+							"type": "STRING",
+							"function": "100"
+						},
+						"allowedFileTypes": [
+							".7Z",
+							".ADOC",
+							".BMP",
+							".DOC",
+							".DOCX",
+							".JPEG",
+							".JPG",
+							".ODS",
+							".ODT",
+							".PDF",
+							".PNG",
+							".RTF",
+							".TXT",
+							".XLS",
+							".XLSX",
+							".ZIP"
+						],
+						"fileNameNotUnique": true,
+						"uploadButtonLabel": {
+							"type": "STRING",
+							"function": "Pasirinktite"
+						},
+						"showLabelInPreview": true,
+						"showDocumentNameInput": true
+					}
+				},
+				{
+					"component": "h3",
+					"data": {
+						"label": "Antraštė 3",
+						"textValue": {
+							"type": "STRING",
+							"function": "Sutikimas"
+						},
+						"preserveLayoutInPreview": true
+					}
+				},
+				{
+					"component": "checkbox",
+					"dataModelPath": "checkbox_1",
+					"data": {
+						"label": {
+							"type": "STRING",
+							"function": "<b>Patvirtinu, kad</b> paraiškoje ir kituose dokumentuose pateikta informacija yra teisinga."
+						},
+						"disabled": {
+							"type": "SIMPLE",
+							"function": "data?.revisionData && data?.revisionData?.['checkbox_1'] === undefined"
+						},
+						"validators": {
+							"required": [
+								{
+									"key": "requiredValidation",
+									"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+									"value": {
+										"type": "SIMPLE",
+										"function": "true"
+									}
+								}
+							]
+						},
+						"contextHelp": {
+							"type": "STRING",
+							"function": "${data?.revisionData?.['checkbox_1'] ? data?.revisionData?.['checkbox_1'] : ''}"
+						}
+					}
+				},
+				{
+					"component": "checkbox",
+					"dataModelPath": "checkbox_2",
+					"data": {
+						"label": {
+							"type": "STRING",
+							"function": "Įsipareigoju leisti Užimtumo tarnybai patikrinti pateiktą informaciją, jeigu, jos manymu, tai yra būtina, ir man žinoma, kad, jeigu gausiu subsidiją, darbo vietą (-as) turėsiu įsteigti per 10 mėnesių nuo Paramos verslui kurti sutarties pasirašymo ir nepanaikinti už subsidijos lėšas įsteigtos (-ų) darbo vietos (-ų) 36 mėnesius nuo jos (jų) įsteigimo dienos."
+						},
+						"disabled": {
+							"type": "SIMPLE",
+							"function": "data?.revisionData && data?.revisionData?.['checkbox_2'] === undefined"
+						},
+						"validators": {
+							"required": [
+								{
+									"key": "requiredValidation",
+									"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+									"value": {
+										"type": "SIMPLE",
+										"function": "true"
+									}
+								}
+							]
+						},
+						"contextHelp": {
+							"type": "STRING",
+							"function": "${data?.revisionData?.['checkbox_2'] ? data?.revisionData?.['checkbox_2'] : ''}"
+						}
+					}
+				},
+				{
+					"component": "checkbox",
+					"dataModelPath": "checkbox_3",
+					"data": {
+						"class": null,
+						"label": {
+							"type": "STRING",
+							"function": "Patvirtinu, kad darbo vietą sau arba sau ir Užimtumo tarnybos siųstam bedarbiui (siųstiems bedarbiams) ketinu steigti Lietuvos Respublikos smulkiojo ir vidutinio verslo plėtros įstatyme apibrėžtoje labai mažoje įmonėje."
+						},
+						"disabled": {
+							"type": "SIMPLE",
+							"function": "data?.revisionData && data?.revisionData?.['checkbox_3'] === undefined"
+						},
+						"validators": {
+							"required": [
+								{
+									"key": "requiredValidation",
+									"label": "IFormsValidatorConfig.validators.required.params.requiredValidation",
+									"value": {
+										"type": "SIMPLE",
+										"function": "true"
+									}
+								}
+							]
+						},
+						"contextHelp": {
+							"type": "STRING",
+							"function": "${data?.revisionData?.['checkbox_3'] ? data?.revisionData?.['checkbox_3'] : ''}"
+						}
+					}
+				}
+			]
+		},
+		{
+			"component": "stepper-actions",
+			"data": {
+				"class": {
+					"type": "STRING",
+					"function": "gap-3 btn-group-mobile reverse-mobile"
+				},
+				"label": "Žingsnių veiksmai",
+				"visible": null,
+				"showNextStep": true,
+				"validateStep": true,
+				"hideInPreview": true,
+				"nextStepLabel": {
+					"type": "STRING",
+					"function": "Toliau"
+				},
+				"bootstrapClasses": "justify-content-end d-flex",
+				"showPreviousStep": true,
+				"previousStepLabel": {
+					"type": "STRING",
+					"function": "Atgal"
+				}
+			},
+			"children": [
+				{
+					"component": "button",
+					"data": {
+						"class": null,
+						"label": {
+							"type": "STRING",
+							"function": "Šalinti ruošinį"
+						},
+						"visible": {
+							"type": "SIMPLE",
+							"function": "data.status === 'DRAFT' || !data.status"
+						},
+						"buttonType": "BUTTON",
+						"buttonEvent": {
+							"eventName": "onDraftDelete",
+							"eventType": "PREDEFINED_EVENT"
+						},
+						"buttonStyle": "btn btn--link",
+						"hideInPreview": true,
+						"bootstrapClasses": "d-flex",
+						"preserveLayoutInPreview": true
+					},
+					"children": [
+						{
+							"component": "icon",
+							"data": {
+								"class": null,
+								"label": "Ikona",
+								"style": null,
+								"iconName": {
+									"type": "STRING",
+									"function": "delete"
+								},
+								"preserveLayoutInPreview": true
+							}
+						}
+					]
+				},
+				{
+					"component": "button",
+					"data": {
+						"class": null,
+						"label": {
+							"type": "STRING",
+							"function": "Saugoti ruošinį"
+						},
+						"visible": {
+							"type": "SIMPLE",
+							"function": "data.status === 'DRAFT' || !data.status"
+						},
+						"buttonType": "BUTTON",
+						"buttonEvent": {
+							"eventName": "onDraftSave",
+							"eventType": "PREDEFINED_EVENT"
+						},
+						"buttonStyle": "btn btn--primary-light",
+						"hideInPreview": true,
+						"bootstrapClasses": "d-flex",
+						"preserveLayoutInPreview": true
+					},
+					"children": []
+				}
+			]
+		},
+		{
+			"component": "stepper-last-step-actions",
+			"data": {
+				"class": {
+					"type": "STRING",
+					"function": "gap-3 btn-group-mobile reverse-mobile"
+				},
+				"label": "Paskutinio žingsnio veiksmai",
+				"hideInPreview": true,
+				"bootstrapClasses": "justify-content-end d-flex",
+				"showPreviousStep": true,
+				"previousStepLabel": {
+					"type": "STRING",
+					"function": "Atgal"
+				}
+			},
+			"children": [
+				{
+					"component": "button",
+					"data": {
+						"class": null,
+						"label": {
+							"type": "STRING",
+							"function": "Šalinti ruošinį"
+						},
+						"visible": {
+							"type": "SIMPLE",
+							"function": "data.status === 'DRAFT' || !data.status"
+						},
+						"buttonType": "BUTTON",
+						"buttonEvent": {
+							"eventName": "onDraftDelete",
+							"eventType": "PREDEFINED_EVENT"
+						},
+						"buttonStyle": "btn btn--link",
+						"hideInPreview": true,
+						"bootstrapClasses": "d-flex",
+						"preserveLayoutInPreview": true
+					},
+					"children": [
+						{
+							"component": "icon",
+							"data": {
+								"class": null,
+								"label": "Ikona",
+								"style": null,
+								"iconName": {
+									"type": "STRING",
+									"function": "delete"
+								},
+								"preserveLayoutInPreview": true
+							}
+						}
+					]
+				},
+				{
+					"component": "button",
+					"data": {
+						"class": null,
+						"label": {
+							"type": "STRING",
+							"function": "Saugoti ruošinį"
+						},
+						"visible": {
+							"type": "SIMPLE",
+							"function": "data.status === 'DRAFT' || !data.status"
+						},
+						"buttonType": "BUTTON",
+						"buttonEvent": {
+							"eventName": "onDraftSave",
+							"eventType": "PREDEFINED_EVENT"
+						},
+						"buttonStyle": "btn btn--primary-light",
+						"hideInPreview": true,
+						"bootstrapClasses": "d-flex",
+						"preserveLayoutInPreview": true
+					},
+					"children": []
+				},
+				{
+					"component": "button",
+					"data": {
+						"class": {
+							"type": "STRING",
+							"function": "d-flex flex-row-reverse"
+						},
+						"label": {
+							"type": "STRING",
+							"function": "Peržiūrėti"
+						},
+						"visible": null,
+						"buttonType": "SUBMIT",
+						"buttonEvent": {
+							"eventName": "onPreview",
+							"eventType": "PREDEFINED_EVENT"
+						},
+						"buttonStyle": "btn btn--primary",
+						"hideInPreview": true,
+						"bootstrapClasses": "d-flex",
+						"preserveLayoutInPreview": true
+					},
+					"children": [
+						{
+							"component": "icon",
+							"data": {
+								"class": null,
+								"label": "Ikona",
+								"iconName": {
+									"type": "STRING",
+									"function": "chevron_right"
+								},
+								"preserveLayoutInPreview": true
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

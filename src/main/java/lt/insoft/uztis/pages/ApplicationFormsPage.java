@@ -488,7 +488,6 @@ public class ApplicationFormsPage extends UztisPage {
         }
     }
 
-
     public void selectValuesByListEvaluationOne(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 

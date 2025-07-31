@@ -234,13 +234,19 @@ public class EvaluationsPageTest extends UztisPageTest{
             evaluationsPage.clickRadioButtonWithoutCommissionNO();
             log.debug("Selected 'Without Commission' radio button.");
 
-            String chairman = "Pirmininkas Pirmininkauskas";
-            evaluationsPage.enterChairmanName(chairman);
-            log.debug("Entered chairman name: '{}'.", chairman);
+            String chairmanName = "Adelė Kutienė";
+            evaluationsPage.selectValueByListChairmanName(chairmanName);
 
-            String member = "Narys Narauskas";
-            evaluationsPage.enterMemberName(member);
-            log.debug("Entered member name: '{}'.", member);
+//            String chairman = "Pirmininkas Pirmininkauskas";
+//            evaluationsPage.enterChairmanName(chairman);
+//            log.debug("Entered chairman name: '{}'.", chairman);
+
+            String memberName1 = "Agnė Andriūnienė";
+            evaluationsPage.selectValueByListMemberName(memberName1);
+
+//            String member = "Narys Narauskas";
+//            evaluationsPage.enterMemberName(member);
+//            log.debug("Entered member name: '{}'.", member);
 
             evaluationsPage.clickButtonContinue();
             log.debug("Clicked 'Continue'.");
@@ -343,13 +349,19 @@ public class EvaluationsPageTest extends UztisPageTest{
             evaluationsPage.clickRadioButtonWithoutCommissionNO();
             log.debug("Selected 'Without Commission' radio button.");
 
-            String chairman = "Pirmininkas Pirmininkauskas";
-            evaluationsPage.enterChairmanName(chairman);
-            log.debug("Entered chairman name: '{}'.", chairman);
+            String chairmanName = "Adelė Kutienė";
+            evaluationsPage.selectValueByListChairmanName(chairmanName);
 
-            String member = "Narys Narauskas";
-            evaluationsPage.enterMemberName(member);
-            log.debug("Entered member name: '{}'.", member);
+//            String chairman = "Pirmininkas Pirmininkauskas";
+//            evaluationsPage.enterChairmanName(chairman);
+//            log.debug("Entered chairman name: '{}'.", chairman);
+
+            String memberName1 = "Agnė Andriūnienė";
+            evaluationsPage.selectValueByListMemberName(memberName1);
+
+//            String member = "Narys Narauskas";
+//            evaluationsPage.enterMemberName(member);
+//            log.debug("Entered member name: '{}'.", member);
 
             evaluationsPage.clickButtonContinue();
             log.debug("Clicked 'Continue'.");

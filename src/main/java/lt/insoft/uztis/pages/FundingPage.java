@@ -27,7 +27,7 @@ public class FundingPage extends UztisPage{
     @FindBy(xpath = "//button[contains(@class, 'btn') and text()='Formuoti']")
     WebElement buttonForm;
 
-    @FindBy(css = ".btn--primary")
+    @FindBy(xpath = "//button[normalize-space()='Finansuoti']")
     WebElement buttonFinance;
 
     @FindBy(xpath = "//mat-label[text()='Įsakymo Nr.']/ancestor::mat-form-field//input")

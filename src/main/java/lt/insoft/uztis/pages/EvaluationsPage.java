@@ -3,10 +3,14 @@ package lt.insoft.uztis.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Collection;
 
 import static java.lang.invoke.MethodHandles.lookup;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -166,6 +170,16 @@ public class EvaluationsPage extends UztisPage{
 
     @FindBy(xpath = "//label[contains(., 'Komisijos pirmininkas')]/following::input[1]")
     WebElement inputChairmanName;
+
+    @FindBy(xpath = "//mat-label[contains(text(), 'Komisijos pirmininkas')]/following::mat-select[1]")
+    WebElement dropdownChairmanName;
+
+    @FindBy(xpath = "//mat-label[contains(text(), 'Komisijos narys Nr. 1')]/following::mat-select")
+    WebElement dropdownMemberName;
+
+    @FindBy(xpath = "//input[@placeholder='Ieškoti...']")
+    WebElement dropdownSearch;
+
 //    Komisijos narys Nr. 1
     @FindBy(xpath = "//label[contains(., 'Komisijos narys Nr. 1')]/following::input[1]")
     WebElement inputMemberName;
@@ -494,6 +508,116 @@ public class EvaluationsPage extends UztisPage{
     public void enterChairmanName(String chairman) {
         inputChairmanName.clear();
         inputChairmanName.sendKeys(chairman);
+    }
+
+    public void clickElementByTextInDropdown(String visibleText) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
+        try {
+            String optionXPath = "//mat-option//span[normalize-space(text())='" + visibleText + "']";
+            WebElement optionToClick = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(optionXPath)));
+            optionToClick.click();
+            log.info("Clicked on dropdown item with text: '{}'", visibleText);
+        } catch (Exception e) {
+            log.error("Could not find or click dropdown option '{}': {}", visibleText, e.getMessage());
+            throw e;
+        }
+    }
+
+    public void clickOutsideDropdown() {
+        WebElement header = driver.findElement(By.cssSelector("h2.m-0"));
+        header.click();
+    }
+
+    private String normalize(String s) {
+        if (s == null) return "";
+        return s.replaceAll("\\s+", " ").trim().toLowerCase();
+    }
+
+    public void selectValueByListChairmanName(String valueToSelect) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+        try {
+            WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(dropdownChairmanName));
+            dropdown.click();
+            log.info("Evaluator dropdown opened.");
+
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownSearch)).click();
+            dropdownSearch.clear();
+            dropdownSearch.sendKeys(valueToSelect);
+
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//mat-option")));
+
+            clickElementByTextInDropdown(valueToSelect);
+
+            clickOutsideDropdown();
+
+            // Palaukiam, kol dropdown užsidarys (t.y. nebeliks mat-option elementų)
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//mat-option")));
+
+            // Tikrinam ar pasirinktas tekstas matomas teisingai
+            wait.until(driver -> {
+                try {
+                    String selectedText = driver.findElement(
+                            By.cssSelector(".mat-mdc-select-value-text mat-select-trigger span span")
+                    ).getText().trim();
+                    log.debug("Dropdown selected evaluator raw text: '{}'", selectedText);
+                    return normalize(selectedText).contains(normalize(valueToSelect));
+                } catch (Exception e) {
+                    log.warn("Nepavyko gauti pasirinktos reikšmės: {}", e.getMessage());
+                    return false;
+                }
+            });
+
+            log.info("Evaluator successfully selected: {}", valueToSelect);
+
+        } catch (Exception e) {
+            log.error("Failed in selectValueByListEvaluators: {}", e.getMessage(), e);
+            throw e;
+        }
+    }
+
+    public void selectValueByListMemberName(String valueToSelect) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+        try {
+            WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(dropdownMemberName));
+            dropdown.click();
+            log.info("Evaluator dropdown opened.");
+
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownSearch)).click();
+            dropdownSearch.clear();
+            dropdownSearch.sendKeys(valueToSelect);
+
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//mat-option")));
+
+            clickElementByTextInDropdown(valueToSelect);
+
+            clickOutsideDropdown();
+
+            // Palaukiam, kol dropdown užsidarys (t.y. nebeliks mat-option elementų)
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//mat-option")));
+
+//             Tikrinam ar pasirinktas tekstas matomas teisingai
+//            wait.until(driver -> {
+//                try {
+//                    String selectedText = driver.findElement(
+//                            By.cssSelector(".mat-mdc-select-value-text mat-select-trigger span span")
+//                    ).getText().trim();
+//                    log.debug("Dropdown selected evaluator raw text: '{}'", selectedText);
+//                    return normalize(selectedText).contains(normalize(valueToSelect));
+//                } catch (Exception e) {
+//                    log.warn("Nepavyko gauti pasirinktos reikšmės: {}", e.getMessage());
+//                    return false;
+//                }
+//            });
+
+            log.info("Evaluator successfully selected: {}", valueToSelect);
+
+        } catch (Exception e) {
+            log.error("Failed in selectValueByListEvaluators: {}", e.getMessage(), e);
+            throw e;
+        }
     }
 
     public void enterMemberName(String member) {

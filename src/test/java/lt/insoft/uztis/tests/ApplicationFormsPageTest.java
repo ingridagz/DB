@@ -89,8 +89,6 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             Assertions.assertTrue(isEditFormButtonVisible, "Edit button should be displayed.");
             log.info("Verified that the 'Edit' button is displayed.");
 
-//        TestUtils.takeScreenshot(driver, "testNavigateToAndReviewApplicationFormsPageTest");
-
             log.info("Test 'testNavigateToAndReviewApplicationFormsPageTest' completed successfully.");
         } catch (AssertionError | Exception e) {
             log.error("Test 'testNavigateToAndReviewApplicationFormsPageTest' failed with error: {}", e.getMessage(), e);
@@ -98,10 +96,9 @@ public class ApplicationFormsPageTest extends UztisPageTest {
         }
     }
 
-//Po "test...create..." paleisti testą "test...edit...", kitaip neveiks kvietimo kūrimo/publikavimo testas.
-// Po "test...create..." rankiniu būdu įkelti VUI dinaminę formą.
+
     @Test
-    void testCreateNewVuiApplication() {
+    void testCreateNewVuiApplication() throws IOException, AWTException {
         log.info("Starting test:'testCreateNewVuiApplication'");
 
         try {
@@ -118,20 +115,17 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.enterApplicationCode(randomText);
             log.debug("Entered random application code: {}", randomText);
 
-            //Pateiktos paraiškos priskiriamos:
-            applicationFormsPage.clickRadioButtonSection();
-            log.debug("Selected 'Section' radio button.");
-            String valueToSelectS = "Priemonių organizavimo departamentas / Priemonių organizavimo 1-asis skyrius";
-            applicationFormsPage.selectValueByListSection(valueToSelectS);
-            log.debug("Selected a value from the 'Section' dropdown: '{}'", valueToSelectS);
-
             //Biudžetas:
-            applicationFormsPage.clickRadioButtonBudgetByMunicipality();
-            log.debug("Selected 'Budget by Municipality' option.");
+            applicationFormsPage.clickRadioButtonBudgetByCountry();
+            log.debug("Selected 'Budget By Country' radio button.");
+//            applicationFormsPage.clickRadioButtonBudgetByMunicipality();
+//            log.debug("Selected 'Budget by Municipality' option.");
 
             //Finansavimo eilės sudarymas:
-            applicationFormsPage.clickRadioButtonFinancedWithoutQueue();
-            log.debug("Selected 'Financed Without Queue' option.");
+            applicationFormsPage.clickRadioButtonFinancedByQueue();
+            log.debug("Selected 'Financed By Queue' radio button.");
+//            applicationFormsPage.clickRadioButtonFinancedWithoutQueue();
+//            log.debug("Selected 'Financed Without Queue' option.");
 
             applicationFormsPage.clickButtonAdd();
             applicationFormsPage.clickButtonAdd();
@@ -149,7 +143,18 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.selectValuesByListEvaluationThree(valueToSelect3);
             log.debug("Selected a value from the 'EvaluationThree' dropdown: '{}'", valueToSelect3);
 
-            //Nustatymai - nepamiršti aktyvuoti, kai testai bus paruošti.
+            //Pateiktos paraiškos priskiriamos:
+            applicationFormsPage.clickRadioButtonMunicipality();
+            log.debug("Selected 'Municipality' radio button.");
+            String valueToSelectM = "Klaipėdos klientų aptarnavimo departamentas";
+            applicationFormsPage.selectValueByListMunicipality(valueToSelectM);
+            log.debug("Selected a value from the 'Municipality' dropdown: '{}'", valueToSelectM);
+//            applicationFormsPage.clickRadioButtonSection();
+//            log.debug("Selected 'Section' radio button.");
+//            String valueToSelectS = "Kauno klientų aptarnavimo departamentas / Alytaus skyrius";
+//            applicationFormsPage.selectValueByListSection(valueToSelectS);
+//            log.debug("Selected a value from the 'Section' dropdown: '{}'", valueToSelectS);
+
             applicationFormsPage.clickButtonPlus();
             log.debug("Clicked 'Plus' button.");
 
@@ -166,18 +171,31 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.clickButtonSave();
             log.debug("Clicked the 'Save' button.");
 
-            //ĮDĖTI DINAMINĘ FORMĄ RANKINIU BŪDU, nes:
-            //neveikia:
-//        applicationFormsPage.enterFormData("");
-
             applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
             log.info("Verified success message");
+
+            String json = new String(Files.readAllBytes(Paths.get("C:\\Users\\ingrida.zadorozniene\\Desktop\\Asm\\UZTIS\\UZTIS_tests\\src\\test\\resources\\VUI.json")));
+
+            StringSelection selection = new StringSelection(json);
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
+
+            Robot robot = new Robot();
+            robot.delay(500);
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_CONTROL);
 
             boolean isSaveFormButtonVisible = applicationFormsPage.isButtonSaveFormDisplayed();
             Assertions.assertTrue(isSaveFormButtonVisible, "Save form button should be displayed.");
             log.info("Verified that the 'Save Form' button is displayed.");
 
-//        TestUtils.takeScreenshot(driver, "testCreateNewVuiApplication");
+            applicationFormsPage.clickButtonSaveDynamicForm();
+            log.debug("Clicked 'SaveDynamicForm' button");
+
+            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            log.info("Verified success message");
+
 
             log.info("Test 'testCreateNewVuiApplication' completed successfully.");
         } catch (AssertionError | Exception e) {
@@ -186,56 +204,55 @@ public class ApplicationFormsPageTest extends UztisPageTest {
         }
     }
 
-    @Test
-    void testEditAndSaveVuiApplication() {
-        log.info("Starting test:'testEditAndSaveVuiApplication'");
-
-        try {
-
-            TestUtils.loginAllTests(driver);
-            log.debug("User logged in with test credentials");
-
-            navigateToApplicationFormsMenu();
-
-            applicationFormsPage.clickLastDescription();
-            log.debug("Selected the last application description.");
-
-            applicationFormsPage.clickButtonEdit();
-            log.debug("Clicked the 'Edit' button.");
-
-            //Pateiktos paraiškos priskiriamos:
-            applicationFormsPage.clickRadioButtonMunicipality();
-            log.debug("Selected 'Municipality' radio button.");
-            String valueToSelectM = "Priemonių organizavimo departamentas";
-            applicationFormsPage.selectValueByListMunicipality(valueToSelectM);
-            log.debug("Selected a value from the 'Municipality' dropdown: '{}'", valueToSelectM);
-
-            //Biudžetas:
-            applicationFormsPage.clickRadioButtonBudgetByCountry();
-            log.debug("Selected 'Budget By Country' radio button.");
-
-            //Finansavimo eilės sudarymas:
-            applicationFormsPage.clickRadioButtonFinancedByQueue();
-            log.debug("Selected 'Financed By Queue' radio button.");
-
-            String newApplicationName = "_paredaguota";
-            applicationFormsPage.enterApplicationName(newApplicationName);
-            log.debug("Entered new application name: {}", newApplicationName);
-
-            applicationFormsPage.clickButtonSave();
-            log.debug("Clicked the 'Save' button.");
-
-            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
-            log.info("Verified success message");
-
-//        TestUtils.takeScreenshot(driver, "testEditAndSaveVuiApplication");
-
-            log.info("Test 'testEditAndSaveVuiApplication' completed successfully.");
-        } catch (AssertionError | Exception e) {
-            log.error("Test 'testEditAndSaveVuiApplication' failed with error: {}", e.getMessage(), e);
-            throw e;
-        }
-    }
+//nebereikalingas
+//    @Test
+//    void testEditAndSaveVuiApplication() {
+//        log.info("Starting test:'testEditAndSaveVuiApplication'");
+//
+//        try {
+//
+//            TestUtils.loginAllTests(driver);
+//            log.debug("User logged in with test credentials");
+//
+//            navigateToApplicationFormsMenu();
+//
+//            applicationFormsPage.clickLastDescription();
+//            log.debug("Selected the last application description.");
+//
+//            applicationFormsPage.clickButtonEdit();
+//            log.debug("Clicked the 'Edit' button.");
+//
+//            //Pateiktos paraiškos priskiriamos:
+//            applicationFormsPage.clickRadioButtonMunicipality();
+//            log.debug("Selected 'Municipality' radio button.");
+//            String valueToSelectM = "Kauno klientų aptarnavimo departamentas";
+//            applicationFormsPage.selectValueByListMunicipality(valueToSelectM);
+//            log.debug("Selected a value from the 'Municipality' dropdown: '{}'", valueToSelectM);
+//
+//            //Biudžetas:
+////            applicationFormsPage.clickRadioButtonBudgetByCountry();
+////            log.debug("Selected 'Budget By Country' radio button.");
+//
+//            //Finansavimo eilės sudarymas:
+////            applicationFormsPage.clickRadioButtonFinancedByQueue();
+////            log.debug("Selected 'Financed By Queue' radio button.");
+//
+//            String newApplicationName = "_paredaguota";
+//            applicationFormsPage.enterApplicationName(newApplicationName);
+//            log.debug("Entered new application name: {}", newApplicationName);
+//
+//            applicationFormsPage.clickButtonSave();
+//            log.debug("Clicked the 'Save' button.");
+//
+//            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+//            log.info("Verified success message");
+//
+//            log.info("Test 'testEditAndSaveVuiApplication' completed successfully.");
+//        } catch (AssertionError | Exception e) {
+//            log.error("Test 'testEditAndSaveVuiApplication' failed with error: {}", e.getMessage(), e);
+//            throw e;
+//        }
+//    }
 
     @Test
     void testAddDocumentsVUI() {
@@ -269,7 +286,6 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.selectValuesByListDocument8(document3);
             log.debug("Selected a value from the 'Document' dropdown: '{}'", document3);
 
-
             applicationFormsPage.clickButtonSave();
             log.debug("Clicked the 'Save' button.");
 
@@ -282,8 +298,6 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             throw e;
         }
     }
-
-//-----------------------------------------------------
 
     @Test
     void testCreateNewDvpApplication() throws IOException, AWTException {
@@ -303,13 +317,6 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.enterApplicationCode(randomText);
             log.debug("Entered random application code: {}", randomText);
 
-            //Pateiktos paraiškos priskiriamos:
-            applicationFormsPage.clickRadioButtonMunicipality();
-            log.debug("Selected 'Municipality' radio button.");
-            String valueToSelectM = "Priemonių organizavimo departamentas";
-            applicationFormsPage.selectValueByListMunicipality(valueToSelectM);
-            log.debug("Selected a value from the 'Municipality' dropdown: '{}'", valueToSelectM);
-
             //Biudžetas:
             applicationFormsPage.clickRadioButtonBudgetByCountry();
             log.debug("Selected 'Budget By Country' radio button.");
@@ -322,7 +329,13 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.selectValuesByListEvaluationOne(valueToSelect1);
             log.debug("Selected a value from the 'EvaluationOne' dropdown: '{}'", valueToSelect1);
 
-            //Nustatymai - nepamiršti aktyvuoti, kai testai bus paruošti.
+            //Pateiktos paraiškos priskiriamos:
+            applicationFormsPage.clickRadioButtonMunicipality();
+            log.debug("Selected 'Municipality' radio button.");
+            String valueToSelectM = "Klaipėdos klientų aptarnavimo departamentas";
+            applicationFormsPage.selectValueByListMunicipality(valueToSelectM);
+            log.debug("Selected a value from the 'Municipality' dropdown: '{}'", valueToSelectM);
+
             applicationFormsPage.clickButtonPlus();
             log.debug("Clicked 'Plus' button.");
 
@@ -348,7 +361,7 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
 
             Robot robot = new Robot();
-            robot.delay(500); // wait a bit
+            robot.delay(500);
             robot.keyPress(KeyEvent.VK_CONTROL);
             robot.keyPress(KeyEvent.VK_V);
             robot.keyRelease(KeyEvent.VK_V);
@@ -418,7 +431,7 @@ public class ApplicationFormsPageTest extends UztisPageTest {
 
 
     @Test
-    void testCreateNewPvkApplication() {
+    void testCreateNewPvkApplication() throws IOException, AWTException {
         log.info("Starting test:'testCreateNewPvkApplication'");
 
         try {
@@ -434,13 +447,6 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             String randomText = getRandomPvkCode();
             applicationFormsPage.enterApplicationCode(randomText);
             log.debug("Entered random application code: {}", randomText);
-
-            //Pateiktos paraiškos priskiriamos:
-            applicationFormsPage.clickRadioButtonMunicipality();
-            log.debug("Selected 'Municipality' radio button.");
-            String valueToSelectM = "Priemonių organizavimo departamentas";
-            applicationFormsPage.selectValueByListMunicipality(valueToSelectM);
-            log.debug("Selected a value from the 'Municipality' dropdown: '{}'", valueToSelectM);
 
             //Biudžetas:
             applicationFormsPage.clickRadioButtonBudgetByMunicipality();
@@ -466,7 +472,13 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.selectValuesByListEvaluationThree(valueToSelect3);
             log.debug("Selected a value from the 'EvaluationThree' dropdown: '{}'", valueToSelect3);
 
-            //Nustatymai - nepamiršti aktyvuoti, kai testai bus paruošti.
+//            Pateiktos paraiškos priskiriamos:
+            applicationFormsPage.clickRadioButtonMunicipality();
+            log.debug("Selected 'Municipality' radio button.");
+            String valueToSelectM = "Klaipėdos klientų aptarnavimo departamentas";
+            applicationFormsPage.selectValueByListMunicipality(valueToSelectM);
+            log.debug("Selected a value from the 'Municipality' dropdown: '{}'", valueToSelectM);
+
             applicationFormsPage.clickButtonPlus();
             log.debug("Clicked 'Plus' button.");
 
@@ -483,18 +495,30 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.clickButtonSave();
             log.debug("Clicked the 'Save' button.");
 
-            //ĮDĖTI DINAMINĘ FORMĄ RANKINIU BŪDU, nes:
-            //neveikia:
-////        applicationFormsPage.enterFormData("");
+            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            log.info("Verified success message");
 
-//            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
-//            log.info("Verified success message");
-//
-//            boolean isSaveFormButtonVisible = applicationFormsPage.isButtonSaveFormDisplayed();
-//            Assertions.assertTrue(isSaveFormButtonVisible, "Save form button should be displayed.");
-//            log.info("Verified that the 'Save Form' button is displayed.");
+            String json = new String(Files.readAllBytes(Paths.get("C:\\Users\\ingrida.zadorozniene\\Desktop\\Asm\\UZTIS\\UZTIS_tests\\src\\test\\resources\\PVK.json")));
 
-//        TestUtils.takeScreenshot(driver, "testCreateNewVuiApplication");
+            StringSelection selection = new StringSelection(json);
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
+
+            Robot robot = new Robot();
+            robot.delay(500);
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+
+            boolean isSaveFormButtonVisible = applicationFormsPage.isButtonSaveFormDisplayed();
+            Assertions.assertTrue(isSaveFormButtonVisible, "Save form button should be displayed.");
+            log.info("Verified that the 'Save Form' button is displayed.");
+
+            applicationFormsPage.clickButtonSaveDynamicForm();
+            log.debug("Clicked 'SaveDynamicForm' button");
+
+            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            log.info("Verified success message");
 
             log.info("Test 'testCreateNewPvkApplication' completed successfully.");
         } catch (AssertionError | Exception e) {

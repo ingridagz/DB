@@ -744,6 +744,7 @@ public class InvitationsPageTest extends UztisPageTest {
             throw e;
         }
     }
-//run test with statistic information
+
+//run test testInsertVui_PvkStatisticInformation
 
 }
