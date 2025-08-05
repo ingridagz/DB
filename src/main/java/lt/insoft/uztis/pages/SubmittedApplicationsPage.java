@@ -89,10 +89,59 @@ public class SubmittedApplicationsPage extends UztisPage {
     WebElement dropdownButtonEVRK_DVP;
     //DVP
 
+    //PVK
+    @FindBy(xpath = "//input[@type='radio' and @name='mat-radio-group-1' and @value='jobForYourself']")
+    WebElement radioButtonForYourself;
+
+    @FindBy(xpath = "//mat-label[contains(text(), 'Planuojama steigti veiklos forma')]")
+    WebElement dropdownButtonBusinessStructureName_PVK;
+
+    @FindBy(xpath = "//mat-label[contains(text(), 'Planuojama vykdyti veikla, kodas pagal EVRK')]")
+    WebElement dropdownButtonEVRK_PVK;
+
+    @FindBy(xpath = "//input[@type='radio' and @value='true']")
+    WebElement radioButtonSelfEmploymentTerminated;
+
+    @FindBy(xpath = "//mat-label[contains(text(), 'Vykdyta veikla (-os), kuri buvo nutraukta, kodas pagal EVRK')]")
+    WebElement dropdownButtonEVRK_PVK_true;
+
+    @FindBy(xpath = "//mat-checkbox[.//label[contains(normalize-space(), '1.2.1. vykdant veiklą sumažės gamtos ar kitų išteklių naudojimas')]]//input[@type='checkbox']")
+    WebElement checkboxOne_label_PVK;
+
+    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[1]")
+    WebElement inputExplanation_PVK;
+
+    @FindBy(xpath = "//mat-label[contains(text(), 'Steigiamos darbo vietos pavadinimas, kodas pagal profesijų klasifikatorių')]")
+    WebElement dropdownButtonJobNameAdaptable_PVK;
+    //------------------
+    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[2]")
+    WebElement inputJobFunction_PVK;
+
+    @FindBy(xpath = "(//input[@type='radio' and @value='true'])[2]")
+    WebElement radioButtonForQualification_PVK_step2;
+
+
+
+    @FindBy(xpath = "(//input[@type='radio' and @value='false'])[3]")
+    WebElement radioButtonForExperience_PVK_step2;
+
+
+
+    @FindBy(xpath = "(//input[@type='radio' and @value='false'])[4]")
+    WebElement radioButtonForSupportedPerson_PVK_step2;
+
+
+    //PVK
+
     //address
 //----------------
     @FindBy(xpath = "(//mat-icon[contains(text(), 'edit')])[3]")
     WebElement addressComponent;
+
+    //PVK
+    @FindBy(xpath = "(//mat-icon[contains(text(), 'edit')])[2]")
+    WebElement addressComponentPVK;
+    //PVK
 
     @FindBy(xpath = "//mat-label[contains(text(), 'Valstybė')]/following::mat-select[1]")
     WebElement dropdownAddressCountry;
@@ -533,9 +582,21 @@ public class SubmittedApplicationsPage extends UztisPage {
     }
 
     //----------------------------
-    public void clickRadioButtonFA() {
+    public void selectRadioButtonFA() {
         if (!radioButtonFA.isSelected()) {
             radioButtonFA.click();
+        }
+    }
+
+    public void selectRadioForYourself() {
+        if (!radioButtonForYourself.isSelected()) {
+            radioButtonForYourself.click();
+        }
+    }
+
+    public void selectRadioButtonSelfEmploymentTerminated() {
+        if (!radioButtonSelfEmploymentTerminated.isSelected()) {
+            radioButtonSelfEmploymentTerminated.click();
         }
     }
 
@@ -555,6 +616,54 @@ public class SubmittedApplicationsPage extends UztisPage {
     }
 
 
+    public void selectDropdownBusinessStructureName_PVK(String valueToSelect) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Ilgesnis laukimo laikas
+
+        log.info("Located the dropdown button.");
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonBusinessStructureName_PVK));
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView(true);", dropdownButtonBusinessStructureName_PVK); // Užtikrinsime, kad elementas būtų matomas
+            dropdownButtonBusinessStructureName_PVK.click();
+        } catch (Exception e) {
+            log.error("Dropdown button click failed: {}", e.getMessage());
+        }
+
+        try {
+            List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option/span")));
+
+            boolean optionSelected = false;
+            for (WebElement option : options) {
+                if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
+                    wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+                    optionSelected = true;
+                    log.info("Successfully selected the value: '{}'", valueToSelect);
+                    break;
+                }
+            }
+
+            if (!optionSelected) {
+                log.warn("Dropdown value '{}' not found.", valueToSelect);
+            }
+
+        } catch (Exception e) {
+            log.error("Failed to select dropdown option: {}", e.getMessage());
+        }
+
+//        try {
+//            wait.until(ExpectedConditions.attributeToBe(dropdownButtonJobName, "aria-expanded", "false"));
+//        } catch (TimeoutException e) {
+//            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
+//        }
+    }
+
+    public void clickMatCheckboxByLabelText(String partialLabelText) {
+        By checkboxLabel = By.xpath("//mat-checkbox[.//label[contains(normalize-space(), '" + partialLabelText + "')]]//label");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement label = wait.until(ExpectedConditions.elementToBeClickable(checkboxLabel));
+        label.click();
+        log.info("Clicked mat-checkbox label containing text: {}", partialLabelText);
+    }
 
     public void selectValueByListEVRK_VUI(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -698,6 +807,118 @@ public class SubmittedApplicationsPage extends UztisPage {
         }
     }
 
+    public void selectValueByListEVRK_PVK(String valueToSelect) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        try {
+            log.info("Clicking on the dropdown button.");
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonEVRK_PVK)).click();
+
+            // Laukiame, kol išskleidžiamas meniu bus matomas
+            List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option//span")));
+            log.info("Found {} options in the dropdown.", options.size());
+
+            boolean optionSelected = false;
+
+            // Tikriname kiekvieną meniu parinktį
+            for (WebElement option : options) {
+                String optionText = option.getText().trim();
+                log.debug("Checking option: '{}'", optionText);
+
+                if (optionText.equalsIgnoreCase(valueToSelect)) {
+                    option.click();  // Tiesioginis paspaudimas ant pasirinkimo
+                    optionSelected = true;
+                    log.info("Successfully selected the value: '{}'", valueToSelect);
+                    break;
+                }
+            }
+
+            if (!optionSelected) {
+                log.warn("The value '{}' was not found among the options.", valueToSelect);
+                throw new RuntimeException("The value '" + valueToSelect + "' was not found in the dropdown.");
+            }
+
+            log.info("Attempting to close the dropdown.");
+
+            // Palaukite, kol pasirinkimas bus atliktas ir dropdown užsidarys
+            // Paliekame laiko įsitikinti, kad pasirinkimas buvo atliktas (rekomenduojama ne mažiau kaip 500ms)
+            Thread.sleep(500);
+
+            // Bandome uždaryti meniu paspausdami ESC (kartais tai padeda, jei meniu nepatikimai užsidaro)
+            Actions actions = new Actions(driver);
+            actions.sendKeys(Keys.ESCAPE).perform();
+
+            // Jei ESC nepadėjo, bandome paspausti į tuščią vietą ekrane
+            WebElement body = driver.findElement(By.tagName("body")); // Paspauskime į visą puslapio kūną, kuris yra tiksliai matomas
+            actions.moveToElement(body).click().perform();
+
+//            // Patikriname, ar meniu užsidarė
+//            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//mat-option//span")));
+//            log.info("Dropdown should be closed now.");
+
+        } catch (Exception e) {
+            log.error("Error occurred while selecting value: {}", e.getMessage());
+            throw new RuntimeException("Failed to select value from dropdown.", e);
+        }
+    }
+
+    public void selectValueByListEVRK_PVK_true(String valueToSelect) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        try {
+            log.info("Clicking on the dropdown button.");
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonEVRK_PVK_true)).click();
+
+            // Laukiame, kol išskleidžiamas meniu bus matomas
+            List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option//span")));
+            log.info("Found {} options in the dropdown.", options.size());
+
+            boolean optionSelected = false;
+
+            // Tikriname kiekvieną meniu parinktį
+            for (WebElement option : options) {
+                String optionText = option.getText().trim();
+                log.debug("Checking option: '{}'", optionText);
+
+                if (optionText.equalsIgnoreCase(valueToSelect)) {
+                    option.click();  // Tiesioginis paspaudimas ant pasirinkimo
+                    optionSelected = true;
+                    log.info("Successfully selected the value: '{}'", valueToSelect);
+                    break;
+                }
+            }
+
+            if (!optionSelected) {
+                log.warn("The value '{}' was not found among the options.", valueToSelect);
+                throw new RuntimeException("The value '" + valueToSelect + "' was not found in the dropdown.");
+            }
+
+            log.info("Attempting to close the dropdown.");
+
+            // Palaukite, kol pasirinkimas bus atliktas ir dropdown užsidarys
+            // Paliekame laiko įsitikinti, kad pasirinkimas buvo atliktas (rekomenduojama ne mažiau kaip 500ms)
+            Thread.sleep(500);
+
+            // Bandome uždaryti meniu paspausdami ESC (kartais tai padeda, jei meniu nepatikimai užsidaro)
+            Actions actions = new Actions(driver);
+            actions.sendKeys(Keys.ESCAPE).perform();
+
+            // Jei ESC nepadėjo, bandome paspausti į tuščią vietą ekrane
+            WebElement body = driver.findElement(By.tagName("body")); // Paspauskime į visą puslapio kūną, kuris yra tiksliai matomas
+            actions.moveToElement(body).click().perform();
+
+//            // Patikriname, ar meniu užsidarė
+//            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//mat-option//span")));
+//            log.info("Dropdown should be closed now.");
+
+        } catch (Exception e) {
+            log.error("Error occurred while selecting value: {}", e.getMessage());
+            throw new RuntimeException("Failed to select value from dropdown.", e);
+        }
+    }
+
+    public void enterExplanation_PVK(String text) {
+        inputExplanation_PVK.clear();
+        inputExplanation_PVK.sendKeys(text);
+    }
 
     //address
     //----------------------------------
@@ -715,6 +936,22 @@ public class SubmittedApplicationsPage extends UztisPage {
             System.out.println("Klaida: Nepavyko rasti elemento.");
         }
     }
+
+    public void clickAddressComponent_PVK() {
+        try {
+            // Laukiame, kol elementas bus matomas ir paspaudžiamas
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            WebElement inputField = wait.until(ExpectedConditions.elementToBeClickable(addressComponentPVK));
+
+            // Paspaudžiame ant laukelio
+            inputField.click();
+            System.out.println("Elementas paspaustas!");
+
+        } catch (Exception e) {
+            System.out.println("Klaida: Nepavyko rasti elemento.");
+        }
+    }
+
 
     public void selectDropdownAddressCountry(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Ilgesnis laukimo laikas
@@ -940,13 +1177,13 @@ public class SubmittedApplicationsPage extends UztisPage {
     }
 
     //DVP
-    public void clickRadioButtonForAlreadyWorking_DVP_step1() {
+    public void selectRadioButtonForAlreadyWorking_DVP_step1() {
         if (!radioButtonForAlreadyWorking_DVP_step1.isSelected()) {
             radioButtonForAlreadyWorking_DVP_step1.click();
         }
     }
 
-    public void clickRadioButtonForNewWorking_DVP_step1() {
+    public void selectRadioButtonForNewWorking_DVP_step1() {
         if (!radioButtonForNewWorking_DVP_step1.isSelected()) {
             radioButtonForNewWorking_DVP_step1.click();
         }
@@ -1068,6 +1305,47 @@ public void selectDropdownJobNameAdaptable_DVP(String valueToSelect) {
 //    }
 }
 
+    public void selectDropdownJobNameAdaptable_PVK(String valueToSelect) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Ilgesnis laukimo laikas
+
+        log.info("Located the dropdown button.");
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonJobNameAdaptable_PVK));
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView(true);", dropdownButtonJobNameAdaptable_PVK); // Užtikrinsime, kad elementas būtų matomas
+            dropdownButtonJobNameAdaptable_PVK.click();
+        } catch (Exception e) {
+            log.error("Dropdown button click failed: {}", e.getMessage());
+        }
+
+        try {
+            List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option/span")));
+
+            boolean optionSelected = false;
+            for (WebElement option : options) {
+                if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
+                    wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+                    optionSelected = true;
+                    log.info("Successfully selected the value: '{}'", valueToSelect);
+                    break;
+                }
+            }
+
+            if (!optionSelected) {
+                log.warn("Dropdown value '{}' not found.", valueToSelect);
+            }
+
+        } catch (Exception e) {
+            log.error("Failed to select dropdown option: {}", e.getMessage());
+        }
+
+//    try {
+//        wait.until(ExpectedConditions.attributeToBe(dropdownButtonJobNameAdaptable_DVP, "aria-expanded", "false"));
+//    } catch (TimeoutException e) {
+//        log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
+//    }
+    }
+
     public void selectDropdownExpensesTyp_DVP(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Ilgesnis laukimo laikas
 
@@ -1156,6 +1434,11 @@ public void selectDropdownJobNameAdaptable_DVP(String valueToSelect) {
         inputJobFunction.sendKeys(text);
     }
 
+    public void enterInputJobFunction_PVK(String text) {
+        inputJobFunction_PVK.clear();
+        inputJobFunction_PVK.sendKeys(text);
+    }
+
     public void clickRadioButtonWithDisabilitiesVUI() {
         if (!radioButtonWithDisabilities_VUI.isSelected()) {
             radioButtonWithDisabilities_VUI.click();
@@ -1169,6 +1452,26 @@ public void selectDropdownJobNameAdaptable_DVP(String valueToSelect) {
         }
     }
     //DVP
+
+    //PVK
+    public void clickRadioButtonForQualification_PVK_step2() {
+        if (!radioButtonForQualification_PVK_step2.isSelected()) {
+            radioButtonForQualification_PVK_step2.click();
+        }
+    }
+
+    public void clickRadioButtonForExperience_PVK_step2() {
+        if (!radioButtonForExperience_PVK_step2.isSelected()) {
+            radioButtonForExperience_PVK_step2.click();
+        }
+    }
+
+    public void clickRadioButtonForSupportedPerson_PVK_step2() {
+        if (!radioButtonForSupportedPerson_PVK_step2.isSelected()) {
+            radioButtonForSupportedPerson_PVK_step2.click();
+        }
+    }
+    //PVK
 
     public void selectValueByListDisabilitiesType_VUI(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
