@@ -21,6 +21,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
     protected ApplicationFormsPage applicationFormsPage;
     protected SubmittedApplicationsPage submittedApplicationsPage;
 
+
     private void navigateToSubmittedApplicationsMenu() {
         applicationFormsPage.clickMenuExpand();
         applicationFormsPage.clickMenuMore();
@@ -67,6 +68,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
         invitationsPage = new InvitationsPage(driver);
         applicationFormsPage = new ApplicationFormsPage(driver);
         submittedApplicationsPage = new SubmittedApplicationsPage(driver);
+
     }
 
     @Test
@@ -614,8 +616,6 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
         try {
             TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
-//            applicationFormsPage.login("evaluation_chief", "test");
-//            log.debug("User logged in with test credentials.");
 
             getAndInsertInvitationCodeText();
             log.debug("Invitation code inserted.");
@@ -1049,14 +1049,11 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
     @Test
     void testFillNewPVKApplicationFA() {
-
         log.info("Starting test:'testFillNewDVPApplicationFA'");
 
         try {
             TestUtils.loginAllTests(driver);
             log.debug("User logged in with test credentials");
-//            applicationFormsPage.login("evaluation_chief", "test");
-//            log.debug("User logged in with test credentials.");
 
             getAndInsertInvitationCodeText();
             log.debug("Invitation code inserted.");
@@ -1083,15 +1080,13 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 //            submittedApplicationsPage.enterEmailAddress(emailInput);
 //            log.debug("Entered email: '{}'.", emailInput);
 
-            //PVK
             submittedApplicationsPage.selectRadioForYourself();
             log.debug("Clicked on 'ForYourself' button.");
 
             String businessStructureName = "Individuali įmonė";
             submittedApplicationsPage.selectDropdownBusinessStructureName_PVK(businessStructureName);
             log.debug("Selected adaptable job name: '{}'.", businessStructureName);
-//            //PVK
-//
+
 //            //address
 //            //--------------
             submittedApplicationsPage.clickAddressComponent_PVK();
@@ -1163,50 +1158,54 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectDropdownJobNameAdaptable_PVK(jobName_PVK);
             log.debug("Selected adaptable job name: '{}'.", jobName_PVK);
 
+            submittedApplicationsPage.clickRadioButtonForQualification_PVK_step2();
+            log.debug("Selected 'ForQualification' 'no' option.");
+
+            submittedApplicationsPage.clickRadioButtonForExperience_PVK_step2();
+            log.debug("Selected 'ForExperience' 'no' option.");
+
+            submittedApplicationsPage.clickRadioButtonForSupportedPerson_PVK_step2();
+            log.debug("Selected 'ForSupportedPerson' 'no' option.");
+
+            submittedApplicationsPage.clickRadioButtonForRepair_PVK_step2();
+            log.debug("Selected 'ForRepair' 'no' option.");
+
 
             String function_PVK = "Funkcija 1";
             submittedApplicationsPage.enterInputJobFunction_PVK(function_PVK);
             log.debug("Entered job function: '{}'.", function_PVK);
 
-            submittedApplicationsPage.clickRadioButtonForQualification_PVK_step2();
-            log.debug("Selected 'For already working' 'no' option.");
-
-            submittedApplicationsPage.clickRadioButtonForExperience_PVK_step2();
-            log.debug("Selected 'For already working' 'no' option.");
-
-            submittedApplicationsPage.clickRadioButtonForSupportedPerson_PVK_step2();
-            log.debug("Selected 'For already working' 'no' option.");
-
-
-
-
-
-
-
-
-            String disabilitiesLevel = "Lengvo neįgalumo lygis ar 45-55 procentų dalyvumo lygis (iki 2023 m. gruodžio 31 d. – 45-55 procentų darbingumo lygis)";
-            submittedApplicationsPage.selectValueByListDisabilitiesLevel_DVP(disabilitiesLevel);
-            log.debug("Selected disabilities type: '{}'.", disabilitiesLevel);
-
-            String disabilitiesDescription = "Negalia 1";
-            submittedApplicationsPage.enterDisabilities(disabilitiesDescription);
-            log.debug("Entered disability information: '{}'.", disabilitiesDescription);
-
             String qualification = "Kvalifikacija 1";
-            submittedApplicationsPage.enterQualification(qualification);
-            log.debug("Entered qualification: '{}'.", qualification);
+            String experience = "Patirtis 1";
+            String description = "Vietos aprašymas 1";
+            String description_2 = "Proceso aprašymas 1";
+            String description_3 = "Remonto aprašymas 1";
+            String salary = "Užmokestis 1";
 
-            String jobDescription = "Darbo vietos aprašymas 1";
-            submittedApplicationsPage.enterJobDescription(jobDescription);
-            log.debug("Entered job description: '{}'.", jobDescription);
+            submittedApplicationsPage.enterPvkTextArea("qualification", qualification);
+            log.debug("Entered qualification: '{}'", qualification);
 
-            String equipmentDescription_DVP = "Priemonių įsigyjimas 1";
-            submittedApplicationsPage.enterProsesDescriptionVUI_equipmentDescriptionDVP(equipmentDescription_DVP);
-            log.debug("Entered equipment description: '{}'.", equipmentDescription_DVP);
+            submittedApplicationsPage.enterPvkTextArea("experience", experience);
+            log.debug("Entered experience: '{}'", experience);
 
-            String workInformation_DVP = "Darbai 1";
-            submittedApplicationsPage.enterWorkInformationDVP(workInformation_DVP);
-            log.debug("Entered work information: '{}'.", workInformation_DVP);
+            submittedApplicationsPage.enterPvkTextArea("description", description);
+            log.debug("Entered description: '{}'", description);
+
+            submittedApplicationsPage.enterPvkTextArea("description_2", description_2);
+            log.debug("Entered description_2: '{}'", description_2);
+
+            submittedApplicationsPage.enterPvkTextArea("description_3", description_3);
+            log.debug("Entered description_3: '{}'", description_3);
+
+            submittedApplicationsPage.enterPvkTextArea("salary", salary);
+            log.debug("Entered salary: '{}'", salary);
+
+            String supported_PVK = "Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis";
+            submittedApplicationsPage.selectValueForSupportedPerson_PVK(supported_PVK);
+            log.debug("Selected EVRK value: '{}'.", supported_PVK);
+
+            submittedApplicationsPage.enterJobDate_DVP();
+            log.debug("Entered job date.");
 
             String timeMode = "Kita";
             submittedApplicationsPage.selectDropdownTimeMode(timeMode);
@@ -1217,48 +1216,37 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Selected time mode other: '{}'.", timeMode1);
 
             String amount1 = "1200";
-            submittedApplicationsPage.enterSalary(amount1);
+            submittedApplicationsPage.enterSalary_PVK(amount1);
             log.debug("Entered salary amount: '{}'.", amount1);
 
-            String salaryDescription_DVP = "Užmokestis 1";
-            submittedApplicationsPage.enterSalaryDescription_DVP(salaryDescription_DVP);
-            log.debug("Entered salary description: '{}'.", salaryDescription_DVP);
-
-            submittedApplicationsPage.clickRadioButtonTemporaryJob_DVP();
+            submittedApplicationsPage.clickRadioButtonTemporaryJob_PVK();
             log.debug("Selected 'Temporary Job' radio button.");
 
-            submittedApplicationsPage.clickRadioButtonSeasonJob_DVP();
+            submittedApplicationsPage.clickRadioButtonSeasonJob_PVK();
             log.debug("Selected 'Season Job' radio button.");
 
-            submittedApplicationsPage.clickRadioButtonPVM();
-            log.debug("Selected 'PVM' radio button.");
-
-            String type1 = "Darbo vietos pritaikymui";
-            submittedApplicationsPage.selectDropdownExpensesTyp_DVP(type1);
-            log.debug("Selected adaptable job name: '{}'.", type1);
-
             String necessaryForJob = "Įsigyti";
-            submittedApplicationsPage.selectDropdownNecessaryForJobOne_DVP(necessaryForJob);
+            submittedApplicationsPage.selectDropdownNecessaryForJobOne_PVK(necessaryForJob);
             log.debug("Selected necessary for job: '{}'.", necessaryForJob);
 
             String tool1 = "Darbo priemonė 1";
-            submittedApplicationsPage.enterTool_DVP(tool1);
+            submittedApplicationsPage.enterTool_PVK(tool1);
             log.debug("Selected tool: '{}'.", tool1);
 
             String toolParameter1 = "Darbo priemonės 1 parametras 1";
-            submittedApplicationsPage.enterToolParameterOne_DVP(toolParameter1);
+            submittedApplicationsPage.enterToolParameterOne_PVK(toolParameter1);
             log.debug("Selected tool parameter one: '{}'.", toolParameter1);
 
             String toolParameter2 = "Darbo priemonės 1 parametras 2";
-            submittedApplicationsPage.enterToolParameterTwo_DVP(toolParameter2);
+            submittedApplicationsPage.enterToolParameterTwo_PVK(toolParameter2);
             log.debug("Selected tool parameter two: '{}'.", toolParameter2);
 
             String toolParameter3 = "Darbo priemonės 1 parametras 3";
-            submittedApplicationsPage.enterToolParameterThree_DVP(toolParameter3);
+            submittedApplicationsPage.enterToolParameterThree_PVK(toolParameter3);
             log.debug("Selected tool parameter three: '{}'.", toolParameter3);
 
             String toolCount1 = "1";
-            submittedApplicationsPage.enterToolsCount_DVP(toolCount1);
+            submittedApplicationsPage.enterToolsCount_PVK(toolCount1);
             log.debug("Entered tool count: '{}'.", toolCount1);
 
             String amount2 = "1000";
@@ -1269,26 +1257,35 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterOwnFundsOne(amount3);
             log.debug("Entered own funds amount: '{}'.", amount3);
 
-            stay();
+//            stay();
 
             submittedApplicationsPage.clickButtonAdd();
             log.debug("Clicked 'Add' button.");
 
-            String type2 = "Aplinkos pritaikymui";
-            submittedApplicationsPage.selectDropdownExpensesTyp_DVP_2(type2);
-            log.debug("Selected adaptable job name: '{}'.", type2);
-
             String necessaryForJob_2 = "Remontuoti";
-            submittedApplicationsPage.selectDropdownNecessaryForJobOne_DVP_2(necessaryForJob_2);
+            submittedApplicationsPage.selectDropdownNecessaryForJobOne_PVK_2(necessaryForJob_2);
             log.debug("Selected necessary for job: '{}'.", necessaryForJob_2);
 
+
+
+
+
+
+
             String tool1_2 = "Darbo priemonė 2 remontui";
-            submittedApplicationsPage.enterTool_DVP_2(tool1_2);
+            submittedApplicationsPage.enterTool_PVK_2(tool1_2);
             log.debug("Selected tool: '{}'.", tool1_2);
 
-            String workDescription_DVP = "Remonto darbai 1";
-            submittedApplicationsPage.enterWorkDescriptionDVP(workDescription_DVP);
-            log.debug("Entered work information: '{}'.", workDescription_DVP);
+            String repair = "Remonto darbų aprašymas 1";
+
+            submittedApplicationsPage.enterPvkTextArea("repair", repair);
+            log.debug("Entered qualification: '{}'", repair);
+
+
+
+//            String workDescription_DVP_ = "Remonto darbai 1";
+//            submittedApplicationsPage.enterWorkDescriptionDVP(workDescription_DVP_);
+//            log.debug("Entered work information: '{}'.", workDescription_DVP_);
 
             String toolCount1_2 = "2";
             submittedApplicationsPage.enterToolsCount_DVP_2(toolCount1_2);
@@ -1318,23 +1315,6 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Clicked 'Remove Confirmation' button.");
 
             stay();
-
-            submittedApplicationsPage.clickRadioButtonDeMinimis();
-            log.debug("Selected 'De Minimis' radio button.");
-
-            String programName = "Programa 1";
-            submittedApplicationsPage.enterProgramName(programName);
-            log.debug("Entered program name: '{}'.", programName);
-
-            submittedApplicationsPage.enterProjectDateFrom_DVP();
-            log.debug("Entered project date from.");
-
-            submittedApplicationsPage.enterProjectDateUntil_DVP();
-            log.debug("Entered project date until.");
-
-            String amount4 = "2000";
-            submittedApplicationsPage.enterSupportAmount(amount4);
-            log.debug("Entered support amount: '{}'.", amount4);
 
             submittedApplicationsPage.clickButtonNext();
             log.debug("Clicked 'Next' button.");
