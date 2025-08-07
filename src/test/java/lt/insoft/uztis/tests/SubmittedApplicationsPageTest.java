@@ -1080,7 +1080,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 //            submittedApplicationsPage.enterEmailAddress(emailInput);
 //            log.debug("Entered email: '{}'.", emailInput);
 
-            submittedApplicationsPage.selectRadioForYourself();
+            submittedApplicationsPage.selectRadioForYourself_PVK();
             log.debug("Clicked on 'ForYourself' button.");
 
             String businessStructureName = "Individuali įmonė";
@@ -1134,8 +1134,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectValueByListEVRK_PVK(evrkPVK);
             log.debug("Selected EVRK value: '{}'.", evrkPVK);
 
-            submittedApplicationsPage.selectRadioButtonSelfEmploymentTerminated();
-            log.debug("Clicked on 'SelfEmploymentTerminated' button.");
+            submittedApplicationsPage.selectRadioButtonY_N_PVK("selfEmploymentTerminated");
 
             String evrkPVK_true = "02.10 - Miško medžių auginimas ir kita miškininkystės veikla";
             submittedApplicationsPage.selectValueByListEVRK_PVK_true(evrkPVK_true);
@@ -1159,17 +1158,16 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Selected adaptable job name: '{}'.", jobName_PVK);
 
             submittedApplicationsPage.clickRadioButtonForQualification_PVK_step2();
-            log.debug("Selected 'ForQualification' 'no' option.");
+            log.debug("Selected 'ForQualification' 'yes' option.");
 
-            submittedApplicationsPage.clickRadioButtonForExperience_PVK_step2();
-            log.debug("Selected 'ForExperience' 'no' option.");
+            submittedApplicationsPage.selectRadioButtonY_N_PVK("experience_1");
+            log.debug("Selected 'ForExperience' 'yes' option.");
 
-            submittedApplicationsPage.clickRadioButtonForSupportedPerson_PVK_step2();
-            log.debug("Selected 'ForSupportedPerson' 'no' option.");
+            submittedApplicationsPage.selectRadioButtonY_N_PVK("supportedPerson");
+            log.debug("Selected 'ForSupportedPerson' 'yes' option.");
 
-            submittedApplicationsPage.clickRadioButtonForRepair_PVK_step2();
-            log.debug("Selected 'ForRepair' 'no' option.");
-
+            submittedApplicationsPage.selectRadioButtonY_N_PVK("repair_1");
+            log.debug("Selected 'ForRepair' 'yes' option.");
 
             String function_PVK = "Funkcija 1";
             submittedApplicationsPage.enterInputJobFunction_PVK(function_PVK);
@@ -1182,22 +1180,22 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             String description_3 = "Remonto aprašymas 1";
             String salary = "Užmokestis 1";
 
-            submittedApplicationsPage.enterPvkTextArea("qualification", qualification);
+            submittedApplicationsPage.enterTextArea_PVK("qualification", qualification);
             log.debug("Entered qualification: '{}'", qualification);
 
-            submittedApplicationsPage.enterPvkTextArea("experience", experience);
+            submittedApplicationsPage.enterTextArea_PVK("experience", experience);
             log.debug("Entered experience: '{}'", experience);
 
-            submittedApplicationsPage.enterPvkTextArea("description", description);
+            submittedApplicationsPage.enterTextArea_PVK("description", description);
             log.debug("Entered description: '{}'", description);
 
-            submittedApplicationsPage.enterPvkTextArea("description_2", description_2);
+            submittedApplicationsPage.enterTextArea_PVK("description_2", description_2);
             log.debug("Entered description_2: '{}'", description_2);
 
-            submittedApplicationsPage.enterPvkTextArea("description_3", description_3);
+            submittedApplicationsPage.enterTextArea_PVK("description_3", description_3);
             log.debug("Entered description_3: '{}'", description_3);
 
-            submittedApplicationsPage.enterPvkTextArea("salary", salary);
+            submittedApplicationsPage.enterTextArea_PVK("salary", salary);
             log.debug("Entered salary: '{}'", salary);
 
             String supported_PVK = "Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis";
@@ -1219,11 +1217,11 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterSalary_PVK(amount1);
             log.debug("Entered salary amount: '{}'.", amount1);
 
-            submittedApplicationsPage.clickRadioButtonTemporaryJob_PVK();
-            log.debug("Selected 'Temporary Job' radio button.");
+            submittedApplicationsPage.selectRadioButtonY_N_PVK("temporaryJob");
+            log.debug("Selected 'Temporary Job' 'no' option.");
 
-            submittedApplicationsPage.clickRadioButtonSeasonJob_PVK();
-            log.debug("Selected 'Season Job' radio button.");
+            submittedApplicationsPage.selectRadioButtonY_N_PVK("seasonJob");
+            log.debug("Selected 'Season Job' 'no' option.");
 
             String necessaryForJob = "Įsigyti";
             submittedApplicationsPage.selectDropdownNecessaryForJobOne_PVK(necessaryForJob);
@@ -1266,30 +1264,13 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectDropdownNecessaryForJobOne_PVK_2(necessaryForJob_2);
             log.debug("Selected necessary for job: '{}'.", necessaryForJob_2);
 
-
-
-
-
-
-
             String tool1_2 = "Darbo priemonė 2 remontui";
             submittedApplicationsPage.enterTool_PVK_2(tool1_2);
             log.debug("Selected tool: '{}'.", tool1_2);
 
-            String repair = "Remonto darbų aprašymas 1";
-
-            submittedApplicationsPage.enterPvkTextArea("repair", repair);
+            String repair = "Remonto darbai 1";
+            submittedApplicationsPage.enterTextArea_PVK("repair", repair);
             log.debug("Entered qualification: '{}'", repair);
-
-
-
-//            String workDescription_DVP_ = "Remonto darbai 1";
-//            submittedApplicationsPage.enterWorkDescriptionDVP(workDescription_DVP_);
-//            log.debug("Entered work information: '{}'.", workDescription_DVP_);
-
-            String toolCount1_2 = "2";
-            submittedApplicationsPage.enterToolsCount_DVP_2(toolCount1_2);
-            log.debug("Entered tool count: '{}'.", toolCount1_2);
 
             String amount2_2 = "1000";
             submittedApplicationsPage.enterPriceTwo(amount2_2);
@@ -1318,23 +1299,6 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             submittedApplicationsPage.clickButtonNext();
             log.debug("Clicked 'Next' button.");
-
-            //--------------------
-            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationThree, true);
-            log.debug("Checked 'Legal Entities' checkbox 1.");
-
-            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationFour, true);
-            log.debug("Checked 'Legal Entities' checkbox 2.");
-
-            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationFive, true);
-            log.debug("Checked 'Legal Entities' checkbox 3.");
-
-            log.debug("Test finished: All 'Legal Entities' checkboxes checked successfully.");
-
-            submittedApplicationsPage.clickButtonNext();
-            log.debug("Clicked 'Next' button after checkboxes.");
-
-            //--------------------
 
             //--------------------
 
@@ -1372,19 +1336,27 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterDocumentNameEight(documentName8);
             log.debug("Entered program name: '{}'.", documentName8);
 
-            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationDocument_DVP, true);
-            log.debug("Checked 'ConfirmationDocument'");
-            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationApplication_DVP, true);
-            log.debug("Checked 'ConfirmationApplication'");
+            String documentName9 = "Dokumentas 9";
+            submittedApplicationsPage.enterDocumentNameNine(documentName9);
+            log.debug("Entered program name: '{}'.", documentName9);
+
+
+            String labelText_2 = "Patvirtinu, kad paraiškoje ir kituose dokumentuose pateikta informacija yra teisinga.";
+            submittedApplicationsPage.clickMatCheckboxByLabelText(labelText_2);
+            log.debug("Clicked on mat-checkbox with label containing '{}'.", labelText_2);
+
+            String labelText_3 = "Įsipareigoju leisti Užimtumo tarnybai patikrinti pateiktą informaciją, jeigu, jos manymu, tai yra būtina, ir man žinoma, kad, jeigu gausiu subsidiją, darbo vietą (-as) turėsiu įsteigti per 10 mėnesių nuo Paramos verslui kurti sutarties pasirašymo ir nepanaikinti už subsidijos lėšas įsteigtos (-ų) darbo vietos (-ų) 36 mėnesius nuo jos (jų) įsteigimo dienos.";
+            submittedApplicationsPage.clickMatCheckboxByLabelText(labelText_3);
+            log.debug("Clicked on mat-checkbox with label containing '{}'.", labelText_3);
+
+            String labelText_4 = "Patvirtinu, kad darbo vietą sau arba sau ir Užimtumo tarnybos siųstam bedarbiui (siųstiems bedarbiams) ketinu steigti Lietuvos Respublikos smulkiojo ir vidutinio verslo plėtros įstatyme apibrėžtoje labai mažoje įmonėje.";
+            submittedApplicationsPage.clickMatCheckboxByLabelText(labelText_4);
+            log.debug("Clicked on mat-checkbox with label containing '{}'.", labelText_4);
 
             submittedApplicationsPage.clickButtonReview();
             log.debug("Clicked 'Review' button after checkboxes.");
 
             //--------------------
-
-
-
-
 
             submittedApplicationsPage.clickButtonSaveDraft();
             log.debug("Clicked 'SaveDraft' button after checkboxes.");
