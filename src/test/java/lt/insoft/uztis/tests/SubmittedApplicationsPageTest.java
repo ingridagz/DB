@@ -160,9 +160,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 //            submittedApplicationsPage.enterEmailAddress(emailInput);
 //            log.debug("Entered email: '{}'.", emailInput);
 
-            String evrk = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
-            submittedApplicationsPage.selectValueByListEVRK_VUI(evrk);
-            log.debug("Selected EVRK value: '{}'.", evrk);
+            String value = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
+            submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("evrk_VUI", value);
+            log.debug("Selected EVRK value: '{}'.", value);
 
             //address
             //--------------
@@ -213,13 +213,15 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterJobCount(jobCount);
             log.debug("Entered job count: '{}'.", jobCount);
 
-            submittedApplicationsPage.clickButtonNext();
-            log.debug("Clicked 'Next' button.");
+            String buttonKey = "next";
+            submittedApplicationsPage.clickButton(buttonKey);
+            log.info("Clicked button with key: '{}'.", buttonKey);
 
             //--------------------
-            String jobName = "Administratoriai";
-            submittedApplicationsPage.selectDropdownJobName(jobName);
-            log.debug("Selected job name: '{}'.", jobName);
+
+            String value_A = "Administratoriai";
+            submittedApplicationsPage.selectDropdownButtonValue_VUI_DVP_PVK("jobName_VUI", value_A);
+            log.debug("Selected 'Job Name' value: '{}'.", value_A);
 
             String function = "Funkcija 1";
             submittedApplicationsPage.enterInputJobFunction(function);
@@ -228,9 +230,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.clickRadioButtonWithDisabilitiesVUI();
             log.debug("Selected 'RadioButtonWithDisabilities' option.");
 
-            String disabilities = "Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis";
-            submittedApplicationsPage.selectValueByListDisabilitiesType_VUI(disabilities);
-            log.debug("Selected disabilities type: '{}'.", disabilities);
+            String supported_VUI = "Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis";
+            submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("supported_VUI", supported_VUI);
+            log.debug("Selected EVRK_true value: '{}'.", supported_VUI);
 
             String disabilitiesDescription = "Negalia 1";
             submittedApplicationsPage.enterDisabilities(disabilitiesDescription);
@@ -398,15 +400,11 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterSupportAmount(amount6);
             log.debug("Entered support amount: '{}'.", amount6);
 
-            submittedApplicationsPage.clickButtonNext();
-            log.debug("Clicked 'Next' button.");
+            String buttonKey_2 = "next";
+            submittedApplicationsPage.clickButton(buttonKey_2);
+            log.info("Clicked button with key: '{}'.", buttonKey_2);
 
             //--------------------
-//            invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationOne, true);
-//            log.debug("Checked 'For workplace adaptation' checkbox 1.");
-//
-//            invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationTwo, true);
-//            log.debug("Checked 'For environmental adaptation' checkbox 2.");
 
                 SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationOne, true);
                 log.debug("Checked 'Legal Entities' checkbox 1.");
@@ -419,8 +417,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
                 log.debug("Test finished: All 'Legal Entities' checkboxes checked successfully.");
 
-            submittedApplicationsPage.clickButtonNext();
-            log.debug("Clicked 'Next' button after checkboxes.");
+            String buttonKey_3 = "next";
+            submittedApplicationsPage.clickButton(buttonKey_3);
+            log.info("Clicked button with key: '{}'.", buttonKey_3);
 
             //--------------------
 
@@ -453,52 +452,63 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationStepFour, true);
             log.debug("Checked 'ConfirmationStepFour'");
 
-            submittedApplicationsPage.clickButtonNext();
-            log.debug("Clicked 'Next' button after checkboxes.");
+            String buttonKey_4 = "next";
+            submittedApplicationsPage.clickButton(buttonKey_4);
+            log.info("Clicked button with key: '{}'.", buttonKey_4);
 
             //--------------------
 
             submittedApplicationsPage.uploadFileStepFive();
 
-            String documentName1 = "Dokumentas 1";
-            submittedApplicationsPage.enterDocumentNameOne(documentName1);
-            log.debug("Entered program name: '{}'.", documentName1);
+            String fieldKey_1 = "documentNameOne";
+            String doc_1 = "Dokumentas 1 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_1, doc_1);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_1, fieldKey_1);
 
-            String documentName2 = "Dokumentas 2";
-            submittedApplicationsPage.enterDocumentNameTwo(documentName2);
-            log.debug("Entered program name: '{}'.", documentName2);
+            String fieldKey_2 = "documentNameTwo";
+            String doc_2 = "Dokumentas 2 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_2, doc_2);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_2, fieldKey_2);
 
-            String documentName3 = "Dokumentas 3";
-            submittedApplicationsPage.enterDocumentNameThree(documentName3);
-            log.debug("Entered program name: '{}'.", documentName3);
+            String fieldKey_3 = "documentNameThree";
+            String doc_3 = "Dokumentas 3 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_3, doc_3);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_3, fieldKey_3);
 
-            String documentName4 = "Dokumentas 4";
-            submittedApplicationsPage.enterDocumentNameFour(documentName4);
-            log.debug("Entered program name: '{}'.", documentName4);
+            String fieldKey_4 = "documentNameFour";
+            String doc_4 = "Dokumentas 4 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_4, doc_4);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_4, fieldKey_4);
 
-            String documentName5 = "Dokumentas 5";
-            submittedApplicationsPage.enterDocumentNameFive(documentName5);
-            log.debug("Entered program name: '{}'.", documentName5);
+            String fieldKey_5 = "documentNameFive";
+            String doc_5 = "Dokumentas 5 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_5, doc_5);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_5, fieldKey_5);
 
-            String documentName6 = "Dokumentas 6";
-            submittedApplicationsPage.enterDocumentNameSix(documentName6);
-            log.debug("Entered program name: '{}'.", documentName6);
+            String fieldKey_6 = "documentNameSix";
+            String doc_6 = "Dokumentas 6 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_6, doc_6);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_6, fieldKey_6);
 
-            String documentName7 = "Dokumentas 7";
-            submittedApplicationsPage.enterDocumentNameSeven(documentName7);
-            log.debug("Entered program name: '{}'.", documentName4);
+            String fieldKey_7 = "documentNameSeven";
+            String doc_7 = "Dokumentas 7 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_7, doc_7);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_7, fieldKey_7);
 
-            String documentName8 = "Dokumentas 8";
-            submittedApplicationsPage.enterDocumentNameEight(documentName8);
-            log.debug("Entered program name: '{}'.", documentName8);
+            String fieldKey_8 = "documentNameEight";
+            String doc_8 = "Dokumentas 8 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_8, doc_8);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_8, fieldKey_8);
 
-            String documentName9 = "Dokumentas 9";
-            submittedApplicationsPage.enterDocumentNameNine(documentName9);
-            log.debug("Entered program name: '{}'.", documentName9);
+            String fieldKey_9 = "documentNameNine";
+            String doc_9 = "Dokumentas 9 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_9, doc_9);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_9, fieldKey_9);
 
-            String documentName10 = "Dokumentas 10";
-            submittedApplicationsPage.enterDocumentNameTen(documentName10);
-            log.debug("Entered program name: '{}'.", documentName10);
+            String fieldKey_10 = "documentNameTen";
+            String doc_10 = "Dokumentas 10 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_10, doc_10);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_10, fieldKey_10);
 
             SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationDocument, true);
             log.debug("Checked 'ConfirmationDocument'");
@@ -511,15 +521,17 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             applicationFormsPage.verifySuccessMessage("Ruošinys sėkmingai išsaugotas.");
             log.info("Verified success message");
 
-            submittedApplicationsPage.clickButtonReview();
-            log.debug("Clicked 'Review' button after checkboxes.");
+            String review = "review";
+            submittedApplicationsPage.clickButton(review);
+            log.info("Clicked button with key: '{}'.", review);
 
             stay();
 
             //--------------------
 
-            submittedApplicationsPage.clickButtonSubmit();
-            log.debug("Clicked 'Submit' button after checkboxes.");
+            String submit = "submit";
+            submittedApplicationsPage.clickButton(submit);
+            log.info("Clicked button with key: '{}'.", submit);
 
             submittedApplicationsPage.clickButtonSubmitConfirmation();
             log.debug("Clicked 'SubmitConfirmation' button after checkboxes.");
@@ -648,17 +660,11 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationTwo, true);
             log.debug("Checked 'For environmental adaptation' checkbox 2.");
-
-//            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationOne, true);
-//            log.debug("Checked 'For workplace adaptation' checkbox 1.");
-//
-//            SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationTwo, true);
-//            log.debug("Checked 'For environmental adaptation' checkbox 2.");
             //DVP
 
-            String evrkDVP = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
-            submittedApplicationsPage.selectValueByListEVRK_DVP(evrkDVP);
-            log.debug("Selected EVRK value: '{}'.", evrkDVP);
+            String value = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
+            submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("evrk_DVP", value);
+            log.debug("Selected EVRK value: '{}'.", value);
 
             //address
             //--------------
@@ -720,14 +726,15 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Entered person count2: '{}'.", jobCount2);
             //DVP
 
-            submittedApplicationsPage.clickButtonNext();
-            log.debug("Clicked 'Next' button after checkboxes.");
+            String buttonKey = "next";
+            submittedApplicationsPage.clickButton(buttonKey);
+            log.info("Clicked button with key: '{}'.", buttonKey);
 
             //--------------------
 
-            String jobName = "Administratoriai";
-            submittedApplicationsPage.selectDropdownJobNameAdaptable_DVP(jobName);
-            log.debug("Selected adaptable job name: '{}'.", jobName);
+            String value_A = "Administratoriai";
+            submittedApplicationsPage.selectDropdownButtonValue_VUI_DVP_PVK("jobName_DVP", value_A);
+            log.debug("Selected 'Job Name' value: '{}'.", value_A);
 
             submittedApplicationsPage.enterJobDate_DVP();
             log.debug("Entered job date.");
@@ -739,9 +746,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.clickRadioButtonForAlreadyWorking_DVP_step2();
             log.debug("Selected 'For already working' 'no' option.");
 
-            String disabilitiesLevel = "Lengvo neįgalumo lygis ar 45-55 procentų dalyvumo lygis (iki 2023 m. gruodžio 31 d. – 45-55 procentų darbingumo lygis)";
-            submittedApplicationsPage.selectValueByListDisabilitiesLevel_DVP(disabilitiesLevel);
-            log.debug("Selected disabilities type: '{}'.", disabilitiesLevel);
+            String value_D = "Sunkaus neįgalumo lygis ar neviršijantis 25 procentų dalyvumo lygis (iki 2023 metų gruodžio 31 dienos – iki 25 procentų darbingumo lygis)";
+            submittedApplicationsPage.selectDropdownButtonValue_VUI_DVP_PVK("disability_DVP", value_D);
+            log.debug("Selected 'Job Name' value: '{}'.", value_D);
 
             String disabilitiesDescription = "Negalia 1";
             submittedApplicationsPage.enterDisabilities(disabilitiesDescription);
@@ -891,8 +898,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterSupportAmount(amount4);
             log.debug("Entered support amount: '{}'.", amount4);
 
-            submittedApplicationsPage.clickButtonNext();
-            log.debug("Clicked 'Next' button.");
+            String buttonKey_2 = "next";
+            submittedApplicationsPage.clickButton(buttonKey_2);
+            log.info("Clicked button with key: '{}'.", buttonKey_2);
 
             //--------------------
             SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationThree, true);
@@ -906,8 +914,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             log.debug("Test finished: All 'Legal Entities' checkboxes checked successfully.");
 
-            submittedApplicationsPage.clickButtonNext();
-            log.debug("Clicked 'Next' button after checkboxes.");
+            String buttonKey_3 = "next";
+            submittedApplicationsPage.clickButton(buttonKey_3);
+            log.info("Clicked button with key: '{}'.", buttonKey_3);
 
             //--------------------
 
@@ -940,52 +949,64 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationStepFourDVP, true);
             log.debug("Checked 'ConfirmationStepFour'");
 
-            submittedApplicationsPage.clickButtonNext();
-            log.debug("Clicked 'Next' button after checkboxes.");
+            String buttonKey_4 = "next";
+            submittedApplicationsPage.clickButton(buttonKey_4);
+            log.info("Clicked button with key: '{}'.", buttonKey_4);
 
             //--------------------
 
             submittedApplicationsPage.uploadFileStepFive();
 
-            String documentName1 = "Dokumentas 1";
-            submittedApplicationsPage.enterDocumentNameOne(documentName1);
-            log.debug("Entered program name: '{}'.", documentName1);
+            String fieldKey_1 = "documentNameOne";
+            String doc_1 = "Dokumentas 1 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_1, doc_1);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_1, fieldKey_1);
 
-            String documentName2 = "Dokumentas 2";
-            submittedApplicationsPage.enterDocumentNameTwo(documentName2);
-            log.debug("Entered program name: '{}'.", documentName2);
+            String fieldKey_2 = "documentNameTwo";
+            String doc_2 = "Dokumentas 2 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_2, doc_2);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_2, fieldKey_2);
 
-            String documentName3 = "Dokumentas 3";
-            submittedApplicationsPage.enterDocumentNameThree(documentName3);
-            log.debug("Entered program name: '{}'.", documentName3);
+            String fieldKey_3 = "documentNameThree";
+            String doc_3 = "Dokumentas 3 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_3, doc_3);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_3, fieldKey_3);
 
-            String documentName4 = "Dokumentas 4";
-            submittedApplicationsPage.enterDocumentNameFour(documentName4);
-            log.debug("Entered program name: '{}'.", documentName4);
+            String fieldKey_4 = "documentNameFour";
+            String doc_4 = "Dokumentas 4 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_4, doc_4);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_4, fieldKey_4);
 
-            String documentName5 = "Dokumentas 5";
-            submittedApplicationsPage.enterDocumentNameFive(documentName5);
-            log.debug("Entered program name: '{}'.", documentName5);
+            String fieldKey_5 = "documentNameFive";
+            String doc_5 = "Dokumentas 5 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_5, doc_5);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_5, fieldKey_5);
 
-            String documentName6 = "Dokumentas 6";
-            submittedApplicationsPage.enterDocumentNameSix(documentName6);
-            log.debug("Entered program name: '{}'.", documentName6);
+            String fieldKey_6 = "documentNameSix";
+            String doc_6 = "Dokumentas 6 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_6, doc_6);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_6, fieldKey_6);
 
-            String documentName7 = "Dokumentas 7";
-            submittedApplicationsPage.enterDocumentNameSeven(documentName7);
-            log.debug("Entered program name: '{}'.", documentName4);
+            String fieldKey_7 = "documentNameSeven";
+            String doc_7 = "Dokumentas 7 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_7, doc_7);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_7, fieldKey_7);
 
-            String documentName8 = "Dokumentas 8";
-            submittedApplicationsPage.enterDocumentNameEight(documentName8);
-            log.debug("Entered program name: '{}'.", documentName8);
+            String fieldKey_8 = "documentNameEight";
+            String doc_8 = "Dokumentas 8 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_8, doc_8);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_8, fieldKey_8);
 
             SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationDocument_DVP, true);
             log.debug("Checked 'ConfirmationDocument'");
             SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationApplication_DVP, true);
             log.debug("Checked 'ConfirmationApplication'");
 
-            submittedApplicationsPage.clickButtonReview();
-            log.debug("Clicked 'Review' button after checkboxes.");
+            String review = "review";
+            submittedApplicationsPage.clickButton(review);
+            log.info("Clicked button with key: '{}'.", review);
+
+            stay();
 
             //--------------------
 
@@ -994,8 +1015,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             applicationFormsPage.verifySuccessMessage("Ruošinys sėkmingai išsaugotas.");
 
-            submittedApplicationsPage.clickButtonSubmit();
-            log.debug("Clicked 'Submit' button after checkboxes.");
+            String submit = "submit";
+            submittedApplicationsPage.clickButton(submit);
+            log.info("Clicked button with key: '{}'.", submit);
 
             submittedApplicationsPage.clickButtonSubmitConfirmation();
             log.debug("Clicked 'SubmitConfirmation' button after checkboxes.");
@@ -1083,9 +1105,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectRadioForYourself_PVK();
             log.debug("Clicked on 'ForYourself' button.");
 
-            String businessStructureName = "Individuali įmonė";
-            submittedApplicationsPage.selectDropdownBusinessStructureName_PVK(businessStructureName);
-            log.debug("Selected adaptable job name: '{}'.", businessStructureName);
+            String value_BS = "Individuali įmonė";
+            submittedApplicationsPage.selectDropdownButtonValue_VUI_DVP_PVK("businessStructure", value_BS);
+            log.debug("Selected 'BusinessStructure' value: '{}'.", value_BS);
 
 //            //address
 //            //--------------
@@ -1130,32 +1152,34 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.clickButtonConfirm();
             log.debug("Clicked 'Confirm' button.");
 
-            String evrkPVK = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
-            submittedApplicationsPage.selectValueByListEVRK_PVK(evrkPVK);
-            log.debug("Selected EVRK value: '{}'.", evrkPVK);
+
+            String value = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
+            submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("evrk", value);
+            log.debug("Selected EVRK value: '{}'.", value);
 
             submittedApplicationsPage.selectRadioButtonY_N_PVK("selfEmploymentTerminated");
 
-            String evrkPVK_true = "02.10 - Miško medžių auginimas ir kita miškininkystės veikla";
-            submittedApplicationsPage.selectValueByListEVRK_PVK_true(evrkPVK_true);
-            log.debug("Selected EVRK value: '{}'.", evrkPVK_true);
-
+            String value_1 = "02.10 - Miško medžių auginimas ir kita miškininkystės veikla";
+            submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("evrk_true", value_1);
+            log.debug("Selected EVRK_true value: '{}'.", value_1);
 
             String labelText = "1.2.1. vykdant veiklą sumažės gamtos ar kitų išteklių naudojimas";
-            submittedApplicationsPage.clickMatCheckboxByLabelText(labelText);
+            submittedApplicationsPage.clickMatCheckboxByLabelText_PVK(labelText);
             log.debug("Clicked on mat-checkbox with label containing '{}'.", labelText);
 
-            String explanation_PVK = "Preoritetas 1";
-            submittedApplicationsPage.enterExplanation_PVK(explanation_PVK);
-            log.debug("Entered work information: '{}'.", explanation_PVK);
+            String priority = "Prioritetas 1";
+            submittedApplicationsPage.enterTextArea_PVK("priority", priority);
+            log.debug("Entered priority: '{}'", priority);
 
-            submittedApplicationsPage.clickButtonNext();
-            log.debug("Clicked 'Next' button after checkboxes.");
+            String buttonKey = "next";
+            submittedApplicationsPage.clickButton(buttonKey);
+            log.info("Clicked button with key: '{}'.", buttonKey);
 
 //------------------------------
-            String jobName_PVK = "Administratoriai";
-            submittedApplicationsPage.selectDropdownJobNameAdaptable_PVK(jobName_PVK);
-            log.debug("Selected adaptable job name: '{}'.", jobName_PVK);
+
+            String value_A = "Administratoriai";
+            submittedApplicationsPage.selectDropdownButtonValue_VUI_DVP_PVK("jobName", value_A);
+            log.debug("Selected 'Job Name' value: '{}'.", value_A);
 
             submittedApplicationsPage.clickRadioButtonForQualification_PVK_step2();
             log.debug("Selected 'ForQualification' 'yes' option.");
@@ -1174,33 +1198,32 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Entered job function: '{}'.", function_PVK);
 
             String qualification = "Kvalifikacija 1";
-            String experience = "Patirtis 1";
-            String description = "Vietos aprašymas 1";
-            String description_2 = "Proceso aprašymas 1";
-            String description_3 = "Remonto aprašymas 1";
-            String salary = "Užmokestis 1";
-
             submittedApplicationsPage.enterTextArea_PVK("qualification", qualification);
             log.debug("Entered qualification: '{}'", qualification);
 
+            String experience = "Patirtis 1";
             submittedApplicationsPage.enterTextArea_PVK("experience", experience);
             log.debug("Entered experience: '{}'", experience);
 
+            String description = "Vietos aprašymas 1";
             submittedApplicationsPage.enterTextArea_PVK("description", description);
             log.debug("Entered description: '{}'", description);
 
+            String description_2 = "Proceso aprašymas 1";
             submittedApplicationsPage.enterTextArea_PVK("description_2", description_2);
             log.debug("Entered description_2: '{}'", description_2);
 
+            String description_3 = "Remonto aprašymas 1";
             submittedApplicationsPage.enterTextArea_PVK("description_3", description_3);
             log.debug("Entered description_3: '{}'", description_3);
 
+            String salary = "Užmokestis 1";
             submittedApplicationsPage.enterTextArea_PVK("salary", salary);
             log.debug("Entered salary: '{}'", salary);
 
             String supported_PVK = "Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis";
-            submittedApplicationsPage.selectValueForSupportedPerson_PVK(supported_PVK);
-            log.debug("Selected EVRK value: '{}'.", supported_PVK);
+            submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("supported", supported_PVK);
+            log.debug("Selected EVRK_true value: '{}'.", supported_PVK);
 
             submittedApplicationsPage.enterJobDate_DVP();
             log.debug("Entered job date.");
@@ -1213,9 +1236,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterInputTimeModeOthers(timeMode1);
             log.debug("Selected time mode other: '{}'.", timeMode1);
 
-            String amount1 = "1200";
-            submittedApplicationsPage.enterSalary_PVK(amount1);
-            log.debug("Entered salary amount: '{}'.", amount1);
+            String salary_1 = "1200";
+            submittedApplicationsPage.enterText_PVK("salary_1", salary_1);
+            log.debug("Entered salary: '{}'", salary_1);
 
             submittedApplicationsPage.selectRadioButtonY_N_PVK("temporaryJob");
             log.debug("Selected 'Temporary Job' 'no' option.");
@@ -1255,7 +1278,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterOwnFundsOne(amount3);
             log.debug("Entered own funds amount: '{}'.", amount3);
 
-//            stay();
+            stay();
 
             submittedApplicationsPage.clickButtonAdd();
             log.debug("Clicked 'Add' button.");
@@ -1297,64 +1320,74 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             stay();
 
-            submittedApplicationsPage.clickButtonNext();
-            log.debug("Clicked 'Next' button.");
+            String buttonKey_2 = "next";
+            submittedApplicationsPage.clickButton(buttonKey_2);
+            log.info("Clicked button with key: '{}'.", buttonKey_2);
 
             //--------------------
 
             submittedApplicationsPage.uploadFileStepFive();
 
-            String documentName1 = "Dokumentas 1";
-            submittedApplicationsPage.enterDocumentNameOne(documentName1);
-            log.debug("Entered program name: '{}'.", documentName1);
+            String fieldKey_1 = "documentNameOne";
+            String doc_1 = "Dokumentas 1 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_1, doc_1);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_1, fieldKey_1);
 
-            String documentName2 = "Dokumentas 2";
-            submittedApplicationsPage.enterDocumentNameTwo(documentName2);
-            log.debug("Entered program name: '{}'.", documentName2);
+            String fieldKey_2 = "documentNameTwo";
+            String doc_2 = "Dokumentas 2 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_2, doc_2);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_2, fieldKey_2);
 
-            String documentName3 = "Dokumentas 3";
-            submittedApplicationsPage.enterDocumentNameThree(documentName3);
-            log.debug("Entered program name: '{}'.", documentName3);
+            String fieldKey_3 = "documentNameThree";
+            String doc_3 = "Dokumentas 3 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_3, doc_3);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_3, fieldKey_3);
 
-            String documentName4 = "Dokumentas 4";
-            submittedApplicationsPage.enterDocumentNameFour(documentName4);
-            log.debug("Entered program name: '{}'.", documentName4);
+            String fieldKey_4 = "documentNameFour";
+            String doc_4 = "Dokumentas 4 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_4, doc_4);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_4, fieldKey_4);
 
-            String documentName5 = "Dokumentas 5";
-            submittedApplicationsPage.enterDocumentNameFive(documentName5);
-            log.debug("Entered program name: '{}'.", documentName5);
+            String fieldKey_5 = "documentNameFive";
+            String doc_5 = "Dokumentas 5 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_5, doc_5);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_5, fieldKey_5);
 
-            String documentName6 = "Dokumentas 6";
-            submittedApplicationsPage.enterDocumentNameSix(documentName6);
-            log.debug("Entered program name: '{}'.", documentName6);
+            String fieldKey_6 = "documentNameSix";
+            String doc_6 = "Dokumentas 6 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_6, doc_6);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_6, fieldKey_6);
 
-            String documentName7 = "Dokumentas 7";
-            submittedApplicationsPage.enterDocumentNameSeven(documentName7);
-            log.debug("Entered program name: '{}'.", documentName4);
+            String fieldKey_7 = "documentNameSeven";
+            String doc_7 = "Dokumentas 7 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_7, doc_7);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_7, fieldKey_7);
 
-            String documentName8 = "Dokumentas 8";
-            submittedApplicationsPage.enterDocumentNameEight(documentName8);
-            log.debug("Entered program name: '{}'.", documentName8);
+            String fieldKey_8 = "documentNameEight";
+            String doc_8 = "Dokumentas 8 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_8, doc_8);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_8, fieldKey_8);
 
-            String documentName9 = "Dokumentas 9";
-            submittedApplicationsPage.enterDocumentNameNine(documentName9);
-            log.debug("Entered program name: '{}'.", documentName9);
-
+            String fieldKey_9 = "documentNameNine";
+            String doc_9 = "Dokumentas 9 testas";
+            submittedApplicationsPage.enterDocumentInputValue(fieldKey_9, doc_9);
+            log.debug("Entered value: '{}' into field: '{}'.", doc_9, fieldKey_9);
 
             String labelText_2 = "Patvirtinu, kad paraiškoje ir kituose dokumentuose pateikta informacija yra teisinga.";
-            submittedApplicationsPage.clickMatCheckboxByLabelText(labelText_2);
+            submittedApplicationsPage.clickMatCheckboxByLabelText_PVK(labelText_2);
             log.debug("Clicked on mat-checkbox with label containing '{}'.", labelText_2);
 
             String labelText_3 = "Įsipareigoju leisti Užimtumo tarnybai patikrinti pateiktą informaciją, jeigu, jos manymu, tai yra būtina, ir man žinoma, kad, jeigu gausiu subsidiją, darbo vietą (-as) turėsiu įsteigti per 10 mėnesių nuo Paramos verslui kurti sutarties pasirašymo ir nepanaikinti už subsidijos lėšas įsteigtos (-ų) darbo vietos (-ų) 36 mėnesius nuo jos (jų) įsteigimo dienos.";
-            submittedApplicationsPage.clickMatCheckboxByLabelText(labelText_3);
+            submittedApplicationsPage.clickMatCheckboxByLabelText_PVK(labelText_3);
             log.debug("Clicked on mat-checkbox with label containing '{}'.", labelText_3);
 
             String labelText_4 = "Patvirtinu, kad darbo vietą sau arba sau ir Užimtumo tarnybos siųstam bedarbiui (siųstiems bedarbiams) ketinu steigti Lietuvos Respublikos smulkiojo ir vidutinio verslo plėtros įstatyme apibrėžtoje labai mažoje įmonėje.";
-            submittedApplicationsPage.clickMatCheckboxByLabelText(labelText_4);
+            submittedApplicationsPage.clickMatCheckboxByLabelText_PVK(labelText_4);
             log.debug("Clicked on mat-checkbox with label containing '{}'.", labelText_4);
 
-            submittedApplicationsPage.clickButtonReview();
-            log.debug("Clicked 'Review' button after checkboxes.");
+            String review = "review";
+            submittedApplicationsPage.clickButton(review);
+            log.info("Clicked button with key: '{}'.", review);
 
             //--------------------
 
@@ -1363,8 +1396,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             applicationFormsPage.verifySuccessMessage("Ruošinys sėkmingai išsaugotas.");
 
-            submittedApplicationsPage.clickButtonSubmit();
-            log.debug("Clicked 'Submit' button after checkboxes.");
+            String submit = "submit";
+            submittedApplicationsPage.clickButton(submit);
+            log.info("Clicked button with key: '{}'.", submit);
 
             submittedApplicationsPage.clickButtonSubmitConfirmation();
             log.debug("Clicked 'SubmitConfirmation' button after checkboxes.");
