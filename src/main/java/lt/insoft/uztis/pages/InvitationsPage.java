@@ -188,25 +188,6 @@ public class InvitationsPage extends UztisPage {
     @FindBy(xpath = "//div[contains(@class, 'mat-mdc-form-field-infix')]/common-select//mat-select[contains(@class, 'mat-mdc-select')]")
     WebElement invitationCode;
 
-
-//    public void verifySuccessMessage(String expectedMessage) {
-//        List<String> actualMessages = getAllMessagesText(); // Gauti visas žinutės tekstas
-//
-//        boolean messageFound = false;
-//        for (String message : actualMessages) {
-//            if (message.equals(expectedMessage)) {
-//                messageFound = true; // Jei žinutė rasta, pažymime, kad ji yra
-//                break; // Baigiame paiešką, nes radome norimą žinutę
-//            }
-//        }
-//
-//        if (messageFound) {
-//            log.debug("Verified success message: '{}'", expectedMessage); // Sėkmingas tikrinimas
-//        } else {
-//            log.error("Failed to verify the success message: '{}'. Available messages: {}", expectedMessage, actualMessages); // Klaidos pranešimas su visų žinučių sąrašu
-//        }
-//    }
-
     //-------------------------------------------
 
     public String getInvitationCode() {

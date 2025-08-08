@@ -25,7 +25,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 public class SubmittedApplicationsPage extends UztisPage {
 
     private static final Logger log = getLogger(lookup().lookupClass());
-    private final Map<String, By> textAreaLocators_PVK = new HashMap<>();
+    private final Map<String, By> textAreaLocators = new HashMap<>();
     private final Map<String, By> textLocators_PVK = new HashMap<>();
     private final Map<String, By> radioButtonLocatorsY_N_PVK = new HashMap<>();
     private final Map<String, By> dropdownButtonCheckBoxLocators_VUI_DVP_PVK = new HashMap<>();
@@ -54,15 +54,15 @@ public class SubmittedApplicationsPage extends UztisPage {
 
         textLocators_PVK.put("salary_1", By.xpath("//common-decimal-input[contains(@class, 'ng-untouched')]//input[@type='text']"));
 
-        textAreaLocators_PVK.put("priority_pvk", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[1]"));
-        textAreaLocators_PVK.put("job_function_pvk", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[2]"));
-        textAreaLocators_PVK.put("qualification_pvk", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[3]"));
-        textAreaLocators_PVK.put("experience_pvk", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[4]"));
-        textAreaLocators_PVK.put("description_pvk_1", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[5]"));
-        textAreaLocators_PVK.put("description_pvk_2", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[6]"));
-        textAreaLocators_PVK.put("description_pvk_3", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[7]"));
-        textAreaLocators_PVK.put("salary_pvk", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[8]"));
-        textAreaLocators_PVK.put("repair_pvk", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[9]"));
+        textAreaLocators.put("1", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[1]"));
+        textAreaLocators.put("2", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[2]"));
+        textAreaLocators.put("3", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[3]"));
+        textAreaLocators.put("4", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[4]"));
+        textAreaLocators.put("5", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[5]"));
+        textAreaLocators.put("6", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[6]"));
+        textAreaLocators.put("7", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[7]"));
+        textAreaLocators.put("8", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[8]"));
+        textAreaLocators.put("9", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[9]"));
 
 
         dropdownButtonCheckBoxLocators_VUI_DVP_PVK.put("evrk_VUI", By.xpath("//mat-label[contains(text(), 'Projekto teikėjo planuojama vykdyti veikla, kuriai prašoma subsidija, kodas pagal EVRK')]"));
@@ -210,9 +210,6 @@ public class SubmittedApplicationsPage extends UztisPage {
     WebElement dropdownButtonExpensesTyp_DVP_2;
     //DVP
 
-    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[1]")
-    WebElement inputJobFunction;
-
     @FindBy(xpath = "(//input[@type='radio' and @value='true'])[1]")
     WebElement radioButtonWithDisabilities_VUI;
 
@@ -229,23 +226,11 @@ public class SubmittedApplicationsPage extends UztisPage {
 //    WebElement radioButtonForNotAlreadyWorking_DVP_step2;
     //DVP
 
-    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[2]")
-    WebElement inputDisabilities;
-
     @FindBy(xpath = "//mat-label[contains(text(), 'Darbo laiko norma ir darbo laiko režimas')]")
     WebElement dropdownButtonTimeMode;
 
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Darbo laiko norma ir darbo laiko režimas')]//input")
     WebElement inputTimeModeOthers;
-
-    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[3]")
-    WebElement inputQualification;
-
-    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[4]")
-    WebElement inputSalaryDescription;
-
-    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[7]")
-    WebElement inputSalaryDescription_DVP;
 
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[2]")
     WebElement inputJopDate_VUI;
@@ -270,29 +255,11 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "(//input[@type='radio' and @value='false'])[3]")
     WebElement radioButtonSeasonJob;
 
-    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[5]")
-    WebElement inputJobDescription;
-
-    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[6]")
-    WebElement inputProsesDescriptionVUI_equipmentDescriptionDVP;
-
     @FindBy(xpath = "(//input[@type='radio' and @value='true'])[4]")
     WebElement radioButtonEnergy;
 
-    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[7]")
-    WebElement inputEnergyInformationVUI;
-
-    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[4]")
-    WebElement inputWorkInformationDVP;
-
-    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[8]")
-    WebElement inputRepairWorkDescription_DVP;
-
     @FindBy(xpath = "(//input[@type='radio' and @value='true'])[5]")
     WebElement radioButtonRepair;
-
-    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[8]")
-    WebElement inputRepairInformation;
 
     @FindBy(xpath = "(//input[@type='radio' and @value='false'])[6]")
     WebElement radioButtonPVM;
@@ -374,9 +341,6 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Remonto darbų pavadinimas')]//input")
     WebElement inputRepairName;
 
-    @FindBy(xpath = "//div[contains(@class, 'mdc-notched-outline')]//following::textarea[9]")
-    WebElement inputRepairDescription;
-
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Valstybės institucijos, įstaigos (proc.)')]//input")
     WebElement inputCountryPerc;
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Savivaldybės institucijos, įstaigos (proc.)')]//input")
@@ -446,9 +410,6 @@ public class SubmittedApplicationsPage extends UztisPage {
 
     @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[8]")
     public WebElement checkboxConfirmationApplication_DVP;
-
-//    @FindBy(xpath = "//common-button//button[@type='button' and contains(text(), 'Pateikti vertinimui')]")
-//    WebElement buttonSubmitConfirmation;
 
     //DVP
     //--------------
@@ -730,8 +691,8 @@ public class SubmittedApplicationsPage extends UztisPage {
         }
     }
 
-    public void enterTextArea_PVK(String type, String text) {
-        By locator = textAreaLocators_PVK.get(type.toLowerCase());
+    public void enterTextArea(String type, String text) {
+        By locator = textAreaLocators.get(type.toLowerCase());
         if (locator == null) {
             throw new IllegalArgumentException("No input found for type: " + type);
         }
@@ -1135,11 +1096,6 @@ public class SubmittedApplicationsPage extends UztisPage {
     }
     //DVP
 
-        public void enterInputJobFunction(String text) {
-        inputJobFunction.clear();
-        inputJobFunction.sendKeys(text);
-    }
-
     public void clickRadioButtonWithDisabilitiesVUI() {
         if (!radioButtonWithDisabilities_VUI.isSelected()) {
             radioButtonWithDisabilities_VUI.click();
@@ -1161,11 +1117,6 @@ public class SubmittedApplicationsPage extends UztisPage {
         }
     }
     //PVK
-
-    public void enterDisabilities(String text) {
-        inputDisabilities.clear();
-        inputDisabilities.sendKeys(text);
-    }
 
     public void selectDropdownTimeMode(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -1200,28 +1151,9 @@ public class SubmittedApplicationsPage extends UztisPage {
         inputTimeModeOthers.sendKeys(text);
     }
 
-    public void enterQualification(String text) {
-        inputQualification.clear();
-        inputQualification.sendKeys(text);
-    }
-
-    //DVP
-
-//DVP
-
     public void enterSalary(String amount) {
         inputSalary.clear();
         inputSalary.sendKeys(amount);
-    }
-
-    public void enterSalaryDescription(String text) {
-        inputSalaryDescription.clear();
-        inputSalaryDescription.sendKeys(text);
-    }
-
-    public void enterSalaryDescription_DVP(String text) {
-        inputSalaryDescription_DVP.clear();
-        inputSalaryDescription_DVP.sendKeys(text);
     }
 
     public void clickRadioButtonTemporaryJob() {
@@ -1248,46 +1180,16 @@ public class SubmittedApplicationsPage extends UztisPage {
         }
     }
 
-    public void enterJobDescription(String text) {
-        inputJobDescription.clear();
-        inputJobDescription.sendKeys(text);
-    }
-
-    public void enterProsesDescriptionVUI_equipmentDescriptionDVP(String text) {
-        inputProsesDescriptionVUI_equipmentDescriptionDVP.clear();
-        inputProsesDescriptionVUI_equipmentDescriptionDVP.sendKeys(text);
-    }
-
     public void clickRadioButtonEnergy() {
         if (!radioButtonEnergy.isSelected()) {
             radioButtonEnergy.click();
         }
     }
 
-    public void enterEnergyInformationVUI(String text) {
-        inputEnergyInformationVUI.clear();
-        inputEnergyInformationVUI.sendKeys(text);
-    }
-
-    public void enterWorkInformationDVP(String text) {
-        inputWorkInformationDVP.clear();
-        inputWorkInformationDVP.sendKeys(text);
-    }
-
-    public void enterWorkDescriptionDVP(String text) {
-        inputRepairWorkDescription_DVP.clear();
-        inputRepairWorkDescription_DVP.sendKeys(text);
-    }
-
     public void clickRadioButtonRepair() {
         if (!radioButtonRepair.isSelected()) {
             radioButtonRepair.click();
         }
-    }
-
-    public void enterRepairInformation(String text) {
-        inputRepairInformation.clear();
-        inputRepairInformation.sendKeys(text);
     }
 
     public void clickRadioButtonPVM() {
@@ -1398,7 +1300,6 @@ public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
 
     if (!optionSelected) {
         log.warn("Dropdown value '{}' not found.", valueToSelect);
-        return;
     }
 
     // Palaukiame, kol dropdown užsidarys
@@ -1459,7 +1360,6 @@ public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
 
         if (!optionSelected) {
             log.warn("Dropdown value '{}' not found.", valueToSelect);
-            return;
         }
 
         // Palaukiame, kol dropdown užsidarys
@@ -1692,8 +1592,6 @@ public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
         inputToolsCount_DVP_2.sendKeys(amount);
     }
 
-
-
     public void enterPriceOne(String amount) {
         inputPriceOne.clear();
         inputPriceOne.sendKeys(amount);
@@ -1741,11 +1639,6 @@ public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
     public void enterRepairName(String amount) {
         inputRepairName.clear();
         inputRepairName.sendKeys(amount);
-    }
-
-    public void enterRepairDescription(String text) {
-        inputRepairDescription.clear();
-        inputRepairDescription.sendKeys(text);
     }
 
     public void enterCountryPerc(String amount) {
@@ -1952,6 +1845,24 @@ public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
         inputField.clear();
         inputField.sendKeys(value);
         log.info("Entered value '{}' into document input '{}'", value, fieldKey);
+    }
+
+    public void fillDocumentFields(int count) {
+        String[] numberWords = {
+                "One", "Two", "Three", "Four", "Five",
+                "Six", "Seven", "Eight", "Nine", "Ten"
+        };
+
+        if (count > numberWords.length) {
+            throw new IllegalArgumentException("Max allowed is " + numberWords.length);
+        }
+
+        for (int i = 0; i < count; i++) {
+            String fieldKey = "documentName" + numberWords[i];
+            String docValue = "Dokumentas " + (i + 1) + " testas";
+            enterDocumentInputValue(fieldKey, docValue);
+            log.debug("Entered value: '{}' into field: '{}'.", docValue, fieldKey);
+        }
     }
 
     //DVP

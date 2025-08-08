@@ -465,21 +465,6 @@ public class EvaluationsPage extends UztisPage{
 
     //------------------------
 
-//    public void enterCommissionDate() {
-//        LocalDate today = LocalDate.now();
-//
-//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-//
-//        String formattedTodayDate = today.format(formatter);
-//
-//        if (inputCommissionDate.isDisplayed() && inputCommissionDate.isEnabled()) {
-//            inputCommissionDate.clear();
-//            inputCommissionDate.sendKeys(formattedTodayDate);
-//        } else {
-//            throw new RuntimeException("Date input is not interactable.");
-//        }
-//    }
-
     public void enterCommissionDate() {
         LocalDate today = LocalDate.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
