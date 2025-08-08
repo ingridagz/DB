@@ -7,12 +7,6 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 
 import java.awt.*;
@@ -21,7 +15,6 @@ import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.time.Duration;
 
 import static java.lang.invoke.MethodHandles.lookup;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -118,6 +111,8 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             //Biudžetas:
             applicationFormsPage.clickRadioButtonBudgetByCountry();
             log.debug("Selected 'Budget By Country' radio button.");
+
+            //pabandymui
 //            applicationFormsPage.clickRadioButtonBudgetByMunicipality();
 //            log.debug("Selected 'Budget by Municipality' option.");
 
@@ -131,29 +126,23 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.clickButtonAdd();
             log.debug("Clicked 'Add' button.");
 
-            String valueToSelect1 = "VUI atitiktis URP";
-            applicationFormsPage.selectValuesByListEvaluationOne(valueToSelect1);
-            log.debug("Selected a value from the 'EvaluationOne' dropdown: '{}'", valueToSelect1);
-
-            String valueToSelect2 = "VUI atitiktis kokybės kriterijams";
-            applicationFormsPage.selectValuesByListEvaluationTwo(valueToSelect2);
-            log.debug("Selected a value from the 'EvaluationTwon' dropdown: '{}'", valueToSelect2);
-
-            String valueToSelect3 = "VUI gynimo vertinimo forma";
-            applicationFormsPage.selectValuesByListEvaluationThree(valueToSelect3);
-            log.debug("Selected a value from the 'EvaluationThree' dropdown: '{}'", valueToSelect3);
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonEvaluationOne(), "VUI atitiktis URP");
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonEvaluationTwo(), "VUI atitiktis kokybės kriterijams");
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonEvaluationThree(), "VUI gynimo vertinimo forma");
 
             //Pateiktos paraiškos priskiriamos:
+
             applicationFormsPage.clickRadioButtonMunicipality();
             log.debug("Selected 'Municipality' radio button.");
-            String valueToSelectM = "Klaipėdos klientų aptarnavimo departamentas";
-            applicationFormsPage.selectValueByListMunicipality(valueToSelectM);
-            log.debug("Selected a value from the 'Municipality' dropdown: '{}'", valueToSelectM);
-//            applicationFormsPage.clickRadioButtonSection();
+//
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonMunicipality(), "Klaipėdos klientų aptarnavimo departamentas");
+//
+           // kaip reikalinga parinkti Dapartamentą/Skyrių
+
+//            applicationFormsPage.clickRadioButtonMunicipalitySection();
 //            log.debug("Selected 'Section' radio button.");
-//            String valueToSelectS = "Kauno klientų aptarnavimo departamentas / Alytaus skyrius";
-//            applicationFormsPage.selectValueByListSection(valueToSelectS);
-//            log.debug("Selected a value from the 'Section' dropdown: '{}'", valueToSelectS);
+//
+//            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonMunicipalitySection(), "Klaipėdos klientų aptarnavimo departamentas / Klaipėdos 1-asis skyrius");
 
             applicationFormsPage.clickButtonPlus();
             log.debug("Clicked 'Plus' button.");
@@ -204,56 +193,6 @@ public class ApplicationFormsPageTest extends UztisPageTest {
         }
     }
 
-//nebereikalingas
-//    @Test
-//    void testEditAndSaveVuiApplication() {
-//        log.info("Starting test:'testEditAndSaveVuiApplication'");
-//
-//        try {
-//
-//            TestUtils.loginAllTests(driver);
-//            log.debug("User logged in with test credentials");
-//
-//            navigateToApplicationFormsMenu();
-//
-//            applicationFormsPage.clickLastDescription();
-//            log.debug("Selected the last application description.");
-//
-//            applicationFormsPage.clickButtonEdit();
-//            log.debug("Clicked the 'Edit' button.");
-//
-//            //Pateiktos paraiškos priskiriamos:
-//            applicationFormsPage.clickRadioButtonMunicipality();
-//            log.debug("Selected 'Municipality' radio button.");
-//            String valueToSelectM = "Kauno klientų aptarnavimo departamentas";
-//            applicationFormsPage.selectValueByListMunicipality(valueToSelectM);
-//            log.debug("Selected a value from the 'Municipality' dropdown: '{}'", valueToSelectM);
-//
-//            //Biudžetas:
-////            applicationFormsPage.clickRadioButtonBudgetByCountry();
-////            log.debug("Selected 'Budget By Country' radio button.");
-//
-//            //Finansavimo eilės sudarymas:
-////            applicationFormsPage.clickRadioButtonFinancedByQueue();
-////            log.debug("Selected 'Financed By Queue' radio button.");
-//
-//            String newApplicationName = "_paredaguota";
-//            applicationFormsPage.enterApplicationName(newApplicationName);
-//            log.debug("Entered new application name: {}", newApplicationName);
-//
-//            applicationFormsPage.clickButtonSave();
-//            log.debug("Clicked the 'Save' button.");
-//
-//            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
-//            log.info("Verified success message");
-//
-//            log.info("Test 'testEditAndSaveVuiApplication' completed successfully.");
-//        } catch (AssertionError | Exception e) {
-//            log.error("Test 'testEditAndSaveVuiApplication' failed with error: {}", e.getMessage(), e);
-//            throw e;
-//        }
-//    }
-
     @Test
     void testAddDocumentsVUI() {
         log.info("Starting test:'testAddContractVUI'");
@@ -274,17 +213,9 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.clickButtonEdit();
             log.debug("Clicked the 'Edit' button.");
 
-            String document1 = "Vietinių užimtumo iniciatyvų projekto įgyvendinimo ir finansavimo sutartis";
-            applicationFormsPage.selectValuesByListDocument3(document1);
-            log.debug("Selected a value from the 'Document' dropdown: '{}'", document1);
-
-            String document2 = "Sprendimas dėl išmokos";
-            applicationFormsPage.selectValuesByListDocument4(document2);
-            log.debug("Selected a value from the 'Document' dropdown: '{}'", document2);
-
-            String document3 = "Sprendimas dėl išmokos";
-            applicationFormsPage.selectValuesByListDocument8(document3);
-            log.debug("Selected a value from the 'Document' dropdown: '{}'", document3);
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonDocumentContract(), "Vietinių užimtumo iniciatyvų projekto įgyvendinimo ir finansavimo sutartis");
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonDocumentDecision1(), "Sprendimas dėl išmokos");
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonDocumentDecision2(), "Sprendimas dėl išmokos");
 
             applicationFormsPage.clickButtonSave();
             log.debug("Clicked the 'Save' button.");
@@ -325,16 +256,13 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.clickRadioButtonFinancedWithoutQueue();
             log.debug("Selected 'Financed Without Queue' option.");
 
-            String valueToSelect1 = "DVP atitiktis URP";
-            applicationFormsPage.selectValuesByListEvaluationOne(valueToSelect1);
-            log.debug("Selected a value from the 'EvaluationOne' dropdown: '{}'", valueToSelect1);
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonEvaluationOne(), "DVP atitiktis URP");
 
             //Pateiktos paraiškos priskiriamos:
             applicationFormsPage.clickRadioButtonMunicipality();
             log.debug("Selected 'Municipality' radio button.");
-            String valueToSelectM = "Klaipėdos klientų aptarnavimo departamentas";
-            applicationFormsPage.selectValueByListMunicipality(valueToSelectM);
-            log.debug("Selected a value from the 'Municipality' dropdown: '{}'", valueToSelectM);
+
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonMunicipality(), "Klaipėdos klientų aptarnavimo departamentas");
 
             applicationFormsPage.clickButtonPlus();
             log.debug("Clicked 'Plus' button.");
@@ -404,17 +332,9 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.clickButtonEdit();
             log.debug("Clicked the 'Edit' button.");
 
-            String document1 = "Darbo vietų pritaikymo ir finansavimo sutartis";
-            applicationFormsPage.selectValuesByListDocument3(document1);
-            log.debug("Selected a value from the 'Document' dropdown: '{}'", document1);
-
-            String document2 = "Sprendimas dėl išmokos";
-            applicationFormsPage.selectValuesByListDocument4(document2);
-            log.debug("Selected a value from the 'Document' dropdown: '{}'", document2);
-
-            String document3 = "Sprendimas dėl išmokos";
-            applicationFormsPage.selectValuesByListDocument8(document3);
-            log.debug("Selected a value from the 'Document' dropdown: '{}'", document3);
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonDocumentContract(), "Darbo vietų pritaikymo ir finansavimo sutartis");
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonDocumentDecision1(), "Sprendimas dėl išmokos");
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonDocumentDecision2(), "Sprendimas dėl išmokos");
 
             applicationFormsPage.clickButtonSave();
             log.debug("Clicked the 'Save' button.");
@@ -460,24 +380,15 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.clickButtonAdd();
             log.debug("Clicked 'Add' button.");
 
-            String valueToSelect1 = "PVK atitiktis URP";
-            applicationFormsPage.selectValuesByListEvaluationOne(valueToSelect1);
-            log.debug("Selected a value from the 'EvaluationOne' dropdown: '{}'", valueToSelect1);
-
-            String valueToSelect2 = "PVK atitiktis kokybės kriterijams";
-            applicationFormsPage.selectValuesByListEvaluationTwo(valueToSelect2);
-            log.debug("Selected a value from the 'EvaluationTwon' dropdown: '{}'", valueToSelect2);
-
-            String valueToSelect3 = "PVK gynimo vertinimo forma";
-            applicationFormsPage.selectValuesByListEvaluationThree(valueToSelect3);
-            log.debug("Selected a value from the 'EvaluationThree' dropdown: '{}'", valueToSelect3);
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonEvaluationOne(), "PVK atitiktis URP");
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonEvaluationTwo(), "PVK atitiktis kokybės kriterijams");
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonEvaluationThree(), "PVK gynimo vertinimo forma");
 
 //            Pateiktos paraiškos priskiriamos:
             applicationFormsPage.clickRadioButtonMunicipality();
             log.debug("Selected 'Municipality' radio button.");
-            String valueToSelectM = "Klaipėdos klientų aptarnavimo departamentas";
-            applicationFormsPage.selectValueByListMunicipality(valueToSelectM);
-            log.debug("Selected a value from the 'Municipality' dropdown: '{}'", valueToSelectM);
+
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonMunicipality(), "Klaipėdos klientų aptarnavimo departamentas");
 
             applicationFormsPage.clickButtonPlus();
             log.debug("Clicked 'Plus' button.");
@@ -547,17 +458,9 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.clickButtonEdit();
             log.debug("Clicked the 'Edit' button.");
 
-            String document1 = "Paramos verslui kurti sutartis";
-            applicationFormsPage.selectValuesByListDocument3(document1);
-            log.debug("Selected a value from the 'Document' dropdown: '{}'", document1);
-
-            String document2 = "Sprendimas dėl išmokos";
-            applicationFormsPage.selectValuesByListDocument4(document2);
-            log.debug("Selected a value from the 'Document' dropdown: '{}'", document2);
-
-            String document3 = "Sprendimas dėl išmokos";
-            applicationFormsPage.selectValuesByListDocument8(document3);
-            log.debug("Selected a value from the 'Document' dropdown: '{}'", document3);
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonDocumentContract(), "Paramos verslui kurti sutartis");
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonDocumentDecision1(), "Sprendimas dėl išmokos");
+            applicationFormsPage.selectValueFromDropdown(applicationFormsPage.getDropdownButtonDocumentDecision2(), "Sprendimas dėl išmokos");
 
             applicationFormsPage.clickButtonSave();
             log.debug("Clicked the 'Save' button.");

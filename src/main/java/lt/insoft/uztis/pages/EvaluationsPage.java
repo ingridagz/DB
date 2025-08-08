@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Collection;
+
 
 import static java.lang.invoke.MethodHandles.lookup;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -164,12 +164,12 @@ public class EvaluationsPage extends UztisPage{
     @FindBy(xpath = "//input[@value='false']")
     WebElement radioButtonWithoutCommissionNO;
 
-    @FindBy(xpath = "//input[contains(@id, 'mat-radio') and @name='mat-radio-group-76' and @value='true']")
-    WebElement radioButtonWithoutCommissionYES;
+//    @FindBy(xpath = "//input[contains(@id, 'mat-radio') and @name='mat-radio-group-76' and @value='true']")
+//    WebElement radioButtonWithoutCommissionYES;
 
 
-    @FindBy(xpath = "//label[contains(., 'Komisijos pirmininkas')]/following::input[1]")
-    WebElement inputChairmanName;
+//    @FindBy(xpath = "//label[contains(., 'Komisijos pirmininkas')]/following::input[1]")
+//    WebElement inputChairmanName;
 
     @FindBy(xpath = "//mat-label[contains(text(), 'Komisijos pirmininkas')]/following::mat-select[1]")
     WebElement dropdownChairmanName;
@@ -505,10 +505,10 @@ public class EvaluationsPage extends UztisPage{
         }
     }
 
-    public void enterChairmanName(String chairman) {
-        inputChairmanName.clear();
-        inputChairmanName.sendKeys(chairman);
-    }
+//    public void enterChairmanName(String chairman) {
+//        inputChairmanName.clear();
+//        inputChairmanName.sendKeys(chairman);
+//    }
 
     public void clickElementByTextInDropdown(String visibleText) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -620,10 +620,10 @@ public class EvaluationsPage extends UztisPage{
         }
     }
 
-    public void enterMemberName(String member) {
-        inputMemberName.clear();
-        inputMemberName.sendKeys(member);
-    }
+//    public void enterMemberName(String member) {
+//        inputMemberName.clear();
+//        inputMemberName.sendKeys(member);
+//    }
 
     public void enterScoreChairman(String score) {
         inputScoreChairman.clear();

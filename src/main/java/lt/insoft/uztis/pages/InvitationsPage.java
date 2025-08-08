@@ -617,9 +617,9 @@ public class InvitationsPage extends UztisPage {
         }
     }
 
-    public void clickButtonLogin() {
-        buttonLogin.click();
-    }
+//    public void clickButtonLogin() {
+//        buttonLogin.click();
+//    }
 
     public void clickButtonAction() {
         buttonAction.click();

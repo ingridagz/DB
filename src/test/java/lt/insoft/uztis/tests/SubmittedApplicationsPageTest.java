@@ -202,20 +202,22 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 //            submittedApplicationsPage.selectDropdownAddressApartment(apartment);
 //            log.debug("Selected apartment: '{}'.", apartment);
 
-            submittedApplicationsPage.clickButtonConfirm();
-            log.debug("Clicked 'Confirm' button.");
+            String buttonAddressConfirm = "addressConfirm";
+            submittedApplicationsPage.clickApplicationButton(buttonAddressConfirm);
+            log.info("Clicked button with key: '{}'.", buttonAddressConfirm);
+
             //-------------
 
-            submittedApplicationsPage.enterDate();
+            submittedApplicationsPage.enterDate_VUI();
             log.debug("Entered project date.");
 
             String jobCount = "1";
             submittedApplicationsPage.enterJobCount(jobCount);
             log.debug("Entered job count: '{}'.", jobCount);
 
-            String buttonKey = "next";
-            submittedApplicationsPage.clickButton(buttonKey);
-            log.info("Clicked button with key: '{}'.", buttonKey);
+            String next_1 = "next";
+            submittedApplicationsPage.clickApplicationButton(next_1);
+            log.info("Clicked button with key: '{}'.", next_1);
 
             //--------------------
 
@@ -250,7 +252,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterQualification(qualificationDescription);
             log.debug("Entered qualification: '{}'.", qualificationDescription);
 
-            submittedApplicationsPage.enterJobDate();
+            submittedApplicationsPage.enterJobDate_VUI();
             log.debug("Entered job date.");
 
             String salary = "1200";
@@ -400,9 +402,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterSupportAmount(amount6);
             log.debug("Entered support amount: '{}'.", amount6);
 
-            String buttonKey_2 = "next";
-            submittedApplicationsPage.clickButton(buttonKey_2);
-            log.info("Clicked button with key: '{}'.", buttonKey_2);
+            String next_2 = "next";
+            submittedApplicationsPage.clickApplicationButton(next_2);
+            log.info("Clicked button with key: '{}'.", next_2);
 
             //--------------------
 
@@ -417,9 +419,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
                 log.debug("Test finished: All 'Legal Entities' checkboxes checked successfully.");
 
-            String buttonKey_3 = "next";
-            submittedApplicationsPage.clickButton(buttonKey_3);
-            log.info("Clicked button with key: '{}'.", buttonKey_3);
+            String next_3 = "next";
+            submittedApplicationsPage.clickApplicationButton(next_3);
+            log.info("Clicked button with key: '{}'.", next_3);
 
             //--------------------
 
@@ -452,9 +454,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationStepFour, true);
             log.debug("Checked 'ConfirmationStepFour'");
 
-            String buttonKey_4 = "next";
-            submittedApplicationsPage.clickButton(buttonKey_4);
-            log.info("Clicked button with key: '{}'.", buttonKey_4);
+            String next_4 = "next";
+            submittedApplicationsPage.clickApplicationButton(next_4);
+            log.info("Clicked button with key: '{}'.", next_4);
 
             //--------------------
 
@@ -515,14 +517,18 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationApplication, true);
             log.debug("Checked 'ConfirmationApplication'");
 
-            submittedApplicationsPage.clickButtonSaveDraft();
-            log.debug("Clicked 'SaveDraft' button after checkboxes.");
+            String save_draft = "save_draft";
+            submittedApplicationsPage.clickApplicationButton(save_draft);
+            log.info("Clicked button with key: '{}'.", save_draft);
+            //istrinti
+//            submittedApplicationsPage.clickButtonSaveDraft();
+//            log.debug("Clicked 'SaveDraft' button after checkboxes.");
 
             applicationFormsPage.verifySuccessMessage("Ruošinys sėkmingai išsaugotas.");
             log.info("Verified success message");
 
             String review = "review";
-            submittedApplicationsPage.clickButton(review);
+            submittedApplicationsPage.clickApplicationButton(review);
             log.info("Clicked button with key: '{}'.", review);
 
             stay();
@@ -530,11 +536,12 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             //--------------------
 
             String submit = "submit";
-            submittedApplicationsPage.clickButton(submit);
+            submittedApplicationsPage.clickApplicationButton(submit);
             log.info("Clicked button with key: '{}'.", submit);
 
-            submittedApplicationsPage.clickButtonSubmitConfirmation();
-            log.debug("Clicked 'SubmitConfirmation' button after checkboxes.");
+            String submitConfirmation = "submitConfirm";
+            submittedApplicationsPage.clickApplicationButton(submitConfirmation);
+            log.info("Clicked button with key: '{}'.", submitConfirmation);
 
             applicationFormsPage.verifySuccessMessage("Paraiška sėkmingai pateikta ir užregistruota.");
 
@@ -618,7 +625,6 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             throw e;
         }
     }
-
 
     @Test
     void testFillNewDVPApplicationFA() {
@@ -706,8 +712,10 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 //            submittedApplicationsPage.selectDropdownAddressApartment(apartment);
 //            log.debug("Selected apartment: '{}'.", apartment);
 
-            submittedApplicationsPage.clickButtonConfirm();
-            log.debug("Clicked 'Confirm' button.");
+            String buttonAddressConfirm = "addressConfirm";
+            submittedApplicationsPage.clickApplicationButton(buttonAddressConfirm);
+            log.info("Clicked button with key: '{}'.", buttonAddressConfirm);
+
             //-------------
 
             //DVP
@@ -726,9 +734,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Entered person count2: '{}'.", jobCount2);
             //DVP
 
-            String buttonKey = "next";
-            submittedApplicationsPage.clickButton(buttonKey);
-            log.info("Clicked button with key: '{}'.", buttonKey);
+            String next_1 = "next";
+            submittedApplicationsPage.clickApplicationButton(next_1);
+            log.info("Clicked button with key: '{}'.", next_1);
 
             //--------------------
 
@@ -898,9 +906,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterSupportAmount(amount4);
             log.debug("Entered support amount: '{}'.", amount4);
 
-            String buttonKey_2 = "next";
-            submittedApplicationsPage.clickButton(buttonKey_2);
-            log.info("Clicked button with key: '{}'.", buttonKey_2);
+            String next_2 = "next";
+            submittedApplicationsPage.clickApplicationButton(next_2);
+            log.info("Clicked button with key: '{}'.", next_2);
 
             //--------------------
             SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationThree, true);
@@ -914,9 +922,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             log.debug("Test finished: All 'Legal Entities' checkboxes checked successfully.");
 
-            String buttonKey_3 = "next";
-            submittedApplicationsPage.clickButton(buttonKey_3);
-            log.info("Clicked button with key: '{}'.", buttonKey_3);
+            String next_3 = "next";
+            submittedApplicationsPage.clickApplicationButton(next_3);
+            log.info("Clicked button with key: '{}'.", next_3);
 
             //--------------------
 
@@ -949,9 +957,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             SubmittedApplicationsPage.CheckboxHelper.setConfirmationCheckbox(driver, submittedApplicationsPage.checkboxConfirmationStepFourDVP, true);
             log.debug("Checked 'ConfirmationStepFour'");
 
-            String buttonKey_4 = "next";
-            submittedApplicationsPage.clickButton(buttonKey_4);
-            log.info("Clicked button with key: '{}'.", buttonKey_4);
+            String next_4 = "next";
+            submittedApplicationsPage.clickApplicationButton(next_4);
+            log.info("Clicked button with key: '{}'.", next_4);
 
             //--------------------
 
@@ -1003,24 +1011,26 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Checked 'ConfirmationApplication'");
 
             String review = "review";
-            submittedApplicationsPage.clickButton(review);
+            submittedApplicationsPage.clickApplicationButton(review);
             log.info("Clicked button with key: '{}'.", review);
 
             stay();
 
             //--------------------
 
-            submittedApplicationsPage.clickButtonSaveDraft();
-            log.debug("Clicked 'SaveDraft' button after checkboxes.");
+            String save_draft = "save_draft";
+            submittedApplicationsPage.clickApplicationButton(save_draft);
+            log.info("Clicked button with key: '{}'.", save_draft);
 
             applicationFormsPage.verifySuccessMessage("Ruošinys sėkmingai išsaugotas.");
 
             String submit = "submit";
-            submittedApplicationsPage.clickButton(submit);
+            submittedApplicationsPage.clickApplicationButton(submit);
             log.info("Clicked button with key: '{}'.", submit);
 
-            submittedApplicationsPage.clickButtonSubmitConfirmation();
-            log.debug("Clicked 'SubmitConfirmation' button after checkboxes.");
+            String submitConfirmation = "submitConfirm";
+            submittedApplicationsPage.clickApplicationButton(submitConfirmation);
+            log.info("Clicked button with key: '{}'.", submitConfirmation);
 
             applicationFormsPage.verifySuccessMessage("Paraiška sėkmingai pateikta ir užregistruota.");
             log.info("Verified success message");
@@ -1102,11 +1112,10 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 //            submittedApplicationsPage.enterEmailAddress(emailInput);
 //            log.debug("Entered email: '{}'.", emailInput);
 
-            submittedApplicationsPage.selectRadioForYourself_PVK();
-            log.debug("Clicked on 'ForYourself' button.");
+            submittedApplicationsPage.selectRadioButtonY_N_PVK("jobForYourself_PVK");
 
             String value_BS = "Individuali įmonė";
-            submittedApplicationsPage.selectDropdownButtonValue_VUI_DVP_PVK("businessStructure", value_BS);
+            submittedApplicationsPage.selectDropdownButtonValue_VUI_DVP_PVK("businessStructure_PVK", value_BS);
             log.debug("Selected 'BusinessStructure' value: '{}'.", value_BS);
 
 //            //address
@@ -1149,80 +1158,83 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 //            submittedApplicationsPage.selectDropdownAddressApartment(apartment);
 //            log.debug("Selected apartment: '{}'.", apartment);
 
-            submittedApplicationsPage.clickButtonConfirm();
-            log.debug("Clicked 'Confirm' button.");
+            String buttonAddressConfirm = "addressConfirm";
+            submittedApplicationsPage.clickApplicationButton(buttonAddressConfirm);
+            log.info("Clicked button with key: '{}'.", buttonAddressConfirm);
 
+            String value_evrk = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
+            submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("evrk_PVK", value_evrk);
+            log.debug("Selected EVRK value: '{}'.", value_evrk);
 
-            String value = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
-            submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("evrk", value);
-            log.debug("Selected EVRK value: '{}'.", value);
+            submittedApplicationsPage.selectRadioButtonY_N_PVK("selfEmploymentTerminated_PVK");
 
-            submittedApplicationsPage.selectRadioButtonY_N_PVK("selfEmploymentTerminated");
-
-            String value_1 = "02.10 - Miško medžių auginimas ir kita miškininkystės veikla";
-            submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("evrk_true", value_1);
-            log.debug("Selected EVRK_true value: '{}'.", value_1);
+            String value_evrk_1 = "02.10 - Miško medžių auginimas ir kita miškininkystės veikla";
+            submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("evrk_true_PVK", value_evrk_1);
+            log.debug("Selected EVRK_true value: '{}'.", value_evrk_1);
 
             String labelText = "1.2.1. vykdant veiklą sumažės gamtos ar kitų išteklių naudojimas";
             submittedApplicationsPage.clickMatCheckboxByLabelText_PVK(labelText);
             log.debug("Clicked on mat-checkbox with label containing '{}'.", labelText);
 
             String priority = "Prioritetas 1";
-            submittedApplicationsPage.enterTextArea_PVK("priority", priority);
+            submittedApplicationsPage.enterTextArea_PVK("priority_pvk", priority);
             log.debug("Entered priority: '{}'", priority);
 
-            String buttonKey = "next";
-            submittedApplicationsPage.clickButton(buttonKey);
-            log.info("Clicked button with key: '{}'.", buttonKey);
+            String next_1 = "next";
+            submittedApplicationsPage.clickApplicationButton(next_1);
+            log.info("Clicked button with key: '{}'.", next_1);
 
 //------------------------------
 
-            String value_A = "Administratoriai";
-            submittedApplicationsPage.selectDropdownButtonValue_VUI_DVP_PVK("jobName", value_A);
-            log.debug("Selected 'Job Name' value: '{}'.", value_A);
+            String value_JN = "Administratoriai";
+            submittedApplicationsPage.selectDropdownButtonValue_VUI_DVP_PVK("jobName_PVK", value_JN);
+            log.debug("Selected 'Job Name' value: '{}'.", value_JN);
+
+//            submittedApplicationsPage.selectRadioButtonY_N_PVK("qualification_PVK_1");
+//            log.debug("Selected 'ForQualification' 'yes' option.");
 
             submittedApplicationsPage.clickRadioButtonForQualification_PVK_step2();
             log.debug("Selected 'ForQualification' 'yes' option.");
 
-            submittedApplicationsPage.selectRadioButtonY_N_PVK("experience_1");
+            submittedApplicationsPage.selectRadioButtonY_N_PVK("experience_PVK_1");
             log.debug("Selected 'ForExperience' 'yes' option.");
 
-            submittedApplicationsPage.selectRadioButtonY_N_PVK("supportedPerson");
+            submittedApplicationsPage.selectRadioButtonY_N_PVK("supportedPerson_PVK");
             log.debug("Selected 'ForSupportedPerson' 'yes' option.");
 
-            submittedApplicationsPage.selectRadioButtonY_N_PVK("repair_1");
+            submittedApplicationsPage.selectRadioButtonY_N_PVK("repair_PVK_1");
             log.debug("Selected 'ForRepair' 'yes' option.");
 
-            String function_PVK = "Funkcija 1";
-            submittedApplicationsPage.enterInputJobFunction_PVK(function_PVK);
-            log.debug("Entered job function: '{}'.", function_PVK);
+            String function = "Funkcija 1";
+            submittedApplicationsPage.enterTextArea_PVK("job_function_pvk", function);
+            log.debug("Entered function: '{}'", function);
 
             String qualification = "Kvalifikacija 1";
-            submittedApplicationsPage.enterTextArea_PVK("qualification", qualification);
+            submittedApplicationsPage.enterTextArea_PVK("qualification_pvk", qualification);
             log.debug("Entered qualification: '{}'", qualification);
 
             String experience = "Patirtis 1";
-            submittedApplicationsPage.enterTextArea_PVK("experience", experience);
+            submittedApplicationsPage.enterTextArea_PVK("experience_pvk", experience);
             log.debug("Entered experience: '{}'", experience);
 
-            String description = "Vietos aprašymas 1";
-            submittedApplicationsPage.enterTextArea_PVK("description", description);
-            log.debug("Entered description: '{}'", description);
+            String description_1 = "Vietos aprašymas 1";
+            submittedApplicationsPage.enterTextArea_PVK("description_pvk_1", description_1);
+            log.debug("Entered description: '{}'", description_1);
 
             String description_2 = "Proceso aprašymas 1";
-            submittedApplicationsPage.enterTextArea_PVK("description_2", description_2);
+            submittedApplicationsPage.enterTextArea_PVK("description_pvk_2", description_2);
             log.debug("Entered description_2: '{}'", description_2);
 
             String description_3 = "Remonto aprašymas 1";
-            submittedApplicationsPage.enterTextArea_PVK("description_3", description_3);
+            submittedApplicationsPage.enterTextArea_PVK("description_pvk_3", description_3);
             log.debug("Entered description_3: '{}'", description_3);
 
             String salary = "Užmokestis 1";
-            submittedApplicationsPage.enterTextArea_PVK("salary", salary);
+            submittedApplicationsPage.enterTextArea_PVK("salary_pvk", salary);
             log.debug("Entered salary: '{}'", salary);
 
             String supported_PVK = "Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis";
-            submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("supported", supported_PVK);
+            submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("supported_PVK", supported_PVK);
             log.debug("Selected EVRK_true value: '{}'.", supported_PVK);
 
             submittedApplicationsPage.enterJobDate_DVP();
@@ -1240,10 +1252,10 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterText_PVK("salary_1", salary_1);
             log.debug("Entered salary: '{}'", salary_1);
 
-            submittedApplicationsPage.selectRadioButtonY_N_PVK("temporaryJob");
+            submittedApplicationsPage.selectRadioButtonY_N_PVK("temporaryJob_PVK");
             log.debug("Selected 'Temporary Job' 'no' option.");
 
-            submittedApplicationsPage.selectRadioButtonY_N_PVK("seasonJob");
+            submittedApplicationsPage.selectRadioButtonY_N_PVK("seasonJob_PVK");
             log.debug("Selected 'Season Job' 'no' option.");
 
             String necessaryForJob = "Įsigyti";
@@ -1292,7 +1304,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Selected tool: '{}'.", tool1_2);
 
             String repair = "Remonto darbai 1";
-            submittedApplicationsPage.enterTextArea_PVK("repair", repair);
+            submittedApplicationsPage.enterTextArea_PVK("repair_pvk", repair);
             log.debug("Entered qualification: '{}'", repair);
 
             String amount2_2 = "1000";
@@ -1320,9 +1332,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             stay();
 
-            String buttonKey_2 = "next";
-            submittedApplicationsPage.clickButton(buttonKey_2);
-            log.info("Clicked button with key: '{}'.", buttonKey_2);
+            String next_2 = "next";
+            submittedApplicationsPage.clickApplicationButton(next_2);
+            log.info("Clicked button with key: '{}'.", next_2);
 
             //--------------------
 
@@ -1386,22 +1398,24 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Clicked on mat-checkbox with label containing '{}'.", labelText_4);
 
             String review = "review";
-            submittedApplicationsPage.clickButton(review);
+            submittedApplicationsPage.clickApplicationButton(review);
             log.info("Clicked button with key: '{}'.", review);
 
             //--------------------
 
-            submittedApplicationsPage.clickButtonSaveDraft();
-            log.debug("Clicked 'SaveDraft' button after checkboxes.");
+            String save_draft = "save_draft";
+            submittedApplicationsPage.clickApplicationButton(save_draft);
+            log.info("Clicked button with key: '{}'.", save_draft);
 
             applicationFormsPage.verifySuccessMessage("Ruošinys sėkmingai išsaugotas.");
 
             String submit = "submit";
-            submittedApplicationsPage.clickButton(submit);
+            submittedApplicationsPage.clickApplicationButton(submit);
             log.info("Clicked button with key: '{}'.", submit);
 
-            submittedApplicationsPage.clickButtonSubmitConfirmation();
-            log.debug("Clicked 'SubmitConfirmation' button after checkboxes.");
+            String submitConfirmation = "submitConfirm";
+            submittedApplicationsPage.clickApplicationButton(submitConfirmation);
+            log.info("Clicked button with key: '{}'.", submitConfirmation);
 
             applicationFormsPage.verifySuccessMessage("Paraiška sėkmingai pateikta ir užregistruota.");
             log.info("Verified success message");

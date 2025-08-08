@@ -54,13 +54,13 @@ public class ApplicationFormsPage extends UztisPage {
 
     @FindBy(xpath = "//input[@type='radio' and @value='REGIONAL']")
     WebElement radioButtonMunicipality;
-    @FindBy(xpath = "//input[@type='radio' and @value='BRANCH']")
-    WebElement radioButtonSection;
+//    @FindBy(xpath = "//input[@type='radio' and @value='BRANCH']")
+//    WebElement radioButtonSection;
 
     @FindBy(xpath = "(//input[@type='radio' and @value='REGIONAL'])[2]")
     WebElement radioButtonBudgetByMunicipality;
     @FindBy(xpath = "(//input[@type='radio' and @value='GLOBAL'])")
-    WebElement radioButtonBudgetByCountry;
+    WebElement radioButtonBudgetByMunicipalityCountry;
 
     @FindBy(xpath = "(//input[@type='radio' and @value='true'])")
     WebElement radioButtonFinancedByQueue;
@@ -72,8 +72,8 @@ public class ApplicationFormsPage extends UztisPage {
 
     @FindBy(xpath = "//mat-label[contains(text(), 'Departamentas')]")
     WebElement dropdownButtonMunicipality;
-    @FindBy(xpath = "//mat-label[contains(text(), 'Departamentas / skyrius')]")
-    WebElement dropdownButtonSection;
+//    @FindBy(xpath = "//mat-label[contains(text(), 'Departamentas / skyrius')]")
+//    WebElement dropdownButtonMunicipalitySection;
 
     @FindBy(xpath = "//mat-label[contains(text(), 'I etapo vertinimo forma')]")
     WebElement dropdownButtonEvaluationOne;
@@ -132,21 +132,19 @@ public class ApplicationFormsPage extends UztisPage {
     WebElement tabProjectProgress;
 
     @FindBy(xpath = "(//mat-label[contains(text(), 'Dokumentas')])[3]")
-    WebElement dropdownButtonDocument_3;
+    WebElement dropdownButtonDocumentContract;
 
     @FindBy(xpath = "(//mat-label[contains(text(), 'Dokumentas')])[4]")
-    WebElement dropdownButtonDocument_4;
+    WebElement dropdownButtonDocumentDecision1;
 
     @FindBy(xpath = "(//mat-label[contains(text(), 'Dokumentas')])[8]")
-    WebElement dropdownButtonDocument_8;
+    WebElement dropdownButtonDocumentDecision2;
 
 
     //messages
 //--------------------
     @FindBy(css = "[class='w-100']")
     List<WebElement> successMessages;
-
-
 
 
 
@@ -180,111 +178,7 @@ public class ApplicationFormsPage extends UztisPage {
         tabProjectProgress.click();
     }
 
-//    public void selectValuesByListDocument(String valueToSelect) {
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//
-//        log.info("Located the dropdown button.");
-//        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonDocument_3)).click();
-//
-//        List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option"))); // Replace with actual locator
-//
-//        boolean optionSelected = false;
-//        for (WebElement option : options) {
-//            if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
-//                wait.until(ExpectedConditions.elementToBeClickable(option)).click();
-//                optionSelected = true;
-//                log.info("Successfully selected the value: '{}'", valueToSelect);
-//                break;
-//            }
-//        }
-//
-//        if (!optionSelected) {
-//            log.warn("The value '{}' was not found among the options.", valueToSelect);
-//        }
-//
-//        try {
-//            wait.until(ExpectedConditions.attributeToBe(dropdownButtonDocument_3, "aria-expanded", "false"));
-//        } catch (TimeoutException e) {
-//            log.error("Failed to close the dropdown with aria-expanded = 'false'.");
-//        }
-//    }
-
-    public void selectValuesByListDocument3(String valueToSelect) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        log.info("Opening the dropdown.");
-        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonDocument_3)).click();
-
-        List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option")));
-
-        for (WebElement option : options) {
-            if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
-                wait.until(ExpectedConditions.elementToBeClickable(option)).click();
-                log.info("Selected the value: '{}'", valueToSelect);
-                break;
-            }
-        }
-
-        try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonDocument_3, "aria-expanded", "false"));
-        } catch (TimeoutException e) {
-            log.error("Dropdown did not close as expected.");
-        }
-    }
-
-    public void selectValuesByListDocument4(String valueToSelect) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        log.info("Opening the dropdown.");
-        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonDocument_4)).click();
-
-        List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option")));
-
-        for (WebElement option : options) {
-            if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
-                wait.until(ExpectedConditions.elementToBeClickable(option)).click();
-                log.info("Selected the value: '{}'", valueToSelect);
-                break;
-            }
-        }
-
-        try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonDocument_4, "aria-expanded", "false"));
-        } catch (TimeoutException e) {
-            log.error("Dropdown did not close as expected.");
-        }
-    }
-
-    public void selectValuesByListDocument8(String valueToSelect) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        log.info("Opening the dropdown.");
-        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonDocument_8)).click();
-
-        List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option")));
-
-        for (WebElement option : options) {
-            if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
-                wait.until(ExpectedConditions.elementToBeClickable(option)).click();
-                log.info("Selected the value: '{}'", valueToSelect);
-                break;
-            }
-        }
-
-        try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonDocument_8, "aria-expanded", "false"));
-        } catch (TimeoutException e) {
-            log.error("Dropdown did not close as expected.");
-        }
-    }
-
     //---------------------
-
-//    public void login(String uname, String pword) {
-//        this.username.sendKeys(uname);
-//        this.password.sendKeys(pword);
-//        this.buttonLogin.click();
-//    }
 
         public void openMenuApplicationProcessing() {
         if (isMenuApplicationProcessingDisplayed()) {
@@ -395,11 +289,11 @@ public class ApplicationFormsPage extends UztisPage {
         }
     }
 
-    public void clickRadioButtonSection() {
-        if (!radioButtonSection.isSelected()) {
-            radioButtonSection.click();
-        }
-    }
+//    public void clickRadioButtonMunicipalitySection() {
+//        if (!radioButtonSection.isSelected()) {
+//            radioButtonSection.click();
+//        }
+//    }
 
     public void clickRadioButtonBudgetByMunicipality() {
         if (!radioButtonBudgetByMunicipality.isSelected()) {
@@ -408,8 +302,8 @@ public class ApplicationFormsPage extends UztisPage {
     }
 
     public void clickRadioButtonBudgetByCountry() {
-        if (!radioButtonBudgetByCountry.isSelected()) {
-            radioButtonBudgetByCountry.click();  //
+        if (!radioButtonBudgetByMunicipalityCountry.isSelected()) {
+            radioButtonBudgetByMunicipalityCountry.click();  //
         }
     }
 
@@ -424,156 +318,66 @@ public class ApplicationFormsPage extends UztisPage {
             radioButtonFinancedWithoutQueue.click();
         }
     }
-    //dropdowns
-    //-----------------------
-    public void selectValueByListMunicipality(String valueToSelect) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        try {
-        log.info("Located the dropdown button.");
-        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonMunicipality)).click();
 
-        List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option"))); // Replace with actual locator
+public void selectValueFromDropdown(WebElement dropdownButton, String valueToSelect) {
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        boolean optionSelected = false;
-        for (WebElement option : options) {
-            if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
-                wait.until(ExpectedConditions.elementToBeClickable(option)).click();
-                optionSelected = true;
-                log.info("Successfully selected the value: '{}'", valueToSelect);
-                break;
-            }
-        }
+    wait.until(ExpectedConditions.elementToBeClickable(dropdownButton)).click();
 
-        if (!optionSelected) {
-            log.warn("The value '{}' was not found among the options.", valueToSelect);
-        }
+    List<WebElement> options = wait.until(
+            ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option"))
+    );
 
-        try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonMunicipality, "aria-expanded", "false"));
-        } catch (TimeoutException e) {
-            log.error("Failed to close the dropdown with aria-expanded = 'false'.");
-        }
-        } catch (Exception e) {
-            log.error("Error selecting value from the list: {}", e.getMessage());
-            throw new RuntimeException("Failed to select from the list", e);
+    boolean selected = false;
+    for (WebElement option : options) {
+        if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
+            wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+            selected = true;
+            break;
         }
     }
 
-    public void selectValueByListSection(String valueToSelect) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        log.info("Located the dropdown button.");
-        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonSection)).click();
-
-        List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option"))); // Replace with actual locator
-
-        boolean optionSelected = false;
-        for (WebElement option : options) {
-            if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
-                wait.until(ExpectedConditions.elementToBeClickable(option)).click();
-                optionSelected = true;
-                log.info("Successfully selected the value: '{}'", valueToSelect);
-                break;
-            }
-        }
-
-        if (!optionSelected) {
-            log.warn("The value '{}' was not found among the options.", valueToSelect);
-        }
-
-        try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonSection, "aria-expanded", "false"));
-        } catch (TimeoutException e) {
-            log.error("Failed to close the dropdown with aria-expanded = 'false'.");
-        }
+    if (!selected) {
+        System.out.println("Reikšmė '" + valueToSelect + "' nerasta tarp parinkčių.");
     }
 
-    public void selectValuesByListEvaluationOne(String valueToSelect) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    try {
+        wait.until(ExpectedConditions.attributeToBe(dropdownButton, "aria-expanded", "false"));
+    } catch (TimeoutException e) {
+        System.err.println("Dropdown neužsidarė automatiškai.");
+    }
+}
 
-        log.info("Located the dropdown button.");
-        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonEvaluationOne)).click();
-
-        List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option"))); // Replace with actual locator
-
-        boolean optionSelected = false;
-        for (WebElement option : options) {
-            if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
-                wait.until(ExpectedConditions.elementToBeClickable(option)).click();
-                optionSelected = true;
-                log.info("Successfully selected the value: '{}'", valueToSelect);
-                break;
-            }
-        }
-
-        if (!optionSelected) {
-            log.warn("The value '{}' was not found among the options.", valueToSelect);
-        }
-
-        try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonEvaluationOne, "aria-expanded", "false"));
-        } catch (TimeoutException e) {
-            log.error("Failed to close the dropdown with aria-expanded = 'false'.");
-        }
+    public WebElement getDropdownButtonMunicipality() {
+        return dropdownButtonMunicipality;
     }
 
+//    public WebElement getDropdownButtonMunicipalitySection() {
+//        return dropdownButtonMunicipalitySection;
+//    }
 
-    public void selectValuesByListEvaluationTwo(String valueToSelect) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        log.info("Located the dropdown button.");
-        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonEvaluationTwo)).click();
-
-        List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option"))); // Replace with actual locator
-
-        boolean optionSelected = false;
-        for (WebElement option : options) {
-            if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
-                wait.until(ExpectedConditions.elementToBeClickable(option)).click();
-                optionSelected = true;
-                log.info("Successfully selected the value: '{}'", valueToSelect);
-                break;
-            }
-        }
-
-        if (!optionSelected) {
-            log.warn("The value '{}' was not found among the options.", valueToSelect);
-        }
-
-        try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonEvaluationTwo, "aria-expanded", "false"));
-        } catch (TimeoutException e) {
-            log.error("Failed to close the dropdown with aria-expanded = 'false'.");
-        }
+    public WebElement getDropdownButtonEvaluationOne() {
+        return dropdownButtonEvaluationOne;
     }
 
-    public void selectValuesByListEvaluationThree(String valueToSelect) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    public WebElement getDropdownButtonEvaluationTwo() {
+        return dropdownButtonEvaluationTwo;
+    }
 
-        log.info("Located the dropdown button.");
-        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonEvaluationThree)).click();
+    public WebElement getDropdownButtonEvaluationThree() {
+        return dropdownButtonEvaluationThree;
+    }
 
-        List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option"))); // Replace with actual locator
+    public WebElement getDropdownButtonDocumentContract() {
+        return dropdownButtonDocumentContract;
+    }
 
-        boolean optionSelected = false;
-        for (WebElement option : options) {
-            if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
-                wait.until(ExpectedConditions.elementToBeClickable(option)).click();
-                optionSelected = true;
-                log.info("Successfully selected the value: '{}'", valueToSelect);
-                break;
-            }
-        }
+    public WebElement getDropdownButtonDocumentDecision1() {
+        return dropdownButtonDocumentDecision1;
+    }
 
-        if (!optionSelected) {
-            log.warn("The value '{}' was not found among the options.", valueToSelect);
-        }
-
-        try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonEvaluationThree, "aria-expanded", "false"));
-        } catch (TimeoutException e) {
-            log.error("Failed to close the dropdown with aria-expanded = 'false'.");
-        }
+    public WebElement getDropdownButtonDocumentDecision2() {
+        return dropdownButtonDocumentDecision2;
     }
 
     public void selectValueAndEnterText() {
