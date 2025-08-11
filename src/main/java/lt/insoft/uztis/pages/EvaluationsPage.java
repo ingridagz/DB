@@ -31,22 +31,12 @@ public class EvaluationsPage extends UztisPage{
     @FindBy(xpath = "(//tr[contains(@class, 'mdc-data-table__row')])[1]")
     WebElement lastEvaluation;
 
-//    @FindBy(css = "button.btn.btn--primary")
-//    WebElement buttonEdit;
-
-//    @FindBy(css = "//common-button[@btnclass='btn btn--accent' and @btntype='submit']//button[@type='submit']")
-//    @FindBy(xpath = "//button[text()='Tvirtinti vertinimą']")
-//    @FindBy(xpath = "//button[@type='submit' and text()='Tvirtinti vertinimą']")
     @FindBy(xpath = "//common-button[@btntype='submit' and contains(@btnclass, 'btn--accent')]//button")
     WebElement buttonConfirm1;
 
     @FindBy(xpath = "//common-button[@btntype='submit' and contains(@btnclass, 'btn--accent')]//button")
     WebElement buttonConfirm2;
 
-//    @FindBy(xpath = "//button[@type='submit' and contains(@class, 'btn--accent')]")
-//    @FindBy(xpath = "//common-button[@btntype='submit' and contains(@btnclass, 'btn--accent')]//button")
-//    @FindBy(xpath = "//common-button[contains(@btnclass, 'btn--accent')]//button")
-//    @FindBy(xpath = "//common-button[@btnclass='btn btn--accent']//button")
     @FindBy(xpath = "//common-button//button[text()='Tvirtinti vertinimą']")
     WebElement buttonConfirm3;
 
@@ -56,7 +46,6 @@ public class EvaluationsPage extends UztisPage{
     @FindBy(xpath = "//button[text()='Tęsti']")
     WebElement buttonContinue;
 
-//    @FindBy(css = ".reverse-mobile .ng-star-inserted:nth-of-type(2)")
     @FindBy(css = ".reverse-mobile .btn--primary")
     WebElement buttonConfirmConfirmation;
 
@@ -66,11 +55,9 @@ public class EvaluationsPage extends UztisPage{
     //-------------
 
     @FindBy(xpath = "//input[@type='radio' and @name='mat-radio-group-1' and @value='YES']")
-//    @FindBy(xpath = "(//input[@value='YES'])[1]")
     WebElement radioButton1_1;
 
     @FindBy(xpath = "//input[@type='radio' and @name='mat-radio-group-3' and @value='YES']")
-//    @FindBy(xpath = "(//input[@value='YES'])[2]")
     WebElement radioButton1_2;
 
     @FindBy(xpath = "//input[@type='radio' and @name='mat-radio-group-5' and @value='YES']")
@@ -181,8 +168,8 @@ public class EvaluationsPage extends UztisPage{
     WebElement dropdownSearch;
 
 //    Komisijos narys Nr. 1
-    @FindBy(xpath = "//label[contains(., 'Komisijos narys Nr. 1')]/following::input[1]")
-    WebElement inputMemberName;
+//    @FindBy(xpath = "//label[contains(., 'Komisijos narys Nr. 1')]/following::input[1]")
+//    WebElement inputMemberName;
 
     @FindBy(xpath = "//label[contains(., 'Balas')]/following::input[13]")
     WebElement inputScoreChairman;

@@ -228,8 +228,8 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterTextArea("1", function);
             log.debug("Entered function: '{}'", function);
 
-            submittedApplicationsPage.clickRadioButtonWithDisabilitiesVUI();
-            log.debug("Selected 'RadioButtonWithDisabilities' option.");
+            submittedApplicationsPage.selectRadioButtonY_N("1_true");
+            log.debug("Selected 'With Disabilities' 'yes' option.");
 
             String supported_VUI = "Bedarbiai, kurie yra darbingo amžiaus neįgalieji, kuriems nustatytas iki 25 procentų darbingumo lygis arba sunkus neįgalumo lygis";
             submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("supported_VUI", supported_VUI);
@@ -262,17 +262,17 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterTextArea("4", salaryDescription);
             log.debug("Entered salary description: '{}'", salaryDescription);
 
-            submittedApplicationsPage.clickRadioButtonTemporaryJob();
-            log.debug("Selected 'Temporary Job' radio button.");
+            submittedApplicationsPage.selectRadioButtonY_N("2_false");
+            log.debug("Selected 'Temporary Job' 'no' option.");
 
-            submittedApplicationsPage.clickRadioButtonSeasonJob();
-            log.debug("Selected 'Season Job' radio button.");
+            submittedApplicationsPage.selectRadioButtonY_N("3_false");
+            log.debug("Selected 'Season Job' 'no' option.");
 
-            submittedApplicationsPage.clickRadioButtonEnergy();
-            log.debug("Selected 'Energy' radio button.");
+            submittedApplicationsPage.selectRadioButtonY_N("4_true");
+            log.debug("Selected 'Energy' 'yes' option.");
 
-            submittedApplicationsPage.clickRadioButtonRepair();
-            log.debug("Selected 'Repair' radio button.");
+            submittedApplicationsPage.selectRadioButtonY_N("5_true");
+            log.debug("Selected 'Repair' 'yes' option.");
 
             String activity = "Veikla 5";
             submittedApplicationsPage.enterTextArea("5", activity);
@@ -290,8 +290,8 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterTextArea("8", repair);
             log.debug("Entered repair proses: '{}'", repair);
 
-            submittedApplicationsPage.clickRadioButtonPVM();
-            log.debug("Selected 'PVM' radio button.");
+            submittedApplicationsPage.selectRadioButtonY_N("6_false");
+            log.debug("Selected 'PVM' 'no' option.");
 
             String necessaryForJob = "Įsigyti";
             submittedApplicationsPage.selectDropdownNecessaryForJobOne(necessaryForJob);
@@ -383,8 +383,8 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterMunicipalityPerc(perc3);
             log.debug("Entered municipality percentage: '{}'.", perc3);
 
-            submittedApplicationsPage.clickRadioButtonDeMinimis();
-            log.debug("Selected 'De Minimis' radio button.");
+            submittedApplicationsPage.selectRadioButtonY_N("7_true");
+            log.debug("Selected 'De Minimis' 'yes' option.");
 
             String programName = "Programa 1";
             submittedApplicationsPage.enterProgramName(programName);
@@ -669,15 +669,15 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             //-------------
 
             //DVP
-            submittedApplicationsPage.selectRadioButtonForAlreadyWorking_DVP_step1();
-            log.debug("Selected 'For already working' option.");
+            submittedApplicationsPage.selectRadioButtonY_N("1_false");
+            log.debug("Selected 'For already working' 'no' option.");
 
 //            String jobCount1 = "1";
 //            submittedApplicationsPage.enterPersonCountOne_DVP(jobCount1);
 //            log.debug("Entered person count1: '{}'.", jobCount1);
 
-            submittedApplicationsPage.selectRadioButtonForNewWorking_DVP_step1();
-            log.debug("Selected 'For new working' option.");
+            submittedApplicationsPage.selectRadioButtonY_N("2_true");
+            log.debug("Selected 'For new working' 'yes' option.");
 
             String jobCount2 = "1";
             submittedApplicationsPage.enterPersonCountTwo_DVP(jobCount2);
@@ -701,8 +701,8 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterTextArea("1", function);
             log.debug("Entered function: '{}'", function);
 
-            submittedApplicationsPage.clickRadioButtonForAlreadyWorking_DVP_step2();
-            log.debug("Selected 'For already working' 'no' option.");
+//            submittedApplicationsPage.selectRadioButtonY_N("3_false");
+//            log.debug("Selected 'For already working' 'no' option.");
 
             String value_D = "Sunkaus neįgalumo lygis ar neviršijantis 25 procentų dalyvumo lygis (iki 2023 metų gruodžio 31 dienos – iki 25 procentų darbingumo lygis)";
             submittedApplicationsPage.selectDropdownButtonValue_VUI_DVP_PVK("disability_DVP", value_D);
@@ -744,14 +744,14 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterTextArea("7", salary);
             log.debug("Entered salary: '{}'", salary);
 
-            submittedApplicationsPage.clickRadioButtonTemporaryJob_DVP();
-            log.debug("Selected 'Temporary Job' radio button.");
+            submittedApplicationsPage.selectRadioButtonY_N("4_false");
+            log.debug("Selected 'Temporary Job' 'no' option.");
 
-            submittedApplicationsPage.clickRadioButtonSeasonJob_DVP();
-            log.debug("Selected 'Season Job' radio button.");
+            submittedApplicationsPage.selectRadioButtonY_N("5_false");
+            log.debug("Selected 'Season Job' 'no' option.");
 
-            submittedApplicationsPage.clickRadioButtonPVM();
-            log.debug("Selected 'PVM' radio button.");
+            submittedApplicationsPage.selectRadioButtonY_N("6_false");
+            log.debug("Selected 'PVM' 'no' option.");
 
             String type1 = "Darbo vietos pritaikymui";
             submittedApplicationsPage.selectDropdownExpensesTyp_DVP(type1);
@@ -839,8 +839,8 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             stay();
 
-            submittedApplicationsPage.clickRadioButtonDeMinimis();
-            log.debug("Selected 'De Minimis' radio button.");
+            submittedApplicationsPage.selectRadioButtonY_N("7_true");
+            log.debug("Selected 'De Minimis' 'yes' option.");
 
             String programName = "Programa 1";
             submittedApplicationsPage.enterProgramName(programName);
@@ -1024,7 +1024,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 //            submittedApplicationsPage.enterEmailAddress(emailInput);
 //            log.debug("Entered email: '{}'.", emailInput);
 
-            submittedApplicationsPage.selectRadioButtonY_N_PVK("jobForYourself_PVK");
+            submittedApplicationsPage.selectRadioButtonY_N("job_for_yourself_pvk");
 
             String value_BS = "Individuali įmonė";
             submittedApplicationsPage.selectDropdownButtonValue_VUI_DVP_PVK("businessStructure_PVK", value_BS);
@@ -1078,7 +1078,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("evrk_PVK", value_evrk);
             log.debug("Selected EVRK value: '{}'.", value_evrk);
 
-            submittedApplicationsPage.selectRadioButtonY_N_PVK("selfEmploymentTerminated_PVK");
+            submittedApplicationsPage.selectRadioButtonY_N("selfEmploymentTerminated_PVK");
 
             String value_evrk_1 = "02.10 - Miško medžių auginimas ir kita miškininkystės veikla";
             submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("evrk_true_PVK", value_evrk_1);
@@ -1102,20 +1102,17 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectDropdownButtonValue_VUI_DVP_PVK("jobName_PVK", value_JN);
             log.debug("Selected 'Job Name' value: '{}'.", value_JN);
 
-//            submittedApplicationsPage.selectRadioButtonY_N_PVK("qualification_PVK_1");
-//            log.debug("Selected 'ForQualification' 'yes' option.");
+            submittedApplicationsPage.selectRadioButtonY_N("2_true");
+            log.debug("Selected 'For Qualification' 'yes' option.");
 
-            submittedApplicationsPage.clickRadioButtonForQualification_PVK_step2();
-            log.debug("Selected 'ForQualification' 'yes' option.");
+            submittedApplicationsPage.selectRadioButtonY_N("3_true");
+            log.debug("Selected 'For Experience' 'yes' option.");
 
-            submittedApplicationsPage.selectRadioButtonY_N_PVK("experience_PVK_1");
-            log.debug("Selected 'ForExperience' 'yes' option.");
+            submittedApplicationsPage.selectRadioButtonY_N("4_true");
+            log.debug("Selected 'For Supported Person' 'yes' option.");
 
-            submittedApplicationsPage.selectRadioButtonY_N_PVK("supportedPerson_PVK");
-            log.debug("Selected 'ForSupportedPerson' 'yes' option.");
-
-            submittedApplicationsPage.selectRadioButtonY_N_PVK("repair_PVK_1");
-            log.debug("Selected 'ForRepair' 'yes' option.");
+            submittedApplicationsPage.selectRadioButtonY_N("5_true");
+            log.debug("Selected 'For Repair' 'yes' option.");
 
             String function = "Funkcija 2";
             submittedApplicationsPage.enterTextArea("2", function);
@@ -1164,10 +1161,10 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterText_PVK("salary_1", salary_1);
             log.debug("Entered salary: '{}'", salary_1);
 
-            submittedApplicationsPage.selectRadioButtonY_N_PVK("temporaryJob_PVK");
+            submittedApplicationsPage.selectRadioButtonY_N("6_false");
             log.debug("Selected 'Temporary Job' 'no' option.");
 
-            submittedApplicationsPage.selectRadioButtonY_N_PVK("seasonJob_PVK");
+            submittedApplicationsPage.selectRadioButtonY_N("7_false");
             log.debug("Selected 'Season Job' 'no' option.");
 
             String necessaryForJob = "Įsigyti";

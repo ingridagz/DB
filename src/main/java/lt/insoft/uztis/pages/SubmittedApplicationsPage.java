@@ -27,7 +27,7 @@ public class SubmittedApplicationsPage extends UztisPage {
     private static final Logger log = getLogger(lookup().lookupClass());
     private final Map<String, By> textAreaLocators = new HashMap<>();
     private final Map<String, By> textLocators_PVK = new HashMap<>();
-    private final Map<String, By> radioButtonLocatorsY_N_PVK = new HashMap<>();
+    private final Map<String, By> radioButtonLocatorsY_N = new HashMap<>();
     private final Map<String, By> dropdownButtonCheckBoxLocators_VUI_DVP_PVK = new HashMap<>();
     private final Map<String, By> dropdownButtonLocators_VUI_DVP_PVK = new HashMap<>();
     private final Map<String, By> documentInputLocators = new HashMap<>();
@@ -43,14 +43,22 @@ public class SubmittedApplicationsPage extends UztisPage {
         buttonApplicationLocators.put("save_draft", By.xpath("//common-button/button[contains(text(), 'Saugoti ruošinį')]"));
         buttonApplicationLocators.put("submitConfirm", By.xpath("//common-button//button[@type='button' and contains(text(), 'Pateikti vertinimui')]"));
 
-        radioButtonLocatorsY_N_PVK.put("jobForYourself_PVK", By.xpath("//input[@type='radio' and @name='mat-radio-group-1' and @value='jobForYourself']"));
-        radioButtonLocatorsY_N_PVK.put("selfEmploymentTerminated_PVK", By.xpath("//input[@type='radio' and @value='true']"));
-//        radioButtonLocatorsY_N_PVK.put("qualification_PVK_1", By.xpath("//input[@type='radio' and @value='true'])[2]"));
-        radioButtonLocatorsY_N_PVK.put("experience_PVK_1", By.xpath("(//input[@type='radio' and @value='true'])[3]"));
-        radioButtonLocatorsY_N_PVK.put("supportedPerson_PVK", By.xpath("(//input[@type='radio' and @value='true'])[4]"));
-        radioButtonLocatorsY_N_PVK.put("repair_PVK_1", By.xpath("(//input[@type='radio' and @value='true'])[5]"));
-        radioButtonLocatorsY_N_PVK.put("temporaryJob_PVK", By.xpath("(//input[@type='radio' and @value='false'])[6]"));
-        radioButtonLocatorsY_N_PVK.put("seasonJob_PVK", By.xpath("(//input[@type='radio' and @value='false'])[7]"));
+        radioButtonLocatorsY_N.put("job_for_yourself_pvk", By.xpath("//input[@type='radio' and @name='mat-radio-group-1' and @value='jobForYourself']"));
+        radioButtonLocatorsY_N.put("selfEmploymentTerminated_PVK", By.xpath("//input[@type='radio' and @value='true']"));
+
+        radioButtonLocatorsY_N.put("1_true", By.xpath("(//input[@type='radio' and @value='true'])[1]"));
+        radioButtonLocatorsY_N.put("1_false", By.xpath("(//input[@type='radio' and @value='false'])[1]"));
+        radioButtonLocatorsY_N.put("2_true", By.xpath("(//input[@type='radio' and @value='true'])[2]"));
+        radioButtonLocatorsY_N.put("2_false", By.xpath("(//input[@type='radio' and @value='false'])[2]"));
+        radioButtonLocatorsY_N.put("3_true", By.xpath("(//input[@type='radio' and @value='true'])[3]"));
+        radioButtonLocatorsY_N.put("3_false", By.xpath("(//input[@type='radio' and @value='false'])[3]"));
+        radioButtonLocatorsY_N.put("4_true", By.xpath("(//input[@type='radio' and @value='true'])[4]"));
+        radioButtonLocatorsY_N.put("4_false", By.xpath("(//input[@type='radio' and @value='false'])[4]"));
+        radioButtonLocatorsY_N.put("5_true", By.xpath("(//input[@type='radio' and @value='true'])[5]"));
+        radioButtonLocatorsY_N.put("5_false", By.xpath("(//input[@type='radio' and @value='false'])[5]"));
+        radioButtonLocatorsY_N.put("6_false", By.xpath("(//input[@type='radio' and @value='false'])[6]"));
+        radioButtonLocatorsY_N.put("7_true", By.xpath("(//input[@type='radio' and @value='true'])[7]"));
+        radioButtonLocatorsY_N.put("7_false", By.xpath("(//input[@type='radio' and @value='false'])[7]"));
 
         textLocators_PVK.put("salary_1", By.xpath("//common-decimal-input[contains(@class, 'ng-untouched')]//input[@type='text']"));
 
@@ -136,8 +144,6 @@ public class SubmittedApplicationsPage extends UztisPage {
     WebElement dropdownButtonApplicant;
 
     //PVK
-    @FindBy(xpath = "(//input[@type='radio' and @value='true'])[2]")
-    WebElement radioButtonForQualification_PVK_step2;
 
     @FindBy(xpath = "(//mat-form-field[.//mat-label[contains(text(), 'Darbo vietai įsteigti reikalinga')]]//mat-select)[1]")
     WebElement dropdownButtonNecessaryForJobOne_PVK;
@@ -210,18 +216,7 @@ public class SubmittedApplicationsPage extends UztisPage {
     WebElement dropdownButtonExpensesTyp_DVP_2;
     //DVP
 
-    @FindBy(xpath = "(//input[@type='radio' and @value='true'])[1]")
-    WebElement radioButtonWithDisabilities_VUI;
-
     //DVP
-    @FindBy(xpath = "(//input[@type='radio' and @value='false'])[1]")
-    WebElement radioButtonForAlreadyWorking_DVP_step1;
-    @FindBy(xpath = "(//input[@type='radio' and @value='true'])[2]")
-    WebElement radioButtonForNewWorking_DVP_step1;
-
-    @FindBy(xpath = "(//input[@type='radio' and @value='false'])[3]")
-    WebElement radioButtonForAlreadyWorking_DVP_step2;
-
 //    @FindBy(xpath = "(//input[@type='radio' and @value='true'])[4]")
 //    WebElement radioButtonForNotAlreadyWorking_DVP_step2;
     //DVP
@@ -239,30 +234,8 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[1]")
     WebElement inputJopDate_DVP;
 
-    @FindBy(xpath = "(//input[@type='radio' and @value='false'])[4]")
-    WebElement radioButtonTemporaryJob_DVP;
-
-    @FindBy(xpath = "(//input[@type='radio' and @value='false'])[5]")
-    WebElement radioButtonSeasonJob_DVP;
-    //DVP
-
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Planuojamas mokėti bruto darbo užmokestis, Eur')]//input")
     WebElement inputSalary;
-
-    @FindBy(xpath = "(//input[@type='radio' and @value='false'])[2]")
-    WebElement radioButtonTemporaryJob;
-
-    @FindBy(xpath = "(//input[@type='radio' and @value='false'])[3]")
-    WebElement radioButtonSeasonJob;
-
-    @FindBy(xpath = "(//input[@type='radio' and @value='true'])[4]")
-    WebElement radioButtonEnergy;
-
-    @FindBy(xpath = "(//input[@type='radio' and @value='true'])[5]")
-    WebElement radioButtonRepair;
-
-    @FindBy(xpath = "(//input[@type='radio' and @value='false'])[6]")
-    WebElement radioButtonPVM;
 
     @FindBy(xpath = "(//mat-label[contains(text(), 'Darbo vietai įsteigti reikalinga')])[1]")
     WebElement dropdownButtonNecessaryForJobOne;
@@ -347,9 +320,6 @@ public class SubmittedApplicationsPage extends UztisPage {
     WebElement inputInstitutionPerc;
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Valstybės ar savivaldybių įmonės (proc.)')]//input")
     WebElement inputMunicipalityPerc;
-
-    @FindBy(xpath = "(//input[@type='radio' and @value='true'])[7]")
-    WebElement radioButtonDeMinimis;
 
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Projekto ir finansuojančios programos pavadinimas')]//input")
     WebElement inputProgramName;
@@ -680,8 +650,8 @@ public class SubmittedApplicationsPage extends UztisPage {
         }
     }
 
-    public void selectRadioButtonY_N_PVK(String type) {
-        By locator = radioButtonLocatorsY_N_PVK.get(type);
+    public void selectRadioButtonY_N(String type) {
+        By locator = radioButtonLocatorsY_N.get(type);
         if (locator == null) {
             throw new IllegalArgumentException("No locator found for type: " + type);
         }
@@ -996,20 +966,6 @@ public class SubmittedApplicationsPage extends UztisPage {
         inputJobCount.sendKeys(count);
     }
 
-    //DVP
-    public void selectRadioButtonForAlreadyWorking_DVP_step1() {
-        if (!radioButtonForAlreadyWorking_DVP_step1.isSelected()) {
-            radioButtonForAlreadyWorking_DVP_step1.click();
-        }
-    }
-
-    public void selectRadioButtonForNewWorking_DVP_step1() {
-        if (!radioButtonForNewWorking_DVP_step1.isSelected()) {
-            radioButtonForNewWorking_DVP_step1.click();
-        }
-    }
-    //DVP
-
     //----------------------------
 
     //DVP
@@ -1096,28 +1052,6 @@ public class SubmittedApplicationsPage extends UztisPage {
     }
     //DVP
 
-    public void clickRadioButtonWithDisabilitiesVUI() {
-        if (!radioButtonWithDisabilities_VUI.isSelected()) {
-            radioButtonWithDisabilities_VUI.click();
-        }
-    }
-
-    //DVP
-    public void clickRadioButtonForAlreadyWorking_DVP_step2() {
-        if (!radioButtonForAlreadyWorking_DVP_step2.isSelected()) {
-            radioButtonForAlreadyWorking_DVP_step2.click();
-        }
-    }
-    //DVP
-
-    //PVK
-    public void clickRadioButtonForQualification_PVK_step2() {
-        if (!radioButtonForQualification_PVK_step2.isSelected()) {
-            radioButtonForQualification_PVK_step2.click();
-        }
-    }
-    //PVK
-
     public void selectDropdownTimeMode(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
@@ -1154,48 +1088,6 @@ public class SubmittedApplicationsPage extends UztisPage {
     public void enterSalary(String amount) {
         inputSalary.clear();
         inputSalary.sendKeys(amount);
-    }
-
-    public void clickRadioButtonTemporaryJob() {
-        if (!radioButtonTemporaryJob.isSelected()) {
-            radioButtonTemporaryJob.click();
-        }
-    }
-
-    public void clickRadioButtonTemporaryJob_DVP() {
-        if (!radioButtonTemporaryJob_DVP.isSelected()) {
-            radioButtonTemporaryJob_DVP.click();
-        }
-    }
-
-    public void clickRadioButtonSeasonJob() {
-        if (!radioButtonSeasonJob.isSelected()) {
-            radioButtonSeasonJob.click();
-        }
-    }
-
-    public void clickRadioButtonSeasonJob_DVP() {
-        if (!radioButtonSeasonJob_DVP.isSelected()) {
-            radioButtonSeasonJob_DVP.click();
-        }
-    }
-
-    public void clickRadioButtonEnergy() {
-        if (!radioButtonEnergy.isSelected()) {
-            radioButtonEnergy.click();
-        }
-    }
-
-    public void clickRadioButtonRepair() {
-        if (!radioButtonRepair.isSelected()) {
-            radioButtonRepair.click();
-        }
-    }
-
-    public void clickRadioButtonPVM() {
-        if (!radioButtonPVM.isSelected()) {
-            radioButtonPVM.click();
-        }
     }
 
     public void selectDropdownNecessaryForJobOne(String valueToSelect) {
@@ -1656,11 +1548,6 @@ public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
         inputMunicipalityPerc.sendKeys(amount);
     }
 
-    public void clickRadioButtonDeMinimis() {
-        if (!radioButtonDeMinimis.isSelected()) {
-            radioButtonDeMinimis.click();
-        }
-    }
 
     public void enterProgramName(String amount) {
         inputProgramName.clear();
