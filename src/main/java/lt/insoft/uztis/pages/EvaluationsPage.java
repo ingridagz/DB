@@ -1,5 +1,6 @@
 package lt.insoft.uztis.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,7 +19,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 public class EvaluationsPage extends UztisPage{
 
     private static final Logger log = getLogger(lookup().lookupClass());
-    private static org.openqa.selenium.By By;
+
 
     public EvaluationsPage(WebDriver driver) {
         super(driver);
@@ -459,7 +460,7 @@ public class EvaluationsPage extends UztisPage{
 
         if (inputCommissionDate.isDisplayed() && inputCommissionDate.isEnabled()) {
             // Patikriname, ar laukelis jau turi reikšmę
-            String currentValue = inputCommissionDate.getAttribute("value");
+            String currentValue = inputCommissionDate.getDomAttribute("value");
 
             if (currentValue != null && !currentValue.isEmpty()) {
                 inputCommissionDate.clear(); // Jei reikšmė yra, ją ištriname

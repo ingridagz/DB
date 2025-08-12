@@ -211,8 +211,8 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Entered project date.");
 
             String jobCount = "1";
-            submittedApplicationsPage.enterJobCount(jobCount);
-            log.debug("Entered job count: '{}'.", jobCount);
+            submittedApplicationsPage.enterText("job_count_vui", jobCount);
+            log.debug("Entered job count: '{}'", jobCount);
 
             String next_1 = "next";
             submittedApplicationsPage.clickApplicationButton(next_1);
@@ -254,9 +254,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterJobDate_VUI();
             log.debug("Entered job date.");
 
-            String salary = "1200";
-            submittedApplicationsPage.enterSalary(salary);
-            log.debug("Entered salary amount: '{}'.", salary);
+            String salary_vui = "1200";
+            submittedApplicationsPage.enterText("salary_vui_dvp", salary_vui);
+            log.debug("Entered salary: '{}'", salary_vui);
 
             String salaryDescription = "Užmokestis 4";
             submittedApplicationsPage.enterTextArea("4", salaryDescription);
@@ -313,9 +313,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterToolParameterThree(toolParameter3);
             log.debug("Selected tool parameter three: '{}'.", toolParameter3);
 
-            String toolCount = "1";
-            submittedApplicationsPage.enterToolsCount(toolCount);
-            log.debug("Entered tool count: '{}'.", toolCount);
+            String tool_count = "1";
+            submittedApplicationsPage.enterText("tool_count_vui", tool_count);
+            log.debug("Entered tool count: '{}'", tool_count);
 
             String amount2 = "1000";
             submittedApplicationsPage.enterPriceOne(amount2);
@@ -371,24 +371,24 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             stay();
 
-            String perc1 = "50";
-            submittedApplicationsPage.enterCountryPerc(perc1);
-            log.debug("Entered country percentage: '{}'.", perc1);
+            String country_perc = "50";
+            submittedApplicationsPage.enterText("country_perc", country_perc);
+            log.debug("Entered country percentage: '{}'", country_perc);
 
-            String perc2 = "50";
-            submittedApplicationsPage.enterInstitutionPerc(perc2);
-            log.debug("Entered institution percentage: '{}'.", perc2);
+            String institution_perc = "50";
+            submittedApplicationsPage.enterText("institution_perc", institution_perc);
+            log.debug("Entered institution percentage: '{}'", institution_perc);
 
-            String perc3 = "50";
-            submittedApplicationsPage.enterMunicipalityPerc(perc3);
-            log.debug("Entered municipality percentage: '{}'.", perc3);
+            String municipality_perc = "50";
+            submittedApplicationsPage.enterText("municipality_perc", municipality_perc);
+            log.debug("Entered municipality percentage: '{}'", municipality_perc);
 
             submittedApplicationsPage.selectRadioButtonY_N("7_true");
             log.debug("Selected 'De Minimis' 'yes' option.");
 
             String programName = "Programa 1";
-            submittedApplicationsPage.enterProgramName(programName);
-            log.debug("Entered program name: '{}'.", programName);
+            submittedApplicationsPage.enterText("program_name", programName);
+            log.debug("Entered  program name: '{}'", programName);
 
             submittedApplicationsPage.enterProjectDateFrom();
             log.debug("Entered project date from.");
@@ -396,9 +396,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterProjectDateUntil();
             log.debug("Entered project date until.");
 
-            String amount6 = "2000";
-            submittedApplicationsPage.enterSupportAmount(amount6);
-            log.debug("Entered support amount: '{}'.", amount6);
+            String support_amount = "2000";
+            submittedApplicationsPage.enterText("support_amount", support_amount);
+            log.debug("Entered  support amount: '{}'", support_amount);
 
             String next_2 = "next";
             submittedApplicationsPage.clickApplicationButton(next_2);
@@ -736,9 +736,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterInputTimeModeOthers(timeMode1);
             log.debug("Selected time mode other: '{}'.", timeMode1);
 
-            String amount1 = "1200";
-            submittedApplicationsPage.enterSalary(amount1);
-            log.debug("Entered salary amount: '{}'.", amount1);
+            String salary_dvp = "1200";
+            submittedApplicationsPage.enterText("salary_vui_dvp", salary_dvp);
+            log.debug("Entered salary: '{}'", salary_dvp);
 
             String salary = "Užmokestis 7";
             submittedApplicationsPage.enterTextArea("7", salary);
@@ -843,8 +843,8 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Selected 'De Minimis' 'yes' option.");
 
             String programName = "Programa 1";
-            submittedApplicationsPage.enterProgramName(programName);
-            log.debug("Entered program name: '{}'.", programName);
+            submittedApplicationsPage.enterText("program_name", programName);
+            log.debug("Entered  program name: '{}'", programName);
 
             submittedApplicationsPage.enterProjectDateFrom_DVP();
             log.debug("Entered project date from.");
@@ -852,9 +852,9 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterProjectDateUntil_DVP();
             log.debug("Entered project date until.");
 
-            String amount4 = "2000";
-            submittedApplicationsPage.enterSupportAmount(amount4);
-            log.debug("Entered support amount: '{}'.", amount4);
+            String support_amount = "2000";
+            submittedApplicationsPage.enterText("support_amount", support_amount);
+            log.debug("Entered  support amount: '{}'", support_amount);
 
             String next_2 = "next";
             submittedApplicationsPage.clickApplicationButton(next_2);
@@ -1158,7 +1158,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Selected time mode other: '{}'.", timeMode1);
 
             String salary_1 = "1200";
-            submittedApplicationsPage.enterText_PVK("salary_1", salary_1);
+            submittedApplicationsPage.enterText("salary_pvk", salary_1);
             log.debug("Entered salary: '{}'", salary_1);
 
             submittedApplicationsPage.selectRadioButtonY_N("6_false");

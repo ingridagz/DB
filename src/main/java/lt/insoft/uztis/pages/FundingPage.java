@@ -22,7 +22,6 @@ public class FundingPage extends UztisPage{
     @FindBy(xpath = "//a[@href='/application/funding-queue']")
     WebElement buttonMenuFundingQueue;
 
-//    @FindBy(xpath = "//button[contains(@class, 'btn--primary')]")
     @FindBy(xpath = "//button[contains(@class, 'btn') and text()='Formuoti']")
     WebElement buttonForm;
 

@@ -23,8 +23,8 @@ public class InvitationsPage extends UztisPage {
     }
 
 
-    @FindBy(id = "kc-login")
-    WebElement buttonLogin;
+//    @FindBy(id = "kc-login")
+//    WebElement buttonLogin;
 
     @FindBy(xpath = "//a[@href='/application/invitation']")
     WebElement buttonMenuInvitation;

@@ -26,7 +26,7 @@ public class SubmittedApplicationsPage extends UztisPage {
 
     private static final Logger log = getLogger(lookup().lookupClass());
     private final Map<String, By> textAreaLocators = new HashMap<>();
-    private final Map<String, By> textLocators_PVK = new HashMap<>();
+    private final Map<String, By> textInputLocators = new HashMap<>();
     private final Map<String, By> radioButtonLocatorsY_N = new HashMap<>();
     private final Map<String, By> dropdownButtonCheckBoxLocators_VUI_DVP_PVK = new HashMap<>();
     private final Map<String, By> dropdownButtonLocators_VUI_DVP_PVK = new HashMap<>();
@@ -45,7 +45,6 @@ public class SubmittedApplicationsPage extends UztisPage {
 
         radioButtonLocatorsY_N.put("job_for_yourself_pvk", By.xpath("//input[@type='radio' and @name='mat-radio-group-1' and @value='jobForYourself']"));
         radioButtonLocatorsY_N.put("selfEmploymentTerminated_PVK", By.xpath("//input[@type='radio' and @value='true']"));
-
         radioButtonLocatorsY_N.put("1_true", By.xpath("(//input[@type='radio' and @value='true'])[1]"));
         radioButtonLocatorsY_N.put("1_false", By.xpath("(//input[@type='radio' and @value='false'])[1]"));
         radioButtonLocatorsY_N.put("2_true", By.xpath("(//input[@type='radio' and @value='true'])[2]"));
@@ -60,7 +59,15 @@ public class SubmittedApplicationsPage extends UztisPage {
         radioButtonLocatorsY_N.put("7_true", By.xpath("(//input[@type='radio' and @value='true'])[7]"));
         radioButtonLocatorsY_N.put("7_false", By.xpath("(//input[@type='radio' and @value='false'])[7]"));
 
-        textLocators_PVK.put("salary_1", By.xpath("//common-decimal-input[contains(@class, 'ng-untouched')]//input[@type='text']"));
+        textInputLocators.put("salary_pvk", By.xpath("//common-decimal-input[contains(@class, 'ng-untouched')]//input[@type='text']"));
+        textInputLocators.put("salary_vui_dvp", By.xpath("//mat-form-field[contains(.//label, 'Planuojamas mokėti bruto darbo užmokestis, Eur')]//input"));
+        textInputLocators.put("job_count_vui", By.xpath("//mat-form-field[contains(.//label, 'Planuojamų steigti darbo vietų skaičius')]//input"));
+        textInputLocators.put("tool_count_vui", By.xpath("//mat-form-field[contains(.//label, 'Darbo priemonės kiekis, vnt.')]//input"));
+        textInputLocators.put("country_perc", By.xpath("//mat-form-field[contains(.//label, 'Valstybės institucijos, įstaigos (proc.)')]//input"));
+        textInputLocators.put("institution_perc", By.xpath("//mat-form-field[contains(.//label, 'Savivaldybės institucijos, įstaigos (proc.)')]//input"));
+        textInputLocators.put("municipality_perc", By.xpath("//mat-form-field[contains(.//label, 'Valstybės ar savivaldybių įmonės (proc.)')]//input"));
+        textInputLocators.put("program_name", By.xpath("//mat-form-field[contains(.//label, 'Projekto ir finansuojančios programos pavadinimas')]//input"));
+        textInputLocators.put("support_amount", By.xpath("//mat-form-field[contains(.//label, 'Gautos paramos suma, Eur')]//input"));
 
         textAreaLocators.put("1", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[1]"));
         textAreaLocators.put("2", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[2]"));
@@ -202,9 +209,6 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "//input[contains(@class, 'mat-datepicker-input')]")
     WebElement inputDate;
 
-    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Planuojamų steigti darbo vietų skaičius')]//input")
-    WebElement inputJobCount;
-
     //application form step 2
     //------------------------------
 
@@ -233,9 +237,6 @@ public class SubmittedApplicationsPage extends UztisPage {
     //DVP
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[1]")
     WebElement inputJopDate_DVP;
-
-    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Planuojamas mokėti bruto darbo užmokestis, Eur')]//input")
-    WebElement inputSalary;
 
     @FindBy(xpath = "(//mat-label[contains(text(), 'Darbo vietai įsteigti reikalinga')])[1]")
     WebElement dropdownButtonNecessaryForJobOne;
@@ -275,9 +276,6 @@ public class SubmittedApplicationsPage extends UztisPage {
     WebElement inputToolParameterThree_DVP;
 
 
-    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Darbo priemonės kiekis, vnt.')]//input")
-    WebElement inputToolsCount;
-
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Išlaidų elemento kiekis, vnt.')]//input")
     WebElement inputToolsCount_DVP;
 
@@ -314,16 +312,6 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Remonto darbų pavadinimas')]//input")
     WebElement inputRepairName;
 
-    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Valstybės institucijos, įstaigos (proc.)')]//input")
-    WebElement inputCountryPerc;
-    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Savivaldybės institucijos, įstaigos (proc.)')]//input")
-    WebElement inputInstitutionPerc;
-    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Valstybės ar savivaldybių įmonės (proc.)')]//input")
-    WebElement inputMunicipalityPerc;
-
-    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Projekto ir finansuojančios programos pavadinimas')]//input")
-    WebElement inputProgramName;
-
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[3]")
     WebElement inputProjectDateFrom;
 
@@ -335,9 +323,6 @@ public class SubmittedApplicationsPage extends UztisPage {
 
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[3]")
     WebElement inputProjectDateUntil_DVP;
-
-    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Gautos paramos suma, Eur')]//input")
-    WebElement inputSupportAmount;
 
 //application form step 3 (Checkboxes)
 //-----------
@@ -671,8 +656,8 @@ public class SubmittedApplicationsPage extends UztisPage {
         input.sendKeys(text);
     }
 
-    public void enterText_PVK(String type, String text) {
-        By locator = textLocators_PVK.get(type.toLowerCase());
+    public void enterText(String type, String text) {
+        By locator = textInputLocators.get(type.toLowerCase());
         if (locator == null) {
             throw new IllegalArgumentException("No input found for type: " + type);
         }
@@ -961,10 +946,6 @@ public class SubmittedApplicationsPage extends UztisPage {
             throw new RuntimeException("End date input is not interactable.");
         }
     }
-    public void enterJobCount(String count) {
-        inputJobCount.clear();
-        inputJobCount.sendKeys(count);
-    }
 
     //----------------------------
 
@@ -1083,11 +1064,6 @@ public class SubmittedApplicationsPage extends UztisPage {
     public void enterInputTimeModeOthers(String text) {
         inputTimeModeOthers.clear();
         inputTimeModeOthers.sendKeys(text);
-    }
-
-    public void enterSalary(String amount) {
-        inputSalary.clear();
-        inputSalary.sendKeys(amount);
     }
 
     public void selectDropdownNecessaryForJobOne(String valueToSelect) {
@@ -1464,11 +1440,6 @@ public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
         inputToolParameterThree_PVK.sendKeys(parameter);
     }
 
-    public void enterToolsCount(String amount) {
-        inputToolsCount.clear();
-        inputToolsCount.sendKeys(amount);
-    }
-
     public void enterToolsCount_DVP(String amount) {
         inputToolsCount_DVP.clear();
         inputToolsCount_DVP.sendKeys(amount);
@@ -1533,27 +1504,6 @@ public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
         inputRepairName.sendKeys(amount);
     }
 
-    public void enterCountryPerc(String amount) {
-        inputCountryPerc.clear();
-        inputCountryPerc.sendKeys(amount);
-    }
-
-    public void enterInstitutionPerc(String amount) {
-        inputInstitutionPerc.clear();
-        inputInstitutionPerc.sendKeys(amount);
-    }
-
-    public void enterMunicipalityPerc(String amount) {
-        inputMunicipalityPerc.clear();
-        inputMunicipalityPerc.sendKeys(amount);
-    }
-
-
-    public void enterProgramName(String amount) {
-        inputProgramName.clear();
-        inputProgramName.sendKeys(amount);
-    }
-
     public void enterProjectDateFrom() {
         LocalDate today = LocalDate.now();
         LocalDate pastDate = today.minusDays(1);
@@ -1612,11 +1562,6 @@ public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
         } else {
             throw new RuntimeException("End date input is not interactable.");
         }
-    }
-
-    public void enterSupportAmount(String amount) {
-        inputSupportAmount.clear();
-        inputSupportAmount.sendKeys(amount);
     }
 
 //--------------------
