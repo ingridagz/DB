@@ -148,16 +148,13 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectValueApplicant_FA(applicant);
             log.debug("Selected applicant: '{}'.", applicant);
 
-//            submittedApplicationsPage.clickRadioButtonFA();
-//            log.debug("Selected the 'RadioButtonFA' option.");
-//
-//            String phoneNumber = "61298745";
-//            submittedApplicationsPage.enterPhoneNumber(phoneNumber);
-//            log.debug("Entered phone number: '{}'.", phoneNumber);
-//
-//            String emailInput = "test@autotest.com";
-//            submittedApplicationsPage.enterEmailAddress(emailInput);
-//            log.debug("Entered email: '{}'.", emailInput);
+            String phone = "61298745";
+            submittedApplicationsPage.enterText("phone", phone);
+            log.debug("Entered phone number: '{}'", phone);
+
+            String email = "test@autotest.com";
+            submittedApplicationsPage.enterText("e_mail", email);
+            log.debug("Entered email: '{}'", email);
 
             String value = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
             submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("evrk_VUI", value);
@@ -298,63 +295,56 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             log.debug("Selected necessary for job: '{}'.", necessaryForJob);
 
             String tool = "Darbo priemonė 1";
-            submittedApplicationsPage.enterTool(tool);
-            log.debug("Selected tool: '{}'.", tool);
+            submittedApplicationsPage.enterText("tool", tool);
+            log.debug("Entered tool: '{}'", tool);
 
-            String toolParameter1 = "Darbo priemonės 1 parametras 1";
-            submittedApplicationsPage.enterToolParameterOne(toolParameter1);
-            log.debug("Selected tool parameter one: '{}'.", toolParameter1);
+            String tool_parameter_1 = "Darbo priemonės 1 parametras 1";
+            submittedApplicationsPage.enterText("tool_parameter_1", tool_parameter_1);
+            log.debug("Entered tool parameter 1: '{}'", tool_parameter_1);
 
-            String toolParameter2 = "Darbo priemonės 1 parametras 2";
-            submittedApplicationsPage.enterToolParameterTwo(toolParameter2);
-            log.debug("Selected tool parameter two: '{}'.", toolParameter2);
+            String tool_parameter_2 = "Darbo priemonės 1 parametras 2";
+            submittedApplicationsPage.enterText("tool_parameter_2", tool_parameter_2);
+            log.debug("Entered tool parameter 2: '{}'", tool_parameter_2);
 
-            String toolParameter3 = "Darbo priemonės 1 parametras 3";
-            submittedApplicationsPage.enterToolParameterThree(toolParameter3);
-            log.debug("Selected tool parameter three: '{}'.", toolParameter3);
+            String tool_parameter_3 = "Darbo priemonės 1 parametras 3";
+            submittedApplicationsPage.enterText("tool_parameter_3", tool_parameter_3);
+            log.debug("Entered tool parameter 3: '{}'", tool_parameter_3);
 
             String tool_count = "1";
-            submittedApplicationsPage.enterText("tool_count_vui", tool_count);
+            submittedApplicationsPage.enterText("tool_count", tool_count);
             log.debug("Entered tool count: '{}'", tool_count);
 
-            String amount2 = "1000";
-            submittedApplicationsPage.enterPriceOne(amount2);
-            log.debug("Entered price amount 1: '{}'.", amount2);
+            String price_amount_1 = "1000";
+            submittedApplicationsPage.enterText("price_amount_1", price_amount_1);
+            log.debug("Entered price amount 1: '{}'", price_amount_1);
 
-            stay();
+            String funds_amount_1 = "800";
+            submittedApplicationsPage.enterText("funds_amount_1", funds_amount_1);
+            log.debug("Entered own funds amount 1: '{}'", funds_amount_1);
 
-            String amount3 = "800";
-            submittedApplicationsPage.enterOwnFundsOne(amount3);
-            log.debug("Entered own funds amount 1: '{}'.", amount3);
-
-            stay();
-
-            submittedApplicationsPage.clickButtonAdd();
-            log.debug("Clicked 'Add' button.");
+            String add = "add";
+            submittedApplicationsPage.clickApplicationButton(add);
+            log.info("Clicked button with key: '{}'.", add);
 
             String necessaryForJob1 = "Remontuoti";
             submittedApplicationsPage.selectDropdownNecessaryForJobTwo(necessaryForJob1);
             log.debug("Selected necessary for job 'to repair': '{}'.", necessaryForJob1);
 
-            String repairName = "Remonto pavadinimas 1";
-            submittedApplicationsPage.enterRepairName(repairName);
-            log.debug("Selected repair name: '{}'.", repairName);
+            String repair_name = "Remonto pavadinimas 1";
+            submittedApplicationsPage.enterText("repair_name", repair_name);
+            log.debug("Entered repair name: '{}'", repair_name);
 
             String repairDescription = "Remonto aprašymas 9";
             submittedApplicationsPage.enterTextArea("9", repairDescription);
             log.debug("Entered repair description proses: '{}'", repairDescription);
 
-            String amount2_1 = "1000";
-            submittedApplicationsPage.enterPriceTwo(amount2_1);
-            log.debug("Entered price amount 2: '{}'.", amount2_1);
+            String price_amount_2 = "1000";
+            submittedApplicationsPage.enterText("price_amount_2", price_amount_2);
+            log.debug("Entered price amount 2: '{}'", price_amount_2);
 
-            stay();
-
-            String amount3_1 = "900";
-            submittedApplicationsPage.enterOwnFundsTwo(amount3_1);
-            log.debug("Entered own funds amount 2: '{}'.", amount3_1);
-
-            stay();
+            String funds_amount_2 = "900";
+            submittedApplicationsPage.enterText("funds_amount_2", funds_amount_2);
+            log.debug("Entered own funds amount 2: '{}'", funds_amount_2);
 
             submittedApplicationsPage.clickButtonAddRemoved();
             log.debug("Clicked 'AddRemoved' button.");
@@ -470,9 +460,6 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             String save_draft = "save_draft";
             submittedApplicationsPage.clickApplicationButton(save_draft);
             log.info("Clicked button with key: '{}'.", save_draft);
-            //istrinti
-//            submittedApplicationsPage.clickButtonSaveDraft();
-//            log.debug("Clicked 'SaveDraft' button after checkboxes.");
 
             applicationFormsPage.verifySuccessMessage("Ruošinys sėkmingai išsaugotas.");
             log.info("Verified success message");
@@ -601,22 +588,19 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectValueApplicant_FA(applicant);
             log.debug("Selected applicant: '{}'.", applicant);
 
+            String phone = "61298745";
+            submittedApplicationsPage.enterText("phone", phone);
+            log.debug("Entered phone number: '{}'", phone);
 
-//            String phoneNumber = "61298745";
-//            submittedApplicationsPage.enterPhoneNumber(phoneNumber);
-//            log.debug("Entered phone number: '{}'.", phoneNumber);
-//
-//            String emailInput = "test@autotest.com";
-//            submittedApplicationsPage.enterEmailAddress(emailInput);
-//            log.debug("Entered email: '{}'.", emailInput);
+            String email = "test@autotest.com";
+            submittedApplicationsPage.enterText("e_mail", email);
+            log.debug("Entered email: '{}'", email);
 
-            //DVP
             invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationOne, true);
             log.debug("Checked 'For workplace adaptation' checkbox 1.");
 
             invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationTwo, true);
             log.debug("Checked 'For environmental adaptation' checkbox 2.");
-            //DVP
 
             String value = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
             submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("evrk_DVP", value);
@@ -668,21 +652,15 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             //-------------
 
-            //DVP
             submittedApplicationsPage.selectRadioButtonY_N("1_false");
             log.debug("Selected 'For already working' 'no' option.");
-
-//            String jobCount1 = "1";
-//            submittedApplicationsPage.enterPersonCountOne_DVP(jobCount1);
-//            log.debug("Entered person count1: '{}'.", jobCount1);
 
             submittedApplicationsPage.selectRadioButtonY_N("2_true");
             log.debug("Selected 'For new working' 'yes' option.");
 
-            String jobCount2 = "1";
-            submittedApplicationsPage.enterPersonCountTwo_DVP(jobCount2);
-            log.debug("Entered person count2: '{}'.", jobCount2);
-            //DVP
+            String person_count = "1";
+            submittedApplicationsPage.enterText("person_count_dvp", person_count);
+            log.debug("Entered person count: '{}'", person_count);
 
             String next_1 = "next";
             submittedApplicationsPage.clickApplicationButton(next_1);
@@ -761,38 +739,37 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectDropdownNecessaryForJobOne_DVP(necessaryForJob);
             log.debug("Selected necessary for job: '{}'.", necessaryForJob);
 
-            String tool1 = "Darbo priemonė 1";
-            submittedApplicationsPage.enterTool_DVP(tool1);
-            log.debug("Selected tool: '{}'.", tool1);
+            String purchase_name_DVP = "Darbo priemonė 1";
+            submittedApplicationsPage.enterText("purchase_name_dvp", purchase_name_DVP);
+            log.debug("Entered purchase name: '{}'", purchase_name_DVP);
 
-            String toolParameter1 = "Darbo priemonės 1 parametras 1";
-            submittedApplicationsPage.enterToolParameterOne_DVP(toolParameter1);
-            log.debug("Selected tool parameter one: '{}'.", toolParameter1);
+            String purchase_parameter_1 = "Darbo priemonės 1 parametras 1";
+            submittedApplicationsPage.enterText("purchase_parameter_dvp_1", purchase_parameter_1);
+            log.debug("Entered purchase parameter 1: '{}'", purchase_parameter_1);
 
-            String toolParameter2 = "Darbo priemonės 1 parametras 2";
-            submittedApplicationsPage.enterToolParameterTwo_DVP(toolParameter2);
-            log.debug("Selected tool parameter two: '{}'.", toolParameter2);
+            String purchase_parameter_2 = "Darbo priemonės 1 parametras 2";
+            submittedApplicationsPage.enterText("purchase_parameter_dvp_2", purchase_parameter_2);
+            log.debug("Entered purchase parameter 2: '{}'", purchase_parameter_2);
 
-            String toolParameter3 = "Darbo priemonės 1 parametras 3";
-            submittedApplicationsPage.enterToolParameterThree_DVP(toolParameter3);
-            log.debug("Selected tool parameter three: '{}'.", toolParameter3);
+            String purchase_parameter_3 = "Darbo priemonės 1 parametras 3";
+            submittedApplicationsPage.enterText("purchase_parameter_dvp_3", purchase_parameter_3);
+            log.debug("Entered purchase parameter 3: '{}'", purchase_parameter_3);
 
-            String toolCount1 = "1";
-            submittedApplicationsPage.enterToolsCount_DVP(toolCount1);
-            log.debug("Entered tool count: '{}'.", toolCount1);
+            String tool_count_1 = "1";
+            submittedApplicationsPage.enterText("tool_count_dvp_1", tool_count_1);
+            log.debug("Entered tool count 1: '{}'", tool_count_1);
 
-            String amount2 = "1000";
-            submittedApplicationsPage.enterPriceOne(amount2);
-            log.debug("Entered price amount: '{}'.", amount2);
+            String price_amount_1 = "1000";
+            submittedApplicationsPage.enterText("price_amount_1", price_amount_1);
+            log.debug("Entered price amount 1: '{}'", price_amount_1);
 
-            String amount3 = "800";
-            submittedApplicationsPage.enterOwnFundsOne(amount3);
-            log.debug("Entered own funds amount: '{}'.", amount3);
+            String funds_amount_1 = "800";
+            submittedApplicationsPage.enterText("funds_amount_1", funds_amount_1);
+            log.debug("Entered own funds amount 1: '{}'", funds_amount_1);
 
-            stay();
-
-            submittedApplicationsPage.clickButtonAdd();
-            log.debug("Clicked 'Add' button.");
+            String add = "add";
+            submittedApplicationsPage.clickApplicationButton(add);
+            log.info("Clicked button with key: '{}'.", add);
 
             String type2 = "Aplinkos pritaikymui";
             submittedApplicationsPage.selectDropdownExpensesTyp_DVP_2(type2);
@@ -802,27 +779,25 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectDropdownNecessaryForJobOne_DVP_2(necessaryForJob_2);
             log.debug("Selected necessary for job: '{}'.", necessaryForJob_2);
 
-            String tool1_2 = "Darbo priemonė 2 remontui";
-            submittedApplicationsPage.enterTool_DVP_2(tool1_2);
-            log.debug("Selected tool: '{}'.", tool1_2);
+            String repair_name_DVP = "Remonto išlaidų pavadinimas 1";
+            submittedApplicationsPage.enterText("repair_name_dvp", repair_name_DVP);
+            log.debug("Entered repair name: '{}'", repair_name_DVP);
 
             String workDescription = "Remonto darbai 8";
             submittedApplicationsPage.enterTextArea("8", workDescription);
             log.debug("Entered work description: '{}'", workDescription);
 
-            String toolCount1_2 = "2";
-            submittedApplicationsPage.enterToolsCount_DVP_2(toolCount1_2);
-            log.debug("Entered tool count: '{}'.", toolCount1_2);
+            String tool_count_2 = "2";
+            submittedApplicationsPage.enterText("tool_count_dvp_2", tool_count_2);
+            log.debug("Entered tool count 2: '{}'", tool_count_2);
 
-            String amount2_2 = "1000";
-            submittedApplicationsPage.enterPriceTwo(amount2_2);
-            log.debug("Entered price amount: '{}'.", amount2_2);
+            String price_amount_2 = "1000";
+            submittedApplicationsPage.enterText("price_amount_2", price_amount_2);
+            log.debug("Entered price amount 2: '{}'", price_amount_2);
 
-            String amount3_2 = "900";
-            submittedApplicationsPage.enterOwnFundsTwo(amount3_2);
-            log.debug("Entered own funds amount: '{}'.", amount3_2);
-
-            stay();
+            String funds_amount_2 = "900";
+            submittedApplicationsPage.enterText("funds_amount_2", funds_amount_2);
+            log.debug("Entered own funds amount 2: '{}'", funds_amount_2);
 
             submittedApplicationsPage.clickButtonAddRemoved();
             log.debug("Clicked 'AddRemoved' button.");
@@ -1015,14 +990,13 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectValueApplicant_FA(applicant);
             log.debug("Selected applicant: '{}'.", applicant);
 
+            String phone = "61298745";
+            submittedApplicationsPage.enterText("phone", phone);
+            log.debug("Entered phone number: '{}'", phone);
 
-//            String phoneNumber = "61298745";
-//            submittedApplicationsPage.enterPhoneNumber(phoneNumber);
-//            log.debug("Entered phone number: '{}'.", phoneNumber);
-//
-//            String emailInput = "test@autotest.com";
-//            submittedApplicationsPage.enterEmailAddress(emailInput);
-//            log.debug("Entered email: '{}'.", emailInput);
+            String email = "test@autotest.com";
+            submittedApplicationsPage.enterText("e_mail", email);
+            log.debug("Entered email: '{}'", email);
 
             submittedApplicationsPage.selectRadioButtonY_N("job_for_yourself_pvk");
 
@@ -1171,60 +1145,57 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectDropdownNecessaryForJobOne_PVK(necessaryForJob);
             log.debug("Selected necessary for job: '{}'.", necessaryForJob);
 
-            String tool1 = "Darbo priemonė 1";
-            submittedApplicationsPage.enterTool_PVK(tool1);
-            log.debug("Selected tool: '{}'.", tool1);
+            String tool = "Darbo priemonė 1";
+            submittedApplicationsPage.enterText("tool", tool);
+            log.debug("Entered tool: '{}'", tool);
 
-            String toolParameter1 = "Darbo priemonės 1 parametras 1";
-            submittedApplicationsPage.enterToolParameterOne_PVK(toolParameter1);
-            log.debug("Selected tool parameter one: '{}'.", toolParameter1);
+            String tool_parameter_1 = "Darbo priemonės 1 parametras 1";
+            submittedApplicationsPage.enterText("tool_parameter_1", tool_parameter_1);
+            log.debug("Entered tool parameter 1: '{}'", tool_parameter_1);
 
-            String toolParameter2 = "Darbo priemonės 1 parametras 2";
-            submittedApplicationsPage.enterToolParameterTwo_PVK(toolParameter2);
-            log.debug("Selected tool parameter two: '{}'.", toolParameter2);
+            String tool_parameter_2 = "Darbo priemonės 1 parametras 2";
+            submittedApplicationsPage.enterText("tool_parameter_2", tool_parameter_2);
+            log.debug("Entered tool parameter 2: '{}'", tool_parameter_2);
 
-            String toolParameter3 = "Darbo priemonės 1 parametras 3";
-            submittedApplicationsPage.enterToolParameterThree_PVK(toolParameter3);
-            log.debug("Selected tool parameter three: '{}'.", toolParameter3);
+            String tool_parameter_3 = "Darbo priemonės 1 parametras 3";
+            submittedApplicationsPage.enterText("tool_parameter_3", tool_parameter_3);
+            log.debug("Entered tool parameter 3: '{}'", tool_parameter_3);
 
-            String toolCount1 = "1";
-            submittedApplicationsPage.enterToolsCount_PVK(toolCount1);
-            log.debug("Entered tool count: '{}'.", toolCount1);
+            String toolCount = "1";
+            submittedApplicationsPage.enterText("tool_count", toolCount);
+            log.debug("Entered tool count: '{}'", toolCount);
 
-            String amount2 = "1000";
-            submittedApplicationsPage.enterPriceOne(amount2);
-            log.debug("Entered price amount: '{}'.", amount2);
+            String price_amount_1 = "1000";
+            submittedApplicationsPage.enterText("price_amount_1", price_amount_1);
+            log.debug("Entered price amount 1: '{}'", price_amount_1);
 
-            String amount3 = "800";
-            submittedApplicationsPage.enterOwnFundsOne(amount3);
-            log.debug("Entered own funds amount: '{}'.", amount3);
+            String funds_amount_1 = "800";
+            submittedApplicationsPage.enterText("funds_amount_1", funds_amount_1);
+            log.debug("Entered own funds amount 1: '{}'", funds_amount_1);
+            String add = "add";
 
-            stay();
-
-            submittedApplicationsPage.clickButtonAdd();
-            log.debug("Clicked 'Add' button.");
+            submittedApplicationsPage.clickApplicationButton(add);
+            log.info("Clicked button with key: '{}'.", add);
 
             String necessaryForJob_2 = "Remontuoti";
             submittedApplicationsPage.selectDropdownNecessaryForJobOne_PVK_2(necessaryForJob_2);
             log.debug("Selected necessary for job: '{}'.", necessaryForJob_2);
 
-            String tool1_2 = "Darbo priemonė 2 remontui";
-            submittedApplicationsPage.enterTool_PVK_2(tool1_2);
-            log.debug("Selected tool: '{}'.", tool1_2);
+            String repair_name = "Remonto pavadinimas 1";
+            submittedApplicationsPage.enterText("repair_name", repair_name);
+            log.debug("Entered repair name: '{}'", repair_name);
 
             String repair = "Remonto darbai 9";
             submittedApplicationsPage.enterTextArea("9", repair);
             log.debug("Entered qualification: '{}'", repair);
 
-            String amount2_2 = "1000";
-            submittedApplicationsPage.enterPriceTwo(amount2_2);
-            log.debug("Entered price amount: '{}'.", amount2_2);
+            String price_amount_2 = "1000";
+            submittedApplicationsPage.enterText("price_amount_2", price_amount_2);
+            log.debug("Entered price amount 2: '{}'", price_amount_2);
 
-            String amount3_2 = "900";
-            submittedApplicationsPage.enterOwnFundsTwo(amount3_2);
-            log.debug("Entered own funds amount: '{}'.", amount3_2);
-
-            stay();
+            String funds_amount_2 = "900";
+            submittedApplicationsPage.enterText("funds_amount_2", funds_amount_2);
+            log.debug("Entered own funds amount 2: '{}'", funds_amount_2);
 
             submittedApplicationsPage.clickButtonAddRemoved();
             log.debug("Clicked 'AddRemoved' button.");

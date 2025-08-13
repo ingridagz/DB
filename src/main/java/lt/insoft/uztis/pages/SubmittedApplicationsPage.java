@@ -42,6 +42,8 @@ public class SubmittedApplicationsPage extends UztisPage {
         buttonApplicationLocators.put("addressConfirm", By.xpath("//common-button[@btntype='submit']//button"));
         buttonApplicationLocators.put("save_draft", By.xpath("//common-button/button[contains(text(), 'Saugoti ruošinį')]"));
         buttonApplicationLocators.put("submitConfirm", By.xpath("//common-button//button[@type='button' and contains(text(), 'Pateikti vertinimui')]"));
+        buttonApplicationLocators.put("add", By.xpath("(//button[contains(@class, 'i-forms-repeater-button-add')])[4]"));
+
 
         radioButtonLocatorsY_N.put("job_for_yourself_pvk", By.xpath("//input[@type='radio' and @name='mat-radio-group-1' and @value='jobForYourself']"));
         radioButtonLocatorsY_N.put("selfEmploymentTerminated_PVK", By.xpath("//input[@type='radio' and @value='true']"));
@@ -59,15 +61,36 @@ public class SubmittedApplicationsPage extends UztisPage {
         radioButtonLocatorsY_N.put("7_true", By.xpath("(//input[@type='radio' and @value='true'])[7]"));
         radioButtonLocatorsY_N.put("7_false", By.xpath("(//input[@type='radio' and @value='false'])[7]"));
 
+
+        textInputLocators.put("phone", By.xpath("//input[@id='phone']"));
+        textInputLocators.put("e_mail", By.xpath("//mat-form-field[contains(.//label, 'El. pašto adresas')]//input"));
         textInputLocators.put("salary_pvk", By.xpath("//common-decimal-input[contains(@class, 'ng-untouched')]//input[@type='text']"));
         textInputLocators.put("salary_vui_dvp", By.xpath("//mat-form-field[contains(.//label, 'Planuojamas mokėti bruto darbo užmokestis, Eur')]//input"));
         textInputLocators.put("job_count_vui", By.xpath("//mat-form-field[contains(.//label, 'Planuojamų steigti darbo vietų skaičius')]//input"));
-        textInputLocators.put("tool_count_vui", By.xpath("//mat-form-field[contains(.//label, 'Darbo priemonės kiekis, vnt.')]//input"));
         textInputLocators.put("country_perc", By.xpath("//mat-form-field[contains(.//label, 'Valstybės institucijos, įstaigos (proc.)')]//input"));
         textInputLocators.put("institution_perc", By.xpath("//mat-form-field[contains(.//label, 'Savivaldybės institucijos, įstaigos (proc.)')]//input"));
         textInputLocators.put("municipality_perc", By.xpath("//mat-form-field[contains(.//label, 'Valstybės ar savivaldybių įmonės (proc.)')]//input"));
         textInputLocators.put("program_name", By.xpath("//mat-form-field[contains(.//label, 'Projekto ir finansuojančios programos pavadinimas')]//input"));
         textInputLocators.put("support_amount", By.xpath("//mat-form-field[contains(.//label, 'Gautos paramos suma, Eur')]//input"));
+        textInputLocators.put("tool", By.xpath("//mat-form-field[contains(.//label, 'Darbo priemonės pavadinimas')]//input"));
+        textInputLocators.put("tool_parameter_1", By.xpath("(//mat-form-field[.//label[contains(normalize-space(), 'Darbo priemonės techninis parametras')]]//input)[1]"));
+        textInputLocators.put("tool_parameter_2", By.xpath("(//mat-form-field[.//label[contains(normalize-space(), 'Darbo priemonės techninis parametras')]]//input)[2]"));
+        textInputLocators.put("tool_parameter_3", By.xpath("(//mat-form-field[.//label[contains(normalize-space(), 'Darbo priemonės techninis parametras')]]//input)[3]"));
+        textInputLocators.put("tool_count", By.xpath("//mat-form-field[contains(.//label, 'Darbo priemonės kiekis, vnt.')]//input"));
+        textInputLocators.put("person_count_dvp", By.xpath("(//mat-form-field[contains(.//label, 'Asmenų skaičius')]//input)[1]"));
+        textInputLocators.put("repair_name", By.xpath("//mat-form-field[contains(.//label, 'Remonto darbų pavadinimas')]//input"));
+        textInputLocators.put("purchase_name_dvp", By.xpath("//mat-form-field[contains(.//label, 'Išlaidų elemento pavadinimas')]//input"));
+        textInputLocators.put("purchase_parameter_dvp_1", By.xpath("(//mat-form-field[.//label[contains(normalize-space(), 'Išlaidų elemento techninis parametras')]]//input)[1]"));
+        textInputLocators.put("purchase_parameter_dvp_2", By.xpath("(//mat-form-field[.//label[contains(normalize-space(), 'Išlaidų elemento techninis parametras')]]//input)[2]"));
+        textInputLocators.put("purchase_parameter_dvp_3", By.xpath("(//mat-form-field[.//label[contains(normalize-space(), 'Išlaidų elemento techninis parametras')]]//input)[3]"));
+        textInputLocators.put("tool_count_dvp_1", By.xpath("//mat-form-field[contains(.//label, 'Išlaidų elemento kiekis, vnt.')]//input"));
+        textInputLocators.put("tool_count_dvp_2", By.xpath("(//mat-form-field[contains(.//label, 'Išlaidų elemento kiekis, vnt.')]//input)[2]"));
+        textInputLocators.put("repair_name_dvp", By.xpath("(//mat-form-field[contains(.//label, 'Išlaidų elemento pavadinimas')]//input)[2]"));
+        textInputLocators.put("price_amount_1", By.xpath("(//mat-form-field[contains(.//label, 'Kaina, Eur')]//input)[1]"));
+        textInputLocators.put("price_amount_2", By.xpath("(//mat-form-field[contains(.//label, 'Kaina, Eur')]//input)[2]"));
+        textInputLocators.put("funds_amount_1", By.xpath("(//mat-form-field[contains(.//label, 'Nuosavos lėšos, Eur')]//input)[1]"));
+        textInputLocators.put("funds_amount_2", By.xpath("(//mat-form-field[contains(.//label, 'Nuosavos lėšos, Eur')]//input)[2]"));
+
 
         textAreaLocators.put("1", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[1]"));
         textAreaLocators.put("2", By.xpath("//div[contains(@class, 'mdc-notched-outline')]//following::textarea[2]"));
@@ -134,9 +157,6 @@ public class SubmittedApplicationsPage extends UztisPage {
 
 //    @FindBy(xpath = "//button[contains(@class, 'i-forms-stepper-button-previous') and normalize-space(text())='Atgal']")
 //    WebElement buttonPrevious;
-//
-//    @FindBy(xpath = "//input[@id='phone']")
-//    WebElement phoneInput;
 
     //application form step 1
     //------------------------------
@@ -144,38 +164,24 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "//input[@type='radio' and @value='PERSON']")
     WebElement radioButtonFA;
 
-//    @FindBy(xpath = "//mat-form-field[contains(.//label, 'El. pašto adresas')]//input")
-//    WebElement inputEMail;
-
     @FindBy(xpath = "//mat-select[contains(@class, \"mat-mdc-select\")]")
     WebElement dropdownButtonApplicant;
 
     //PVK
-
     @FindBy(xpath = "(//mat-form-field[.//mat-label[contains(text(), 'Darbo vietai įsteigti reikalinga')]]//mat-select)[1]")
     WebElement dropdownButtonNecessaryForJobOne_PVK;
 
     @FindBy(xpath = "(//mat-form-field[.//mat-label[contains(text(), 'Darbo vietai įsteigti reikalinga')]]//mat-select)[2]")
     WebElement dropdownButtonNecessaryForJobOne_PVK_2;
-
-    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Darbo priemonės pavadinimas')]//input")
-    WebElement inputTool_PVK;
-
-    @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Darbo priemonės techninis parametras')]]//input)[1]")
-    WebElement inputToolParameterOne_PVK;
-
-    @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Darbo priemonės techninis parametras')]]//input)[2]")
-    WebElement inputToolParameterTwo_PVK;
-
-    @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Darbo priemonės techninis parametras')]]//input)[3]")
-    WebElement inputToolParameterThree_PVK;
-
-    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Darbo priemonės kiekis, vnt.')]//input")
-    WebElement inputToolsCount_PVK;
-
-    @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Remonto darbų pavadinimas')]//input)")
-    WebElement inputTool_PVK_2;
     //PVK
+
+    //DVP
+    @FindBy(xpath = "//mat-label[contains(text(), 'Išlaidų tipas')]")
+    WebElement dropdownButtonExpensesTyp_DVP;
+
+    @FindBy(xpath = "(//mat-label[contains(text(), 'Išlaidų tipas')])[2]")
+    WebElement dropdownButtonExpensesTyp_DVP_2;
+    //DVP
 
     //address
 //----------------
@@ -204,26 +210,9 @@ public class SubmittedApplicationsPage extends UztisPage {
 //    @FindBy(xpath = "//mat-label[contains(text(), 'Buto / patalpos Nr.')]/following::mat-select[1]")
 //    WebElement dropdownAddressApartment;
 
-//------------------
-
-    @FindBy(xpath = "//input[contains(@class, 'mat-datepicker-input')]")
-    WebElement inputDate;
 
     //application form step 2
     //------------------------------
-
-    //DVP
-       @FindBy(xpath = "//mat-label[contains(text(), 'Išlaidų tipas')]")
-    WebElement dropdownButtonExpensesTyp_DVP;
-
-    @FindBy(xpath = "(//mat-label[contains(text(), 'Išlaidų tipas')])[2]")
-    WebElement dropdownButtonExpensesTyp_DVP_2;
-    //DVP
-
-    //DVP
-//    @FindBy(xpath = "(//input[@type='radio' and @value='true'])[4]")
-//    WebElement radioButtonForNotAlreadyWorking_DVP_step2;
-    //DVP
 
     @FindBy(xpath = "//mat-label[contains(text(), 'Darbo laiko norma ir darbo laiko režimas')]")
     WebElement dropdownButtonTimeMode;
@@ -231,71 +220,30 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "//mat-form-field[contains(.//label, 'Darbo laiko norma ir darbo laiko režimas')]//input")
     WebElement inputTimeModeOthers;
 
+    //VUI
+    @FindBy(xpath = "//input[contains(@class, 'mat-datepicker-input')]")
+    WebElement inputDate_VUI;
+
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[2]")
     WebElement inputJopDate_VUI;
-
-    //DVP
-    @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[1]")
-    WebElement inputJopDate_DVP;
 
     @FindBy(xpath = "(//mat-label[contains(text(), 'Darbo vietai įsteigti reikalinga')])[1]")
     WebElement dropdownButtonNecessaryForJobOne;
 
     @FindBy(xpath = "(//mat-label[contains(text(), 'Darbo vietai įsteigti reikalinga')])[2]")
     WebElement dropdownButtonNecessaryForJobTwo;
+    //VUI
 
     //DVP
+    @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[1]")
+    WebElement inputJopDate_DVP;
+
     @FindBy(xpath = "(//mat-form-field[.//mat-label[contains(text(), 'Reikalinga')]]//mat-select)[1]")
     WebElement dropdownButtonNecessaryForJobOne_DVP;
 
     @FindBy(xpath = "(//mat-form-field[.//mat-label[contains(text(), 'Reikalinga')]]//mat-select)[2]")
     WebElement dropdownButtonNecessaryForJobOne_DVP_2;
-
-    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Darbo priemonės pavadinimas')]//input")
-    WebElement inputTool;
-
-    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Išlaidų elemento pavadinimas')]//input")
-    WebElement inputTool_DVP;
-
-    @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Išlaidų elemento pavadinimas')]//input)[2]")
-    WebElement inputTool_DVP_2;
     //DVP
-
-    @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Darbo priemonės techninis parametras')]]//input)[1]")
-    WebElement inputToolParameterOne;
-    @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Darbo priemonės techninis parametras')]]//input)[2]")
-    WebElement inputToolParameterTwo;
-    @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Darbo priemonės techninis parametras')]]//input)[3]")
-    WebElement inputToolParameterThree;
-
-    @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Išlaidų elemento techninis parametras')]]//input)[1]")
-    WebElement inputToolParameterOne_DVP;
-    @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Išlaidų elemento techninis parametras')]]//input)[2]")
-    WebElement inputToolParameterTwo_DVP;
-    @FindBy(xpath = "(//mat-form-field[.//label[contains(normalize-space(), 'Išlaidų elemento techninis parametras')]]//input)[3]")
-    WebElement inputToolParameterThree_DVP;
-
-
-    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Išlaidų elemento kiekis, vnt.')]//input")
-    WebElement inputToolsCount_DVP;
-
-    @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Išlaidų elemento kiekis, vnt.')]//input)[2]")
-    WebElement inputToolsCount_DVP_2;
-
-    @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Kaina, Eur')]//input)[1]")
-    WebElement inputPriceOne;
-
-    @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Kaina, Eur')]//input)[2]")
-    WebElement inputPriceTwo;
-
-    @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Nuosavos lėšos, Eur')]//input)[1]")
-    WebElement inputOwnFundsOne;
-
-    @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Nuosavos lėšos, Eur')]//input)[2]")
-    WebElement inputOwnFundsTwo;
-
-    @FindBy(xpath = "(//button[contains(@class, 'i-forms-repeater-button-add')])[4]")
-    WebElement buttonAdd;
 
     @FindBy(xpath = "(//button[contains(@class, 'i-forms-repeater-button-add')])[5]")
     WebElement buttonAddRemoved;
@@ -306,11 +254,8 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(css = "common-button:nth-of-type(2) > .btn.btn--primary")
     WebElement buttonRemoveConfirmation;
 
-//    @FindBy(xpath = "(//button[contains(@class, 'i-forms-repeater-button-add')])[5]")
-//    WebElement buttonAddJobPlace;
-
-    @FindBy(xpath = "//mat-form-field[contains(.//label, 'Remonto darbų pavadinimas')]//input")
-    WebElement inputRepairName;
+    @FindBy(xpath = "(//button[contains(@class, 'i-forms-repeater-button-add')])[5]")
+    WebElement buttonAddJobPlace;
 
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[3]")
     WebElement inputProjectDateFrom;
@@ -352,7 +297,7 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[6]")
     public WebElement checkboxConfirmationStepFourDVP;
 
-    //application form step 5 (Radiobuttons)
+    //application form step 5 (Checkboxes)
 //-----------
     @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[5]")
     public WebElement checkboxConfirmationDocument;
@@ -366,21 +311,8 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(xpath = "(//div[contains(@class, 'mdc-checkbox')]//input[@type='checkbox'])[8]")
     public WebElement checkboxConfirmationApplication_DVP;
 
-    //DVP
-    //--------------
-
-//    @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Asmenų skaičius')]//input)[1]")
-//    WebElement inputPersonCountOne_DVP;
-
-//    @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Asmenų skaičius')]//input)[2]")
-//    WebElement inputPersonCountTwo_DVP_2JobPlace;
-
-    @FindBy(xpath = "(//mat-form-field[contains(.//label, 'Asmenų skaičius')]//input)[1]")
-    WebElement inputPersonCountTwo_DVP;
-
     //evaluations
     //---------------
-
     @FindBy(xpath = "//mat-label[contains(text(), 'Vertintojas')]/following::mat-select[1]")
     WebElement dropdownButtonEvaluator;
 
@@ -451,22 +383,6 @@ public class SubmittedApplicationsPage extends UztisPage {
             radioButtonFA.click();
         }
     }
-
-    //jei kada reikes telnr. ar e.pasto
-//    public void enterPhoneNumber(String phoneNumber) {
-//        try {
-//            phoneInput.clear();
-//            phoneInput.sendKeys(phoneNumber);
-//            System.out.println("Phone number entered successfully: " + phoneNumber);
-//        } catch (Exception e) {
-//            System.err.println("Failed to enter phone number: " + e.getMessage());
-//        }
-//    }
-//
-//    public void enterEmailAddress(String emailAddress) {
-//        inputEMail.clear();
-//        inputEMail.sendKeys(emailAddress);
-//    }
 
     public void clickButtonActionApplication() {
         buttonActionApplication.click();
@@ -909,9 +825,9 @@ public class SubmittedApplicationsPage extends UztisPage {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String formattedPastDate = pastDate.format(formatter);
 
-        if (inputDate.isDisplayed() && inputDate.isEnabled()) {
-            inputDate.clear();
-            inputDate.sendKeys(formattedPastDate);
+        if (inputDate_VUI.isDisplayed() && inputDate_VUI.isEnabled()) {
+            inputDate_VUI.clear();
+            inputDate_VUI.sendKeys(formattedPastDate);
         } else {
             throw new RuntimeException("End date input is not interactable.");
         }
@@ -1370,117 +1286,6 @@ public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
         }
     }
 
-    public void enterTool(String tool) {
-        inputTool.clear();
-        inputTool.sendKeys(tool);
-    }
-
-    public void enterTool_DVP(String tool) {
-        inputTool_DVP.clear();
-        inputTool_DVP.sendKeys(tool);
-    }
-
-    public void enterTool_PVK(String tool) {
-        inputTool_PVK.clear();
-        inputTool_PVK.sendKeys(tool);
-    }
-
-    public void enterTool_DVP_2(String tool) {
-        inputTool_DVP_2.clear();
-        inputTool_DVP_2.sendKeys(tool);
-    }
-
-    public void enterTool_PVK_2(String tool) {
-        inputTool_PVK_2.clear();
-        inputTool_PVK_2.sendKeys(tool);
-    }
-
-    public void enterToolParameterOne(String parameter) {
-        inputToolParameterOne.clear();
-        inputToolParameterOne.sendKeys(parameter);
-    }
-
-    public void enterToolParameterTwo(String parameter) {
-        inputToolParameterTwo.clear();
-        inputToolParameterTwo.sendKeys(parameter);
-    }
-
-    public void enterToolParameterThree(String parameter) {
-        inputToolParameterThree.clear();
-        inputToolParameterThree.sendKeys(parameter);
-    }
-
-    public void enterToolParameterOne_DVP(String parameter) {
-        inputToolParameterOne_DVP.clear();
-        inputToolParameterOne_DVP.sendKeys(parameter);
-    }
-
-    public void enterToolParameterOne_PVK(String parameter) {
-        inputToolParameterOne_PVK.clear();
-        inputToolParameterOne_PVK.sendKeys(parameter);
-    }
-
-    public void enterToolParameterTwo_DVP(String parameter) {
-        inputToolParameterTwo_DVP.clear();
-        inputToolParameterTwo_DVP.sendKeys(parameter);
-    }
-
-    public void enterToolParameterTwo_PVK(String parameter) {
-        inputToolParameterTwo_PVK.clear();
-        inputToolParameterTwo_PVK.sendKeys(parameter);
-    }
-
-    public void enterToolParameterThree_DVP(String parameter) {
-        inputToolParameterThree_DVP.clear();
-        inputToolParameterThree_DVP.sendKeys(parameter);
-    }
-
-    public void enterToolParameterThree_PVK(String parameter) {
-        inputToolParameterThree_PVK.clear();
-        inputToolParameterThree_PVK.sendKeys(parameter);
-    }
-
-    public void enterToolsCount_DVP(String amount) {
-        inputToolsCount_DVP.clear();
-        inputToolsCount_DVP.sendKeys(amount);
-    }
-
-    public void enterToolsCount_PVK(String amount) {
-        inputToolsCount_PVK.clear();
-        inputToolsCount_PVK.sendKeys(amount);
-    }
-
-    public void enterToolsCount_DVP_2(String amount) {
-        inputToolsCount_DVP_2.clear();
-        inputToolsCount_DVP_2.sendKeys(amount);
-    }
-
-    public void enterPriceOne(String amount) {
-        inputPriceOne.clear();
-        inputPriceOne.sendKeys(amount);
-    }
-
-    public void enterPriceTwo(String amount) {
-        inputPriceTwo.clear();
-        inputPriceTwo.sendKeys(amount);
-    }
-
-    public void enterOwnFundsOne(String amount) {
-        inputOwnFundsOne.clear();
-        inputOwnFundsOne.sendKeys(amount);
-    }
-
-    public void enterOwnFundsTwo(String amount) {
-        inputOwnFundsTwo.clear();
-        inputOwnFundsTwo.sendKeys(amount);
-    }
-
-    public void clickButtonAdd() {
-        if (!buttonAdd.isSelected()) {
-            buttonAdd.click();
-        }
-    }
-
     public void clickButtonAddRemoved() {
         if (!buttonAddRemoved.isSelected()) {
             buttonAddRemoved.click();
@@ -1497,11 +1302,6 @@ public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
         if (!buttonRemoveConfirmation.isSelected()) {
             buttonRemoveConfirmation.click();
         }
-    }
-
-    public void enterRepairName(String amount) {
-        inputRepairName.clear();
-        inputRepairName.sendKeys(amount);
     }
 
     public void enterProjectDateFrom() {
@@ -1702,11 +1502,6 @@ public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
 //        inputPersonCountOne_DVP.clear();
 //        inputPersonCountOne_DVP.sendKeys(count);
 //    }
-
-    public void enterPersonCountTwo_DVP(String count) {
-        inputPersonCountTwo_DVP.clear();
-        inputPersonCountTwo_DVP.sendKeys(count);
-    }
 
     //evaluations
 //---------------------------
