@@ -228,6 +228,12 @@ public class InvitationsPageTest extends UztisPageTest {
             invitationsPage.enterBudget(newBudget);
             log.debug("Entered budget: '{}'.", newBudget);
 
+            String label = "Finansavimo straipsnis";
+            String article = "KarjerON, ESF lėšos";
+
+            invitationsPage.selectDropdownLabel(label, article);
+            log.debug("Selected the article: '{}'", article);
+
             String newText1 = "Aprašo tekstas";
             invitationsPage.enterDescription(newText1);
             log.debug("Entered description text: '{}'.", newText1);

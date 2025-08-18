@@ -1,5 +1,7 @@
 package lt.insoft.uztis.pages;
 
+import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,6 +15,7 @@ import java.util.List;
 
 import static java.lang.invoke.MethodHandles.lookup;
 import static org.slf4j.LoggerFactory.getLogger;
+
 
 public class InvitationsPage extends UztisPage {
 
@@ -97,6 +100,9 @@ public class InvitationsPage extends UztisPage {
 
     @FindBy(xpath = "//mat-label[contains(text(), 'Biudžetas, Eur')]/ancestor::mat-form-field//common-decimal-input/input")
     WebElement inputBudget;
+
+//    @FindBy(xpath = "//mat-select[@role='combobox']//div[contains(@class,'mat-mdc-select-trigger')]")
+//    WebElement dropdownButtonArticle;
 
     @FindBy(xpath = "(//common-decimal-input//input)[14]")
     WebElement inputBudgetKaunas;
@@ -331,6 +337,29 @@ public class InvitationsPage extends UztisPage {
         buttonAdd.click();
     }
 
+    public void selectDropdown(WebElement dropdownButton, String valueToSelect) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        log.info("Clicking dropdown button.");
+        wait.until(ExpectedConditions.elementToBeClickable(dropdownButton)).click();
+
+        List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option")));
+
+        options.stream()
+                .filter(option -> option.getText().trim().equalsIgnoreCase(valueToSelect))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("Dropdown value '" + valueToSelect + "' not found."))
+                .click();
+
+        log.info("Selected value '{}' from dropdown", valueToSelect);
+
+        try {
+            wait.until(ExpectedConditions.attributeToBe(dropdownButton, "aria-expanded", "false"));
+        } catch (TimeoutException e) {
+            log.error("Timeout waiting for dropdown to close.");
+        }
+    }
+
     public void selectDropdownAmountInformation1(String valueToSelect) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
@@ -428,6 +457,51 @@ public class InvitationsPage extends UztisPage {
             wait.until(ExpectedConditions.attributeToBe(dropdownButtonAmountsInformation3, "aria-expanded", "false"));
         } catch (TimeoutException e) {
             log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
+        }
+    }
+
+    public void selectDropdownLabel(String labelText, String valueToSelect) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+        try {
+            // Rasti dropdown trigger pagal mat-label tekstą
+            By dropdownButtonLocator = By.xpath(
+                    "//mat-label[contains(text(), '" + labelText + "')]//following::mat-select[1]//div[contains(@class,'mat-mdc-select-trigger')]"
+            );
+
+            WebElement dropdownButton = wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonLocator));
+
+            // Scroll į view
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", dropdownButton);
+
+            // Click su JS fallback
+            try {
+                dropdownButton.click();
+            } catch (Exception e) {
+                log.warn("Normal click failed, trying JS click...");
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", dropdownButton);
+            }
+
+            // Rasti ir pasirinkti opciją overlay zonoje
+            By optionLocator = By.xpath(
+                    "//div[@class='cdk-overlay-container']//mat-option//span[normalize-space(text())='" + valueToSelect + "']"
+            );
+
+            WebElement optionToSelect = new WebDriverWait(driver, Duration.ofSeconds(10))
+                    .pollingEvery(Duration.ofMillis(200))
+                    .until(ExpectedConditions.elementToBeClickable(optionLocator));
+
+            try {
+                optionToSelect.click();
+            } catch (Exception e) {
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", optionToSelect);
+            }
+
+            log.info("Selected '{}' from dropdown with label '{}'", valueToSelect, labelText);
+
+        } catch (Exception e) {
+            log.error("Dropdown selection failed for label '{}': {}", labelText, e.getMessage());
+            throw new RuntimeException("Failed to select value from dropdown", e);
         }
     }
 

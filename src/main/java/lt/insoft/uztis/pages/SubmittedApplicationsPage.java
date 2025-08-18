@@ -254,8 +254,8 @@ public class SubmittedApplicationsPage extends UztisPage {
     @FindBy(css = "common-button:nth-of-type(2) > .btn.btn--primary")
     WebElement buttonRemoveConfirmation;
 
-    @FindBy(xpath = "(//button[contains(@class, 'i-forms-repeater-button-add')])[5]")
-    WebElement buttonAddJobPlace;
+//    @FindBy(xpath = "(//button[contains(@class, 'i-forms-repeater-button-add')])[5]")
+//    WebElement buttonAddJobPlace;
 
     @FindBy(xpath = "(//input[contains(@class, 'mat-datepicker-input')])[3]")
     WebElement inputProjectDateFrom;
