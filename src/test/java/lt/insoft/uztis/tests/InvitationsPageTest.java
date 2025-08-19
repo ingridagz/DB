@@ -230,7 +230,6 @@ public class InvitationsPageTest extends UztisPageTest {
 
             String label = "Finansavimo straipsnis";
             String article = "KarjerON, ESF lėšos";
-
             invitationsPage.selectDropdownLabel(label, article);
             log.debug("Selected the article: '{}'", article);
 
@@ -547,6 +546,11 @@ public class InvitationsPageTest extends UztisPageTest {
             invitationsPage.enterBudget(newBudget);
             log.debug("Entered budget: '{}'.", newBudget);
 
+            String label = "Finansavimo straipsnis";
+            String article = "KarjerON, ESF lėšos";
+            invitationsPage.selectDropdownLabel(label, article);
+            log.debug("Selected the article: '{}'", article);
+
             String newText1 = "Aprašo tekstas";
             invitationsPage.enterDescription(newText1);
             log.debug("Entered description text: '{}'.", newText1);
@@ -689,6 +693,11 @@ public class InvitationsPageTest extends UztisPageTest {
             String newGradeThirdWeight = "0,55";
             invitationsPage.enterThirdEvaluationGradeWeight(newGradeThirdWeight);
             log.debug("Entered third evaluation grade weight: '{}'.", newGradeThirdWeight);
+
+            String label = "Finansavimo straipsnis";
+            String article = "KarjerON, ESF lėšos";
+            invitationsPage.selectDropdownLabel(label, article);
+            log.debug("Selected the article: '{}'", article);
 
             String newBudget1 = "2000";
             invitationsPage.enterBudgetKaunas(newBudget1);
