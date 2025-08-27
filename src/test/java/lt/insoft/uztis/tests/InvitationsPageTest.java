@@ -172,29 +172,21 @@ public class InvitationsPageTest extends UztisPageTest {
             invitationsPage.clickButtonAdd();
             log.debug("Added additional values.");
 
-            String valueToSelect1 = "Didžiausia galima paramos suma aplinkos darbo vietai, Eur";
-            invitationsPage.selectDropdownAmountInformation1(valueToSelect1);
-            log.debug("Selected the value: '{}'", valueToSelect1);
+            String option1 = "Didžiausia galima paramos suma aplinkos darbo vietai, Eur";
+            String option2 = "Didžiausia galima paramos suma, Eur";
+            String option3 = "Didžiausia galima paramos suma vienai darbo vietai, Eur";
 
-            String valueToSelect2 = "Didžiausia galima paramos suma, Eur";
-            invitationsPage.selectDropdownAmountInformation2(valueToSelect2);
-            log.debug("Selected the value: '{}'", valueToSelect2);
-
-            String valueToSelect3 = "Didžiausia galima paramos suma vienai darbo vietai, Eur";
-            invitationsPage.selectDropdownAmountInformation3(valueToSelect3);
-            log.debug("Selected the value: '{}'", valueToSelect3);
+            invitationsPage.selectAmountInfo1(option1);
+            invitationsPage.selectAmountInfo2(option2);
+            invitationsPage.selectAmountInfo3(option3);
 
             String value1 = "11000";
-            invitationsPage.enterValueOne(value1);
-            log.debug("Entered value: {}", value1);
-
             String value2 = "12000";
-            invitationsPage.enterValueTwo(value2);
-            log.debug("Entered value: {}", value2);
-
             String value3 = "13000";
-            invitationsPage.enterValueThree(value3);
-            log.debug("Entered value: {}", value3);
+
+            invitationsPage.enterAmountValueOne(value1);
+            invitationsPage.enterAmountValueTwo(value2);
+            invitationsPage.enterAmountValueThree(value3);
 
             invitationsPage.setCheckbox(invitationsPage.checkboxConfirm, true);
             log.debug("Checked 'Legal Entities' checkbox.");
@@ -208,50 +200,36 @@ public class InvitationsPageTest extends UztisPageTest {
             invitationsPage.setCheckbox(invitationsPage.checkboxPersonsRegisteredWithEmploymentServiceAsEmployers, true);
             log.debug("Checked 'Persons Registered as Employers' checkbox.");
 
-            String newGradeSecond = "5";
-            invitationsPage.enterSecondEvaluationGrade(newGradeSecond);
-            log.debug("Entered second evaluation grade: '{}'.", newGradeSecond);
-
-            String newGradeThird = "6";
-            invitationsPage.enterThirdEvaluationGrade(newGradeThird);
-            log.debug("Entered third evaluation grade: '{}'.", newGradeThird);
-
-            String newGradeSecondWeight = "0,45";
-            invitationsPage.enterSecondEvaluationGradeWeight(newGradeSecondWeight);
-            log.debug("Entered second evaluation grade weight: '{}'.", newGradeSecondWeight);
-
-            String newGradeThirdWeight = "0,55";
-            invitationsPage.enterThirdEvaluationGradeWeight(newGradeThirdWeight);
-            log.debug("Entered third evaluation grade weight: '{}'.", newGradeThirdWeight);
-
-            String newBudget = "2000";
-            invitationsPage.enterBudget(newBudget);
-            log.debug("Entered budget: '{}'.", newBudget);
+            invitationsPage.enterEvaluationValue("secondGrade", "5");
+            invitationsPage.enterEvaluationValue("thirdGrade", "6");
+            invitationsPage.enterEvaluationValue("secondWeight", "0.45");
+            invitationsPage.enterEvaluationValue("thirdWeight", "0.55");
+            invitationsPage.enterEvaluationValue("budget", "2000");
 
             String label = "Finansavimo straipsnis";
             String article = "KarjerON, ESF lėšos";
             invitationsPage.selectDropdownLabel(label, article);
             log.debug("Selected the article: '{}'", article);
 
-            String newText1 = "Aprašo tekstas";
-            invitationsPage.enterDescription(newText1);
-            log.debug("Entered description text: '{}'.", newText1);
+            String descriptionText = "Aprašo tekstas";
+            invitationsPage.enterText(InvitationsPage.Field.DESCRIPTION, descriptionText);
+            log.debug("Entered description text: '{}'.", descriptionText);
 
-            String newText2 = "Pareiškėjų tekstas";
-            invitationsPage.enterApplicants(newText2);
-            log.debug("Entered applicants text: '{}'.", newText2);
+            String applicantsText = "Pareiškėjų tekstas";
+            invitationsPage.enterText(InvitationsPage.Field.APPLICANTS, applicantsText);
+            log.debug("Entered applicants text: '{}'.", applicantsText);
 
-            String newText3 = "Išlaidų tekstas";
-            invitationsPage.enterExpenditures(newText3);
-            log.debug("Entered expenditures text: '{}'.", newText3);
+            String expendituresText = "Išlaidų tekstas";
+            invitationsPage.enterText(InvitationsPage.Field.EXPENDITURES, expendituresText);
+            log.debug("Entered expenditures text: '{}'.", expendituresText);
 
-            String newText4 = "Teisės aktų tekstas";
-            invitationsPage.enterActs(newText4);
-            log.debug("Entered legislation text: '{}'.", newText4);
+            String actsText = "Teisės aktų tekstas";
+            invitationsPage.enterText(InvitationsPage.Field.ACTS, actsText);
+            log.debug("Entered legislation text: '{}'.", actsText);
 
-            String newText5 = "Mokymų tekstas";
-            invitationsPage.enterEducation(newText5);
-            log.debug("Entered education text: '{}'.", newText5);
+            String educationText = "Mokymų tekstas";
+            invitationsPage.enterText(InvitationsPage.Field.EDUCATION, educationText);
+            log.debug("Entered education text: '{}'.", educationText);
 
             invitationsPage.uploadFile();
             log.debug("File uploaded.");
@@ -479,7 +457,7 @@ public class InvitationsPageTest extends UztisPageTest {
             invitationsPage.selectValueFromApplication(codeText);
             log.debug("Selected section by code: '{}'.", codeText);
 
-            String valueToSelect = "1";
+            String valueToSelect = "4";
             invitationsPage.selectValueByListInvitationNumber(valueToSelect);
             log.debug("Selected invitation number from the list.");
 
@@ -506,29 +484,21 @@ public class InvitationsPageTest extends UztisPageTest {
             invitationsPage.clickButtonAdd();
             log.debug("Added additional values.");
 
-            String valueToSelect1 = "Didžiausia galima paramos suma aplinkos darbo vietai, Eur";
-            invitationsPage.selectDropdownAmountInformation1(valueToSelect1);
-            log.debug("Selected the value: '{}'", valueToSelect1);
+            String option1 = "Didžiausia galima paramos suma aplinkos darbo vietai, Eur";
+            String option2 = "Didžiausia galima paramos suma, Eur";
+            String option3 = "Didžiausia galima paramos suma vienai darbo vietai, Eur";
 
-            String valueToSelect2 = "Didžiausia galima paramos suma, Eur";
-            invitationsPage.selectDropdownAmountInformation2(valueToSelect2);
-            log.debug("Selected the value: '{}'", valueToSelect2);
-
-            String valueToSelect3 = "Didžiausia galima paramos suma vienai darbo vietai, Eur";
-            invitationsPage.selectDropdownAmountInformation3(valueToSelect3);
-            log.debug("Selected the value: '{}'", valueToSelect3);
+            invitationsPage.selectAmountInfo1(option1);
+            invitationsPage.selectAmountInfo2(option2);
+            invitationsPage.selectAmountInfo3(option3);
 
             String value1 = "11000";
-            invitationsPage.enterValueOne(value1);
-            log.debug("Entered value: {}", value1);
-
             String value2 = "12000";
-            invitationsPage.enterValueTwo(value2);
-            log.debug("Entered value: {}", value2);
-
             String value3 = "13000";
-            invitationsPage.enterValueThree(value3);
-            log.debug("Entered value: {}", value3);
+
+            invitationsPage.enterAmountValueOne(value1);
+            invitationsPage.enterAmountValueTwo(value2);
+            invitationsPage.enterAmountValueThree(value3);
 
             invitationsPage.setCheckbox(invitationsPage.checkboxConfirm, true);
             log.debug("Checked 'Legal Entities' checkbox.");
@@ -542,34 +512,32 @@ public class InvitationsPageTest extends UztisPageTest {
             invitationsPage.setCheckbox(invitationsPage.checkboxPersonsRegisteredWithEmploymentServiceAsEmployers, true);
             log.debug("Checked 'Persons Registered as Employers' checkbox.");
 
-            String newBudget = "2000";
-            invitationsPage.enterBudget(newBudget);
-            log.debug("Entered budget: '{}'.", newBudget);
+            invitationsPage.enterEvaluationValue("budget", "2000");
 
             String label = "Finansavimo straipsnis";
             String article = "KarjerON, ESF lėšos";
             invitationsPage.selectDropdownLabel(label, article);
             log.debug("Selected the article: '{}'", article);
 
-            String newText1 = "Aprašo tekstas";
-            invitationsPage.enterDescription(newText1);
-            log.debug("Entered description text: '{}'.", newText1);
+            String descriptionText = "Aprašo tekstas";
+            invitationsPage.enterText(InvitationsPage.Field.DESCRIPTION, descriptionText);
+            log.debug("Entered description text: '{}'.", descriptionText);
 
-            String newText2 = "Pareiškėjų tekstas";
-            invitationsPage.enterApplicants(newText2);
-            log.debug("Entered applicants text: '{}'.", newText2);
+            String applicantsText = "Pareiškėjų tekstas";
+            invitationsPage.enterText(InvitationsPage.Field.APPLICANTS, applicantsText);
+            log.debug("Entered applicants text: '{}'.", applicantsText);
 
-            String newText3 = "Išlaidų tekstas";
-            invitationsPage.enterExpenditures(newText3);
-            log.debug("Entered expenditures text: '{}'.", newText3);
+            String expendituresText = "Išlaidų tekstas";
+            invitationsPage.enterText(InvitationsPage.Field.EXPENDITURES, expendituresText);
+            log.debug("Entered expenditures text: '{}'.", expendituresText);
 
-            String newText4 = "Teisės aktų tekstas";
-            invitationsPage.enterActs(newText4);
-            log.debug("Entered legislation text: '{}'.", newText4);
+            String actsText = "Teisės aktų tekstas";
+            invitationsPage.enterText(InvitationsPage.Field.ACTS, actsText);
+            log.debug("Entered legislation text: '{}'.", actsText);
 
-            String newText5 = "Mokymų tekstas";
-            invitationsPage.enterEducation(newText5);
-            log.debug("Entered education text: '{}'.", newText5);
+            String educationText = "Mokymų tekstas";
+            invitationsPage.enterText(InvitationsPage.Field.EDUCATION, educationText);
+            log.debug("Entered education text: '{}'.", educationText);
 
             invitationsPage.uploadFile();
             log.debug("File uploaded.");
@@ -642,29 +610,21 @@ public class InvitationsPageTest extends UztisPageTest {
             invitationsPage.clickButtonAdd();
             log.debug("Added additional values.");
 
-            String valueToSelect1 = "Didžiausia galima paramos suma aplinkos darbo vietai, Eur";
-            invitationsPage.selectDropdownAmountInformation1(valueToSelect1);
-            log.debug("Selected the value: '{}'", valueToSelect1);
+            String option1 = "Didžiausia galima paramos suma aplinkos darbo vietai, Eur";
+            String option2 = "Didžiausia galima paramos suma, Eur";
+            String option3 = "Didžiausia galima paramos suma vienai darbo vietai, Eur";
 
-            String valueToSelect2 = "Didžiausia galima paramos suma, Eur";
-            invitationsPage.selectDropdownAmountInformation2(valueToSelect2);
-            log.debug("Selected the value: '{}'", valueToSelect2);
-
-            String valueToSelect3 = "Didžiausia galima paramos suma vienai darbo vietai, Eur";
-            invitationsPage.selectDropdownAmountInformation3(valueToSelect3);
-            log.debug("Selected the value: '{}'", valueToSelect3);
+            invitationsPage.selectAmountInfo1(option1);
+            invitationsPage.selectAmountInfo2(option2);
+            invitationsPage.selectAmountInfo3(option3);
 
             String value1 = "11000";
-            invitationsPage.enterValueOne(value1);
-            log.debug("Entered value: {}", value1);
-
             String value2 = "12000";
-            invitationsPage.enterValueTwo(value2);
-            log.debug("Entered value: {}", value2);
-
             String value3 = "13000";
-            invitationsPage.enterValueThree(value3);
-            log.debug("Entered value: {}", value3);
+
+            invitationsPage.enterAmountValueOne(value1);
+            invitationsPage.enterAmountValueTwo(value2);
+            invitationsPage.enterAmountValueThree(value3);
 
             invitationsPage.setCheckbox(invitationsPage.checkboxConfirm, true);
             log.debug("Checked 'Legal Entities' checkbox.");
@@ -678,66 +638,51 @@ public class InvitationsPageTest extends UztisPageTest {
             invitationsPage.setCheckbox(invitationsPage.checkboxPersonsRegisteredWithEmploymentServiceAsEmployers, false);
             log.debug("Checked 'Persons Registered as Employers' checkbox.");
 
-            String newGradeSecond = "5";
-            invitationsPage.enterSecondEvaluationGrade(newGradeSecond);
-            log.debug("Entered second evaluation grade: '{}'.", newGradeSecond);
-
-            String newGradeThird = "6";
-            invitationsPage.enterThirdEvaluationGrade(newGradeThird);
-            log.debug("Entered third evaluation grade: '{}'.", newGradeThird);
-
-            String newGradeSecondWeight = "0,45";
-            invitationsPage.enterSecondEvaluationGradeWeight(newGradeSecondWeight);
-            log.debug("Entered second evaluation grade weight: '{}'.", newGradeSecondWeight);
-
-            String newGradeThirdWeight = "0,55";
-            invitationsPage.enterThirdEvaluationGradeWeight(newGradeThirdWeight);
-            log.debug("Entered third evaluation grade weight: '{}'.", newGradeThirdWeight);
+            invitationsPage.enterEvaluationValue("secondGrade", "5");
+            invitationsPage.enterEvaluationValue("thirdGrade", "6");
+            invitationsPage.enterEvaluationValue("secondWeight", "0.45");
+            invitationsPage.enterEvaluationValue("thirdWeight", "0.55");
+            invitationsPage.enterEvaluationValue("budget", "2000");
 
             String label = "Finansavimo straipsnis";
             String article = "KarjerON, ESF lėšos";
             invitationsPage.selectDropdownLabel(label, article);
             log.debug("Selected the article: '{}'", article);
 
-            String newBudget1 = "2000";
-            invitationsPage.enterBudgetKaunas(newBudget1);
-            log.debug("Entered budget: '{}'.", newBudget1);
+            log.info("Įvedame biudžetą miestui KAUNAS: 10000");
+            invitationsPage.enterBudget(InvitationsPage.City.KAUNAS, "2000");
 
-            String newBudget2 = "2000";
-            invitationsPage.enterBudgetKlaipeda(newBudget2);
-            log.debug("Entered budget: '{}'.", newBudget2);
+            log.info("Įvedame biudžetą miestui KLAIPEDA: 8000");
+            invitationsPage.enterBudget(InvitationsPage.City.KLAIPEDA, "2000");
 
-            String newBudget3 = "2000";
-            invitationsPage.enterBudgetPanevezys(newBudget3);
-            log.debug("Entered budget: '{}'.", newBudget3);
+            log.info("Įvedame biudžetą miestui PANEVEZYS: 5000");
+            invitationsPage.enterBudget(InvitationsPage.City.PANEVEZYS, "2000");
 
-            String newBudget4 = "2000";
-            invitationsPage.enterBudgetSiauliai(newBudget4);
-            log.debug("Entered budget: '{}'.", newBudget4);
+            log.info("Įvedame biudžetą miestui SIAULIAI: 6000");
+            invitationsPage.enterBudget(InvitationsPage.City.SIAULIAI, "2000");
 
-            String newBudget5 = "2000";
-            invitationsPage.enterBudgetVilnius(newBudget5);
-            log.debug("Entered budget: '{}'.", newBudget5);
+            log.info("Įvedame biudžetą miestui VILNIUS: 12000");
+            invitationsPage.enterBudget(InvitationsPage.City.VILNIUS, "2000");
 
-            String newText1 = "Aprašo tekstas";
-            invitationsPage.enterDescription(newText1);
-            log.debug("Entered description text: '{}'.", newText1);
+            String descriptionText = "Aprašo tekstas";
+            invitationsPage.enterText(InvitationsPage.Field.DESCRIPTION, descriptionText);
+            log.debug("Entered description text: '{}'.", descriptionText);
 
-            String newText2 = "Pareiškėjų tekstas";
-            invitationsPage.enterApplicants(newText2);
-            log.debug("Entered applicants text: '{}'.", newText2);
+            String applicantsText = "Pareiškėjų tekstas";
+            invitationsPage.enterText(InvitationsPage.Field.APPLICANTS, applicantsText);
+            log.debug("Entered applicants text: '{}'.", applicantsText);
 
-            String newText3 = "Išlaidų tekstas";
-            invitationsPage.enterExpenditures(newText3);
-            log.debug("Entered expenditures text: '{}'.", newText3);
+            String expendituresText = "Išlaidų tekstas";
+            invitationsPage.enterText(InvitationsPage.Field.EXPENDITURES, expendituresText);
+            log.debug("Entered expenditures text: '{}'.", expendituresText);
 
-            String newText4 = "Teisės aktų tekstas";
-            invitationsPage.enterActs(newText4);
-            log.debug("Entered legislation text: '{}'.", newText4);
+            String actsText = "Teisės aktų tekstas";
+            invitationsPage.enterText(InvitationsPage.Field.ACTS, actsText);
+            log.debug("Entered legislation text: '{}'.", actsText);
 
-            String newText5 = "Mokymų tekstas";
-            invitationsPage.enterEducation(newText5);
-            log.debug("Entered education text: '{}'.", newText5);
+            String educationText = "Mokymų tekstas";
+            invitationsPage.enterText(InvitationsPage.Field.EDUCATION, educationText);
+            log.debug("Entered education text: '{}'.", educationText);
 
             invitationsPage.uploadFile();
             log.debug("File uploaded.");

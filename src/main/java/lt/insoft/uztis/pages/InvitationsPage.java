@@ -20,9 +20,12 @@ import static org.slf4j.LoggerFactory.getLogger;
 public class InvitationsPage extends UztisPage {
 
     private static final Logger log = getLogger(lookup().lookupClass());
+    private WebDriverWait wait;
 
     public InvitationsPage(WebDriver driver) {
         super(driver);
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
     }
 
 
@@ -337,127 +340,37 @@ public class InvitationsPage extends UztisPage {
         buttonAdd.click();
     }
 
-    public void selectDropdown(WebElement dropdownButton, String valueToSelect) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        log.info("Clicking dropdown button.");
+    public void selectDropdownAmountInformation(WebElement dropdownButton, String valueToSelect) {
+        log.info("Located the dropdown button.");
         wait.until(ExpectedConditions.elementToBeClickable(dropdownButton)).click();
 
-        List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option")));
+        List<WebElement> options = wait.until(
+                ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option"))
+        );
 
         options.stream()
                 .filter(option -> option.getText().trim().equalsIgnoreCase(valueToSelect))
                 .findFirst()
                 .orElseThrow(() -> new RuntimeException("Dropdown value '" + valueToSelect + "' not found."))
                 .click();
-
-        log.info("Selected value '{}' from dropdown", valueToSelect);
 
         try {
             wait.until(ExpectedConditions.attributeToBe(dropdownButton, "aria-expanded", "false"));
         } catch (TimeoutException e) {
-            log.error("Timeout waiting for dropdown to close.");
-        }
-    }
-
-    public void selectDropdownAmountInformation1(String valueToSelect) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        log.info("Located the dropdown button.");
-        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonAmountsInformation1)).click();
-
-        List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option")));
-
-        options.stream()
-                .filter(option -> option.getText().trim().equalsIgnoreCase(valueToSelect))
-                .findFirst()
-                .orElseThrow(() -> new RuntimeException("Dropdown value '" + valueToSelect + "' not found."))
-                .click();
-//        boolean optionSelected = false;
-//        for (WebElement option : options) {
-//            if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
-//                wait.until(ExpectedConditions.elementToBeClickable(option)).click();
-//                optionSelected = true;
-//                log.info("Successfully selected the value: '{}'", valueToSelect);
-//                break;
-//            }
-//        }
-//
-//        if (!optionSelected) {
-//            log.warn("Dropdown value '{}' not found.", valueToSelect);
-//        }
-
-        try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonAmountsInformation1, "aria-expanded", "false"));
-        } catch (TimeoutException e) {
             log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
         }
     }
 
-    public void selectDropdownAmountInformation2(String valueToSelect) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        log.info("Located the dropdown button.");
-        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonAmountsInformation2)).click();
-        List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option")));
-
-        options.stream()
-                .filter(option -> option.getText().trim().equalsIgnoreCase(valueToSelect))
-                .findFirst()
-                .orElseThrow(() -> new RuntimeException("Dropdown value '" + valueToSelect + "' not found."))
-                .click();
-//        boolean optionSelected = false;
-//        for (WebElement option : options) {
-//            if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
-//                wait.until(ExpectedConditions.elementToBeClickable(option)).click();
-//                optionSelected = true;
-//                log.info("Successfully selected the value: '{}'", valueToSelect);
-//                break;
-//            }
-//        }
-//
-//        if (!optionSelected) {
-//            log.warn("Dropdown value '{}' not found.", valueToSelect);
-//        }
-
-        try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonAmountsInformation2, "aria-expanded", "false"));
-        } catch (TimeoutException e) {
-            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
-        }
+    public void selectAmountInfo1(String value) {
+        selectDropdownAmountInformation(dropdownButtonAmountsInformation1, value);
     }
 
-    public void selectDropdownAmountInformation3(String valueToSelect) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    public void selectAmountInfo2(String value) {
+        selectDropdownAmountInformation(dropdownButtonAmountsInformation2, value);
+    }
 
-        log.info("Located the dropdown button.");
-        wait.until(ExpectedConditions.elementToBeClickable(dropdownButtonAmountsInformation3)).click();
-        List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//mat-option")));
-
-        options.stream()
-                .filter(option -> option.getText().trim().equalsIgnoreCase(valueToSelect))
-                .findFirst()
-                .orElseThrow(() -> new RuntimeException("Dropdown value '" + valueToSelect + "' not found."))
-                .click();
-//        boolean optionSelected = false;
-//        for (WebElement option : options) {
-//            if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
-//                wait.until(ExpectedConditions.elementToBeClickable(option)).click();
-//                optionSelected = true;
-//                log.info("Successfully selected the value: '{}'", valueToSelect);
-//                break;
-//            }
-//        }
-//
-//        if (!optionSelected) {
-//            log.warn("Dropdown value '{}' not found.", valueToSelect);
-//        }
-
-        try {
-            wait.until(ExpectedConditions.attributeToBe(dropdownButtonAmountsInformation3, "aria-expanded", "false"));
-        } catch (TimeoutException e) {
-            log.error("Timeout while waiting for dropdown to close with aria-expanded = 'false'.");
-        }
+    public void selectAmountInfo3(String value) {
+        selectDropdownAmountInformation(dropdownButtonAmountsInformation3, value);
     }
 
     public void selectDropdownLabel(String labelText, String valueToSelect) {
@@ -505,37 +418,27 @@ public class InvitationsPage extends UztisPage {
         }
     }
 
-    public void enterValueOne(String inputValue) {
+    public void enterInvitationAmountValue(WebElement inputField, String inputValue) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
-            wait.until(ExpectedConditions.elementToBeClickable(amountInputOne));
-            amountInputOne.clear();
-            amountInputOne.sendKeys(inputValue);
+            wait.until(ExpectedConditions.elementToBeClickable(inputField));
+            inputField.clear();
+            inputField.sendKeys(inputValue);
         } catch (TimeoutException e) {
-            throw new RuntimeException("Input field for 'Reikšmė' is not interactable or timed out.", e);
+            throw new RuntimeException("Input field is not interactable or timed out.", e);
         }
     }
 
-    public void enterValueTwo(String inputValue) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(amountInputTwo));
-            amountInputTwo.clear();
-            amountInputTwo.sendKeys(inputValue);
-        } catch (TimeoutException e) {
-            throw new RuntimeException("Input field for 'Reikšmė' is not interactable or timed out.", e);
-        }
+    public void enterAmountValueOne(String value) {
+        enterInvitationAmountValue(amountInputOne, value);
     }
 
-    public void enterValueThree(String inputValue) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(amountInputThree));
-            amountInputThree.clear();
-            amountInputThree.sendKeys(inputValue);
-        } catch (TimeoutException e) {
-            throw new RuntimeException("Input field for 'Reikšmė' is not interactable or timed out.", e);
-        }
+    public void enterAmountValueTwo(String value) {
+        enterInvitationAmountValue(amountInputTwo, value);
+    }
+
+    public void enterAmountValueThree(String value) {
+        enterInvitationAmountValue(amountInputThree, value);
     }
 
     public void setCheckbox(WebElement checkbox, boolean shouldBeChecked) {
@@ -544,64 +447,76 @@ public class InvitationsPage extends UztisPage {
         }
     }
 
-    public void enterSecondEvaluationGrade(String grade) {
-        this.inputSecondEvaluationGrade.sendKeys(grade);
+    public void enterEvaluationValue(String field, String value) {
+        switch (field) {
+            case "secondGrade":
+                inputSecondEvaluationGrade.sendKeys(value);
+                break;
+            case "thirdGrade":
+                inputThirdEvaluationGrade.sendKeys(value);
+                break;
+            case "secondWeight":
+                inputSecondEvaluationGradeWeight.sendKeys(value);
+                break;
+            case "thirdWeight":
+                inputThirdEvaluationGradeWeight.sendKeys(value);
+                break;
+            case "budget":
+                inputBudget.sendKeys(value);
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown field: " + field);
+        }
     }
 
-    public void enterThirdEvaluationGrade(String grade) {
-        this.inputThirdEvaluationGrade.sendKeys(grade);
+    public enum Field {
+        DESCRIPTION, APPLICANTS, EXPENDITURES, ACTS, EDUCATION
     }
 
-    public void enterSecondEvaluationGradeWeight(String grade) {
-        this.inputSecondEvaluationGradeWeight.sendKeys(grade);
+    public void enterText(Field field, String text) {
+        WebElement inputField;
+
+        switch (field) {
+            case DESCRIPTION -> inputField = inputDescription;
+            case APPLICANTS -> inputField = inputApplicants;
+            case EXPENDITURES -> inputField = inputExpenditures;
+            case ACTS -> inputField = inputActs;
+            case EDUCATION -> inputField = inputEducation;
+            default -> throw new IllegalArgumentException("Nežinomas laukas: " + field);
+        }
+
+        log.info("Įvedame tekstą į lauką {}: '{}'", field, text);
+
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(inputField));
+            inputField.clear();
+            inputField.sendKeys(text);
+        } catch (TimeoutException e) {
+            log.error("Laukelis {} negalima pasiekti arba timeout.", field);
+            throw new RuntimeException("Laukelis " + field + " negalima pasiekti.", e);
+        }
     }
 
-    public void enterThirdEvaluationGradeWeight(String gradeWeight) {
-        this.inputThirdEvaluationGradeWeight.sendKeys(gradeWeight);
+    public enum City {
+        KAUNAS, KLAIPEDA, PANEVEZYS, SIAULIAI, VILNIUS
     }
 
-    public void enterBudget(String amount) {
-        this.inputBudget.sendKeys(amount);
-    }
+    public void enterBudget(City city, String amount) {
+        WebElement inputField;
+        switch (city) {
+            case KAUNAS -> inputField = inputBudgetKaunas;
+            case KLAIPEDA -> inputField = inputBudgetKlaipeda;
+            case PANEVEZYS -> inputField = inputBudgetPanevezys;
+            case SIAULIAI -> inputField = inputBudgetSiauliai;
+            case VILNIUS -> inputField = inputBudgetVilnius;
+            default -> throw new IllegalArgumentException("Nežinomas miestas: " + city);
+        }
 
-    public void enterBudgetKaunas(String amount) {
-        this.inputBudgetKaunas.sendKeys(amount);
-    }
+        log.info("Įvedame biudžetą miestui {}: '{}'", city, amount);
 
-    public void enterBudgetKlaipeda(String amount) {
-        this.inputBudgetKlaipeda.sendKeys(amount);
-    }
-
-    public void enterBudgetPanevezys(String amount) {
-        this.inputBudgetPanevezys.sendKeys(amount);
-    }
-
-    public void enterBudgetSiauliai(String amount) {
-        this.inputBudgetSiauliai.sendKeys(amount);
-    }
-
-    public void enterBudgetVilnius(String amount) {
-        this.inputBudgetVilnius.sendKeys(amount);
-    }
-
-    public void enterDescription(String text1) {
-        this.inputDescription.sendKeys(text1);
-    }
-
-    public void enterApplicants(String text2) {
-        this.inputApplicants.sendKeys(text2);
-    }
-
-    public void enterExpenditures(String text3) {
-        this.inputExpenditures.sendKeys(text3);
-    }
-
-    public void enterActs(String text4) {
-        this.inputActs.sendKeys(text4);
-    }
-
-    public void enterEducation(String text5) {
-        this.inputEducation.sendKeys(text5);
+        wait.until(ExpectedConditions.elementToBeClickable(inputField));
+        inputField.clear();
+        inputField.sendKeys(amount);
     }
 
     //    arba C:\Users\ingrida.zadorozniene\Desktop\Asm\automatinis\IngridaZ_egzaminas\files\TXT.txt
