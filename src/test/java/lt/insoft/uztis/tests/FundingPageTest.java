@@ -59,7 +59,7 @@ public class FundingPageTest extends UztisPageTest{
     }
 
     @BeforeEach
-    void setUpInvitationPage() {
+    void setUpFundingPage() {
         invitationsPage = new InvitationsPage(driver);
         applicationFormsPage = new ApplicationFormsPage(driver);
         submittedApplicationsPage = new SubmittedApplicationsPage(driver);

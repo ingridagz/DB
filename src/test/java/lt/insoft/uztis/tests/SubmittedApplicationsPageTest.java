@@ -64,7 +64,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
 
     @BeforeEach
-    void setUpInvitationPage() {
+    void setUpSubmittedApplicationsPage() {
         invitationsPage = new InvitationsPage(driver);
         applicationFormsPage = new ApplicationFormsPage(driver);
         submittedApplicationsPage = new SubmittedApplicationsPage(driver);

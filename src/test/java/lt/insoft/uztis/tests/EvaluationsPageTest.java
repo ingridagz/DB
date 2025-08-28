@@ -39,7 +39,7 @@ public class EvaluationsPageTest extends UztisPageTest{
     }
 
     @BeforeEach
-    void setUpInvitationPage() {
+    void setUpEvaluationPage() {
         invitationsPage = new InvitationsPage(driver);
         applicationFormsPage = new ApplicationFormsPage(driver);
         submittedApplicationsPage = new SubmittedApplicationsPage(driver);
