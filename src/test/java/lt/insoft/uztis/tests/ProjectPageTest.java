@@ -67,8 +67,8 @@ public class ProjectPageTest extends UztisPageTest {
     }
 
     @Test
-    void testRunProject() {
-        log.info("Starting test:'testRunProject'");
+    void testRunProjectUntil_VFA() {
+        log.info("Starting test:'testRunProjectUntil_VFA'");
 
         try {
             testNavigateToProjectsPage();
@@ -76,8 +76,19 @@ public class ProjectPageTest extends UztisPageTest {
             projectPage.clickProjectRow();
             log.debug("Clicked on last project.");
 
-            projectPage.clickButtonEditProject();
+            projectPage.clickButtonEditProject_Document();
             log.debug("Clicked button 'Edit'.");
+
+            applicationFormsPage.selectValueFromDropdown(projectPage.getDropdownButtonOrderStatus(), "Vykdomas");
+            stay();
+            applicationFormsPage.selectValueFromDropdown(projectPage.getDropdownButtonAccountStatus(), "Vykdomas");
+            stay();
+            applicationFormsPage.selectValueFromDropdown(projectPage.getDropdownButtonKOT_Status(), "Vykdomas");
+            stay();
+            applicationFormsPage.selectValueFromDropdown(projectPage.getDropdownButtonContractStatus(), "Vykdomas");
+            stay();
+            applicationFormsPage.selectValueFromDropdown(projectPage.getDropdownButtonAdvancePaymentStatus(), "Vykdomas");
+            stay();
 
             projectPage.clickButtonEditConfirmProjectDocument();
             log.debug("Clicked button 'Confirm'.");
@@ -85,9 +96,9 @@ public class ProjectPageTest extends UztisPageTest {
             applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
             log.info("Verified success message");
 
-            log.info("Test 'testRunProject' completed successfully.");
+            log.info("Test 'testRunProjectUntil_VFA' completed successfully.");
         } catch (AssertionError | Exception e) {
-            log.error("Test 'testRunProject' failed with error: {}", e.getMessage(), e);
+            log.error("Test 'testRunProjectUntil_VFA' failed with error: {}", e.getMessage(), e);
             throw e;
         }
     }
@@ -102,24 +113,20 @@ public class ProjectPageTest extends UztisPageTest {
             projectPage.clickProjectRow();
             log.debug("Clicked on last project.");
 
-            projectPage.clickButtonEditProject();
-            log.debug("Clicked button 'Edit'.");
-
-            projectPage.clickButtonEditConfirmProjectDocument();
-            log.debug("Clicked button 'Confirm'.");
-
-            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
-            log.info("Verified success message");
-
             projectPage.clickOrderDocument();
             log.debug("Clicked on order document.");
 
             projectPage.clickButtonSaveDocumentDraft();
             log.debug("Clicked button 'SaveDraft'.");
 
-            projectPage.clickButtonEditProject();
+            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            log.info("Verified success message");
+
+            stay();
+
+            projectPage.clickButtonEditProject_Document();
             log.debug("Clicked button 'Edit'.");
-//
+
             invitationsPage.uploadFile();
             log.debug("File uploaded.");
 
@@ -138,12 +145,100 @@ public class ProjectPageTest extends UztisPageTest {
             projectPage.clickButtonReview();
             log.debug("Clicked button 'Review'.");
 
-            //Teikti
-            //Perziureti
+            projectPage.clickButtonConfirmReview();
+            log.debug("Clicked button 'ConfirmReview'.");
+
+            //Perziureti is isorinio portalo
 
             log.info("Test 'testFillProjectOrderDocument' completed successfully.");
         } catch (AssertionError | Exception e) {
             log.error("Test 'testFillProjectOrderDocument' failed with error: {}", e.getMessage(), e);
+            throw e;
+        }
+    }
+
+    @Test
+    void testFillProjectAccountDocument() {
+        log.info("Starting test:'testFillProjectAccountDocument'");
+
+        try {
+            testNavigateToProjectsPage();
+
+            projectPage.clickProjectRow();
+            log.debug("Clicked on last project.");
+
+            projectPage.clickAccountDocument();
+            log.debug("Clicked on account document.");
+
+            projectPage.enterAccountValue("LT000000000000000000");
+
+            Assertions.assertEquals("LT000000000000000000", projectPage.getInputAccount().getAttribute("value"));
+
+            invitationsPage.uploadFile();
+            log.debug("File uploaded.");
+
+            projectPage.clickButtonSaveDocumentDraft();
+            log.debug("Clicked button 'SaveDraft'.");
+
+            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            log.info("Verified success message");
+
+            projectPage.clickButtonEditProject_Document();
+            log.debug("Clicked button 'Edit'.");
+
+            projectPage.clickButtonEditConfirmProjectDocument();
+            log.debug("Clicked button 'Confirm'.");
+
+            applicationFormsPage.verifySuccessMessage("Dokumentas sėkmingai patvirtintas.");
+            log.info("Verified success message");
+
+            log.info("Test 'testFillProjectAccountDocument' completed successfully.");
+        } catch (AssertionError | Exception e) {
+            log.error("Test 'testFillProjectAccountDocument' failed with error: {}", e.getMessage(), e);
+            throw e;
+        }
+    }
+
+    @Test
+    void testFillProjectContractDocument() {
+        log.info("Starting test:'testFillProjectContractDocument'");
+
+        try {
+            testNavigateToProjectsPage();
+
+            projectPage.clickProjectRow();
+            log.debug("Clicked on last project.");
+
+            projectPage.clickContractVUI_Document();
+
+            projectPage.enterPhoneValue("61200000");
+
+            projectPage.clickButtonSaveDocumentDraft();
+            log.debug("Clicked button 'SaveDraft'.");
+
+            applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
+            log.info("Verified success message");
+
+            stay();
+
+            projectPage.clickButtonEditProject_Document();
+            log.debug("Clicked button 'Edit'.");
+
+            projectPage.clickButtonEditConfirmProjectDocument();
+            log.debug("Clicked button 'Confirm'.");
+
+            applicationFormsPage.verifySuccessMessage("Dokumentas sėkmingai patvirtintas.");
+            log.info("Verified success message");
+
+            projectPage.clickButtonSendForSignature();
+            log.debug("Clicked button 'SendForSignature'.");
+
+            projectPage.clickButtonSign();
+            log.debug("Clicked button 'Sign'.");
+
+            log.info("Test 'testFillProjectContractDocument' completed successfully.");
+        } catch (AssertionError | Exception e) {
+            log.error("Test 'testFillProjectContractDocument' failed with error: {}", e.getMessage(), e);
             throw e;
         }
     }
