@@ -448,7 +448,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             //--------------------
 
-            submittedApplicationsPage.uploadFileStepFive();
+            submittedApplicationsPage.uploadFiles();
 
             submittedApplicationsPage.fillDocumentFields(10);
 
@@ -888,7 +888,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             //--------------------
 
-            submittedApplicationsPage.uploadFileStepFive();
+            submittedApplicationsPage.uploadFiles();
 
             submittedApplicationsPage.fillDocumentFields(8);
 
@@ -1218,7 +1218,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             //--------------------
 
-            submittedApplicationsPage.uploadFileStepFive();
+            submittedApplicationsPage.uploadFiles();
 
             submittedApplicationsPage.fillDocumentFields(9);
 

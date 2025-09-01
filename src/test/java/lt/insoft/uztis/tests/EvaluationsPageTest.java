@@ -16,7 +16,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 
 import java.time.Duration;
-import java.time.Instant;
 
 import static java.lang.invoke.MethodHandles.lookup;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -228,7 +227,7 @@ public class EvaluationsPageTest extends UztisPageTest{
             invitationsPage.clickButtonEdit();
             log.debug("Clicked 'Edit'.");
 
-            evaluationsPage.enterCommissionDate();
+            evaluationsPage.enterTodayDate();
             log.debug("Entered commission date.");
 
             evaluationsPage.clickRadioButtonWithoutCommissionNO();
@@ -343,7 +342,7 @@ public class EvaluationsPageTest extends UztisPageTest{
             invitationsPage.clickButtonEdit();
             log.debug("Clicked 'Edit'.");
 
-            evaluationsPage.enterCommissionDate();
+            evaluationsPage.enterTodayDate();
             log.debug("Entered commission date.");
 
             evaluationsPage.clickRadioButtonWithoutCommissionNO();

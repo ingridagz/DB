@@ -147,7 +147,7 @@ public class EvaluationsPage extends UztisPage{
 //---------------------
 
     @FindBy(xpath = "//input[contains(@class, 'mat-datepicker-input')]")
-    WebElement inputCommissionDate;
+    WebElement inputTodayDate;
 
     @FindBy(xpath = "//input[@value='false']")
     WebElement radioButtonWithoutCommissionNO;
@@ -453,20 +453,20 @@ public class EvaluationsPage extends UztisPage{
 
     //------------------------
 
-    public void enterCommissionDate() {
+    public void enterTodayDate() {
         LocalDate today = LocalDate.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String formattedTodayDate = today.format(formatter);
 
-        if (inputCommissionDate.isDisplayed() && inputCommissionDate.isEnabled()) {
+        if (inputTodayDate.isDisplayed() && inputTodayDate.isEnabled()) {
             // Patikriname, ar laukelis jau turi reikšmę
-            String currentValue = inputCommissionDate.getDomAttribute("value");
+            String currentValue = inputTodayDate.getDomAttribute("value");
 
             if (currentValue != null && !currentValue.isEmpty()) {
-                inputCommissionDate.clear(); // Jei reikšmė yra, ją ištriname
+                inputTodayDate.clear(); // Jei reikšmė yra, ją ištriname
             }
 
-            inputCommissionDate.sendKeys(formattedTodayDate); // Įrašome naują datą
+            inputTodayDate.sendKeys(formattedTodayDate); // Įrašome naują datą
         } else {
             throw new RuntimeException("Date input is not interactable.");
         }

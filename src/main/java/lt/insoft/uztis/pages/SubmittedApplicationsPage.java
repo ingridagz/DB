@@ -1444,7 +1444,7 @@ public void selectDropdownNecessaryForJobOne_DVP(String valueToSelect) {
         }
     }
 
-    public void uploadFileStepFive() {
+    public void uploadFiles() {
         String filePath = "C:\\Users\\ingrida.zadorozniene\\TXT.txt";
         List<WebElement> fileInputs = driver.findElements(By.xpath("//input[@type='file']"));
 
