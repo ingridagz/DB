@@ -642,7 +642,6 @@ public class InvitationsPageTest extends UztisPageTest {
             invitationsPage.enterEvaluationValue("thirdGrade", "6");
             invitationsPage.enterEvaluationValue("secondWeight", "0.45");
             invitationsPage.enterEvaluationValue("thirdWeight", "0.55");
-            invitationsPage.enterEvaluationValue("budget", "2000");
 
             String label = "Finansavimo straipsnis";
             String article = "KarjerON, ESF lėšos";
