@@ -233,7 +233,7 @@ public class EvaluationsPageTest extends UztisPageTest{
             evaluationsPage.clickRadioButtonWithoutCommissionNO();
             log.debug("Selected 'Without Commission' radio button.");
 
-            String chairmanName = "Adelė Kutienė";
+            String chairmanName = "Test Testauskas";
             evaluationsPage.selectValueByListChairmanName(chairmanName);
 
 //            String chairman = "Pirmininkas Pirmininkauskas";

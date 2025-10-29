@@ -76,7 +76,7 @@
 						},
 						"radioGroupContextHelp": {
 							"type": "STRING",
-							"function": ""
+							"function": "${data?.revisionData?.['clientAccountSelection'] ? data?.revisionData?.['clientAccountSelection'] : ''}"
 						},
 						"disablePersonSelection": {
 							"type": "SIMPLE",
@@ -84,7 +84,7 @@
 						},
 						"userSelectionContextHelp": {
 							"type": "STRING",
-							"function": ""
+							"function": "${data?.revisionData?.['clientAccountSelection'] ? data?.revisionData?.['clientAccountSelection'] : ''}"
 						},
 						"disableLegalEntitySelection": {
 							"type": "SIMPLE",
@@ -98,7 +98,7 @@
 						"label": null,
 						"visible": {
 							"type": "SIMPLE",
-							"function": "model.clientAccountSelection"
+							"function": "!!model.clientAccountSelection"
 						},
 						"bootstrapClasses": "",
 						"preserveLayoutInPreview": true
@@ -3627,21 +3627,6 @@
 							]
 						},
 						{
-							"component": "h3",
-							"data": {
-								"class": {
-									"type": "STRING",
-									"function": "pt-3"
-								},
-								"label": "Antraštė 3",
-								"textValue": {
-									"type": "STRING",
-									"function": "Iš viso sąmata darbo vietai Nr. ${row.index + 1}\t"
-								},
-								"preserveLayoutInPreview": true
-							}
-						},
-						{
 							"component": "container",
 							"data": {
 								"class": {
@@ -3654,6 +3639,21 @@
 								"preserveLayoutInPreview": true
 							},
 							"children": [
+								{
+									"component": "h3",
+									"data": {
+										"class": {
+											"type": "STRING",
+											"function": "pt-3"
+										},
+										"label": "Antraštė 3",
+										"textValue": {
+											"type": "STRING",
+											"function": "Iš viso sąmata darbo vietai Nr. ${row.index + 1}\t"
+										},
+										"preserveLayoutInPreview": true
+									}
+								},
 								{
 									"component": "decimal-input",
 									"dataModelPath": "totalFundsForOneWorkPlace",
@@ -3986,21 +3986,6 @@
 					}
 				},
 				{
-					"component": "h3",
-					"data": {
-						"class": {
-							"type": "STRING",
-							"function": "pt-3"
-						},
-						"label": "Antraštė 3",
-						"textValue": {
-							"type": "STRING",
-							"function": "Bendra sąmata (iš viso)"
-						},
-						"preserveLayoutInPreview": true
-					}
-				},
-				{
 					"component": "container",
 					"data": {
 						"class": {
@@ -4012,6 +3997,21 @@
 						"preserveLayoutInPreview": true
 					},
 					"children": [
+						{
+							"component": "h3",
+							"data": {
+								"class": {
+									"type": "STRING",
+									"function": "pt-3"
+								},
+								"label": "Antraštė 3",
+								"textValue": {
+									"type": "STRING",
+									"function": "Bendra sąmata (iš viso)"
+								},
+								"preserveLayoutInPreview": true
+							}
+						},
 						{
 							"component": "decimal-input",
 							"dataModelPath": "totalFunds",

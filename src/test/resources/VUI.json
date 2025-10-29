@@ -1,4 +1,3 @@
-
 {
 	"component": "stepper",
 	"data": {
@@ -73,7 +72,7 @@
 						},
 						"radioGroupContextHelp": {
 							"type": "STRING",
-							"function": ""
+							"function": "${data?.revisionData?.['clientAccountSelection'] ? data?.revisionData?.['clientAccountSelection'] : ''}"
 						},
 						"disablePersonSelection": {
 							"type": "SIMPLE",
@@ -81,7 +80,7 @@
 						},
 						"userSelectionContextHelp": {
 							"type": "STRING",
-							"function": ""
+							"function": "${data?.revisionData?.['clientAccountSelection'] ? data?.revisionData?.['clientAccountSelection'] : ''}"
 						},
 						"disableLegalEntitySelection": {
 							"type": "SIMPLE",
@@ -2881,21 +2880,6 @@
 							]
 						},
 						{
-							"component": "h3",
-							"data": {
-								"class": {
-									"type": "STRING",
-									"function": "pt-3"
-								},
-								"label": "Antraštė 3",
-								"textValue": {
-									"type": "STRING",
-									"function": "Iš viso sąmata darbo vietai Nr. ${row.index + 1}"
-								},
-								"preserveLayoutInPreview": true
-							}
-						},
-						{
 							"component": "container",
 							"data": {
 								"class": {
@@ -2907,6 +2891,21 @@
 								"preserveLayoutInPreview": true
 							},
 							"children": [
+								{
+									"component": "h3",
+									"data": {
+										"class": {
+											"type": "STRING",
+											"function": "pt-3"
+										},
+										"label": "Antraštė 3",
+										"textValue": {
+											"type": "STRING",
+											"function": "Iš viso sąmata darbo vietai Nr. ${row.index + 1}"
+										},
+										"preserveLayoutInPreview": true
+									}
+								},
 								{
 									"component": "decimal-input",
 									"dataModelPath": "workPlaceFunds",

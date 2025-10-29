@@ -169,7 +169,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.selectDropdownAddressCountry(country);
             log.debug("Selected country: '{}'.", country);
 
-            String citySearchTerm = "Klaipėda";
+            String citySearchTerm = "Vilnius";
 
             try {
                 submittedApplicationsPage.selectDropdownAddressCity(citySearchTerm);
@@ -186,7 +186,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
                 Assert.fail("Test failed: " + e.getMessage());
             }
 
-            String street = "Agluonos g.";
+            String street = "A. Goštauto g.";
             submittedApplicationsPage.selectDropdownAddressStreet(street);
             log.debug("Selected street: '{}'.", street);
 
@@ -516,7 +516,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterThirdEvaluationEndDate();
             log.debug("Entered third evaluation date.");
 
-            String expectedEvaluator = "Adelė Kutienė";
+            String expectedEvaluator = "Test Testauskas";
             submittedApplicationsPage.selectValueByListEvaluators(expectedEvaluator);
 
             submittedApplicationsPage.clickButtonAddEvaluatorsConfirmation();

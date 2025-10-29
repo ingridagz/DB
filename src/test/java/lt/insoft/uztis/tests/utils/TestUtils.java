@@ -66,11 +66,14 @@ public class TestUtils {
     }
 
 
-    public static final String DEFAULT_USERNAME = "adele.kutiene@uzt.lt";
+    public static final String DEFAULT_USERNAME = "test";
     public static final String DEFAULT_PASSWORD = "test";
 
+
+//      adele.kutiene@uzt.lt / test
 //    evaluation_chief / test — Vaitkuvienė Lijana
 //    evaluation_specialist / test — Palikevičius Marius
+    //    test / test — Test Testauskas
 
     public static void loginAllTests(WebDriver driver) {
         login(driver, DEFAULT_USERNAME, DEFAULT_PASSWORD);

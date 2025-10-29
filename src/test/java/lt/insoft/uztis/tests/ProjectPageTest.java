@@ -331,6 +331,8 @@ public class ProjectPageTest extends UztisPageTest {
 
             projectPage.enterAmountValue("100");
 
+            projectPage.enterAmountValue2("200");
+
             submittedApplicationsPage.uploadFiles();
 
             projectPage.clickButtonSaveDocumentDraft();

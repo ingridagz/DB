@@ -123,6 +123,9 @@ public class ProjectPage extends UztisPage {
     @FindBy(xpath = "(//common-decimal-input//input[@type='text'])[2]")
     WebElement inputVFA_Amount;
 
+    @FindBy(xpath = "(//common-decimal-input//input[@type='text'])[4]")
+    WebElement inputVFA_Amount2;
+
     @FindBy(xpath = "(//div[contains(@class,'mat-mdc-form-field-infix')]/common-text-input/input)[2]")
     WebElement inputUserFirstName;
 
@@ -263,6 +266,10 @@ public class ProjectPage extends UztisPage {
 
     public void enterAmountValue(String value) {
         enterValueIntoInput(inputVFA_Amount, value);
+    }
+
+    public void enterAmountValue2(String value) {
+        enterValueIntoInput(inputVFA_Amount2, value);
     }
 
     public void enterUserFirstName(String value) {
