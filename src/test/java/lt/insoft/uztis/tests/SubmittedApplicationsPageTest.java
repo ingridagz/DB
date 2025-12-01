@@ -516,6 +516,11 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterThirdEvaluationEndDate();
             log.debug("Entered third evaluation date.");
 
+//role
+            String value = "Paraiškų vertinimas";
+            submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("evaluator_role", value);
+            log.debug("Selected evaluator role: '{}'.", value);
+
             String expectedEvaluator = "Test Testauskas";
             submittedApplicationsPage.selectValueByListEvaluators(expectedEvaluator);
 

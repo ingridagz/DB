@@ -109,6 +109,8 @@ public class SubmittedApplicationsPage extends UztisPage {
         dropdownButtonCheckBoxLocators_VUI_DVP_PVK.put("evrk_PVK", By.xpath("//mat-label[contains(text(), 'Planuojama vykdyti veikla, kodas pagal EVRK')]"));
         dropdownButtonCheckBoxLocators_VUI_DVP_PVK.put("evrk_true_PVK", By.xpath("//mat-label[contains(text(), 'Vykdyta veikla (-os), kuri buvo nutraukta, kodas pagal EVRK')]"));
         dropdownButtonCheckBoxLocators_VUI_DVP_PVK.put("supported_PVK", By.xpath("//mat-label[contains(text(), 'Papildomai remiamo asmens tipas')]"));
+        dropdownButtonCheckBoxLocators_VUI_DVP_PVK.put("evaluator_role", By.xpath("//span[contains(@class,'mat-mdc-select-placeholder')]/ancestor::mat-select"));
+
 
         dropdownButtonLocators_VUI_DVP_PVK.put("jobName_VUI", By.xpath("//mat-label[contains(text(), 'Darbo vietos pavadinimas')]"));
         dropdownButtonLocators_VUI_DVP_PVK.put("jobName_DVP", By.xpath("//mat-label[contains(text(), 'Pritaikomos darbo vietos pavadinimas, kodas pagal profesijų klasifikatorių')]"));
