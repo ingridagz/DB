@@ -457,7 +457,7 @@ public class InvitationsPageTest extends UztisPageTest {
             invitationsPage.selectValueFromApplication(codeText);
             log.debug("Selected section by code: '{}'.", codeText);
 
-            String valueToSelect = "4";
+            String valueToSelect = "1";
             invitationsPage.selectValueByListInvitationNumber(valueToSelect);
             log.debug("Selected invitation number from the list.");
 

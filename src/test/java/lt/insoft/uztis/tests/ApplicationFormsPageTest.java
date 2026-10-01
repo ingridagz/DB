@@ -157,8 +157,8 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.enterApplicationName(applicationName);
             log.debug("Entered application name: {}", applicationName);
 
-            applicationFormsPage.clickButtonSave();
-            log.debug("Clicked the 'Save' button.");
+//            applicationFormsPage.clickButtonSave();
+//            log.debug("Clicked the 'Save' button.");
 
             applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
             log.info("Verified success message");
@@ -314,6 +314,7 @@ public class ApplicationFormsPageTest extends UztisPageTest {
 
     @Test
     void testAddDocumentsDVP() {
+
         log.info("Starting test:'testAddContractDVP'");
 
         try {
@@ -348,6 +349,8 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             throw e;
         }
     }
+
+
 
 
     @Test
@@ -403,8 +406,8 @@ public class ApplicationFormsPageTest extends UztisPageTest {
             applicationFormsPage.enterApplicationName(applicationName);
             log.debug("Entered application name: {}", applicationName);
 
-            applicationFormsPage.clickButtonSave();
-            log.debug("Clicked the 'Save' button.");
+//            applicationFormsPage.clickButtonSave();
+//            log.debug("Clicked the 'Save' button.");
 
             applicationFormsPage.verifySuccessMessage("Duomenys sėkmingai išsaugoti.");
             log.info("Verified success message");

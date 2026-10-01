@@ -156,7 +156,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.enterText("e_mail", email);
             log.debug("Entered email: '{}'", email);
 
-            String value = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
+            String value = "Abrazyvinių gaminių gamyba";
             submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("evrk_VUI", value);
             log.debug("Selected EVRK value: '{}'.", value);
 
@@ -217,7 +217,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             //--------------------
 
-            String value_A = "Administratoriai";
+            String value_A = "Abdominalinės chirurgijos gydytojas, 22120119";
             submittedApplicationsPage.selectDropdownButtonValue_VUI_DVP_PVK("jobName_VUI", value_A);
             log.debug("Selected 'Job Name' value: '{}'.", value_A);
 
@@ -607,7 +607,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             invitationsPage.setCheckbox(submittedApplicationsPage.checkboxConfirmationTwo, true);
             log.debug("Checked 'For environmental adaptation' checkbox 2.");
 
-            String value = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
+            String value = "Abrazyvinių gaminių gamyba";
             submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("evrk_DVP", value);
             log.debug("Selected EVRK value: '{}'.", value);
 
@@ -673,7 +673,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
             //--------------------
 
-            String value_A = "Administratoriai";
+            String value_A = "Abdominalinės chirurgijos gydytojas, 22120119";
             submittedApplicationsPage.selectDropdownButtonValue_VUI_DVP_PVK("jobName_DVP", value_A);
             log.debug("Selected 'Job Name' value: '{}'.", value_A);
 
@@ -1053,7 +1053,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
             submittedApplicationsPage.clickApplicationButton(buttonAddressConfirm);
             log.info("Clicked button with key: '{}'.", buttonAddressConfirm);
 
-            String value_evrk = "01.11 - Grūdinių (išskyrus ryžius), ankštinių ir aliejingų sėklų augalų auginimas";
+            String value_evrk = "Abrazyvinių gaminių gamyba";
             submittedApplicationsPage.selectDropdownButtonCheckBoxValueEVRK_VUI_DVP_PVK("evrk_PVK", value_evrk);
             log.debug("Selected EVRK value: '{}'.", value_evrk);
 
@@ -1077,7 +1077,7 @@ public class SubmittedApplicationsPageTest extends UztisPageTest {
 
 //------------------------------
 
-            String value_JN = "Administratoriai";
+            String value_JN = "Abdominalinės chirurgijos gydytojas, 22120119";
             submittedApplicationsPage.selectDropdownButtonValue_VUI_DVP_PVK("jobName_PVK", value_JN);
             log.debug("Selected 'Job Name' value: '{}'.", value_JN);
 
